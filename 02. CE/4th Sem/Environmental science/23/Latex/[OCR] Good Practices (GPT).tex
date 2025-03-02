@@ -1,0 +1,104 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+% Set up header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{CBS Examination, Dec 2018}
+\fancyhead[R]{Computer Networks (CE-204)}
+\fancyfoot[C]{\thepage}
+
+% Title formatting
+\titleformat{\section}[block]{\large\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}[block]{\normalsize\bfseries}{\thesubsection.}{1em}{}
+
+% Set spacing
+\setstretch{1.2}
+
+\title{\vspace{-2cm}CBS Examination, Dec 2018\\\textbf{Computer Networks (CE-204)}}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\noindent \textbf{Time: 3 Hours} \hfill \textbf{Max. Marks: 60}
+
+\section*{Instructions:}
+\begin{enumerate}[label=\arabic*.]
+    \item It is compulsory to answer all the questions (2 marks each) of Part-A in short.
+    \item Answer any four questions from Part-B in detail.
+    \item Different sub-parts of a question are to be attempted adjacent to each other.
+\end{enumerate}
+
+\section*{Part-A}
+
+\begin{enumerate}[label=(\alph*)]
+    \item List two characteristics of a broadband network. \hfill (2)
+    \item What is HTTP? \hfill (2)
+    \item Mention the advantages of wireless LAN. \hfill (2)
+    \item What is the difference between network layer delivery and transport layer delivery? \hfill (2)
+    \item Name some parameters for determining the quality of service at the transport layer. \hfill (2)
+    \item Discuss basic functions of the data link layer in brief. \hfill (2)
+    \item What is the effect of packet size on transmission time? \hfill (2)
+    \item What is dotted decimal notation? \hfill (2)
+    \item What is the difference between a port address, a logical address, and a physical address? \hfill (2)
+    \item Differentiate between a point-to-point direct link and a multipoint guided configuration. \hfill (2)
+\end{enumerate}
+
+\section*{Part-B}
+\textbf{Q2:} 
+\begin{enumerate}[label=(\alph*)]
+    \item What is a LAN? Can a LAN have routers? What is the difference between a packet and a frame? \hfill (5)
+    \item Create a diagram of the NRZ, NRZI, and Manchester encodings for the bit pattern 11010011. \hfill (5)
+\end{enumerate}
+
+\textbf{Q3:}
+\begin{enumerate}[label=(\alph*)]
+    \item Describe sliding window flow control. \hfill (5)
+    \item Explain CRC coding mechanism considering the following message and generator polynomial. \hfill (5)
+    \begin{itemize}
+        \item Message: $M=110010101100101010$
+        \item Generator Polynomial: $G=1010$
+    \end{itemize}
+    Show the working of CRC on this data.
+\end{enumerate}
+
+\textbf{Q4:}
+\begin{quote}
+    Explain the advantages of IPv6 over IPv4. A large number of consecutive IP addresses are available starting at 198.16.0.0. Suppose that four organizations A, B, C, and D request 4000, 2000, 4000, and 8000 addresses, respectively, in that order.  
+    \begin{enumerate}[label=(\roman*)]
+        \item First IP address assigned
+        \item Last IP address assigned
+        \item Mask in the W.X.Y.Z / S notation
+    \end{enumerate}
+\end{quote}
+
+\textbf{Q5:}
+\begin{enumerate}[label=(\alph*)]
+    \item Compare the TCP header and UDP header. List the fields in the TCP header that are missing from the UDP header. Give the reason for their absence. \hfill (5)
+    \item What is the Address Resolution Protocol? How is mapping performed between an IP address and a MAC address? \hfill (5)
+\end{enumerate}
+
+\textbf{Q6:}
+\begin{enumerate}[label=(\alph*)]
+    \item What is the difference between open-loop congestion control and closed-loop congestion control? \hfill (5)
+    \item Explain the Distance Vector Routing Protocol? What is its major drawback? \hfill (5)
+\end{enumerate}
+
+\textbf{Q7:}
+Differentiate between the following: \hfill (10)
+\begin{enumerate}[label=(\alph*)]
+    \item Pure ALOHA and Slotted ALOHA
+    \item Packet Switched Networks and Circuit Switched Networks
+\end{enumerate}
+
+\end{document}

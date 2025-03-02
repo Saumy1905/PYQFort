@@ -1,0 +1,98 @@
+// They are the 3 heading titles of a PYQ
+// Needs to be written in bold
+// Needs to be justify as top centre
+May 2023
+B.Tech. (CE/CE(DS)/CSE(AIML))/CE(H)
+ENVIRONMENTAL SCIENCES (MC-03/MCH-03)
+
+// Then write the following as given in (.tex) file format under % delimiters
+
+%\noindent \textbf{Time: 3 hours} \hfill \textbf{Max. Marks: 75}%
+
+// Then write the following as given in (.tex) file format under % delimiters
+
+%\section*{Instructions:}
+\begin{enumerate}[label=\arabic*.]
+    \item It is compulsory to answer all the questions (1.5 marks each) of Part-A in short.
+    \item Answer any four questions from Part-B in detail.
+    \item Different sub-parts of a question are to be attempted adjacent to each other.
+\end{enumerate}%
+
+// Write it in bold in centre in the next line
+PART-A
+
+// In the next line starting write the below and make it bold as it represent 1st question
+1.
+
+// Write it after what's written above in the same line with 1 indentation (which is 4 spaces)
+Write a short note on the following :
+
+// Write the below parts of 1st question with 1 indentation from '1.' with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) Green marketing. (1.5)
+(b) Eutrophication. (1.5)
+(c) Ocean Thermal Energy Conservation (OTEC). (1.5)
+(d) Ecological succession. (1.5)
+(e) Biogeographic Zones of India. (1.5)
+(f) Hotspot of biodiversity. (1.5)
+(g) Endemic species. (1.5)
+(h) Sanitary landfills. (1.5)
+(i) Sustainable Development. (1.5)
+(j) Watershed Management. (1.5)
+
+// Write it in bold in centre in the next line
+PART-B
+
+// In the next line starting write the below and make it bold as it represent 2nd question, it needs to be in the same alignment as that of previous 1st question (which is '1')
+2.
+
+// Write the below parts of 2nd question with 1 indentation from '1.' (which is 4 spaces) with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) How would environmental awareness help to protect our environment, explain briefly? (5)
+(b) Write an explanatory note on the multidisciplinary nature of environmental science. Briefly describe, how computer engineering plays an important role in conservation and protection of environmental quality? (10)
+
+// In the next line starting write the below and make it bold as it represent 3rd question, it needs to be in the same alignment as that of previous 2nd question (which is '2.')
+3.
+
+// Write the below parts of 3rd question with 1 indentation from '1.' (which is 4 spaces) with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) Give a detailed account of various impacts of traditional and modern agricultural practices on environment. (7.5)
+(b) What are the environmental impacts associated with mineral extraction? Briefly explain the remedial measures to reduce the impacts of mining. (7.5)
+
+// In the next line starting write the below and make it bold as it represent 4th question, it needs to be in the same alignment as that of previous 3rd question (which is '3.')
+4.
+
+// Write the below parts of 4th question with 1 indentation from '1.' (which is 4 spaces) with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) Define ecosystem. Give a detailed account of structural and functional attributes of an ecosystem. (10)
+(b) Why the concept of food web is more realistic than the concept of food chain? (5)
+
+// In the next line starting write the below and make it bold as it represent 5th question, it needs to be in the same alignment as that of previous 4th question (which is '4.')
+5.
+
+// Write the below parts of 5th question with 1 indentation from '1.' (which is 4 spaces) with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) What do you understand by the tenn biodiversity? Discuss the concept of biodiversity at different hierarchic~ levels. (7.5)
+(b) Elucidate differen·t approaches of biodiversity conservation along with their merits and demerits. (7.5)
+
+// In the next line starting write the below and make it bold as it represent 6th question, it needs to be in the same alignment as that of previous 5th question (which is '5.')
+6.
+
+// Write the below parts of 6th question with 1 indentation from '1.' (which is 4 spaces) with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) What is water pollution? Briefly explain the effects and various control measures of water pollution. (7.5)
+(b) What are wastelands. Give a detailed account of various methods or techniques for reclamation of wastelands. (7.5)
+
+// In the next line starting write the below and make it bold as it represent 7th question, it needs to be in the same alignment as that of previous 6th question (which is '6.')
+7.
+
+// Write it after what's written above in the same line with 1 indentation (which is 4 spaces)
+Write short note on any three of the following :
+
+
+// Write the below parts of 1st question with 1 indentation from '1.' with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) Environmental ethics. (1.5)
+(b) Life expectancy. (1.5)
+(c) Role of IT in environmental and health. (1.5)
+(d) Universal Declaration of Human Rights.  (1.5)

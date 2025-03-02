@@ -1,0 +1,101 @@
+// They are the 3 heading titles of a PYQ
+// Needs to be written in bold
+// Needs to be justify as top centre
+    ---
+    ---
+    ---
+
+// Then write the following as given in (.tex) file format under % delimiters
+
+%\noindent \textbf{Time: 3 hours} \hfill \textbf{Max. Marks: 75}%
+
+// Then write the following as given in (.tex) file format under % delimiters
+
+%\section*{Instructions:}
+\begin{enumerate}[label=\arabic*.]
+    \item It is compulsory to answer all the questions (1.5 marks each) of Part-A in short.
+    \item Answer any four questions from Part-B in detail.
+    \item Different sub-parts of a question are to be attempted adjacent to each other.
+\end{enumerate}%
+
+// Write it in bold in centre in the next line
+PART-A
+
+// In the next line starting write the below and make it bold as it represent 1st question
+1.
+
+// Write it after what's written above in the same line with 1 indentation (which is 4 spaces)
+Write a short note on the following :
+
+// Write the below parts of 1st question with 1 indentation from '1.' with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) --- (1.5)
+(b) --- (1.5)
+(c) --- (1.5)
+(d) --- (1.5)
+(e) --- (1.5)
+(f) --- (1.5)
+(g) --- (1.5)
+(h) --- (1.5)
+(i) --- (1.5)
+(j) --- (1.5)
+
+// Write it in bold in centre in the next line
+PART-B
+
+// In the next line starting write the below and make it bold as it represent 2nd question, it needs to be in the same alignment as that of previous 1st question (which is '1.')
+2.
+
+// Write the below parts of 2nd question with 1 indentation from '1.' (which is 4 spaces) with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) ---
+(b) ---
+
+// In the next line starting write the below and make it bold as it represent 3rd question, it needs to be in the same alignment as that of previous 2nd question (which is '2.')
+3.
+
+// Write the below parts of 3rd question with 1 indentation from '1.' (which is 4 spaces) with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) ---
+(b) ---
+
+// In the next line starting write the below and make it bold as it represent 4th question, it needs to be in the same alignment as that of previous 3rd question (which is '3.')
+4.
+
+// Write the below parts of 4th question with 1 indentation from '1.' (which is 4 spaces) with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) ---
+(b) ---
+
+// In the next line starting write the below and make it bold as it represent 5th question, it needs to be in the same alignment as that of previous 4th question (which is '4.')
+5.
+
+// Write the below parts of 5th question with 1 indentation from '1.' (which is 4 spaces) with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) ---
+(b) ---
+
+// In the next line starting write the below and make it bold as it represent 6th question, it needs to be in the same alignment as that of previous 5th question (which is '5.')
+6.
+
+// Write the below parts of 6th question with 1 indentation from '1.' (which is 4 spaces) with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) ---
+(b) ---
+
+// In the next line starting write the below and make it bold as it represent 7th question, it needs to be in the same alignment as that of previous 6th question (which is '6.')
+7.
+
+// Write the below parts of 7th question with 1 indentation from '1.' (which is 4 spaces) with every part in new Line
+// Write the marking (as given in parentheses) of the parts in the end of the like (like we do in question papers)
+(a) ---
+(b) ---
+
+
+
+
+
+
+
+
+I want to make a professional documentation using (.tex) file and for that purpose I'm providing you the double quoted text as, "", the double forward slash or // under the double quoted text, I'm typing the requirement of the specification text below that part and you'll need to code for that and provide me the complete (.tex) file with the styling and professional look using good practices
