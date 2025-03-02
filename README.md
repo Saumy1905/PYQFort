@@ -74,7 +74,7 @@ git clone <your-forked-repo-URL>
 
 ---
 
-## 🤝 Join the Open-Source Movement!
+## 🤝 Join the Open-Source Praxian Project!
 By contributing to **PYQFort**, you are not only helping students but also strengthening the **open-source ecosystem** of **Praxian Projects**.
 
 🌍 **Let's build an accessible academic resource together!**
