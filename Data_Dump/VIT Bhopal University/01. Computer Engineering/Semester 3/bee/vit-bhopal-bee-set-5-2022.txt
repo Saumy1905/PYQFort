@@ -1,0 +1,40 @@
+**TERM END EXAMINATIONS (TEE) - December 2021- January 2022**
+
+**Programme B.Tech (CSE)**
+
+**Course Name: Electric Circuits and Systems**
+
+**Course Code: EEE1001**
+
+**Faculty Name: Dr. Praveen Shukla**
+
+**Slot: Class No F1+ F12+F13/0071**
+
+**Time: 2 hours**
+
+**Max. Marks: 50**
+
+**Answer ALL the Questions**
+
+**PART A (30 Marks)**
+
+a) For the circuit shown in Fig. 1, the Thevenin equivalent voltage (in Volts) across terminals a-b is ______________________.
+
+[Fig. 1]
+
+OR
+b) In circuit Fig. 2 shown; switch SW is closed at t = 0. Assuming zero initial conditions, the value of Vc(t) (in volts) at t = 1 second is _______________________.
+
+[Fig. 2]
+
+a) Write a working principle of D.C. motor: Derive the voltage, power and torque equation for D.C. Motor: What are the different types of Speed control D.C. Motor? OR
+b) What is a Zener diode? How is it different from a p-n junction diode?
+
+[10 Marks]
+
+**PART B (20 Marks)**
+
+1. Two inductors whose self-inductances are 7SmH and SSmH respectively are connected together in parallel aiding: Their mutual inductance is given as 22.SmH. Calculate the total inductance of the parallel combination: _______________________.
+
+[10 Marks]
+2. Draw an SR Flip-Flop using NAND gate, explain its operation: _______________________.

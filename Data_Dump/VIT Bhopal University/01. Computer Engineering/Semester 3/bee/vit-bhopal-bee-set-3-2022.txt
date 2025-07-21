@@ -1,0 +1,91 @@
+**PART A**
+
+**Mid-Term Examination, November 2024**
+
+**Electric Circuits and Systems**
+
+**Course Code: EEE1001**
+
+**Course Title:** Electric Circuits
+
+**Max Marks: 50**
+
+**Time: 1 hour**
+
+Answer all the questions.
+
+**Section 1: Calculate the total current supplied by the battery shown in Fig. 1.**
+
+(a) Marks: 20
+
+0.24 V, 30 A
+
+Fig. 1.
+
+
+**(b) Determine Vx in the given circuit shown in Fig. 2.**
+
+SA, Marks: 80
+
+6 V, <20
+
+Fig. 2.
+
+
+**(a) Determine the current through the load resistance connected across the terminals A and B using mesh analysis shown in Fig. 3.**
+
+A, 6 Q
+B, 9 Q Load
+I = 5 V
+
+Fig. 3.
+
+
+**Section 2:**
+
+**(b) Calculate the value of load resistance Rz for which maximum power transfer will occur from source to load. Also, calculate the value of maximum power in the given circuit shown in Fig. 4.**
+
+Marks: 60
+
+12 V
+
+Fig. 4.
+
+**(c) Show that current in a pure inductive circuit lags the voltage by 90%.**
+
+3 (a)
+
+What should be the value of R for which a current of 25 A will flow through it in the given circuit shown in Fig. 5?
+
+2, 5 Q
+
+Z = 0 mH
+R = 8
+230 V, 50 Hz
+
+Fig. 5.
+
+
+**(a) An R-LC series circuit has R = 10 Ω, L = 0.1 H; and C = 8 pF. Calculate the resonant frequency.**
+
+4 (6)
+
+Marks: 20
+
+
+**Section 3: Consider a linear time-invariant system given by**
+
+dy(t)/dt + 14y(t) = dx(t) + 2x(t)
+Initial condition:
+y(0) = 5, dy(0)/dt = 0
+
+Find the natural response, forced response, and total response.
+
+Marks: 30
+
+
+**Section 4: (a) A circular coil of radius r meters is carrying a current of I Amperes. Determine the magnetic field strength H at a point P which is situated at a distance of d meters from the centre of the coil. Also, determine the field strength at the centre of the coil.**
+
+(b) An iron ring with permeability 2000 has a mean length of an iron path of 1 m and has a uniform cross-sectional area of 10 cm? It is wound with two magnetizing coils in a manner such that the current flowing through the two coils produce flux in opposite directions. A cut in the ring creates an air gap of 0.1 cm. Calculate the flux.
+
+Marks: 40

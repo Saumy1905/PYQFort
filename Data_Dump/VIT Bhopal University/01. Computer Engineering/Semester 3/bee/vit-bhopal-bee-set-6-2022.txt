@@ -1,0 +1,37 @@
+**TERM END EXAMINATIONS (TEE) - December 2021- January 2022**
+
+**B.Tech BAC, BAI, BAS, BCE, BCG, Fall 2021-22 Programme [BCY, BEC, BHI; BME, BMR, BOE, Semester BSA, MEI Course Name Electric Circuits and Systems Course Code EEE1001 Faculty Name Dr. Baldev Swamy Slot Class No : C11+C12+C13/0083 Time : 1 hour Max. Marks 50**
+
+**Answer ALL the Questions**
+
+**PART A (30 Marks)**
+
+**Calculate the values of total current I and voltage across each element (R, L, C) of the below Fig: 1.**
+
+Marks: 10
+Fig: 1
+
+**An iron ring of 19.1 cm mean diameter has a cross-sectional area of 8 cm². The ring has an air gap of 5 mm. The winding on the ring has 1000 turns and carries a current of 5A. The relative permeability of iron is 2000. Calculate the flux produced in the air gap.**
+
+a) A 12-pole separately excited machine having 1200 lap-connected conductors each carrying a current of 15A. The armature is being driven at 300 rpm. The flux per pole is 60 mWb. Resistance of armature circuit is 0.1Ω. Calculate the output power.
+
+Marks: 10
+
+**OR**
+
+b) Calculate the minimum and maximum values of the series resistance Rs of the below circuit, IzM = 40mA (shown in Fig: 2).
+
+Marks: 10
+Fig: 2
+
+**PART A (Continued)**
+
+**Calculate the values of total current I and voltage across each element (R, L, C) of the below Fig: 1.**
+
+Marks: 10
+
+**3**
+Analyse the device which works as a switch; controls the voltage and current flow between the source and drain. The working of the device depends on the MOS capacitor, which is the semiconductor surface below the oxide layers between the source and drain. Also analyse its operating modes.
+
+Marks: 10
+OR

@@ -1,0 +1,65 @@
+**REGISTRATION NO**
+**NAME**
+
+**INSTITUTE OF VIT**
+**VIT B HOPAL 2021-22 ODUCU IIliou Subu**
+**www.vitbhopal.ac.in**
+
+**TERM END EXAMINATIONS (TEE) December 2021-January 2022 Programme B.Tech: Semester Fall 2021-22 Course Name Electric Circuits and Systems Course Code EEE1001 Faculty Name J. Sharmila Joseph Slot Class No. E-+E12+E13/0158 Time 11 hours Max. Marks 50**
+
+**Answer ALL the Questions**
+
+**PART A (30 Marks)**
+
+**(a) Find the current I_L using Superposition theorem for the circuit shown in Fig. 1.**
+**(10 marks)**
+
+IL
+4n
+I_L
+21n
+23JA
+200 V
+Fig. 1
+
+OR
+
+**(b) A circular iron ring has a mean circumference of 1.5m and a cross-sectional area of 0.01m2. A sawcut of 4mm wide is made in the ring. Calculate the magnetizing current required to produce a flux of 0.8mWb in the air gap if the ring is wound with the coil of 175 turns. Assume relative permeability of iron as 400 and leakage factor 1.25.**
+**(10 marks)**
+
+OR
+
+**(a) For efficient power transfer, voltage is typically transformed from high to low and vice versa in electric power generation and distribution systems. In this case, a particular device is used to convert energy levels. Identify the device and describe its construction, operational principle, and attributes using crisp illustrations.**
+**(10 marks)**
+
+OR
+
+**(b) For the circuit shown in Fig. 2, determine:**
+
+* **a) D.C output voltage**
+* **b) Rectification Efficiency**
+* **c) Peak Inverse Voltage**
+* **d) Output frequency**
+*Assume the diodes are ideal.
+**(10 marks)**
+
+i0: SoHz'
+250 J
+Fig. 2
+
+3
+**(a) The introduction of MOSFET device has brought a change in the domain of switching in Electronics. Identify the MOSFET which initially has no channel between drain and source in its construction. For the same, elaborate the working principle, drain characteristics, and transfer characteristics with neat diagrams.**
+**(10 marks)**
+
+OR
+
+**(b) Explain how a full adder can be built using two half adders.**
+**(10 marks)**
+
+**PART B (20 Marks)**
+
+**(a) A closed magnetic circuit of cast steel contains a 6cm long path of cross-sectional area lcm2 and a 2 cm path of cross-sectional area 0.5 cm2. A coil of 200 turns is wound around the 6cm length of the circuit and a current of 0.4A flows through it. Determine the flux density in the 2cm path of the magnetic circuit. Relative permeability of cast steel is 750.**
+**(10 marks)**
+
+**(b) Design a 4-bit ripple counter and give an explanation of its operation with neat signal diagram.**
+**(10 marks)**

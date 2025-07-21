@@ -1,0 +1,93 @@
+**MID-TERM EXAMINATIONS**
+
+**VIT Bhopal University**
+
+**Department of Electrical Engineering**
+
+**October 2021**
+
+**Programme: B. Tech**
+
+**Course: Electric Circuits & Systems**
+
+**Faculty: Mr. Amit Kumar Singh**
+
+**Time: 1 hour**
+
+**Semester Code: EEE1001**
+
+**Slot/Class No.: A11+A12+A13/0600**
+
+**Max. Marks: 50**
+
+**Answer all the Questions**
+
+**Sub. Sec.**
+
+**QNo.** **Question Description** **Marks**
+
+**Part A (20 marks)**
+
+1. Derive the condition for the maximum power transfer in a given circuit.
+	* b) Determine the value of Rz for the maximum power transfer as shown in Figure 1, also find the maximum power transferred to the load.
+
+R + 68 V
+3 (2
+6A Rz 10 @
+RL
+R3
+2
+Figure 1
+
+**Part B (30 marks)**
+
+1. A series RLC circuit with L = 160 mH, C = 100 pF, and R = 40.092 is connected to a sinusoidal voltage V(t) = 40sin(ot); with ω = 200 rad/s.
+	* a) What is the impedance of the circuit?
+	* b) Let the current at any instant in the circuit be I(t) = I0 sin(wt - φ). Find I0.
+	* c) What is the power factor?
+
+2. (b) Using superposition theorem, determine the current Iz through Rz = 12 kΩ resistor for the circuit shown in Figure 2.
+
+k VV
+Rz= 12kII
+6 mt
+E 4MP
+R-35M}
+Figure 2
+
+3. a) Determine the value of "Vo & 1" in the circuit shown in Figure 3 considering the diodes approximate ideal.
+	+16 V
+Si
+Si
+GaAs
+Si
+Si
+V,
+Vo
+kS2
+47k02
+AV
+Figure 3
+
+b) Determine the output waveform (Vo) in the network shown in Figure 4 and calculate the output D.C level and required PIV of each diode?
+
+10 V
+2 kΩ
+2 kΩ2
+2 kO2
+Figure 4
+
+**Part C (20 marks)**
+
+1. Draw the input/output characteristics of the CE configuration NPN transistor made up with silicon. Also define the term ICEo.
+
+5. Explain the working of n-channel D-MOSFET with the transfer characteristics curve.
+
+Design a combinational logic circuit with 3 input variables that will produce logic 1' when more than one input variables are at logic 0'.
+
+5.
+b) Minimize the following Boolean function using K-map and realize it using NAND gates only:
+
+F(A, B, C, D) = (2',2',5',7',11',14)
+
+**Note:** This is a sample output. Please verify the formatting and content with the actual question paper.

@@ -1,0 +1,76 @@
+**TERM END EXAMINATIONS (TEE)**
+**December 2021-January 2022**
+
+**B-Tech (BAC; BAI; BAS; BCG, BHI; Semester Fall 2021-22 Programme)**
+**Course Name: Electric Circuits and Systems**
+**Code: EEE1001**
+**Faculty Name: Dr. Abhay Vidyarthi**
+**Slot/Class No.: E+E12+E13/0053**
+**Time: 1 hour**
+**Max. Marks: 50**
+
+**Answer ALL the Questions**
+
+**PART A (30 Marks)**
+
+1. **Obtain the Thevenin equivalent network for the circuit shown in Fig. 1**
+
+[Fig. 1]
+
+ Marks: 10
+Q No.: 150 V, 10 Q, 5 A, 15 Q, 1 Vx 3
+
+2. **Find the equivalent inductance of the network shown in Fig. 2**
+
+kz = 0.65, 10 H; kz = 0.33, 12 H; kz = 0.37, 14 H
+
+[Fig. 2]
+
+ Marks: 10
+Q No.: 2
+
+**Explain the working of a single-phase transformer with the help of a neat sketch:**
+
+[Insert Sketch]
+
+ Marks: 10
+OR:
+
+(b) With the help of a neat sketch, explain the working of any two:
+I. BJT and its V-I Characteristics
+II. PN Diode and its V-I Characteristics
+III. Full-wave Rectifiers
+IV. Modes of operation of SCR (Depletion-type MOSFET)
+
+ Marks: 10
+
+3. **Write the truth table of Full Subtractor and Half Adders and how to design a Full Subtractor using two Half Adders and an OR gate.**
+
+[Insert Table]
+
+ Marks: 10
+
+**PART B (20 Marks)**
+
+4. **Find the value of resistance RL as shown in Fig. 3 so as to deliver the maximum power transfer, and also calculate the maximum power.**
+
+I = 2 A, V = 5 Q, R1 = 10 Q, Ri = 20 Q, V = 80 V, V = 20 V
+
+[Fig. 3]
+
+ Marks: 20
+Q No.: 4
+
+5. **Explain the significance of threshold voltage in case of N-Channel Enhancement MOSFET.**
+
+What happens to the current which is flowing from drain to source if the drain-to-source voltage crosses the saturation voltage level?
+
+Marks: 10
+
+**OR:**
+
+(b) Explain the working of N-Channel Enhancement MOSFET with the help of a neat sketch:
+
+[Insert Sketch]
+
+ Marks: 10

@@ -1,0 +1,46 @@
+**PART A**
+
+**Regulation Form**
+
+* **Name:** _______________________________
+* **Roll Number:** _______________________
+
+**Mid-Term Examinations**
+**October 2021**
+
+**Electric Circuits and Systems**
+**Dr. Abhay Vidyarthi**
+**Code: EEE1001**
+**Slot/Class No: E+E12+E13/0053**
+**Time:** _______________________________
+**Max. Marks:** 50
+
+**Instructions:** Answer all the questions.
+
+**Q.No. Question Description Marks**
+
+1. Find the current in the 2 ohm resistor in the network of Fig. 1. (10)
+
+Fig. 1: _______________________________________________________
+
+2. Find Norton's equivalent network at the terminals A and B of Fig. 2. (6)
+
+Fig. 2: _______________________________________________________
+
+3. Determine I, V, Vz, and Vo for the series dc configuration of Fig. 3. Consider the value of 0.7V for the silicon diode to move from off-state to on-state.
+
+Fig. 3: _______________________________________________________
+
+**Page 1 of 2**
+
+4. Why is the gate-to-source voltage not used in an N-Channel Depletion type MOSFET? What is pinch-off voltage, and what happens to the drain-to-source current at this pinch-off voltage? What can be done to increase the value of the drain-to-source current once it reaches its saturation value? Explain the working of an N-Channel Depletion type MOSFET with a neat sketch.
+
+**Q.No. Question Description Marks**
+
+5. Realize XOR and XNOR gates with the help of NAND and NOR gates, respectively. (10)
+
+**PART B**
+
+**No questions in this part.**
+
+**Page 2 of 2**

@@ -1,0 +1,46 @@
+**TERM END EXAMINATIONS (TEE)**
+**December 2021-January 2022**
+
+**B-Tech (BCY, BAI; BAS; BCG, BEC, Fall 2021-22 Programme)**
+**Semester: BHI, BMR, BSA**
+**Course Name: Electric Circuits and Systems**
+**Course Code: EEE1001**
+**Faculty Name: Dr. Abhay Vidyarthi**
+
+**Slot: Class No /A11+A12+A13/0045**
+**Time: 1 hour**
+**Max. Marks: 50**
+
+**Answer ALL the Questions**
+
+**PART A (30 Marks)**
+
+1. Use the superposition theorem to find v in the circuit of Fig. 1.
+
+Marks: 10
+
+[Fig. 1: OR Two inductors are connected in parallel. Their equivalent inductance when the mutual inductance aids the self-inductance is 6 mH and it is 2 mH when the mutual inductance opposes the self-inductance. If the ratio of the self-inductances is 1.3 and the mutual inductance between the coils is 4 mH; find the self-inductances.]
+
+OR
+
+[Explain the working of any two: I BJT, II. PN Junction Diode, III. Rectifier, IV. SCR or MOSFET with the help of a neat sketch.]
+
+Marks: 10
+
+2. Write the truth table of Full Adder and Half Adder and design a Full Adder using two Half Adders and an OR gate.
+
+Marks: 10
+
+**PART - B (20 Marks)**
+
+1. Obtain the Thevenin equivalent network of Fig. 2 for the given network at terminals a and b.
+
+Marks: 10
+
+[Fig. 2]
+
+OR
+
+[Why the gate to source voltage is not used in an N Channel Depletion type MOSFET? What is pinch-off voltage and what happens to the drain to source current at this pinch-off voltage, and what is to be done to increase the value of the drain to source current once it reaches its saturation value? Explain the working of N Channel Depletion type MOSFET with the help of a neat sketch.]
+
+Marks: 10
