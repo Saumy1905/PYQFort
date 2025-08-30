@@ -1094,6 +1094,23 @@
                   id: ymca-universal-human-values-2023-set-2  # Add this unique identifier
                   pages: 3
                   title: "Universal Human Values 2023-set-2"
+            - name: Machine Learning
+              slug: ml
+              id: ml
+              description: Principles of machine learning
+              keywords: ["machine", "learning", "principles"]
+              icon: brain
+              pyqs:
+                - year: 2022
+                  file: ymca-ml-2022.pdf
+                  id: ymca-ml-2022
+                  pages: 3
+                  title: "Machine Learning 2022"
+                - year: 2023
+                  file: ymca-ml-2023.pdf
+                  id: ymca-ml-2023
+                  pages: 3
+                  title: "Machine Learning 2023"
         - number: 6
           slug: sem6
           id: sem6

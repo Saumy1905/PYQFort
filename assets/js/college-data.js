@@ -1312,6 +1312,30 @@ window.COLLEGE_DATA = {
               description: "Subjects for Semester 5",
               subjects: [
                 {
+                  name: "Machine Learning",
+                  slug: "ml",
+                  id: "ml",
+                  description: "Principles of machine learning",
+                  keywords: ["machine", "learning", "principles"],
+                  icon: "brain",
+                  pyqs: [
+                    {
+                      year: 2022,
+                      file: "ymca-ml-2022.pdf",
+                      id: "ymca-ml-2022",
+                      pages: 3,
+                      title: "Machine Learning 2022",
+                    },
+                    {
+                      year: 2023,
+                      file: "ymca-ml-2023.pdf",
+                      id: "ymca-ml-2023",
+                      pages: 3,
+                      title: "Machine Learning 2023",
+                    },
+                  ],
+                },
+                {
                   name: "Database Management Systems",
                   id: "dbms",
                   description: "Principles of database systems",
