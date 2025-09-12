@@ -1093,9 +1093,48 @@ function initializeCollegeCardsAnimation() {
   const middleIndex = Math.floor((cards.length - 1) / 2);
   cards[middleIndex].classList.add('middle-card');
   
+  // Apply dynamic circular positioning for better arc motion
+  cards.forEach((card, index) => {
+    if (index !== middleIndex) {
+      // Calculate circular position based on card index relative to middle
+      const relativeIndex = index - middleIndex;
+      const angle = (relativeIndex * 45) + (Math.random() * 30 - 15); // Add some randomness
+      const distance = Math.abs(relativeIndex) * 80 + 150; // Distance from center
+      
+      // Calculate x and y positions in a circular pattern
+      const radians = (angle * Math.PI) / 180;
+      const x = Math.cos(radians) * distance;
+      const y = Math.sin(radians) * distance * 0.6; // Compress Y for better layout
+      const rotation = relativeIndex * 8; // Slight rotation for organic feel
+      
+      // Store the calculated positions as data attributes
+      card.setAttribute('data-circle-x', x);
+      card.setAttribute('data-circle-y', y);
+      card.setAttribute('data-circle-rotation', rotation);
+      
+      console.log(`Card ${index}: angle=${angle}°, distance=${distance}px, x=${x}, y=${y}, rotation=${rotation}°`);
+    }
+  });
+  
   // Add animation-ready class after a short delay to prepare for animation
   setTimeout(() => {
     container.classList.add('animation-ready');
+    
+    // Apply the dynamic positioning via CSS custom properties
+    cards.forEach((card, index) => {
+      if (index !== middleIndex) {
+        const x = card.getAttribute('data-circle-x');
+        const y = card.getAttribute('data-circle-y');
+        const rotation = card.getAttribute('data-circle-rotation');
+        
+        const collegeCard = card.querySelector('.college-card');
+        if (collegeCard) {
+          collegeCard.style.setProperty('--dynamic-x', `${x}px`);
+          collegeCard.style.setProperty('--dynamic-y', `${y}px`);
+          collegeCard.style.setProperty('--dynamic-rotation', `${rotation}deg`);
+        }
+      }
+    });
   }, 100);
   
   // Set up Intersection Observer for scroll detection
@@ -1107,10 +1146,10 @@ function initializeCollegeCardsAnimation() {
   const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Trigger the splash animation
+        // Trigger the circular splash animation
         entry.target.classList.add('is-visible');
         
-        console.log('🎯 College cards animation triggered!');
+        console.log('🎯 Circular college cards animation triggered!');
         
         // Optionally unobserve after first animation
         // observer.unobserve(entry.target);
@@ -1137,8 +1176,9 @@ function initializeCollegeCardsAnimation() {
     }
   });
   
-  console.log('✅ College cards scroll animation initialized for laptop screens');
+  console.log('✅ Circular college cards scroll animation initialized for laptop screens');
   console.log(`📊 Found ${cards.length} cards, middle card is at index ${middleIndex}`);
+  console.log('🔄 Dynamic circular positioning applied to non-middle cards');
 }
 
 // ============================================== [CARD ANIMATIONS] ==============================================
