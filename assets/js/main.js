@@ -92,6 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize card animations
   initializeCardAnimations();
   
+  // Initialize college cards scroll animation
+  initializeCollegeCardsAnimation();
+  
   // Initialize advanced filtering
   initializeAdvancedFiltering();
   
@@ -1064,6 +1067,78 @@ function showSearchState(state) {
       element.style.display = s === state ? 'block' : 'none';
     }
   });
+}
+
+// ============================================== [COLLEGE CARDS SCROLL ANIMATION] ==============================================
+
+function initializeCollegeCardsAnimation() {
+  // Only run on laptops (screen width >= 1024px)
+  if (window.innerWidth < 1024) {
+    return;
+  }
+  
+  const container = document.querySelector('.college-cards-container');
+  if (!container) {
+    return;
+  }
+  
+  const cards = container.querySelectorAll('.card');
+  if (cards.length === 0) {
+    return;
+  }
+  
+  // Identify the middle card - adjust logic for correct middle selection
+  // For arrays: [0,1,2,3] -> middle should be index 1 (2nd card)
+  // For arrays: [0,1,2,3,4] -> middle should be index 2 (3rd card)
+  const middleIndex = Math.floor((cards.length - 1) / 2);
+  cards[middleIndex].classList.add('middle-card');
+  
+  // Add animation-ready class after a short delay to prepare for animation
+  setTimeout(() => {
+    container.classList.add('animation-ready');
+  }, 100);
+  
+  // Set up Intersection Observer for scroll detection
+  const observerOptions = {
+    threshold: 0.3, // Trigger when 30% of the container is visible
+    rootMargin: '0px 0px -100px 0px' // Trigger a bit before the element comes into view
+  };
+  
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Trigger the splash animation
+        entry.target.classList.add('is-visible');
+        
+        console.log('🎯 College cards animation triggered!');
+        
+        // Optionally unobserve after first animation
+        // observer.unobserve(entry.target);
+      } else {
+        // Remove animation class when scrolling back up (converge back to center)
+        entry.target.classList.remove('is-visible');
+      }
+    });
+  }, observerOptions);
+  
+  // Start observing the container
+  observer.observe(container);
+  
+  // Handle window resize to disable/enable animation based on screen size
+  window.addEventListener('resize', function() {
+    if (window.innerWidth < 1024) {
+      // Disable animation on smaller screens
+      container.classList.remove('is-visible', 'animation-ready');
+      observer.disconnect();
+    } else {
+      // Re-enable animation on larger screens
+      container.classList.add('animation-ready');
+      observer.observe(container);
+    }
+  });
+  
+  console.log('✅ College cards scroll animation initialized for laptop screens');
+  console.log(`📊 Found ${cards.length} cards, middle card is at index ${middleIndex}`);
 }
 
 // ============================================== [CARD ANIMATIONS] ==============================================

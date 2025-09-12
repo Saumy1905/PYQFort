@@ -298,6 +298,78 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 3rem;
 }
 
+/* College Cards Container for Scroll Animation */
+.college-cards-container {
+  position: relative;
+}
+
+/* Individual Card Wrapper for Animation */
+.college-cards-container .card {
+  position: relative;
+  display: flex; /* Ensure card wrapper is flex */
+  flex-direction: column; /* Stack content vertically */
+}
+
+/* College Card Animation - Laptop Only */
+@media (min-width: 1024px) {
+  /* Default state - all cards visible initially */
+  .college-cards-container .card .college-card {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    transition: opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Animation ready state - hide non-middle cards and prepare for animation */
+  .college-cards-container.animation-ready .card:not(.middle-card) .college-card {
+    opacity: 0;
+    transform: scale(0.8) translateX(0);
+  }
+  
+  /* Middle card stays visible when animation is ready */
+  .college-cards-container.animation-ready .card.middle-card .college-card {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    z-index: 2;
+  }
+  
+  /* Animated State - When container becomes visible */
+  .college-cards-container.is-visible .card .college-card {
+    opacity: 1 !important;
+  }
+  
+  /* Only apply transform when not hovering to allow JavaScript tilt to work */
+  .college-cards-container.is-visible .card .college-card:not(:hover) {
+    transform: scale(1) translateX(0) !important;
+  }
+  
+  /* Clear all transition delays when hovering to prevent tilt delays */
+  .college-cards-container .card .college-card:hover {
+    transition-delay: 0s !important;
+    transition: transform 0.1s ease, box-shadow 0.3s ease !important;
+  }
+  
+  /* Staggered Animation Delays - Splash from center outward */
+  .college-cards-container.is-visible .card:nth-child(1) .college-card:not(:hover) { transition-delay: 0.2s; }
+  .college-cards-container.is-visible .card:nth-child(2) .college-card:not(:hover) { transition-delay: 0s; } /* Middle card - fastest */
+  .college-cards-container.is-visible .card:nth-child(3) .college-card:not(:hover) { transition-delay: 0.2s; }
+  .college-cards-container.is-visible .card:nth-child(4) .college-card:not(:hover) { transition-delay: 0.4s; }
+  .college-cards-container.is-visible .card:nth-child(5) .college-card:not(:hover) { transition-delay: 0.6s; }
+  .college-cards-container.is-visible .card:nth-child(6) .college-card:not(:hover) { transition-delay: 0.8s; }
+  .college-cards-container.is-visible .card:nth-child(7) .college-card:not(:hover) { transition-delay: 1.0s; }
+  .college-cards-container.is-visible .card:nth-child(8) .college-card:not(:hover) { transition-delay: 1.2s; }
+  
+  /* Additional cards get progressively longer delays */
+  .college-cards-container.is-visible .card:nth-child(n+9) .college-card:not(:hover) { transition-delay: 1.4s; }
+  
+  /* Enhanced shadow effect for animated cards on hover */
+  .college-cards-container .card .college-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+}
+
 .college-card {
   display: flex;
   flex-direction: column;
@@ -305,7 +377,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Ensure consistent height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add back basic hover transition */
   /* transition: transform 0.3s, box-shadow 0.3s; */
+}
+
+/* Restore hover effect for college cards */
+.college-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* .college-card:hover {

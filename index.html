@@ -26,22 +26,26 @@ title: Home
       <button class="filter-btn" onclick="window.location.href='{{ '/' | relative_url }}?sort=ranking'">Sort by Ranking</button>
     </div> -->
 
-    <div class="college-grid">
-      {% assign colleges = site.data.colleges %}
-      {% if page.sort == 'ranking' %}
-        {% assign sorted_colleges = colleges | sort: 'ranking.overall' %}
-      {% else %}
-        {% assign sorted_colleges = colleges | sort: 'name' %}
-      {% endif %}
-      {% for college in sorted_colleges %}
-        {% include college-card.html 
-          slug=college.slug
-          id=college.id 
-          name=college.name 
-          description=college.description 
-          icon=college.icon 
-        %}
-      {% endfor %}
+    <div class="college-cards-container">
+      <div class="college-grid">
+        {% assign colleges = site.data.colleges %}
+        {% if page.sort == 'ranking' %}
+          {% assign sorted_colleges = colleges | sort: 'ranking.overall' %}
+        {% else %}
+          {% assign sorted_colleges = colleges | sort: 'name' %}
+        {% endif %}
+        {% for college in sorted_colleges %}
+          <div class="card" data-card-index="{{ forloop.index0 }}">
+            {% include college-card.html 
+              slug=college.slug
+              id=college.id 
+              name=college.name 
+              description=college.description 
+              icon=college.icon 
+            %}
+          </div>
+        {% endfor %}
+      </div>
     </div>
     <!-- <div class="section-footer">
       <a href="{{ '/colleges/' | relative_url }}" class="btn-primary">View All Colleges</a>
