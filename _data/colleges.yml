@@ -4526,6 +4526,43 @@
                   id: ymca-industrial-engineering-2022  # Add this unique identifier
                   pages: 3
                   title: "Industrial Engineering 2022"
+            - name: Sessional
+              id: sessional
+              slug: sessional
+              description: Subjects for Sessional Exams
+              keywords: ["sessional", "exams"]
+              new: true
+              pyqs:
+                - year: 2022
+                  file: ymca-dom-2022-mid-1.pdf
+                  id: ymca-dom-2022-mid-1
+                  pages: 3
+                  title: "Dynamics of Machines 2022 Mid 1"
+                  new: true
+                - year: 2022
+                  file: ymca-dme-2022-mid-1.pdf
+                  id: ymca-dme-2022-mid-1
+                  pages: 3
+                  title: "Design of Machine Elements 1 2022 Mid 1"
+                  new: true
+                - year: 2022
+                  file: ymca-hmt-2022-mid-1.pdf
+                  id: ymca-hmt-2022-mid-1
+                  pages: 3
+                  title: "Heat and Mass Transfer 2022 Mid 1"
+                  new: true
+                - year: 2022
+                  file: ymca-industrial-engineering-2022-mid-1.pdf
+                  id: ymca-industrial-engineering-2022-mid-1
+                  pages: 3
+                  title: "Industrial Engineering 2022 Mid 1"
+                  new: true
+                - year: 2022
+                  file: ymca-rac-2022-mid-1.pdf
+                  id: ymca-rac-2022-mid-1
+                  pages: 3
+                  title: "Refrigeration and Air Conditioning 2022 Mid 1"
+                  new: true
         - number: 6
           slug: sem6
           id: sem6
