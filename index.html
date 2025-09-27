@@ -42,13 +42,17 @@ title: Home
     <div class="college-cards-container">
       <div class="college-grid">
         {% assign colleges = site.data.colleges %}
+        {% assign integrated_marketing_cards = site.data.marketing_cards | where: 'type', 'integrated' %}
+        
         {% if page.sort == 'ranking' %}
           {% assign sorted_colleges = colleges | sort: 'ranking.overall' %}
         {% else %}
           {% assign sorted_colleges = colleges | sort: 'name' %}
         {% endif %}
+        
+        {% assign card_index = 0 %}
         {% for college in sorted_colleges %}
-          <div class="card" data-card-index="{{ forloop.index0 }}">
+          <div class="card" data-card-index="{{ card_index }}">
             {% include college-card.html 
               slug=college.slug
               id=college.id 
@@ -57,6 +61,20 @@ title: Home
               icon=college.icon 
             %}
           </div>
+          {% assign card_index = card_index | plus: 1 %}
+          
+          {% comment %} Insert marketing card after every 3rd college card {% endcomment %}
+          {% assign modulo = card_index | modulo: 4 %}
+          {% if modulo == 0 and integrated_marketing_cards.size > 0 %}
+            {% assign marketing_index = card_index | divided_by: 4 | minus: 1 %}
+            {% assign marketing_card = integrated_marketing_cards[marketing_index] %}
+            {% if marketing_card %}
+              <div class="card marketing-card-wrapper" data-card-index="{{ card_index }}">
+                {% include college-marketing-card.html marketing_card=marketing_card %}
+              </div>
+              {% assign card_index = card_index | plus: 1 %}
+            {% endif %}
+          {% endif %}
         {% endfor %}
       </div>
     </div>

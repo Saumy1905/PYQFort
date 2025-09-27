@@ -22,12 +22,27 @@ layout: default
     {% assign branch_data = college_data.branches | where: "slug", page.branch_slug | first %}
     
     {% if branch_data and branch_data.semesters %}
+      {% assign semester_marketing_cards = college_data.semester_marketing_cards | where: 'type', 'semester_integrated' %}
+      {% assign semester_index = 0 %}
+      
       {% for semester in branch_data.semesters %}
         {% include semester-card.html 
           semester=semester 
           college_slug=page.college_slug 
           branch_slug=page.branch_slug 
         %}
+        {% assign semester_index = semester_index | plus: 1 %}
+        
+        {% comment %} Insert marketing card after every 3rd semester card {% endcomment %}
+        {% assign modulo = semester_index | modulo: 4 %}
+        {% if modulo == 0 and semester_marketing_cards.size > 0 %}
+          {% assign marketing_index = semester_index | divided_by: 4 | minus: 1 %}
+          {% assign marketing_card = semester_marketing_cards[marketing_index] %}
+          {% if marketing_card %}
+            {% include semester-marketing-card.html marketing_card=marketing_card %}
+            {% assign semester_index = semester_index | plus: 1 %}
+          {% endif %}
+        {% endif %}
       {% endfor %}
       
       {% comment %} Add placeholder cards for future semesters {% endcomment %}

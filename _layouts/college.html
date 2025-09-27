@@ -31,6 +31,9 @@ layout: default
     {% assign college_data = site.data.colleges | where: "slug", page.college_slug | first %}
     
     {% if college_data and college_data.branches %}
+      {% assign branch_marketing_cards = college_data.branch_marketing_cards | where: 'type', 'branch_integrated' %}
+      {% assign branch_index = 0 %}
+      
       {% for branch in college_data.branches %}
         {% comment %} Safe URL construction {% endcomment %}
         {% assign safe_college_slug = page.college_slug | slugify %}
@@ -49,6 +52,18 @@ layout: default
           branch=branch
           college_slug=page.college_slug
         %}
+        {% assign branch_index = branch_index | plus: 1 %}
+        
+        {% comment %} Insert marketing card after every 3rd branch card {% endcomment %}
+        {% assign modulo = branch_index | modulo: 4 %}
+        {% if modulo == 0 and branch_marketing_cards.size > 0 %}
+          {% assign marketing_index = branch_index | divided_by: 4 | minus: 1 %}
+          {% assign marketing_card = branch_marketing_cards[marketing_index] %}
+          {% if marketing_card %}
+            {% include branch-marketing-card.html marketing_card=marketing_card %}
+            {% assign branch_index = branch_index | plus: 1 %}
+          {% endif %}
+        {% endif %}
       {% endfor %}
     {% else %}
       {% comment %} Debug info {% endcomment %}

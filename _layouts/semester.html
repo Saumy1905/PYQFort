@@ -24,6 +24,9 @@ layout: default
     {% assign semester_data = branch_data.semesters | where: "slug", page.semester_slug | first %}
     
     {% if semester_data and semester_data.subjects %}
+      {% assign subject_marketing_cards = college_data.subject_marketing_cards | where: 'type', 'subject_integrated' %}
+      {% assign subject_index = 0 %}
+      
       {% for subject in semester_data.subjects %}
         {% comment %} Safe URL construction {% endcomment %}
         {% assign safe_college = page.college_slug | slugify %}
@@ -43,6 +46,18 @@ layout: default
           url=subject_url
           id=subject.slug
         %}
+        {% assign subject_index = subject_index | plus: 1 %}
+        
+        {% comment %} Insert marketing card after every 4th subject card {% endcomment %}
+        {% assign modulo = subject_index | modulo: 5 %}
+        {% if modulo == 0 and subject_marketing_cards.size > 0 %}
+          {% assign marketing_index = subject_index | divided_by: 5 | minus: 1 %}
+          {% assign marketing_card = subject_marketing_cards[marketing_index] %}
+          {% if marketing_card %}
+            {% include subject-marketing-card.html marketing_card=marketing_card %}
+            {% assign subject_index = subject_index | plus: 1 %}
+          {% endif %}
+        {% endif %}
       {% endfor %}
     {% else %}
       {% comment %} Debug and error handling {% endcomment %}

@@ -1,0 +1,168 @@
+<style>
+  .college-marketing-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .college-marketing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: white;
+  }
+
+  .college-marketing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transform: translate(25px, -25px);
+  }
+
+  .college-marketing-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff6b6b;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+  }
+
+  .college-marketing-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .college-marketing-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255,255,255,0.3);
+  }
+
+  .college-marketing-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: white;
+  }
+
+  .college-marketing-description {
+    font-size: 0.9em;
+    opacity: 0.9;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  .college-marketing-cta {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+  }
+
+  .college-marketing-cta:hover {
+    background: rgba(255,255,255,0.3);
+    color: white;
+    text-decoration: none;
+  }
+
+  .college-marketing-cta i {
+    transition: transform 0.3s ease;
+  }
+
+  .college-marketing-card:hover .college-marketing-cta i {
+    transform: translateX(3px);
+  }
+
+  /* Theme variations for integrated cards */
+  .college-marketing-card.theme-blue {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .college-marketing-card.theme-green {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+  }
+
+  .college-marketing-card.theme-orange {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+
+  .college-marketing-card.theme-purple {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  }
+</style>
+
+<a href="{{ include.marketing_card.url }}" target="_blank" rel="noopener noreferrer" 
+   class="college-marketing-card {% if include.marketing_card.theme %}theme-{{ include.marketing_card.theme }}{% endif %}" 
+   onclick="gtag('event', 'click', {'event_category': 'marketing_integrated', 'event_label': '{{ include.marketing_card.title }}'});">
+  
+  {% if include.marketing_card.badge %}
+  <div class="college-marketing-badge">{{ include.marketing_card.badge }}</div>
+  {% endif %}
+
+  <div class="college-marketing-content">
+    {% if include.marketing_card.image %}
+      <img src="{{ '/assets/images/' | append: include.marketing_card.image | relative_url }}" 
+           alt="{{ include.marketing_card.title }}" 
+           class="college-marketing-image">
+    {% elsif include.marketing_card.icon %}
+      <div class="college-marketing-icon">
+        <i class="fas fa-{{ include.marketing_card.icon }}"></i>
+      </div>
+    {% endif %}
+
+    <h2>{{ include.marketing_card.title }}</h2>
+    <p class="college-marketing-description">{{ include.marketing_card.description }}</p>
+  </div>
+
+  <div class="college-marketing-cta">
+    {{ include.marketing_card.cta_text | default: "Learn More" }}
+    <i class="fas fa-arrow-right"></i>
+  </div>
+</a>

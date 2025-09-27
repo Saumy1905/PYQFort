@@ -1,0 +1,143 @@
+<style>
+  .subject-marketing-card {
+    background: linear-gradient(135deg, #e17055 0%, #fdcb6e 100%);
+    border-radius: 10px;
+    padding: 16px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .subject-marketing-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+    text-decoration: none;
+    color: white;
+  }
+
+  .subject-marketing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    transform: translate(12px, -12px);
+  }
+
+  .subject-marketing-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #2d3436;
+    color: white;
+    font-size: 7px;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    z-index: 2;
+  }
+
+  .subject-marketing-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: white;
+  }
+
+  .subject-marketing-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid rgba(255,255,255,0.3);
+  }
+
+  .subject-marketing-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.95em;
+    font-weight: 600;
+    line-height: 1.2;
+    color: white;
+  }
+
+  .subject-marketing-content .subject-description {
+    font-size: 0.75em;
+    opacity: 0.9;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    flex-grow: 1;
+  }
+
+  .subject-marketing-content .pdf-count {
+    font-size: 0.7em;
+    opacity: 0.8;
+    background: rgba(255,255,255,0.1);
+    padding: 2px 5px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+
+  /* Theme variations for subject marketing cards */
+  .subject-marketing-card.theme-blue {
+    background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%);
+  }
+
+  .subject-marketing-card.theme-green {
+    background: linear-gradient(135deg, #00b894 0%, #55efc4 100%);
+  }
+
+  .subject-marketing-card.theme-orange {
+    background: linear-gradient(135deg, #e17055 0%, #fdcb6e 100%);
+  }
+
+  .subject-marketing-card.theme-purple {
+    background: linear-gradient(135deg, #a29bfe 0%, #fd79a8 100%);
+  }
+</style>
+
+<a href="{{ include.marketing_card.url }}" target="_blank" rel="noopener noreferrer" 
+   class="subject-marketing-card {% if include.marketing_card.theme %}theme-{{ include.marketing_card.theme }}{% endif %}" 
+   onclick="gtag('event', 'click', {'event_category': 'marketing_subject', 'event_label': '{{ include.marketing_card.title }}'});">
+  
+  {% if include.marketing_card.badge %}
+  <div class="subject-marketing-badge">{{ include.marketing_card.badge }}</div>
+  {% endif %}
+
+  <div class="subject-marketing-content">
+    {% if include.marketing_card.image %}
+      <img src="{{ '/assets/images/' | append: include.marketing_card.image | relative_url }}" 
+           alt="{{ include.marketing_card.title }}" 
+           class="subject-marketing-image">
+    {% elsif include.marketing_card.icon %}
+      <div class="subject-marketing-icon">
+        <i class="fas fa-{{ include.marketing_card.icon }}"></i>
+      </div>
+    {% endif %}
+
+    <h4>{{ include.marketing_card.title }}</h4>
+    <p class="subject-description">{{ include.marketing_card.description }}</p>
+    <div class="pdf-count">
+      {{ include.marketing_card.meta_text | default: "Sponsored" }}
+    </div>
+  </div>
+</a>

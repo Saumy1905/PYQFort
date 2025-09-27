@@ -1,0 +1,143 @@
+<style>
+  .branch-marketing-card {
+    background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .branch-marketing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: white;
+  }
+
+  .branch-marketing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    transform: translate(20px, -20px);
+  }
+
+  .branch-marketing-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #2d3436;
+    color: white;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+  }
+
+  .branch-marketing-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: white;
+  }
+
+  .branch-marketing-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255,255,255,0.3);
+  }
+
+  .branch-marketing-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: white;
+  }
+
+  .branch-marketing-content .branch-description {
+    font-size: 0.85em;
+    opacity: 0.9;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex-grow: 1;
+  }
+
+  .branch-marketing-content .meta {
+    font-size: 0.8em;
+    opacity: 0.8;
+    background: rgba(255,255,255,0.1);
+    padding: 4px 8px;
+    border-radius: 12px;
+    display: inline-block;
+  }
+
+  /* Theme variations for branch marketing cards */
+  .branch-marketing-card.theme-blue {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  }
+
+  .branch-marketing-card.theme-green {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  }
+
+  .branch-marketing-card.theme-orange {
+    background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+  }
+
+  .branch-marketing-card.theme-purple {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  }
+</style>
+
+<a href="{{ include.marketing_card.url }}" target="_blank" rel="noopener noreferrer" 
+   class="branch-marketing-card {% if include.marketing_card.theme %}theme-{{ include.marketing_card.theme }}{% endif %}" 
+   onclick="gtag('event', 'click', {'event_category': 'marketing_branch', 'event_label': '{{ include.marketing_card.title }}'});">
+  
+  {% if include.marketing_card.badge %}
+  <div class="branch-marketing-badge">{{ include.marketing_card.badge }}</div>
+  {% endif %}
+
+  <div class="branch-marketing-content">
+    {% if include.marketing_card.image %}
+      <img src="{{ '/assets/images/' | append: include.marketing_card.image | relative_url }}" 
+           alt="{{ include.marketing_card.title }}" 
+           class="branch-marketing-image">
+    {% elsif include.marketing_card.icon %}
+      <div class="branch-marketing-icon">
+        <i class="fas fa-{{ include.marketing_card.icon }}"></i>
+      </div>
+    {% endif %}
+
+    <h3 class="branch-title">{{ include.marketing_card.title }}</h3>
+    <p class="branch-description">{{ include.marketing_card.description }}</p>
+    <div class="meta">
+      {{ include.marketing_card.meta_text | default: "Sponsored Content" }}
+    </div>
+  </div>
+</a>
