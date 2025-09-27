@@ -1,0 +1,18 @@
+# Global Marketing Cards Data
+# These cards appear on the home page and across the site
+
+- title: "PYQFort"
+  description: "PYQFort is Democratizing Education by providing premium, engineered, educational resources for the B.Tech students of India."
+  url: "https://pyqfort.com"
+  image: "marketing/pyqfort.jpg"
+  badge: "Featured"
+  theme: "blue"
+  cta_text: "Get Access"
+
+- title: "PYQFort"
+  description: "PYQFort is Democratizing Education by providing premium, engineered, educational resources for the B.Tech students of India."
+  url: "https://pyqfort.com"
+  icon: "chalkboard-teacher"
+  badge: "New"
+  theme: "green"
+  cta_text: "Start Learning"

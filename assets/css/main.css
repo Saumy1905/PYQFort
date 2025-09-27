@@ -2943,6 +2943,36 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
+/* Marketing Cards Styles */
+.marketing-section, .global-marketing {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  margin: 2rem 0;
+}
+
+.marketing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.marketing-section .section-title, .global-marketing .section-title {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Dark theme support for marketing section */
+.dark-theme .marketing-section,
+.dark-theme .global-marketing {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+}
+
+.dark-theme .marketing-section .section-title,
+.dark-theme .global-marketing .section-title {
+  color: #f7fafc;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
@@ -2951,5 +2981,15 @@ h1, h2, h3, h4, h5, h6 {
   .btn-contribute-form {
     width: 100%;
     text-align: center;
+  }
+
+  .marketing-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .marketing-section, .global-marketing {
+    padding: 2rem 0;
+    margin: 1rem 0;
   }
 }

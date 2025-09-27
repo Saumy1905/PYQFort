@@ -13,6 +13,15 @@
     category: "Government"
     total_students: 8000
     accreditation: "NAAC A+"
+  # Marketing cards specific to this college
+  marketing_cards:
+    - title: "PYQFort"
+      description: "PYQFort is Democratizing Education by providing premium, engineered, educational resources for the B.Tech students of India."
+      url: "https://pyqfort.com"
+      icon: "graduation-cap"
+      badge: "Exclusive"
+      theme: "blue"
+      cta_text: "Get Access"
   branches:
     - name: Fresher Year
       slug: acr
@@ -6462,6 +6471,21 @@
     category: "Public"
     total_students: 6000
     accreditation: "NAAC A"
+  # Marketing cards for NIT Kurukshetra
+  marketing_cards:
+    - title: "NIT-KKR Research Labs"
+      description: "Explore cutting-edge research opportunities and projects available for NIT Kurukshetra students."
+      url: "https://example.com/nitkkr-research"
+      icon: "flask"
+      badge: "Research"
+      theme: "purple"
+      cta_text: "Explore Labs"
+    - title: "Tech Fest Sponsors"
+      description: "Partner with leading tech companies during Confluence - NIT Kurukshetra's annual technical festival."
+      url: "https://example.com/nitkkr-techfest"
+      icon: "rocket"
+      theme: "orange"
+      cta_text: "Sponsor Now"
   branches:
     - name: Computer Department
       slug: computer-department

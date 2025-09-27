@@ -13,6 +13,18 @@ layout: default
     <p class="page-description">{{ page.description | default: "Explore branches and their Previous Year Question Papers" }}</p>
   </header>
 
+  <!-- Marketing Cards -->
+  {% if college_data and college_data.marketing_cards %}
+  <section class="marketing-section">
+    <h2 class="section-title">Featured Resources</h2>
+    <div class="marketing-grid">
+      {% for marketing_card in college_data.marketing_cards %}
+        {% include marketing-card.html marketing_card=marketing_card %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   <!-- Branch Grid -->
   <section class="branch-grid">
     {% comment %} Use the working neo x manus logic {% endcomment %}

@@ -16,6 +16,19 @@ title: Home
   </div>
 </section>
 
+<section class="global-marketing">
+  <div class="container">
+    {% if site.data.marketing_cards %}
+    <h2 class="section-title">Featured Partners</h2>
+    <div class="marketing-grid">
+      {% for marketing_card in site.data.marketing_cards %}
+        {% include marketing-card.html marketing_card=marketing_card %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
 <section class="featured-colleges">
   <div class="container">
     <h2 class="section-title">Browse by Colleges</h2>
