@@ -2,14 +2,16 @@
   .semester-marketing-card {
     background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
     border-radius: 12px;
-    padding: 18px;
+    padding: 20px;
     color: white;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    min-height: 180px;
+    min-height: 200px;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,8 +19,8 @@
   }
 
   .semester-marketing-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     text-decoration: none;
     color: white;
   }
@@ -28,73 +30,96 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 50px;
-    height: 50px;
-    background: rgba(255,255,255,0.15);
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.1);
     border-radius: 50%;
-    transform: translate(15px, -15px);
+    transform: translate(25px, -25px);
   }
 
   .semester-marketing-badge {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #fd79a8;
+    top: 15px;
+    right: 15px;
+    background: #ff6b6b;
     color: white;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: bold;
-    padding: 2px 5px;
-    border-radius: 8px;
+    padding: 4px 8px;
+    border-radius: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     z-index: 2;
   }
 
   .semester-marketing-icon {
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
     background: rgba(255,255,255,0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 12px;
-    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-size: 1.5em;
     color: white;
   }
 
   .semester-marketing-image {
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     border: 2px solid rgba(255,255,255,0.3);
   }
 
   .semester-marketing-content h3 {
-    margin: 0 0 6px 0;
-    font-size: 1.0em;
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
     font-weight: 600;
     line-height: 1.3;
     color: white;
   }
 
   .semester-marketing-content .semester-description {
-    font-size: 0.8em;
+    font-size: 0.9em;
     opacity: 0.9;
-    line-height: 1.3;
-    margin-bottom: 12px;
+    line-height: 1.4;
+    margin-bottom: 20px;
     flex-grow: 1;
   }
 
   .semester-marketing-content .meta {
-    font-size: 0.75em;
-    opacity: 0.8;
-    background: rgba(255,255,255,0.1);
-    padding: 3px 6px;
-    border-radius: 10px;
-    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+  }
+
+  .semester-marketing-content .meta:hover {
+    background: rgba(255,255,255,0.3);
+    color: white;
+    text-decoration: none;
+  }
+
+  .semester-marketing-content .meta i {
+    transition: transform 0.3s ease;
+  }
+
+  .semester-marketing-card:hover .meta i {
+    transform: translateX(3px);
   }
 
   /* Theme variations for semester marketing cards */
@@ -136,8 +161,10 @@
 
     <h3>{{ include.marketing_card.title }}</h3>
     <p class="semester-description">{{ include.marketing_card.description }}</p>
-    <div class="meta">
-      {{ include.marketing_card.meta_text | default: "Sponsored" }}
-    </div>
+  </div>
+
+  <div class="meta">
+    {{ include.marketing_card.meta_text | default: "Learn More" }}
+    <i class="fas fa-arrow-right"></i>
   </div>
 </a>
