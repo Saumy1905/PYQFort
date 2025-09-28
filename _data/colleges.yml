@@ -24,7 +24,7 @@
       image: "marketing/pyqfort.jpg"
       theme: "blue"
       meta_text: "Get Access"
-      type: "branch_integrated"
+      # type: "branch_integrated"
     - title: "Engineering Tools Bundle"
       description: "Essential software and tools every engineering student needs at discounted prices."
       url: "https://example.com/engineering-tools"
@@ -32,7 +32,7 @@
       badge: "50% OFF"
       theme: "orange"
       meta_text: "Limited Time Offer"
-      type: "branch_integrated"
+      # type: "branch_integrated"
     - title: "Study Groups Platform"
       description: "Join collaborative study groups with fellow students from your college."
       url: "https://example.com/study-groups"
@@ -40,7 +40,7 @@
       badge: "FREE"
       theme: "green"
       meta_text: "Join 500+ Students"
-      type: "branch_integrated"
+      # type: "branch_integrated"
   branches:
     - name: Fresher Year
       slug: acr
@@ -58,7 +58,7 @@
           badge: "FRESHMAN"
           theme: "blue"
           meta_text: "For First Year"
-          type: "semester_integrated"
+          # type: "semester_integrated"
         - title: "Basic Engineering Notes"
           description: "Essential notes covering fundamental engineering subjects for freshers."
           url: "https://example.com/basic-notes"
@@ -66,7 +66,7 @@
           badge: "BASIC"
           theme: "purple"
           meta_text: "Foundation Level"
-          type: "semester_integrated"
+          # type: "semester_integrated"
       semesters:
         - number: 1
           slug: sem1
@@ -82,7 +82,7 @@
               badge: "HD"
               theme: "green"
               meta_text: "Semester 1"
-              type: "subject_integrated"
+              # type: "subject_integrated"
             - title: "Sem 1 Practice Tests"
               description: "Mock tests and practice papers specifically for Semester 1 examination pattern."
               url: "https://example.com/sem1-tests"
@@ -90,7 +90,7 @@
               badge: "MOCK"
               theme: "orange"
               meta_text: "For Sem 1"
-              type: "subject_integrated"
+              # type: "subject_integrated"
           subjects:
             - name: Basic Electrical Technology
               slug: bet
@@ -457,7 +457,7 @@
               badge: "ADVANCED"
               theme: "blue"
               meta_text: "Semester 2"
-              type: "subject_integrated"
+              # type: "subject_integrated"
             - title: "Sem 2 Mock Exams"
               description: "Comprehensive mock examinations designed for Semester 2 syllabus and pattern."
               url: "https://example.com/sem2-mock-exams"
@@ -465,7 +465,7 @@
               badge: "PREMIUM"
               theme: "purple"
               meta_text: "For Sem 2"
-              type: "subject_integrated"
+              # type: "subject_integrated"
           subjects:
             - name: Engineering Graphics and Design
               slug: egd
@@ -731,7 +731,7 @@
           badge: "CODING"
           theme: "green"
           meta_text: "For CS Students"
-          type: "semester_integrated"
+          # type: "semester_integrated"
         - title: "Tech Interview Prep"
           description: "Complete preparation for technical interviews at top tech companies."
           url: "https://example.com/tech-interview-prep"
@@ -739,7 +739,7 @@
           badge: "PLACEMENT"
           theme: "orange"
           meta_text: "Job Ready"
-          type: "semester_integrated"
+          # type: "semester_integrated"
       semesters:
         - number: 3
           slug: sem3
@@ -754,7 +754,7 @@
               badge: "LAB"
               theme: "green"
               meta_text: "CS Sem 3"
-              type: "subject_integrated"
+              # type: "subject_integrated"
             - title: "CS Algorithms Course"
               description: "Comprehensive algorithms course with problem solving and competitive programming."
               url: "https://example.com/cs-algorithms"
@@ -762,7 +762,7 @@
               badge: "PRO"
               theme: "blue"
               meta_text: "Advanced Level"
-              type: "subject_integrated"
+              # type: "subject_integrated"
           subjects:
             - name: Analog Electronic Circuit
               description: Study of electronic circuits and devices
