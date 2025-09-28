@@ -17,12 +17,12 @@ layout: default
 
   <!-- Semester Grid -->
   <section class="semester-grid">
-    {% comment %} Use the working neo x manus logic {% endcomment %}
+    {% comment %} Use the working project logic {% endcomment %}
     {% assign college_data = site.data.colleges | where: "slug", page.college_slug | first %}
     {% assign branch_data = college_data.branches | where: "slug", page.branch_slug | first %}
     
     {% if branch_data and branch_data.semesters %}
-      {% assign semester_marketing_cards = college_data.semester_marketing_cards | where: 'type', 'semester_integrated' %}
+      {% assign semester_marketing_cards = branch_data.semester_marketing_cards | where: 'type', 'semester_integrated' %}
       {% assign semester_index = 0 %}
       
       {% for semester in branch_data.semesters %}

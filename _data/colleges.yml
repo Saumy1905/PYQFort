@@ -13,17 +13,17 @@
     category: "Government"
     total_students: 8000
     accreditation: "NAAC A+"
-  # Marketing cards specific to this college
-  marketing_cards:
+  # Branch-level marketing cards
+  branch_marketing_cards:
     - title: "PYQFort"
       description: "PYQFort is Democratizing Education by providing premium, engineered, educational resources for the B.Tech students of India."
       url: "https://pyqfort.com"
       icon: "graduation-cap"
       badge: "Exclusive"
+      image: "marketing/pyqfort.jpg"
       theme: "blue"
-      cta_text: "Get Access"
-  # Branch-level marketing cards
-  branch_marketing_cards:
+      meta_text: "Get Access"
+      type: "branch_integrated"
     - title: "Engineering Tools Bundle"
       description: "Essential software and tools every engineering student needs at discounted prices."
       url: "https://example.com/engineering-tools"
@@ -40,42 +40,6 @@
       theme: "green"
       meta_text: "Join 500+ Students"
       type: "branch_integrated"
-  # Semester-level marketing cards
-  semester_marketing_cards:
-    - title: "Exam Prep Kit"
-      description: "Complete semester exam preparation with mock tests and solutions."
-      url: "https://example.com/exam-prep"
-      icon: "clipboard-check"
-      badge: "NEW"
-      theme: "blue"
-      meta_text: "95% Success Rate"
-      type: "semester_integrated"
-    - title: "Quick Notes"
-      description: "Concise semester notes for last-minute revision and quick learning."
-      url: "https://example.com/quick-notes"
-      icon: "sticky-note"
-      badge: "POPULAR"
-      theme: "purple"
-      meta_text: "Trusted by 1000+"
-      type: "semester_integrated"
-  # Subject-level marketing cards
-  subject_marketing_cards:
-    - title: "Video Lectures"
-      description: "HD video lectures by top professors for better understanding."
-      url: "https://example.com/video-lectures"
-      icon: "play-circle"
-      badge: "HD"
-      theme: "green"
-      meta_text: "4.9★ Rating"
-      type: "subject_integrated"
-    - title: "Practice Tests"
-      description: "Subject-wise practice tests with detailed solutions and explanations."
-      url: "https://example.com/practice-tests"
-      icon: "tasks"
-      badge: "MOCK"
-      theme: "orange"
-      meta_text: "Unlimited Access"
-      type: "subject_integrated"
   branches:
     - name: Fresher Year
       slug: acr
@@ -83,12 +47,48 @@
       description: Academic Common Subjects for Freshers
       keywords: ["common", "first year", "freshers", "foundation"]
       icon: book
+      # Branch-specific semester marketing cards for Fresher Year
+      semester_marketing_cards:
+        - title: "Foundation Exam Kit"
+          description: "Specially designed exam preparation for first year engineering students."
+          url: "https://example.com/foundation-exam-prep"
+          icon: "clipboard-check"
+          badge: "FRESHMAN"
+          theme: "blue"
+          meta_text: "For First Year"
+          type: "semester_integrated"
+        - title: "Basic Engineering Notes"
+          description: "Essential notes covering fundamental engineering subjects for freshers."
+          url: "https://example.com/basic-notes"
+          icon: "sticky-note"
+          badge: "BASIC"
+          theme: "purple"
+          meta_text: "Foundation Level"
+          type: "semester_integrated"
       semesters:
         - number: 1
           slug: sem1
           id: sem1
           description: Subjects for Semester 1
           keywords: ["semester 1", "common", "foundation"]
+          # Semester 1 specific subject marketing cards
+          subject_marketing_cards:
+            - title: "Sem 1 Video Lectures"
+              description: "Comprehensive video lectures for all Semester 1 subjects with expert instructors."
+              url: "https://example.com/sem1-videos"
+              icon: "play-circle"
+              badge: "HD"
+              theme: "green"
+              meta_text: "Semester 1"
+              type: "subject_integrated"
+            - title: "Sem 1 Practice Tests"
+              description: "Mock tests and practice papers specifically for Semester 1 examination pattern."
+              url: "https://example.com/sem1-tests"
+              icon: "tasks"
+              badge: "MOCK"
+              theme: "orange"
+              meta_text: "For Sem 1"
+              type: "subject_integrated"
           subjects:
             - name: Basic Electrical Technology
               slug: bet
@@ -446,6 +446,24 @@
           id: sem2
           description: Subjects for Semester 2
           keywords: ["semester 2", "common", "foundation"]
+          # Semester 2 specific subject marketing cards
+          subject_marketing_cards:
+            - title: "Sem 2 Advanced Lectures"
+              description: "Advanced video content for Semester 2 engineering subjects with practical examples."
+              url: "https://example.com/sem2-advanced-videos"
+              icon: "play-circle"
+              badge: "ADVANCED"
+              theme: "blue"
+              meta_text: "Semester 2"
+              type: "subject_integrated"
+            - title: "Sem 2 Mock Exams"
+              description: "Comprehensive mock examinations designed for Semester 2 syllabus and pattern."
+              url: "https://example.com/sem2-mock-exams"
+              icon: "tasks"
+              badge: "PREMIUM"
+              theme: "purple"
+              meta_text: "For Sem 2"
+              type: "subject_integrated"
           subjects:
             - name: Engineering Graphics and Design
               slug: egd
@@ -702,11 +720,47 @@
       description: Computer Engineering Branch
       keywords: ["computer", "programming", "software", "hardware"]
       icon: laptop-code
+      # Branch-specific semester marketing cards for Computer Engineering
+      semester_marketing_cards:
+        - title: "Programming Bootcamp"
+          description: "Intensive coding bootcamp for computer engineering students with industry projects."
+          url: "https://example.com/programming-bootcamp"
+          icon: "code"
+          badge: "CODING"
+          theme: "green"
+          meta_text: "For CS Students"
+          type: "semester_integrated"
+        - title: "Tech Interview Prep"
+          description: "Complete preparation for technical interviews at top tech companies."
+          url: "https://example.com/tech-interview-prep"
+          icon: "laptop-code"
+          badge: "PLACEMENT"
+          theme: "orange"
+          meta_text: "Job Ready"
+          type: "semester_integrated"
       semesters:
         - number: 3
           slug: sem3
           id: sem3
           description: Subjects for Semester 3
+          # Computer Engineering Semester 3 specific subject marketing cards
+          subject_marketing_cards:
+            - title: "CS Sem 3 Coding Labs"
+              description: "Interactive coding labs for data structures, algorithms and programming concepts."
+              url: "https://example.com/cs-sem3-labs"
+              icon: "laptop-code"
+              badge: "LAB"
+              theme: "green"
+              meta_text: "CS Sem 3"
+              type: "subject_integrated"
+            - title: "CS Algorithms Course"
+              description: "Comprehensive algorithms course with problem solving and competitive programming."
+              url: "https://example.com/cs-algorithms"
+              icon: "project-diagram"
+              badge: "PRO"
+              theme: "blue"
+              meta_text: "Advanced Level"
+              type: "subject_integrated"
           subjects:
             - name: Analog Electronic Circuit
               description: Study of electronic circuits and devices

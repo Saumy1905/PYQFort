@@ -24,7 +24,7 @@ layout: default
     {% assign semester_data = branch_data.semesters | where: "slug", page.semester_slug | first %}
     
     {% if semester_data and semester_data.subjects %}
-      {% assign subject_marketing_cards = college_data.subject_marketing_cards | where: 'type', 'subject_integrated' %}
+      {% assign subject_marketing_cards = semester_data.subject_marketing_cards | where: 'type', 'subject_integrated' %}
       {% assign subject_index = 0 %}
       
       {% for subject in semester_data.subjects %}

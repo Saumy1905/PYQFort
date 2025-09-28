@@ -27,7 +27,7 @@ layout: default
 
   <!-- Branch Grid -->
   <section class="branch-grid">
-    {% comment %} Use the working neo x manus logic {% endcomment %}
+    {% comment %} Use the working project logic {% endcomment %}
     {% assign college_data = site.data.colleges | where: "slug", page.college_slug | first %}
     
     {% if college_data and college_data.branches %}
