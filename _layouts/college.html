@@ -27,42 +27,113 @@ layout: default
 
   <!-- Branch Grid -->
   <section class="branch-grid">
-    {% comment %} Use the working project logic {% endcomment %}
+    {% comment %} === ROBUST ALPHABETICAL INSERTION LOGIC FOR BRANCHES === {% endcomment %}
     {% assign college_data = site.data.colleges | where: "slug", page.college_slug | first %}
     
     {% if college_data and college_data.branches %}
-      {% assign branch_marketing_cards = college_data.branch_marketing_cards | where: 'type', 'branch_integrated' %}
-      {% assign branch_index = 0 %}
+      {% comment %} 1. Get and prepare data with null safety {% endcomment %}
+      {% assign branch_marketing_cards = college_data.branch_marketing_cards | default: empty %}
+      {% assign filtered_marketing_cards = branch_marketing_cards | where: 'type', 'branch_integrated' | default: empty %}
       
-      {% for branch in college_data.branches %}
-        {% comment %} Safe URL construction {% endcomment %}
-        {% assign safe_college_slug = page.college_slug | slugify %}
-        {% assign safe_branch_slug = branch.slug | slugify %}
-        {% capture branch_url %}/colleges/{{ safe_college_slug }}/{{ safe_branch_slug }}{% endcapture %}
-        {% assign branch_url = branch_url | relative_url %}
+      {% comment %} 2. Filter by special flag with default handling {% endcomment %}
+      {% assign special_marketing_cards = "" | split: "," %}
+      {% assign regular_marketing_cards = "" | split: "," %}
+      
+      {% for card in filtered_marketing_cards %}
+        {% assign is_special = card.special | default: false %}
+        {% if is_special == true %}
+          {% assign special_marketing_cards = special_marketing_cards | push: card %}
+        {% else %}
+          {% assign regular_marketing_cards = regular_marketing_cards | push: card %}
+        {% endif %}
+      {% endfor %}
+      
+      {% comment %} 3. Sort branches and marketing cards alphabetically {% endcomment %}
+      {% assign sorted_branches = college_data.branches | sort: 'name' %}
+      {% assign sorted_marketing = regular_marketing_cards | sort: 'title' %}
+      
+      {% comment %} 4. Render special priority cards first {% endcomment %}
+      {% for special_card in special_marketing_cards %}
+        <div class="branch-card marketing-card-wrapper priority-card" data-card-type="marketing-priority">
+          {% include branch-marketing-card.html marketing_card=special_card %}
+        </div>
+      {% endfor %}
+      
+      {% comment %} 5. Alphabetical merge rendering {% endcomment %}
+      {% assign branch_index = 0 %}
+      {% assign marketing_index = 0 %}
+      {% assign branch_count = sorted_branches.size %}
+      {% assign marketing_count = sorted_marketing.size %}
+      
+      {% comment %} 6. Process all remaining items alphabetically {% endcomment %}
+      {% for iteration in (1..50) %}
+        {% if branch_index >= branch_count and marketing_index >= marketing_count %}
+          {% break %}
+        {% endif %}
         
-        {% comment %} Include branch card with proper parameters {% endcomment %}
-        {% include branch-card.html 
-          title=branch.name 
-          id=branch.slug
-          description=branch.description 
-          icon=branch.icon 
-          url=branch_url 
-          slug=branch.slug
-          branch=branch
-          college_slug=page.college_slug
-        %}
-        {% assign branch_index = branch_index | plus: 1 %}
+        {% assign current_branch = sorted_branches[branch_index] %}
+        {% assign current_marketing = sorted_marketing[marketing_index] %}
         
-        {% comment %} Insert marketing card after every 3rd branch card {% endcomment %}
-        {% assign modulo = branch_index | modulo: 4 %}
-        {% if modulo == 0 and branch_marketing_cards.size > 0 %}
-          {% assign marketing_index = branch_index | divided_by: 4 | minus: 1 %}
-          {% assign marketing_card = branch_marketing_cards[marketing_index] %}
-          {% if marketing_card %}
-            {% include branch-marketing-card.html marketing_card=marketing_card %}
+        {% if current_branch and current_marketing %}
+          {% comment %} Compare branch name with marketing title {% endcomment %}
+          {% assign branch_name_lower = current_branch.name | downcase %}
+          {% assign marketing_title_lower = current_marketing.title | downcase %}
+          
+          {% if branch_name_lower <= marketing_title_lower %}
+            {% comment %} Render branch card {% endcomment %}
+            {% assign safe_college_slug = page.college_slug | slugify %}
+            {% assign safe_branch_slug = current_branch.slug | slugify %}
+            {% capture branch_url %}/colleges/{{ safe_college_slug }}/{{ safe_branch_slug }}{% endcapture %}
+            {% assign branch_url = branch_url | relative_url %}
+            
+            <div class="branch-card" data-card-type="branch" data-sort-key="{{ branch_name_lower }}">
+              {% include branch-card.html 
+                title=current_branch.name 
+                id=current_branch.slug
+                description=current_branch.description 
+                icon=current_branch.icon 
+                url=branch_url 
+                slug=current_branch.slug
+                branch=current_branch
+                college_slug=page.college_slug
+              %}
+            </div>
             {% assign branch_index = branch_index | plus: 1 %}
+          {% else %}
+            {% comment %} Render marketing card {% endcomment %}
+            <div class="branch-card marketing-card-wrapper" data-card-type="marketing" data-sort-key="{{ marketing_title_lower }}">
+              {% include branch-marketing-card.html marketing_card=current_marketing %}
+            </div>
+            {% assign marketing_index = marketing_index | plus: 1 %}
           {% endif %}
+          
+        {% elsif current_branch %}
+          {% comment %} Only branches left {% endcomment %}
+          {% assign safe_college_slug = page.college_slug | slugify %}
+          {% assign safe_branch_slug = current_branch.slug | slugify %}
+          {% capture branch_url %}/colleges/{{ safe_college_slug }}/{{ safe_branch_slug }}{% endcapture %}
+          {% assign branch_url = branch_url | relative_url %}
+          
+          <div class="branch-card" data-card-type="branch" data-sort-key="{{ current_branch.name | downcase }}">
+            {% include branch-card.html 
+              title=current_branch.name 
+              id=current_branch.slug
+              description=current_branch.description 
+              icon=current_branch.icon 
+              url=branch_url 
+              slug=current_branch.slug
+              branch=current_branch
+              college_slug=page.college_slug
+            %}
+          </div>
+          {% assign branch_index = branch_index | plus: 1 %}
+          
+        {% elsif current_marketing %}
+          {% comment %} Only marketing cards left {% endcomment %}
+          <div class="branch-card marketing-card-wrapper" data-card-type="marketing" data-sort-key="{{ current_marketing.title | downcase }}">
+            {% include branch-marketing-card.html marketing_card=current_marketing %}
+          </div>
+          {% assign marketing_index = marketing_index | plus: 1 %}
         {% endif %}
       {% endfor %}
     {% else %}

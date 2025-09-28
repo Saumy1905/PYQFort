@@ -47,6 +47,7 @@
       description: Academic Common Subjects for Freshers
       keywords: ["common", "first year", "freshers", "foundation"]
       icon: book
+      special: true # Highlight this branch
       # Branch-specific semester marketing cards for Fresher Year
       semester_marketing_cards:
         - title: "Foundation Exam Kit"

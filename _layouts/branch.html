@@ -17,31 +17,94 @@ layout: default
 
   <!-- Semester Grid -->
   <section class="semester-grid">
-    {% comment %} Use the working project logic {% endcomment %}
+    {% comment %} === ROBUST ALPHABETICAL INSERTION LOGIC FOR SEMESTERS === {% endcomment %}
     {% assign college_data = site.data.colleges | where: "slug", page.college_slug | first %}
     {% assign branch_data = college_data.branches | where: "slug", page.branch_slug | first %}
     
     {% if branch_data and branch_data.semesters %}
-      {% assign semester_marketing_cards = branch_data.semester_marketing_cards | where: 'type', 'semester_integrated' %}
-      {% assign semester_index = 0 %}
+      {% comment %} 1. Get and prepare data with null safety {% endcomment %}
+      {% assign semester_marketing_cards = branch_data.semester_marketing_cards | default: empty %}
+      {% assign filtered_marketing_cards = semester_marketing_cards | where: 'type', 'semester_integrated' | default: empty %}
       
-      {% for semester in branch_data.semesters %}
-        {% include semester-card.html 
-          semester=semester 
-          college_slug=page.college_slug 
-          branch_slug=page.branch_slug 
-        %}
-        {% assign semester_index = semester_index | plus: 1 %}
+      {% comment %} 2. Filter by special flag with default handling {% endcomment %}
+      {% assign special_marketing_cards = "" | split: "," %}
+      {% assign regular_marketing_cards = "" | split: "," %}
+      
+      {% for card in filtered_marketing_cards %}
+        {% assign is_special = card.special | default: false %}
+        {% if is_special == true %}
+          {% assign special_marketing_cards = special_marketing_cards | push: card %}
+        {% else %}
+          {% assign regular_marketing_cards = regular_marketing_cards | push: card %}
+        {% endif %}
+      {% endfor %}
+      
+      {% comment %} 3. Sort semesters and marketing cards alphabetically {% endcomment %}
+      {% assign sorted_semesters = branch_data.semesters | sort: 'number' %}
+      {% assign sorted_marketing = regular_marketing_cards | sort: 'title' %}
+      
+      {% comment %} 4. Render special priority cards first {% endcomment %}
+      {% for special_card in special_marketing_cards %}
+        <div class="semester-card marketing-card-wrapper priority-card" data-card-type="marketing-priority">
+          {% include semester-marketing-card.html marketing_card=special_card %}
+        </div>
+      {% endfor %}
+      
+      {% comment %} 5. Alphabetical merge rendering {% endcomment %}
+      {% assign semester_index = 0 %}
+      {% assign marketing_index = 0 %}
+      {% assign semester_count = sorted_semesters.size %}
+      {% assign marketing_count = sorted_marketing.size %}
+      
+      {% comment %} 6. Process all remaining items alphabetically {% endcomment %}
+      {% for iteration in (1..50) %}
+        {% if semester_index >= semester_count and marketing_index >= marketing_count %}
+          {% break %}
+        {% endif %}
         
-        {% comment %} Insert marketing card after every 3rd semester card {% endcomment %}
-        {% assign modulo = semester_index | modulo: 4 %}
-        {% if modulo == 0 and semester_marketing_cards.size > 0 %}
-          {% assign marketing_index = semester_index | divided_by: 4 | minus: 1 %}
-          {% assign marketing_card = semester_marketing_cards[marketing_index] %}
-          {% if marketing_card %}
-            {% include semester-marketing-card.html marketing_card=marketing_card %}
+        {% assign current_semester = sorted_semesters[semester_index] %}
+        {% assign current_marketing = sorted_marketing[marketing_index] %}
+        
+        {% if current_semester and current_marketing %}
+          {% comment %} Compare semester name with marketing title {% endcomment %}
+          {% assign semester_name_lower = current_semester.name | downcase %}
+          {% assign marketing_title_lower = current_marketing.title | downcase %}
+          
+          {% if semester_name_lower <= marketing_title_lower %}
+            {% comment %} Render semester card {% endcomment %}
+            <div class="semester-card" data-card-type="semester" data-sort-key="{{ semester_name_lower }}">
+              {% include semester-card.html 
+                semester=current_semester 
+                college_slug=page.college_slug 
+                branch_slug=page.branch_slug 
+              %}
+            </div>
             {% assign semester_index = semester_index | plus: 1 %}
+          {% else %}
+            {% comment %} Render marketing card {% endcomment %}
+            <div class="semester-card marketing-card-wrapper" data-card-type="marketing" data-sort-key="{{ marketing_title_lower }}">
+              {% include semester-marketing-card.html marketing_card=current_marketing %}
+            </div>
+            {% assign marketing_index = marketing_index | plus: 1 %}
           {% endif %}
+          
+        {% elsif current_semester %}
+          {% comment %} Only semesters left {% endcomment %}
+          <div class="semester-card" data-card-type="semester" data-sort-key="{{ current_semester.name | downcase }}">
+            {% include semester-card.html 
+              semester=current_semester 
+              college_slug=page.college_slug 
+              branch_slug=page.branch_slug 
+            %}
+          </div>
+          {% assign semester_index = semester_index | plus: 1 %}
+          
+        {% elsif current_marketing %}
+          {% comment %} Only marketing cards left {% endcomment %}
+          <div class="semester-card marketing-card-wrapper" data-card-type="marketing" data-sort-key="{{ current_marketing.title | downcase }}">
+            {% include semester-marketing-card.html marketing_card=current_marketing %}
+          </div>
+          {% assign marketing_index = marketing_index | plus: 1 %}
         {% endif %}
       {% endfor %}
       

@@ -41,41 +41,103 @@ title: Home
 
     <div class="college-cards-container">
       <div class="college-grid">
-        {% assign colleges = site.data.colleges %}
-        {% assign integrated_marketing_cards = site.data.marketing_cards | where: 'type', 'integrated' %}
+        {% comment %} === ROBUST ALPHABETICAL INSERTION LOGIC === {% endcomment %}
         
+        {% comment %} 1. Get and prepare data with null safety {% endcomment %}
+        {% assign colleges = site.data.colleges %}
+        {% assign integrated_marketing_cards = site.data.marketing_cards | where: 'type', 'integrated' | default: empty %}
+        
+        {% comment %} 2. Filter by special flag with default handling {% endcomment %}
+        {% assign special_marketing_cards = "" | split: "," %}
+        {% assign regular_marketing_cards = "" | split: "," %}
+        
+        {% for card in integrated_marketing_cards %}
+          {% assign is_special = card.special | default: false %}
+          {% if is_special == true %}
+            {% assign special_marketing_cards = special_marketing_cards | push: card %}
+          {% else %}
+            {% assign regular_marketing_cards = regular_marketing_cards | push: card %}
+          {% endif %}
+        {% endfor %}
+        
+        {% comment %} 3. Sort colleges and marketing cards {% endcomment %}
         {% if page.sort == 'ranking' %}
           {% assign sorted_colleges = colleges | sort: 'ranking.overall' %}
         {% else %}
           {% assign sorted_colleges = colleges | sort: 'name' %}
         {% endif %}
         
-        {% assign card_index = 0 %}
-        {% for college in sorted_colleges %}
-          <div class="card" data-card-index="{{ card_index }}">
-            {% include college-card.html 
-              slug=college.slug
-              id=college.id 
-              name=college.name 
-              description=college.description 
-              icon=college.icon 
-            %}
+        {% assign sorted_marketing = regular_marketing_cards | sort: 'title' %}
+        
+        {% comment %} 4. Render special priority cards first {% endcomment %}
+        {% for special_card in special_marketing_cards %}
+          <div class="card marketing-card-wrapper priority-card" data-card-type="marketing-priority">
+            {% include college-marketing-card.html marketing_card=special_card %}
           </div>
-          {% assign card_index = card_index | plus: 1 %}
+        {% endfor %}
+        
+        {% comment %} 5. Alphabetical merge rendering {% endcomment %}
+        {% assign college_index = 0 %}
+        {% assign marketing_index = 0 %}
+        {% assign college_count = sorted_colleges.size %}
+        {% assign marketing_count = sorted_marketing.size %}
+        
+        {% comment %} 6. Process all remaining items alphabetically {% endcomment %}
+        {% for iteration in (1..50) %}
+          {% if college_index >= college_count and marketing_index >= marketing_count %}
+            {% break %}
+          {% endif %}
           
-          {% comment %} Insert marketing card after every 3rd college card {% endcomment %}
-          {% assign modulo = card_index | modulo: 4 %}
-          {% if modulo == 0 and integrated_marketing_cards.size > 0 %}
-            {% assign marketing_index = card_index | divided_by: 4 | minus: 1 %}
-            {% assign marketing_card = integrated_marketing_cards[marketing_index] %}
-            {% if marketing_card %}
-              <div class="card marketing-card-wrapper" data-card-index="{{ card_index }}">
-                {% include college-marketing-card.html marketing_card=marketing_card %}
+          {% assign current_college = sorted_colleges[college_index] %}
+          {% assign current_marketing = sorted_marketing[marketing_index] %}
+          
+          {% if current_college and current_marketing %}
+            {% comment %} Compare first letters for alphabetical ordering {% endcomment %}
+            {% assign college_name_lower = current_college.name | downcase %}
+            {% assign marketing_title_lower = current_marketing.title | downcase %}
+            
+            {% if college_name_lower <= marketing_title_lower %}
+              {% comment %} Render college card {% endcomment %}
+              <div class="card" data-card-type="college" data-sort-key="{{ college_name_lower }}">
+                {% include college-card.html 
+                  slug=current_college.slug
+                  id=current_college.id 
+                  name=current_college.name 
+                  description=current_college.description 
+                  icon=current_college.icon 
+                %}
               </div>
-              {% assign card_index = card_index | plus: 1 %}
+              {% assign college_index = college_index | plus: 1 %}
+            {% else %}
+              {% comment %} Render marketing card {% endcomment %}
+              <div class="card marketing-card-wrapper" data-card-type="marketing" data-sort-key="{{ marketing_title_lower }}">
+                {% include college-marketing-card.html marketing_card=current_marketing %}
+              </div>
+              {% assign marketing_index = marketing_index | plus: 1 %}
             {% endif %}
+            
+          {% elsif current_college %}
+            {% comment %} Only colleges left {% endcomment %}
+            <div class="card" data-card-type="college" data-sort-key="{{ current_college.name | downcase }}">
+              {% include college-card.html 
+                slug=current_college.slug
+                id=current_college.id 
+                name=current_college.name 
+                description=current_college.description 
+                icon=current_college.icon 
+              %}
+            </div>
+            {% assign college_index = college_index | plus: 1 %}
+            
+          {% elsif current_marketing %}
+            {% comment %} Only marketing cards left {% endcomment %}
+            <div class="card marketing-card-wrapper" data-card-type="marketing" data-sort-key="{{ current_marketing.title | downcase }}">
+              {% include college-marketing-card.html marketing_card=current_marketing %}
+            </div>
+            {% assign marketing_index = marketing_index | plus: 1 %}
           {% endif %}
         {% endfor %}
+        
       </div>
     </div>
     <!-- <div class="section-footer">

@@ -18,45 +18,117 @@ layout: default
 
   <!-- Subject Grid -->
   <section class="subject-grid">
-    {% comment %} Navigate to the correct nested data structure {% endcomment %}
+    {% comment %} === ROBUST ALPHABETICAL INSERTION LOGIC FOR SUBJECTS === {% endcomment %}
     {% assign college_data = site.data.colleges | where: "slug", page.college_slug | first %}
     {% assign branch_data = college_data.branches | where: "slug", page.branch_slug | first %}
     {% assign semester_data = branch_data.semesters | where: "slug", page.semester_slug | first %}
     
     {% if semester_data and semester_data.subjects %}
-      {% assign subject_marketing_cards = semester_data.subject_marketing_cards | where: 'type', 'subject_integrated' %}
-      {% assign subject_index = 0 %}
+      {% comment %} 1. Get and prepare data with null safety {% endcomment %}
+      {% assign subject_marketing_cards = semester_data.subject_marketing_cards | default: empty %}
+      {% assign filtered_marketing_cards = subject_marketing_cards | where: 'type', 'subject_integrated' | default: empty %}
       
-      {% for subject in semester_data.subjects %}
-        {% comment %} Safe URL construction {% endcomment %}
-        {% assign safe_college = page.college_slug | slugify %}
-        {% assign safe_branch = page.branch_slug | slugify %}
-        {% assign safe_semester = page.semester_slug | slugify %}
-        {% assign safe_subject = subject.slug | slugify %}
-        {% capture subject_url %}/colleges/{{ safe_college }}/{{ safe_branch }}/{{ safe_semester }}/{{ safe_subject }}{% endcapture %}
-        {% assign subject_url = subject_url | relative_url %}
+      {% comment %} 2. Filter by special flag with default handling {% endcomment %}
+      {% assign special_marketing_cards = "" | split: "," %}
+      {% assign regular_marketing_cards = "" | split: "," %}
+      
+      {% for card in filtered_marketing_cards %}
+        {% assign is_special = card.special | default: false %}
+        {% if is_special == true %}
+          {% assign special_marketing_cards = special_marketing_cards | push: card %}
+        {% else %}
+          {% assign regular_marketing_cards = regular_marketing_cards | push: card %}
+        {% endif %}
+      {% endfor %}
+      
+      {% comment %} 3. Sort subjects and marketing cards alphabetically {% endcomment %}
+      {% assign sorted_subjects = semester_data.subjects | sort: 'name' %}
+      {% assign sorted_marketing = regular_marketing_cards | sort: 'title' %}
+      
+      {% comment %} 4. Render special priority cards first {% endcomment %}
+      {% for special_card in special_marketing_cards %}
+        <div class="subject-card marketing-card-wrapper priority-card" data-card-type="marketing-priority">
+          {% include subject-marketing-card.html marketing_card=special_card %}
+        </div>
+      {% endfor %}
+      
+      {% comment %} 5. Alphabetical merge rendering {% endcomment %}
+      {% assign subject_index = 0 %}
+      {% assign marketing_index = 0 %}
+      {% assign subject_count = sorted_subjects.size %}
+      {% assign marketing_count = sorted_marketing.size %}
+      
+      {% comment %} 6. Process all remaining items alphabetically {% endcomment %}
+      {% for iteration in (1..50) %}
+        {% if subject_index >= subject_count and marketing_index >= marketing_count %}
+          {% break %}
+        {% endif %}
         
-        {% comment %} Include subject card with proper parameters {% endcomment %}
-        {% include subject-card.html 
-          name=subject.name
-          title=subject.name
-          code=subject.id
-          description=subject.description
-          pdf_count=subject.pyqs.size
-          url=subject_url
-          id=subject.slug
-        %}
-        {% assign subject_index = subject_index | plus: 1 %}
+        {% assign current_subject = sorted_subjects[subject_index] %}
+        {% assign current_marketing = sorted_marketing[marketing_index] %}
         
-        {% comment %} Insert marketing card after every 4th subject card {% endcomment %}
-        {% assign modulo = subject_index | modulo: 5 %}
-        {% if modulo == 0 and subject_marketing_cards.size > 0 %}
-          {% assign marketing_index = subject_index | divided_by: 5 | minus: 1 %}
-          {% assign marketing_card = subject_marketing_cards[marketing_index] %}
-          {% if marketing_card %}
-            {% include subject-marketing-card.html marketing_card=marketing_card %}
+        {% if current_subject and current_marketing %}
+          {% comment %} Compare subject name with marketing title {% endcomment %}
+          {% assign subject_name_lower = current_subject.name | downcase %}
+          {% assign marketing_title_lower = current_marketing.title | downcase %}
+          
+          {% if subject_name_lower <= marketing_title_lower %}
+            {% comment %} Render subject card {% endcomment %}
+            {% assign safe_college = page.college_slug | slugify %}
+            {% assign safe_branch = page.branch_slug | slugify %}
+            {% assign safe_semester = page.semester_slug | slugify %}
+            {% assign safe_subject = current_subject.slug | slugify %}
+            {% capture subject_url %}/colleges/{{ safe_college }}/{{ safe_branch }}/{{ safe_semester }}/{{ safe_subject }}{% endcapture %}
+            {% assign subject_url = subject_url | relative_url %}
+            
+            <div class="subject-card" data-card-type="subject" data-sort-key="{{ subject_name_lower }}">
+              {% include subject-card.html 
+                name=current_subject.name
+                title=current_subject.name
+                code=current_subject.id
+                description=current_subject.description
+                pdf_count=current_subject.pyqs.size
+                url=subject_url
+                id=current_subject.slug
+              %}
+            </div>
             {% assign subject_index = subject_index | plus: 1 %}
+          {% else %}
+            {% comment %} Render marketing card {% endcomment %}
+            <div class="subject-card marketing-card-wrapper" data-card-type="marketing" data-sort-key="{{ marketing_title_lower }}">
+              {% include subject-marketing-card.html marketing_card=current_marketing %}
+            </div>
+            {% assign marketing_index = marketing_index | plus: 1 %}
           {% endif %}
+          
+        {% elsif current_subject %}
+          {% comment %} Only subjects left {% endcomment %}
+          {% assign safe_college = page.college_slug | slugify %}
+          {% assign safe_branch = page.branch_slug | slugify %}
+          {% assign safe_semester = page.semester_slug | slugify %}
+          {% assign safe_subject = current_subject.slug | slugify %}
+          {% capture subject_url %}/colleges/{{ safe_college }}/{{ safe_branch }}/{{ safe_semester }}/{{ safe_subject }}{% endcapture %}
+          {% assign subject_url = subject_url | relative_url %}
+          
+          <div class="subject-card" data-card-type="subject" data-sort-key="{{ current_subject.name | downcase }}">
+            {% include subject-card.html 
+              name=current_subject.name
+              title=current_subject.name
+              code=current_subject.id
+              description=current_subject.description
+              pdf_count=current_subject.pyqs.size
+              url=subject_url
+              id=current_subject.slug
+            %}
+          </div>
+          {% assign subject_index = subject_index | plus: 1 %}
+          
+        {% elsif current_marketing %}
+          {% comment %} Only marketing cards left {% endcomment %}
+          <div class="subject-card marketing-card-wrapper" data-card-type="marketing" data-sort-key="{{ current_marketing.title | downcase }}">
+            {% include subject-marketing-card.html marketing_card=current_marketing %}
+          </div>
+          {% assign marketing_index = marketing_index | plus: 1 %}
         {% endif %}
       {% endfor %}
     {% else %}

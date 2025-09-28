@@ -1,38 +1,27 @@
 # Global Marketing Cards Data
 # These cards appear on the home page and across the site
 
-- title: "PYQFort"
+- title: "PYQFort Updates"
   description: "PYQFort is Democratizing Education by providing premium, engineered, educational resources for the B.Tech students of India."
-  url: "https://pyqfort.com"
+  url: "https://whatsapp.com/channel/0029VbA8ahgDzgT43SB9VH1V"
   icon: "graduation-cap"
   badge: "Exclusive"
   theme: "blue"
   cta_text: "Get Access"
   image: "marketing/pyqfort.jpg"
-  type: "integrated"  # Special flag to show among college cards
+  type: "integrated"
+  special: false  # Priority card - appears first if true
 
-- title: "Premium Study Resources"
-  description: "Access exclusive study materials, video lectures, and practice tests to boost your academic performance."
-  url: "https://example.com/premium-resources"
-  image: "marketing/premium-study.jpg"
-  badge: "Featured"
+- title: "Perplexity"
+  description: "Perplexity is a free AI-powered answer engine that provides accurate, trusted, and real-time answers to any question."
+  url: "https://plex.it/referrals/BV9TYPGT"
+  icon: "robot"
+  badge: "Free"
   theme: "blue"
   cta_text: "Get Access"
-
-- title: "Online Tutoring Platform"
-  description: "Connect with expert tutors for personalized 1-on-1 sessions in all engineering subjects."
-  url: "https://example.com/tutoring"
-  icon: "chalkboard-teacher"
-  badge: "New"
-  theme: "green"
-  cta_text: "Start Learning"
-
-- title: "Career Guidance Services"
-  description: "Expert career counseling, resume building, and interview preparation for engineering students."
-  url: "https://example.com/career-services"
-  image: "marketing/career-guidance.jpg"
-  theme: "orange"
-  cta_text: "Explore Services"
+  image: "marketing/perplexity.jpg"
+  type: "integrated"
+  special: false  # Regular alphabetical positioning
 
 - title: "Engineering Books Store"
   description: "Best collection of engineering textbooks, reference materials, and digital resources at discounted prices."
@@ -41,3 +30,4 @@
   badge: "Sale"
   theme: "purple"
   cta_text: "Shop Now"
+  special: false  # Regular alphabetical positioning
