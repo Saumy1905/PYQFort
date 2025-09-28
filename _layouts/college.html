@@ -48,22 +48,100 @@ layout: default
         {% endif %}
       {% endfor %}
       
-      {% comment %} 3. Sort branches and marketing cards alphabetically {% endcomment %}
-      {% assign sorted_branches = college_data.branches | sort: 'name' %}
-      {% assign sorted_marketing = regular_marketing_cards | sort: 'title' %}
+      {% comment %} 3. Filter branches by special flag with default handling {% endcomment %}
+      {% assign special_branches = "" | split: "," %}
+      {% assign regular_branches = "" | split: "," %}
       
-      {% comment %} 4. Render special priority cards first {% endcomment %}
-      {% for special_card in special_marketing_cards %}
-        <div class="branch-card marketing-card-wrapper priority-card" data-card-type="marketing-priority">
-          {% include branch-marketing-card.html marketing_card=special_card %}
-        </div>
+      {% for branch in college_data.branches %}
+        {% assign is_special = branch.special | default: false %}
+        {% if is_special == true %}
+          {% assign special_branches = special_branches | push: branch %}
+        {% else %}
+          {% assign regular_branches = regular_branches | push: branch %}
+        {% endif %}
       {% endfor %}
       
-      {% comment %} 5. Alphabetical merge rendering {% endcomment %}
+      {% comment %} 4. Sort all arrays alphabetically {% endcomment %}
+      {% assign sorted_special_branches = special_branches | sort: 'name' %}
+      {% assign sorted_regular_branches = regular_branches | sort: 'name' %}
+      {% assign sorted_special_marketing = special_marketing_cards | sort: 'title' %}
+      {% assign sorted_regular_marketing = regular_marketing_cards | sort: 'title' %}
+      
+      {% comment %} 5. Render ALL special priority items first (branches + marketing) alphabetically {% endcomment %}
+      {% assign special_branch_index = 0 %}
+      {% assign special_marketing_index = 0 %}
+      {% assign special_branch_count = sorted_special_branches.size %}
+      {% assign special_marketing_count = sorted_special_marketing.size %}
+      
+      {% for iteration in (1..50) %}
+        {% if special_branch_index >= special_branch_count and special_marketing_index >= special_marketing_count %}
+          {% break %}
+        {% endif %}
+        
+        {% assign current_special_branch = sorted_special_branches[special_branch_index] %}
+        {% assign current_special_marketing = sorted_special_marketing[special_marketing_index] %}
+        
+        {% if current_special_branch and current_special_marketing %}
+          {% assign branch_name_lower = current_special_branch.name | downcase %}
+          {% assign marketing_title_lower = current_special_marketing.title | downcase %}
+          
+          {% if branch_name_lower <= marketing_title_lower %}
+            {% assign safe_college_slug = page.college_slug | slugify %}
+            {% assign safe_branch_slug = current_special_branch.slug | slugify %}
+            {% capture branch_url %}/colleges/{{ safe_college_slug }}/{{ safe_branch_slug }}{% endcapture %}
+            {% assign branch_url = branch_url | relative_url %}
+            
+            <div class="branch-card priority-card" data-card-type="branch-priority" data-sort-key="{{ branch_name_lower }}">
+              {% include branch-card.html 
+                title=current_special_branch.name 
+                id=current_special_branch.slug
+                description=current_special_branch.description 
+                icon=current_special_branch.icon 
+                url=branch_url 
+                slug=current_special_branch.slug
+                branch=current_special_branch
+                college_slug=page.college_slug
+              %}
+            </div>
+            {% assign special_branch_index = special_branch_index | plus: 1 %}
+          {% else %}
+            <div class="branch-card marketing-card-wrapper priority-card" data-card-type="marketing-priority" data-sort-key="{{ marketing_title_lower }}">
+              {% include branch-marketing-card.html marketing_card=current_special_marketing %}
+            </div>
+            {% assign special_marketing_index = special_marketing_index | plus: 1 %}
+          {% endif %}
+        {% elsif current_special_branch %}
+          {% assign safe_college_slug = page.college_slug | slugify %}
+          {% assign safe_branch_slug = current_special_branch.slug | slugify %}
+          {% capture branch_url %}/colleges/{{ safe_college_slug }}/{{ safe_branch_slug }}{% endcapture %}
+          {% assign branch_url = branch_url | relative_url %}
+          
+          <div class="branch-card priority-card" data-card-type="branch-priority" data-sort-key="{{ current_special_branch.name | downcase }}">
+            {% include branch-card.html 
+              title=current_special_branch.name 
+              id=current_special_branch.slug
+              description=current_special_branch.description 
+              icon=current_special_branch.icon 
+              url=branch_url 
+              slug=current_special_branch.slug
+              branch=current_special_branch
+              college_slug=page.college_slug
+            %}
+          </div>
+          {% assign special_branch_index = special_branch_index | plus: 1 %}
+        {% elsif current_special_marketing %}
+          <div class="branch-card marketing-card-wrapper priority-card" data-card-type="marketing-priority" data-sort-key="{{ current_special_marketing.title | downcase }}">
+            {% include branch-marketing-card.html marketing_card=current_special_marketing %}
+          </div>
+          {% assign special_marketing_index = special_marketing_index | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      
+      {% comment %} 6. Regular alphabetical merge rendering {% endcomment %}
       {% assign branch_index = 0 %}
       {% assign marketing_index = 0 %}
-      {% assign branch_count = sorted_branches.size %}
-      {% assign marketing_count = sorted_marketing.size %}
+      {% assign branch_count = sorted_regular_branches.size %}
+      {% assign marketing_count = sorted_regular_marketing.size %}
       
       {% comment %} 6. Process all remaining items alphabetically {% endcomment %}
       {% for iteration in (1..50) %}
@@ -71,8 +149,8 @@ layout: default
           {% break %}
         {% endif %}
         
-        {% assign current_branch = sorted_branches[branch_index] %}
-        {% assign current_marketing = sorted_marketing[marketing_index] %}
+        {% assign current_branch = sorted_regular_branches[branch_index] %}
+        {% assign current_marketing = sorted_regular_marketing[marketing_index] %}
         
         {% if current_branch and current_marketing %}
           {% comment %} Compare branch name with marketing title {% endcomment %}

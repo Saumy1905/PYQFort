@@ -41,22 +41,102 @@ layout: default
         {% endif %}
       {% endfor %}
       
-      {% comment %} 3. Sort subjects and marketing cards alphabetically {% endcomment %}
-      {% assign sorted_subjects = semester_data.subjects | sort: 'name' %}
-      {% assign sorted_marketing = regular_marketing_cards | sort: 'title' %}
+      {% comment %} 3. Filter subjects by special flag with default handling {% endcomment %}
+      {% assign special_subjects = "" | split: "," %}
+      {% assign regular_subjects = "" | split: "," %}
       
-      {% comment %} 4. Render special priority cards first {% endcomment %}
-      {% for special_card in special_marketing_cards %}
-        <div class="subject-card marketing-card-wrapper priority-card" data-card-type="marketing-priority">
-          {% include subject-marketing-card.html marketing_card=special_card %}
-        </div>
+      {% for subject in semester_data.subjects %}
+        {% assign is_special = subject.special | default: false %}
+        {% if is_special == true %}
+          {% assign special_subjects = special_subjects | push: subject %}
+        {% else %}
+          {% assign regular_subjects = regular_subjects | push: subject %}
+        {% endif %}
       {% endfor %}
       
-      {% comment %} 5. Alphabetical merge rendering {% endcomment %}
+      {% comment %} 4. Sort all arrays alphabetically {% endcomment %}
+      {% assign sorted_special_subjects = special_subjects | sort: 'name' %}
+      {% assign sorted_regular_subjects = regular_subjects | sort: 'name' %}
+      {% assign sorted_special_marketing = special_marketing_cards | sort: 'title' %}
+      {% assign sorted_regular_marketing = regular_marketing_cards | sort: 'title' %}
+      
+      {% comment %} 5. Render ALL special priority items first (subjects + marketing) alphabetically {% endcomment %}
+      {% assign special_subject_index = 0 %}
+      {% assign special_marketing_index = 0 %}
+      {% assign special_subject_count = sorted_special_subjects.size %}
+      {% assign special_marketing_count = sorted_special_marketing.size %}
+      
+      {% for iteration in (1..50) %}
+        {% if special_subject_index >= special_subject_count and special_marketing_index >= special_marketing_count %}
+          {% break %}
+        {% endif %}
+        
+        {% assign current_special_subject = sorted_special_subjects[special_subject_index] %}
+        {% assign current_special_marketing = sorted_special_marketing[special_marketing_index] %}
+        
+        {% if current_special_subject and current_special_marketing %}
+          {% assign subject_name_lower = current_special_subject.name | downcase %}
+          {% assign marketing_title_lower = current_special_marketing.title | downcase %}
+          
+          {% if subject_name_lower <= marketing_title_lower %}
+            {% assign safe_college = page.college_slug | slugify %}
+            {% assign safe_branch = page.branch_slug | slugify %}
+            {% assign safe_semester = page.semester_slug | slugify %}
+            {% assign safe_subject = current_special_subject.slug | slugify %}
+            {% capture subject_url %}/colleges/{{ safe_college }}/{{ safe_branch }}/{{ safe_semester }}/{{ safe_subject }}{% endcapture %}
+            {% assign subject_url = subject_url | relative_url %}
+            
+            <div class="subject-card priority-card" data-card-type="subject-priority" data-sort-key="{{ subject_name_lower }}">
+              {% include subject-card.html 
+                name=current_special_subject.name
+                title=current_special_subject.name
+                code=current_special_subject.id
+                description=current_special_subject.description
+                pdf_count=current_special_subject.pyqs.size
+                url=subject_url
+                id=current_special_subject.slug
+              %}
+            </div>
+            {% assign special_subject_index = special_subject_index | plus: 1 %}
+          {% else %}
+            <div class="subject-card marketing-card-wrapper priority-card" data-card-type="marketing-priority" data-sort-key="{{ marketing_title_lower }}">
+              {% include subject-marketing-card.html marketing_card=current_special_marketing %}
+            </div>
+            {% assign special_marketing_index = special_marketing_index | plus: 1 %}
+          {% endif %}
+        {% elsif current_special_subject %}
+          {% assign safe_college = page.college_slug | slugify %}
+          {% assign safe_branch = page.branch_slug | slugify %}
+          {% assign safe_semester = page.semester_slug | slugify %}
+          {% assign safe_subject = current_special_subject.slug | slugify %}
+          {% capture subject_url %}/colleges/{{ safe_college }}/{{ safe_branch }}/{{ safe_semester }}/{{ safe_subject }}{% endcapture %}
+          {% assign subject_url = subject_url | relative_url %}
+          
+          <div class="subject-card priority-card" data-card-type="subject-priority" data-sort-key="{{ current_special_subject.name | downcase }}">
+            {% include subject-card.html 
+              name=current_special_subject.name
+              title=current_special_subject.name
+              code=current_special_subject.id
+              description=current_special_subject.description
+              pdf_count=current_special_subject.pyqs.size
+              url=subject_url
+              id=current_special_subject.slug
+            %}
+          </div>
+          {% assign special_subject_index = special_subject_index | plus: 1 %}
+        {% elsif current_special_marketing %}
+          <div class="subject-card marketing-card-wrapper priority-card" data-card-type="marketing-priority" data-sort-key="{{ current_special_marketing.title | downcase }}">
+            {% include subject-marketing-card.html marketing_card=current_special_marketing %}
+          </div>
+          {% assign special_marketing_index = special_marketing_index | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      
+      {% comment %} 6. Regular alphabetical merge rendering {% endcomment %}
       {% assign subject_index = 0 %}
       {% assign marketing_index = 0 %}
-      {% assign subject_count = sorted_subjects.size %}
-      {% assign marketing_count = sorted_marketing.size %}
+      {% assign subject_count = sorted_regular_subjects.size %}
+      {% assign marketing_count = sorted_regular_marketing.size %}
       
       {% comment %} 6. Process all remaining items alphabetically {% endcomment %}
       {% for iteration in (1..50) %}
@@ -64,8 +144,8 @@ layout: default
           {% break %}
         {% endif %}
         
-        {% assign current_subject = sorted_subjects[subject_index] %}
-        {% assign current_marketing = sorted_marketing[marketing_index] %}
+        {% assign current_subject = sorted_regular_subjects[subject_index] %}
+        {% assign current_marketing = sorted_regular_marketing[marketing_index] %}
         
         {% if current_subject and current_marketing %}
           {% comment %} Compare subject name with marketing title {% endcomment %}

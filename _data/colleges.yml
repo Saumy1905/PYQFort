@@ -20,6 +20,7 @@
       url: "https://pyqfort.com"
       icon: "graduation-cap"
       badge: "Exclusive"
+      special: true  # Priority card - appears first if true
       image: "marketing/pyqfort.jpg"
       theme: "blue"
       meta_text: "Get Access"

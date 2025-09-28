@@ -39,22 +39,80 @@ layout: default
         {% endif %}
       {% endfor %}
       
-      {% comment %} 3. Sort semesters and marketing cards alphabetically {% endcomment %}
-      {% assign sorted_semesters = branch_data.semesters | sort: 'number' %}
-      {% assign sorted_marketing = regular_marketing_cards | sort: 'title' %}
+      {% comment %} 3. Filter semesters by special flag with default handling {% endcomment %}
+      {% assign special_semesters = "" | split: "," %}
+      {% assign regular_semesters = "" | split: "," %}
       
-      {% comment %} 4. Render special priority cards first {% endcomment %}
-      {% for special_card in special_marketing_cards %}
-        <div class="semester-card marketing-card-wrapper priority-card" data-card-type="marketing-priority">
-          {% include semester-marketing-card.html marketing_card=special_card %}
-        </div>
+      {% for semester in branch_data.semesters %}
+        {% assign is_special = semester.special | default: false %}
+        {% if is_special == true %}
+          {% assign special_semesters = special_semesters | push: semester %}
+        {% else %}
+          {% assign regular_semesters = regular_semesters | push: semester %}
+        {% endif %}
       {% endfor %}
       
-      {% comment %} 5. Alphabetical merge rendering {% endcomment %}
+      {% comment %} 4. Sort all arrays alphabetically {% endcomment %}
+      {% assign sorted_special_semesters = special_semesters | sort: 'number' %}
+      {% assign sorted_regular_semesters = regular_semesters | sort: 'number' %}
+      {% assign sorted_special_marketing = special_marketing_cards | sort: 'title' %}
+      {% assign sorted_regular_marketing = regular_marketing_cards | sort: 'title' %}
+      
+      {% comment %} 5. Render ALL special priority items first (semesters + marketing) alphabetically {% endcomment %}
+      {% assign special_semester_index = 0 %}
+      {% assign special_marketing_index = 0 %}
+      {% assign special_semester_count = sorted_special_semesters.size %}
+      {% assign special_marketing_count = sorted_special_marketing.size %}
+      
+      {% for iteration in (1..50) %}
+        {% if special_semester_index >= special_semester_count and special_marketing_index >= special_marketing_count %}
+          {% break %}
+        {% endif %}
+        
+        {% assign current_special_semester = sorted_special_semesters[special_semester_index] %}
+        {% assign current_special_marketing = sorted_special_marketing[special_marketing_index] %}
+        
+        {% if current_special_semester and current_special_marketing %}
+          {% assign semester_name_lower = current_special_semester.name | downcase %}
+          {% assign marketing_title_lower = current_special_marketing.title | downcase %}
+          
+          {% if semester_name_lower <= marketing_title_lower %}
+            <div class="semester-card priority-card" data-card-type="semester-priority" data-sort-key="{{ semester_name_lower }}">
+              {% include semester-card.html 
+                semester=current_special_semester 
+                college_slug=page.college_slug 
+                branch_slug=page.branch_slug 
+              %}
+            </div>
+            {% assign special_semester_index = special_semester_index | plus: 1 %}
+          {% else %}
+            <div class="semester-card marketing-card-wrapper priority-card" data-card-type="marketing-priority" data-sort-key="{{ marketing_title_lower }}">
+              {% include semester-marketing-card.html marketing_card=current_special_marketing %}
+            </div>
+            {% assign special_marketing_index = special_marketing_index | plus: 1 %}
+          {% endif %}
+        {% elsif current_special_semester %}
+          <div class="semester-card priority-card" data-card-type="semester-priority" data-sort-key="{{ current_special_semester.name | downcase }}">
+            {% include semester-card.html 
+              semester=current_special_semester 
+              college_slug=page.college_slug 
+              branch_slug=page.branch_slug 
+            %}
+          </div>
+          {% assign special_semester_index = special_semester_index | plus: 1 %}
+        {% elsif current_special_marketing %}
+          <div class="semester-card marketing-card-wrapper priority-card" data-card-type="marketing-priority" data-sort-key="{{ current_special_marketing.title | downcase }}">
+            {% include semester-marketing-card.html marketing_card=current_special_marketing %}
+          </div>
+          {% assign special_marketing_index = special_marketing_index | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      
+      {% comment %} 6. Regular alphabetical merge rendering {% endcomment %}
       {% assign semester_index = 0 %}
       {% assign marketing_index = 0 %}
-      {% assign semester_count = sorted_semesters.size %}
-      {% assign marketing_count = sorted_marketing.size %}
+      {% assign semester_count = sorted_regular_semesters.size %}
+      {% assign marketing_count = sorted_regular_marketing.size %}
       
       {% comment %} 6. Process all remaining items alphabetically {% endcomment %}
       {% for iteration in (1..50) %}
@@ -62,8 +120,8 @@ layout: default
           {% break %}
         {% endif %}
         
-        {% assign current_semester = sorted_semesters[semester_index] %}
-        {% assign current_marketing = sorted_marketing[marketing_index] %}
+        {% assign current_semester = sorted_regular_semesters[semester_index] %}
+        {% assign current_marketing = sorted_regular_marketing[marketing_index] %}
         
         {% if current_semester and current_marketing %}
           {% comment %} Compare semester name with marketing title {% endcomment %}
