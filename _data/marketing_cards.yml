@@ -9,7 +9,7 @@
   theme: "blue"
   cta_text: "Get Access"
   image: "marketing/pyqfort.jpg"
-  type: "integrated"
+  # type: "integrated"
   special: false  # Priority card - appears first if true
 
 - title: "Free Perplexity Pro"
