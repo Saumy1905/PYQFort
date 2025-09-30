@@ -1217,7 +1217,7 @@ function initializeCardAnimations() {
 
 function initializeHoverEffects() {
   // Card tilt effect with performance optimization
-  const cards = document.querySelectorAll('.college-card, .branch-card, .semester-card, .subject-card, .pdf-card, .search-result-item');
+  const cards = document.querySelectorAll('.college-card, .branch-card, .semester-card, .search-result-item');
   cards.forEach(card => {
     // Only add event listeners if they don't already exist
     if (!card.dataset.tiltInitialized) {

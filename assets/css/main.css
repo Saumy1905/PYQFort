@@ -554,15 +554,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
 }
 
-.subject-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
+/* Individual subject-card hover removed - using consolidated styles */
 
 .subject-title {
   font-size: 1.5rem;
@@ -597,13 +593,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.pdf-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
+/* Individual pdf-card hover removed - using consolidated styles */
 
 .pdf-icon {
   padding: 2rem;
@@ -1728,8 +1720,7 @@ h1, h2, h3, h4, h5, h6 {
 .semester-card,
 .subject-card,
 .pdf-card {
-  transition: all 0.3s ease;
-  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .college-card:hover,
@@ -1737,7 +1728,8 @@ h1, h2, h3, h4, h5, h6 {
 .semester-card:hover,
 .subject-card:hover,
 .pdf-card:hover {
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Ripple effect for buttons */
