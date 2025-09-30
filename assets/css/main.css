@@ -1725,10 +1725,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .college-card:hover,
 .branch-card:hover,
-.semester-card:hover,
+.semester-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
 .subject-card:hover,
 .pdf-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 

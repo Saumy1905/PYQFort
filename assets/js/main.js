@@ -1217,7 +1217,7 @@ function initializeCardAnimations() {
 
 function initializeHoverEffects() {
   // Card tilt effect with performance optimization
-  const cards = document.querySelectorAll('.college-card, .branch-card, .semester-card, .search-result-item');
+  const cards = document.querySelectorAll('.college-card, .branch-card, .semester-card, .subject-card, .pdf-card, .search-result-item');
   cards.forEach(card => {
     // Only add event listeners if they don't already exist
     if (!card.dataset.tiltInitialized) {
@@ -1239,14 +1239,24 @@ function handleCardTilt(e) {
   const rotateY = (centerX - x) / 10;
   
   // Add will-change for better performance
-  card.style.willChange = 'transform';
+  card.style.willChange = 'transform, box-shadow';
   card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+  
+  // Enhanced box-shadow for subject and PDF cards during 3D tilt
+  if (card.classList.contains('subject-card') || card.classList.contains('pdf-card')) {
+    card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.15)';
+  }
 }
 
 function resetCardTilt(e) {
   const card = e.currentTarget;
   card.style.willChange = 'auto';
   card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+  
+  // Reset box-shadow for subject and PDF cards
+  if (card.classList.contains('subject-card') || card.classList.contains('pdf-card')) {
+    card.style.boxShadow = '';
+  }
 }
 
 // ============================================== [ADVANCED FILTERING] ==============================================
