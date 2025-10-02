@@ -12,17 +12,6 @@
   # type: "integrated"
   special: false  # Priority card - appears first if true
 
-- title: "Free Perplexity Pro"
-  description: "Perplexity is a free AI-powered answer engine that provides accurate, trusted, and real-time answers to any question."
-  url: "https://plex.it/referrals/BV9TYPGT"
-  icon: "robot"
-  badge: "Free"
-  theme: "blue"
-  cta_text: "Get Access"
-  image: "marketing/perplexity.jpg"
-  type: "integrated"
-  special: true 
-
 # - title: "Engineering Books Store"
 #   description: "Best collection of engineering textbooks, reference materials, and digital resources at discounted prices."
 #   url: "https://example.com/bookstore"
