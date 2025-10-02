@@ -190,6 +190,18 @@
                   pages: 3
                   title: "Basic Electrical Technology Sessional 2 2024"
                 - year: 2025
+                  file: ymca-bet-2025-sessional-1.pdf
+                  id: ymca-bet-2025-sessional-1
+                  pages: 3
+                  title: "Basic Electrical Technology Sessional 1 2025"
+                  new: true
+                - year: 2025
+                  file: ymca-bet-2025-sessional-2.pdf
+                  id: ymca-bet-2025-sessional-2
+                  pages: 3
+                  title: "Basic Electrical Technology Sessional 2 2025"
+                  new: true
+                - year: 2025
                   file: ymca-bet-2025.pdf
                   id: ymca-bet-2025
                   pages: 3
@@ -246,6 +258,18 @@
                   id: ymca-chemistry-2023-sessional-5
                   pages: 3
                   title: "Chemistry Sessional 5 2023"
+                - year: 2025
+                  file: ymca-chemistry-2025-sessional-1.pdf
+                  id: ymca-chemistry-2025-sessional-1
+                  pages: 3
+                  title: "Chemistry Sessional 1 2025"
+                  new: true
+                - year: 2025
+                  file: ymca-chemistry-2025-sessional-2.pdf
+                  id: ymca-chemistry-2025-sessional-2
+                  pages: 3
+                  title: "Chemistry Sessional 2 2025"
+                  new: true
                 - year: 2023
                   file: ymca-chemistry-2023.pdf
                   id: ymca-chemistry-2023
@@ -283,6 +307,18 @@
                   id: ymca-english-2023-sessional
                   pages: 3
                   title: "English Sessional 2023"
+                - year: 2025
+                  file: ymca-english-2025-sessional-1.pdf
+                  id: ymca-english-2025-sessional-1
+                  pages: 3
+                  title: "English Sessional 1 2025"
+                  new: true
+                - year: 2025
+                  file: ymca-english-2025-sessional-2.pdf
+                  id: ymca-english-2025-sessional-2
+                  pages: 3
+                  title: "English Sessional 2 2025"
+                  new: true
                 - year: 2023
                   file: ymca-english-set-1-2023.pdf
                   id: ymca-english-set-1-2023
@@ -337,6 +373,12 @@
                   id: ymca-maths-103-a-2023-sessional
                   pages: 3
                   title: "Mathematics 103-A Sessional 2023"
+                - year: 2025
+                  file: ymca-maths-103-a-2025-sessional-1.pdf
+                  id: ymca-maths-103-a-2025-sessional-1
+                  pages: 3
+                  title: "Mathematics 103-A Sessional 1 2025"
+                  new: true
                 - year: 2023
                   file: ymca-maths-103-a-2023.pdf
                   id: ymca-maths-103-a-2023
