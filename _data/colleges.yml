@@ -896,6 +896,12 @@
                   id: ymca-dsa-2024  # Add this unique identifier
                   pages: 3
                   title: "Data Structures and Algorithms 2024"
+                - year: 2022
+                  file: ymca-dsa-2022.pdf
+                  id: ymca-dsa-2022  # Add this unique identifier
+                  pages: 3
+                  title: "Data Structures and Algorithms 2022"
+                  new: true
                 - year: 2023
                   file: ymca-dsa-2023.pdf
                   id: ymca-dsa-2023  # Add this unique identifier
@@ -2114,6 +2120,12 @@
                   id: ymca-dsa-2018
                   pages: 3
                   title: "Data Structures and Algorithms 2018"
+                - year: 2022
+                  file: ymca-dsa-2022.pdf
+                  id: ymca-dsa-2022  # Add this unique identifier
+                  pages: 3
+                  title: "Data Structures and Algorithms 2022"
+                  new: true
                 - year: 2023
                   file: ymca-dsa-2023.pdf
                   id: ymca-dsa-2023
@@ -4703,11 +4715,17 @@
               keywords: ["dynamics", "machines", "study"]
               icon: gear
               pyqs:
+                - year: 2022
+                  file: ymca-dom-2022.pdf
+                  id: ymca-dom-2022  # Add this unique identifier
+                  pages: 3
+                  title: "Dynamics of Machines 2022"
                 - year: 2023
                   file: ymca-dom-2023.pdf
                   id: ymca-dom-2023  # Add this unique identifier
                   pages: 3
                   title: "Dynamics of Machines 2023"
+                  new: true
             - name: Essence of Indian Traditional Knowledge
               slug: eitk
               id: eitk
@@ -4715,6 +4733,12 @@
               keywords: ["Indian", "traditional", "knowledge"]
               icon: book
               pyqs:
+                - year: 2022
+                  file: ymca-eitk-2022.pdf
+                  id: ymca-eitk-2022  # Add this unique identifier
+                  pages: 3
+                  title: "Essence of Indian Traditional Knowledge 2022"
+                  new: true
                 - year: 2023
                   file: ymca-eitk-set-1-2023.pdf
                   id: ymca-eitk-set-1-2023  # Add this unique identifier
@@ -4725,12 +4749,17 @@
                   id: ymca-eitk-set-2-2023  # Add this unique identifier
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge 2023 set 2"
+                - year: 2023
+                  file: ymca-eitk-set-3-2023.pdf
+                  id: ymca-eitk-set-3-2023  # Add this unique identifier
+                  pages: 3
+                  title: "Essence of Indian Traditional Knowledge 2023 set 3"
+                  new: true
                 - year: 2024
                   file: ymca-eitk-2024.pdf
                   id: ymca-eitk-2024  # Add this unique identifier
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge 2024"
-                  new: true
             - name: Refrigeration and Air Conditioning
               slug: rac
               id: rac
@@ -4743,6 +4772,12 @@
                   id: ymca-rac-2019  # Add this unique identifier
                   pages: 3
                   title: "Refrigeration and Air Conditioning 2019"
+                  new: true
+                - year: 2022
+                  file: ymca-rac-2022.pdf
+                  id: ymca-rac-2022  # Add this unique identifier
+                  pages: 3
+                  title: "Refrigeration and Air Conditioning 2022"
                   new: true
                 - year: 2023
                   file: ymca-rac-2023.pdf
@@ -4763,10 +4798,16 @@
                   pages: 3
                   title: "Heat and Mass Transfer 2018"
                 - year: 2022
-                  file: ymca-hmt-2022.pdf
-                  id: ymca-hmt-2022  # Add this unique identifier
+                  file: ymca-hmt-set-1-2022.pdf
+                  id: ymca-hmt-set-1-2022  # Add this unique identifier
                   pages: 3
-                  title: "Heat and Mass Transfer 2022"
+                  title: "Heat and Mass Transfer 2022 set 1"
+                - year: 2022
+                  file: ymca-hmt-set-2-2022.pdf
+                  id: ymca-hmt-set-2-2022  # Add this unique identifier
+                  pages: 3
+                  title: "Heat and Mass Transfer 2022 set 2"
+                  new: true
                 - year: 2016
                   file: ymca-hmt-2016.pdf
                   id: ymca-hmt-2016  # Add this unique identifier
@@ -4794,6 +4835,18 @@
                   id: ymca-dme-2018  # Add this unique identifier
                   pages: 3
                   title: "Design of Machine Elements 1 2018"
+                - year: 2022
+                  file: ymca-dme-2022.pdf
+                  id: ymca-dme-2022  # Add this unique identifier
+                  pages: 3
+                  title: "Design of Machine Elements 1 2022"
+                  new: true
+                - year: 2023
+                  file: ymca-dme-2023.pdf
+                  id: ymca-dme-2023  # Add this unique identifier
+                  pages: 3
+                  title: "Design of Machine Elements 1 2023"
+                  new: true
             - name: Industrial Engineering
               slug: industrial-engineering
               id: industrial-engineering
@@ -4817,10 +4870,22 @@
                   pages: 3
                   title: "Industrial Engineering 2019"
                 - year: 2022
-                  file: ymca-industrial-engineering-2022.pdf
-                  id: ymca-industrial-engineering-2022  # Add this unique identifier
+                  file: ymca-industrial-engineering-set-1-2022.pdf
+                  id: ymca-industrial-engineering-set-1-2022  # Add this unique identifier
                   pages: 3
-                  title: "Industrial Engineering 2022"
+                  title: "Industrial Engineering 2022 set 1"
+                - year: 2022
+                  file: ymca-industrial-engineering-set-2-2022.pdf
+                  id: ymca-industrial-engineering-set-2-2022  # Add this unique identifier
+                  pages: 3
+                  title: "Industrial Engineering 2022 set 2"
+                  new: true
+                - year: 2023
+                  file: ymca-industrial-engineering-2023.pdf
+                  id: ymca-industrial-engineering-2023
+                  pages: 3
+                  title: "Industrial Engineering 2023"
+                  new: true
             - name: Sessional
               id: sessional
               slug: sessional
