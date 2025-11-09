@@ -4772,7 +4772,6 @@
                   id: ymca-rac-2019  # Add this unique identifier
                   pages: 3
                   title: "Refrigeration and Air Conditioning 2019"
-                  new: true
                 - year: 2022
                   file: ymca-rac-2022.pdf
                   id: ymca-rac-2022  # Add this unique identifier
@@ -4784,7 +4783,6 @@
                   id: ymca-rac-2023  # Add this unique identifier
                   pages: 3
                   title: "Refrigeration and Air Conditioning 2023"
-                  new: true
             - name: Heat and Mass Transfer
               slug: hmt
               id: hmt
