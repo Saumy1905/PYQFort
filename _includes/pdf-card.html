@@ -14,6 +14,34 @@
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   }
+  .pdf-content {
+    position: relative;
+  }
+  .pdf-uploader {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: var(--secondary-color);
+    background-color: var(--light-gray);
+    padding: 4px 8px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+  .pdf-uploader i {
+    font-size: 13px;
+    color: var(--primary-color);
+  }
+  .pdf-uploader:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  .pdf-uploader:hover i {
+    color: white;
+  }
 </style>
 
 <div class="pdf-card">
@@ -33,5 +61,11 @@
       <a href="{{ include.view_url }}" class="btn-view">View</a>
       <!-- <a href="{{ include.download_url }}" class="btn-download" download>Download</a> -->
     </div>
+    {% if include.upload %}
+    <div class="pdf-uploader">
+      <i class="fas fa-user-circle"></i>
+      <span>{{ include.upload }}</span>
+    </div>
+    {% endif %}
   </div>
 </div>

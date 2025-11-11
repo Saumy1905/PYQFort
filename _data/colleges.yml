@@ -1082,6 +1082,7 @@
                   id: ymca-daa-praxian-analysis-2025
                   pages: 3
                   title: "Design and Analysis of Algorithms Praxian Analysis 2025"
+                  upload: "Praxian"
             - name: Discrete Mathematics
               id: discrete-mathematics
               description: Mathematical foundations for computer science
