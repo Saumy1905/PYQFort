@@ -864,6 +864,13 @@
                   pages: 3
                   title: "Programming for Problem Solving Sessional 2 2024"
                   upload: "Saumy"
+                - year: 2023
+                  file: xtreme-ends-of-pps-repeated-pyqs.pdf
+                  id: xtreme-ends-of-pps-repeated-pyqs
+                  pages: 55
+                  title: "Xtreme Ends of PPS - Repeated PYQs"
+                  new: true
+                  upload: "Saumy"
     - name: Computer Engineering
       slug: computer-engineering
       id: computer-engineering
