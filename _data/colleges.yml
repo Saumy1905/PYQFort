@@ -5554,6 +5554,13 @@
                   pages: 3
                   title: "IC Engines 2018"
                   upload: "Saumy"
+                - year: 2024
+                  file: ymca-ic-engines-2024.pdf
+                  id: ymca-ic-engines-2024  # Add this unique identifier
+                  pages: 3
+                  title: "IC Engines 2024"
+                  new: true
+                  upload: "Saumy"
             - name: Automation
               slug: automation
               id: automation
@@ -5579,6 +5586,20 @@
                   id: ymca-machine-design-2-2018  # Add this unique identifier
                   pages: 3
                   title: "Machine Design 2 2018"
+                  upload: "Saumy"
+            - name: Mechatronics
+              slug: mechatronics
+              id: mechatronics
+              description: Study of mechatronic systems
+              keywords: ["mechatronics", "systems", "study"]
+              icon: microchip
+              pyqs:
+                - year: 2024
+                  file: ymca-mechatronics-2024.pdf
+                  id: ymca-mechatronics-2024  # Add this unique identifier
+                  pages: 3
+                  title: "Mechatronics 2024"
+                  new: true
                   upload: "Saumy"
         - number: 7
           slug: sem7

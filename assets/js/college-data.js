@@ -995,6 +995,13 @@ window.COLLEGE_DATA = {
                       title: "Data Structures and Algorithms 2018",
                     },
                     {
+                      year: 2022,
+                      file: "ymca-dsa-2022.pdf",
+                      id: "ymca-dsa-2022",
+                      pages: 3,
+                      title: "Data Structures and Algorithms 2022",
+                    },
+                    {
                       year: 2023,
                       file: "ymca-dsa-2023.pdf",
                       id: "ymca-dsa-2023",
@@ -3083,12 +3090,49 @@ window.COLLEGE_DATA = {
               description: "Subjects for Semester 5",
               subjects: [
                 {
+                  name: "Air and Noise Pollution Control",
+                  slug: "anpc",
+                  id: "anpc",
+                  description: "Techniques for controlling air and noise pollution",
+                  icon: "leaf",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "ymca-anpc-2023-set-1.pdf",
+                      id: "ymca-anpc-2023-set-1",
+                      pages: 3,
+                      title: "Air and Noise Pollution Control 2023",
+                    },
+                    {
+                      year: 2023,
+                      file: "ymca-anpc-2023-set-2.pdf",
+                      id: "ymca-anpc-2023-set-2",
+                      pages: 3,
+                      title: "Air and Noise Pollution Control 2023",
+                    },
+                    {
+                      year: 2024,
+                      file: "ymca-anpc-2024.pdf",
+                      id: "ymca-anpc-2024",
+                      pages: 3,
+                      title: "Air and Noise Pollution Control 2024",
+                    }
+                  ],
+                },
+                {
                   name: "Dynamics of Machines",
                   slug: "dom",
                   id: "dom",
                   description: "Study of dynamics in machines",
                   icon: "gear",
                   pyqs: [
+                    {
+                      year: 2022,
+                      file: "ymca-dom-2022.pdf",
+                      id: "ymca-dom-2022",
+                      pages: 3,
+                      title: "Dynamics of Machines 2022",
+                    },
                     {
                       year: 2023,
                       file: "ymca-dom-2023.pdf",
@@ -3106,18 +3150,25 @@ window.COLLEGE_DATA = {
                   icon: "thermometer-half",
                   pyqs: [
                     {
-                      year: 2016,
-                      file: "ymca-hmt-2016.pdf",
-                      id: "ymca-hmt-2016",
+                      year: 2018,
+                      file: "ymca-hmt-2018.pdf",
+                      id: "ymca-hmt-2018",
                       pages: 3,
-                      title: "Heat and Mass Transfer 2016",
+                      title: "Heat and Mass Transfer 2018",
                     },
                     {
                       year: 2022,
-                      file: "ymca-hmt-2022.pdf",
-                      id: "ymca-hmt-2022",
+                      file: "ymca-hmt-set-1-2022.pdf",
+                      id: "ymca-hmt-set-1-2022",
                       pages: 3,
-                      title: "Heat and Mass Transfer 2022",
+                      title: "Heat and Mass Transfer 2022 set 1",
+                    },
+                    {
+                      year: 2022,
+                      file: "ymca-hmt-set-2-2022.pdf",
+                      id: "ymca-hmt-set-2-2022",
+                      pages: 3,
+                      title: "Heat and Mass Transfer 2022 set 2",
                     },
                     {
                       year: 2016,
@@ -3157,6 +3208,20 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "Design of Machine Elements 1 2018",
                     },
+                    {
+                      year: 2022,
+                      file: "ymca-dme-2022.pdf",
+                      id: "ymca-dme-2022",
+                      pages: 3,
+                      title: "Design of Machine Elements 1 2022",
+                    },
+                    {
+                      year: 2023,
+                      file: "ymca-dme-2023.pdf",
+                      id: "ymca-dme-2023",
+                      pages: 3,
+                      title: "Design of Machine Elements 1 2023",
+                    }
                   ],
                 },
                 {
@@ -3189,11 +3254,25 @@ window.COLLEGE_DATA = {
                     },
                     {
                       year: 2022,
-                      file: "ymca-industrial-engineering-2022.pdf",
-                      id: "ymca-industrial-engineering-2022",
+                      file: "ymca-industrial-engineering-set-1-2022.pdf",
+                      id: "ymca-industrial-engineering-set-1-2022",
                       pages: 3,
-                      title: "Industrial Engineering 2022",
+                      title: "Industrial Engineering 2022 set 1",
                     },
+                    {
+                      year: 2022,
+                      file: "ymca-industrial-engineering-set-2-2022.pdf",
+                      id: "ymca-industrial-engineering-set-2-2022",
+                      pages: 3,
+                      title: "Industrial Engineering 2022 set 2",
+                    },
+                    {
+                      year: 2023,
+                      file: "ymca-industrial-engineering-2023.pdf",
+                      id: "ymca-industrial-engineering-2023",
+                      pages: 3,
+                      title: "Industrial Engineering 2023",
+                    }
                   ],
                 },
                 {
@@ -3204,6 +3283,13 @@ window.COLLEGE_DATA = {
                   keywords: ["Indian", "traditional", "knowledge"],
                   icon: "book",
                   pyqs: [
+                    {
+                      year: 2022,
+                      file: "ymca-eitk-2022.pdf",
+                      id: "ymca-eitk-2022",
+                      pages: 3,
+                      title: "Essence of Indian Traditional Knowledge 2022",
+                    },
                     {
                       year: 2023,
                       file: "ymca-eitk-set-1-2023.pdf",
@@ -3219,6 +3305,14 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title:
                         "Essence of Indian Traditional Knowledge 2023 set 2",
+                    },
+                    {
+                      year: 2023,
+                      file: "ymca-eitk-set-3-2023.pdf",
+                      id: "ymca-eitk-set-3-2023",
+                      pages: 3,
+                      title:
+                        "Essence of Indian Traditional Knowledge 2023 set 3",
                     },
                     {
                       year: 2024,
@@ -3244,6 +3338,13 @@ window.COLLEGE_DATA = {
                       id: "ymca-rac-2019",
                       pages: 3,
                       title: "Refrigeration and Air Conditioning 2019",
+                    },
+                    {
+                      year: 2022,
+                      file: "ymca-rac-2022.pdf",
+                      id: "ymca-rac-2022",
+                      pages: 3,
+                      title: "Refrigeration and Air Conditioning 2022",
                     },
                     {
                       year: 2023,
@@ -3275,6 +3376,29 @@ window.COLLEGE_DATA = {
                       id: "ymca-ic-engines-2018",
                       pages: 3,
                       title: "IC Engines 2018",
+                    },
+                    {
+                      year: 2024,
+                      file: "ymca-ic-engines-2024.pdf",
+                      id: "ymca-ic-engines-2024",
+                      pages: 3,
+                      title: "IC Engines 2024",
+                    }
+                  ],
+                },
+                {
+                  name: "Mechatronics",
+                  slug: "mechatronics",
+                  id: "mechatronics",
+                  description: "Study of mechatronic systems",
+                  icon: "cogs",
+                  pyqs: [
+                    {
+                      year: 2024,
+                      file: "ymca-mechatronics-2024.pdf",
+                      id: "ymca-mechatronics-2024",
+                      pages: 3,
+                      title: "Mechatronics 2024",
                     },
                   ],
                 },
@@ -4012,6 +4136,13 @@ window.COLLEGE_DATA = {
                       id: "ymca-dsa-2018",
                       pages: 3,
                       title: "Data Structures and Algorithms 2018",
+                    },
+                    {
+                      year: 2022,
+                      file: "ymca-dsa-2022.pdf",
+                      id: "ymca-dsa-2022",
+                      pages: 3,
+                      title: "Data Structures and Algorithms 2022",
                     },
                     {
                       year: 2024,
@@ -6956,6 +7087,13 @@ window.COLLEGE_DATA = {
                       id: "ymca-dsa-2018",
                       pages: 3,
                       title: "Data Structures and Algorithms 2018",
+                    },
+                    {
+                      year: 2022,
+                      file: "ymca-dsa-2022.pdf",
+                      id: "ymca-dsa-2022",
+                      pages: 3,
+                      title: "Data Structures and Algorithms 2022",
                     },
                     {
                       year: 2023,
