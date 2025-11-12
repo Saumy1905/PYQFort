@@ -1216,47 +1216,34 @@ function initializeCardAnimations() {
 }
 
 function initializeHoverEffects() {
-  // Card tilt effect with performance optimization
-  const cards = document.querySelectorAll('.college-card, .branch-card, .semester-card, .subject-card, .pdf-card, .search-result-item');
+  // Simple outward hover effect for cards (excluding search result cards)
+  const cards = document.querySelectorAll('.college-card, .branch-card, .semester-card, .subject-card, .pdf-card');
   cards.forEach(card => {
     // Only add event listeners if they don't already exist
-    if (!card.dataset.tiltInitialized) {
-      card.addEventListener('mousemove', handleCardTilt);
-      card.addEventListener('mouseleave', resetCardTilt);
-      card.dataset.tiltInitialized = 'true';
+    if (!card.dataset.hoverInitialized) {
+      card.addEventListener('mouseenter', handleCardHover);
+      card.addEventListener('mouseleave', resetCardHover);
+      card.dataset.hoverInitialized = 'true';
     }
   });
 }
 
-function handleCardTilt(e) {
+function handleCardHover(e) {
   const card = e.currentTarget;
-  const rect = card.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-  const centerX = rect.width / 2;
-  const centerY = rect.height / 2;
-  const rotateX = (y - centerY) / 10;
-  const rotateY = (centerX - x) / 10;
   
   // Add will-change for better performance
   card.style.willChange = 'transform, box-shadow';
-  card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-  
-  // Enhanced box-shadow for subject and PDF cards during 3D tilt
-  if (card.classList.contains('subject-card') || card.classList.contains('pdf-card')) {
-    card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.15)';
-  }
+  // Simple outward transform - card comes toward the user
+  card.style.transform = 'translateZ(20px) scale(1.05)';
+  card.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.2)';
 }
 
-function resetCardTilt(e) {
+function resetCardHover(e) {
   const card = e.currentTarget;
   card.style.willChange = 'auto';
-  card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-  
-  // Reset box-shadow for subject and PDF cards
-  if (card.classList.contains('subject-card') || card.classList.contains('pdf-card')) {
-    card.style.boxShadow = '';
-  }
+  // Reset to normal position
+  card.style.transform = 'translateZ(0) scale(1)';
+  card.style.boxShadow = '';
 }
 
 // ============================================== [ADVANCED FILTERING] ==============================================

@@ -296,6 +296,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  perspective: 1000px;
 }
 
 /* College Cards Container for Scroll Animation */
@@ -438,13 +439,14 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   height: 100%; /* Ensure consistent height */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add back basic hover transition */
-  /* transition: transform 0.3s, box-shadow 0.3s; */
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Restore hover effect for college cards */
+/* Simple outward hover effect for college cards */
 .college-card:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateZ(20px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* .college-card:hover {
@@ -499,6 +501,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  perspective: 1000px;
 }
 
 .semester-card {
@@ -508,12 +511,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .semester-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateZ(20px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .semester-icon {
@@ -547,6 +551,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
+  perspective: 1000px;
 }
 
 .subject-card {
@@ -556,9 +561,14 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Individual subject-card hover removed - using consolidated styles */
+.subject-card:hover {
+  transform: translateZ(20px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
 
 .subject-title {
   font-size: 1.5rem;
@@ -585,6 +595,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
+  perspective: 1000px;
 }
 
 .pdf-card {
@@ -593,9 +604,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Individual pdf-card hover removed - using consolidated styles */
+.pdf-card:hover {
+  transform: translateZ(20px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
 
 .pdf-icon {
   padding: 2rem;
@@ -1072,6 +1088,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  perspective: 1000px;
 }
 
 .branch-card {
@@ -1081,12 +1098,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .branch-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateZ(20px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .branch-icon {
@@ -1575,13 +1593,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px var(--box-shadow);
   opacity: 1 !important; /* Override animation opacity */
-  transform: translateY(0) !important; /* Override animation transform */
 }
 
 .search-result-item:hover {
   border-color: var(--primary-color);
-  box-shadow: 0 4px 20px var(--box-shadow);
   transform: translateY(-5px) !important;
+  box-shadow: 0 4px 20px var(--box-shadow);
 }
 
 .result-header {
@@ -1720,19 +1737,17 @@ h1, h2, h3, h4, h5, h6 {
 .semester-card,
 .subject-card,
 .pdf-card {
+  transform-style: preserve-3d;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .college-card:hover,
 .branch-card:hover,
-.semester-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
+.semester-card:hover,
 .subject-card:hover,
 .pdf-card:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateZ(20px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* Ripple effect for buttons */
@@ -2860,6 +2875,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .search-result-item:hover {
   border-color: var(--primary-color);
+  transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(52, 152, 219, 0.1);
 }
 
