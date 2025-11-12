@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize card animations
   initializeCardAnimations();
   
-  // Initialize college cards scroll animation
-  initializeCollegeCardsAnimation();
+  // Initialize college cards scroll animation - DISABLED for better UX
+  // initializeCollegeCardsAnimation();
   
   // Initialize advanced filtering
   initializeAdvancedFiltering();
