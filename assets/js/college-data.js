@@ -1340,6 +1340,20 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "Machine Learning 2023",
                     },
+                    {
+                      year: 2024,
+                      file: "ymca-ml-set-1-2024.pdf",
+                      id: "ymca-ml-set-1-2024",
+                      pages: 3,
+                      title: "Machine Learning 2024 set 1",
+                    },
+                    {
+                      year: 2024,
+                      file: "ymca-ml-set-2-2024.pdf",
+                      id: "ymca-ml-set-2-2024",
+                      pages: 3,
+                      title: "Machine Learning 2024 set 2"
+                    }
                   ],
                 },
                 {
@@ -1395,10 +1409,10 @@ window.COLLEGE_DATA = {
                     },
                     {
                       year: 2024,
-                      file: "ymca-biology-2024.pdf",
-                      id: "ymca-biology-2024",
+                      file: "ymca-biology-set-1-2024.pdf",
+                      id: "ymca-biology-set-1-2024",
                       pages: 3,
-                      title: "Biology 2024",
+                      title: "Biology 2024 set 1",
                     },
                     {
                       year: 2025,
@@ -1410,19 +1424,27 @@ window.COLLEGE_DATA = {
                   ],
                 },
                 {
-                  name: "Compiler Design",
-                  id: "compiler-design",
-                  description: "Principles of compiler design",
+                  name: "Theory of Computation",
+                  id: "toc",
+                  description: "Principles of computation theory",
+                  keywords: ["computation", "theory", "principles"],
                   icon: "file-code",
-                  slug: "compiler-design",
+                  slug: "toc",
                   pyqs: [
                     {
                       year: 2023,
-                      file: "ymca-compiler-design-2023.pdf",
-                      id: "ymca-compiler-design-2023",
+                      file: "ymca-toc-2023.pdf",
+                      id: "ymca-toc-2023",
                       pages: 3,
-                      title: "Compiler Design 2023",
+                      title: "Theory of Computation 2023",
                     },
+                    {
+                      year: 2024,
+                      file: "ymca-toc-2024.pdf",
+                      id: "ymca-toc-2024",
+                      pages: 3,
+                      title: "Theory of Computation 2024",
+                    }
                   ],
                 },
                 {
@@ -1432,6 +1454,13 @@ window.COLLEGE_DATA = {
                   icon: "gavel",
                   slug: "constitution",
                   pyqs: [
+                    {
+                      year: 2018,
+                      file: "ymca-constitution-2018.pdf",
+                      id: "ymca-constitution-2018",
+                      pages: 3,
+                      title: "Constitution 2018",
+                    },
                     {
                       year: 2023,
                       file: "ymca-constitution-2023-set-1.pdf",
@@ -1446,6 +1475,20 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "Constitution 2023-set-2",
                     },
+                    {
+                      year: 2024,
+                      file: "ymca-constitution-set-1-2024.pdf",
+                      id: "ymca-constitution-set-1-2024",
+                      pages: 3,
+                      title: "Constitution 2024-set-1",
+                    },
+                    {
+                      year: 2024,
+                      file: "ymca-constitution-set-2-2024.pdf",
+                      id: "ymca-constitution-set-2-2024",
+                      pages: 3,
+                      title: "Constitution 2024-set-2",
+                    }
                   ],
                 },
                 {
@@ -1469,6 +1512,13 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "Signal and Systems 2019",
                     },
+                    {
+                      year: 2024,
+                      file: "ymca-sns-2024.pdf",
+                      id: "ymca-sns-2024",
+                      pages: 3,
+                      title: "Signal and Systems 2024",
+                    }
                   ],
                 },
                 {
@@ -2513,8 +2563,8 @@ window.COLLEGE_DATA = {
                     },
                     {
                       year: 2024,
-                      file: "ymca-biology-2024.pdf",
-                      id: "ymca-biology-2024",
+                      file: "ymca-biology-set-1-2024.pdf",
+                      id: "ymca-biology-set-1-2024",
                       pages: 3,
                       title: "Biology 2024",
                     },
@@ -4474,10 +4524,10 @@ window.COLLEGE_DATA = {
                     },
                     {
                       year: 2024,
-                      file: "ymca-biology-2024.pdf",
-                      id: "ymca-biology-2024",
+                      file: "ymca-biology-set-1-2024.pdf",
+                      id: "ymca-biology-set-1-2024",
                       pages: 3,
-                      title: "Biology 2024",
+                      title: "Biology 2024 set 1",
                     },
                     {
                       year: 2025,
@@ -4529,19 +4579,19 @@ window.COLLEGE_DATA = {
                   ],
                 },
                 {
-                  name: "Compiler Design",
-                  slug: "compiler-design",
-                  id: "compiler-design",
-                  description: "Principles of compiler design",
-                  keywords: ["compiler", "design", "principles"],
+                  name: "Theory of Computation",
+                  slug: "toc",
+                  id: "toc",
+                  description: "Principles of computation theory",
+                  keywords: ["computation", "theory", "principles"],
                   icon: "file-code",
                   pyqs: [
                     {
                       year: 2023,
-                      file: "ymca-compiler-design-2023.pdf",
-                      id: "ymca-compiler-design-2023",
+                      file: "ymca-toc-2023.pdf",
+                      id: "ymca-toc-2023",
                       pages: 3,
-                      title: "Compiler Design 2023",
+                      title: "Theory of Computation 2023",
                     },
                   ],
                 },
@@ -7346,10 +7396,10 @@ window.COLLEGE_DATA = {
                     },
                     {
                       year: 2024,
-                      file: "ymca-biology-2024.pdf",
-                      id: "ymca-biology-2024",
+                      file: "ymca-biology-set-1-2024.pdf",
+                      id: "ymca-biology-set-1-2024",
                       pages: 3,
-                      title: "Biology 2024",
+                      title: "Biology 2024 set 1",
                     },
                     {
                       year: 2025,
@@ -7927,16 +7977,16 @@ window.COLLEGE_DATA = {
               subjects: [
                 {
                   name: "Compiler Design",
-                  slug: "compiler-design",
-                  id: "compiler-design",
+                  slug: "toc",
+                  id: "toc",
                   description: "Principles of compiler design",
                   keywords: ["compiler", "design", "programming"],
                   icon: "file-code",
                   pyqs: [
                     {
                       year: 2024,
-                      file: "vit-bhopal-compiler-design-2024.pdf",
-                      id: "vit-bhopal-compiler-design-2024",
+                      file: "vit-bhopal-toc-2024.pdf",
+                      id: "vit-bhopal-toc-2024",
                       pages: 3,
                       title: "Compiler Design 2024",
                     },
