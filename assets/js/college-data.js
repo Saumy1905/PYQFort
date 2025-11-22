@@ -165,6 +165,27 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "Basic Electrical Technology Sessional 2 2024",
                     },
+                    {
+                      year: 2025,
+                      file: "ymca-bet-2025-sessional-1.pdf",
+                      id: "ymca-bet-2025-sessional-1",
+                      pages: 3,
+                      title: "Basic Electrical Technology Sessional 1 2025",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-bet-2025-sessional-2.pdf",
+                      id: "ymca-bet-2025-sessional-2",
+                      pages: 3,
+                      title: "Basic Electrical Technology Sessional 2 2025",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-bet-2025-sessional-3.pdf",
+                      id: "ymca-bet-2025-sessional-3",
+                      pages: 3,
+                      title: "Basic Electrical Technology Sessional 3 2025",
+                    }
                   ],
                 },
                 {
@@ -245,6 +266,27 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "Chemistry 2023",
                     },
+                    {
+                      year: 2025,
+                      file: "ymca-chemistry-2025-sessional-1.pdf",
+                      id: "ymca-chemistry-2025-sessional-1",
+                      pages: 3,
+                      title: "Chemistry Sessional 1 2025",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-chemistry-2025-sessional-2.pdf",
+                      id: "ymca-chemistry-2025-sessional-2",
+                      pages: 3,
+                      title: "Chemistry Sessional 2 2025",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-chemistry-2025-sessional-3.pdf",
+                      id: "ymca-chemistry-2025-sessional-3",
+                      pages: 3,
+                      title: "Chemistry Sessional 3 2025",
+                    }
                   ],
                 },
                 {
@@ -311,6 +353,27 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "English 2024",
                     },
+                    {
+                      year: 2025,
+                      file: "ymca-english-2025-sessional-1.pdf",
+                      id: "ymca-english-2025-sessional-1",
+                      pages: 3,
+                      title: "English Sessional 1 2025",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-english-2025-sessional-2.pdf",
+                      id: "ymca-english-2025-sessional-2",
+                      pages: 3,
+                      title: "English Sessional 2 2025",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-english-2025-sessional-3.pdf",
+                      id: "ymca-english-2025-sessional-3",
+                      pages: 3,
+                      title: "English Sessional 3 2025",
+                    }
                   ],
                 },
                 {
@@ -508,6 +571,13 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "Waves and Optics 2024",
                     },
+                    {
+                      year: 2025,
+                      file: "ymca-waves-2025-sessional.pdf",
+                      id: "ymca-waves-2025-sessional",
+                      pages: 3,
+                      title: "Waves and Optics Sessional 2025",
+                    }
                   ],
                 },
               ],
@@ -869,6 +939,13 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "Programming for Problem Solving Sessional 2 2024",
                     },
+                    {
+                      year: 2023,
+                      file: "xtreme-ends-of-pps-repeated-pyqs.pdf",
+                      id: "xtreme-ends-of-pps-repeated-pyqs",
+                      pages: 10,
+                      title: "Xtreme Ends of PPS Repeated PYQs 2019-2023"
+                    }
                   ],
                 },
               ],
@@ -1323,9 +1400,16 @@ window.COLLEGE_DATA = {
                   slug: "ml",
                   id: "ml",
                   description: "Principles of machine learning",
-                  keywords: ["machine", "learning", "principles"],
+                  keywords: ["machine", "learning", "principles", "ml"],
                   icon: "brain",
                   pyqs: [
+                    {
+                      year: 2021,
+                      file: "ymca-ml-2021.pdf",
+                      id: "ymca-ml-2021",
+                      pages: 3,
+                      title: "Machine Learning 2021",
+                    },
                     {
                       year: 2022,
                       file: "ymca-ml-2022.pdf",
@@ -1335,10 +1419,17 @@ window.COLLEGE_DATA = {
                     },
                     {
                       year: 2023,
-                      file: "ymca-ml-2023.pdf",
-                      id: "ymca-ml-2023",
+                      file: "ymca-ml-2023-set-1.pdf",
+                      id: "ymca-ml-2023-set-1",
                       pages: 3,
-                      title: "Machine Learning 2023",
+                      title: "Machine Learning 2023 set 1",
+                    },
+                    {
+                      year: 2023,
+                      file: "ymca-ml-2023-set-2.pdf",
+                      id: "ymca-ml-2023-set-2",
+                      pages: 3,
+                      title: "Machine Learning 2023 set 2",
                     },
                     {
                       year: 2024,
@@ -1384,6 +1475,13 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "Database Management Systems 2019",
                     },
+                    {
+                      year: 2024,
+                      file: "ymca-dbms-2024.pdf",
+                      id: "ymca-dbms-2024",
+                      pages: 3,
+                      title: "Database Management Systems 2024",
+                    }
                   ],
                 },
                 {
@@ -1409,10 +1507,24 @@ window.COLLEGE_DATA = {
                     },
                     {
                       year: 2024,
+                      file: "ymca-biology-set-3-2023.pdf",
+                      id: "ymca-biology-set-3-2023",
+                      pages: 3,
+                      title: "Biology 2023 set 3",
+                    },
+                    {
+                      year: 2024,
                       file: "ymca-biology-set-1-2024.pdf",
                       id: "ymca-biology-set-1-2024",
                       pages: 3,
                       title: "Biology 2024 set 1",
+                    },
+                    {
+                      year: 2024,
+                      file: "ymca-biology-set-2-2024.pdf",
+                      id: "ymca-biology-set-2-2024",
+                      pages: 3,
+                      title: "Biology 2024 set 2",
                     },
                     {
                       year: 2025,

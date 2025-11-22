@@ -147,6 +147,30 @@
                   pages: 3
                   title: "Basic Electrical Technology Set 2 2020"
                   upload: "Saumy"
+                - year: 2022
+                  file: ymca-bet-2022.pdf
+                  id: ymca-bet-2022
+                  pages: 3
+                  title: "Basic Electrical Technology 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-bet-set-1-2023.pdf
+                  id: ymca-bet-set-1-2023
+                  pages: 3
+                  title: "Basic Electrical Technology Set 1 2023"
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-bet-set-2-2023.pdf
+                  id: ymca-bet-set-2-2023
+                  pages: 3
+                  title: "Basic Electrical Technology Set 2 2023"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-bet-2025.pdf
+                  id: ymca-bet-2025
+                  pages: 3
+                  title: "Basic Electrical Technology 2025"
+                  upload: "Saumy"
                 - year: 2021
                   file: ymca-bet-2021-sessional-1.pdf
                   id: ymca-bet-2021-sessional-1
@@ -170,24 +194,6 @@
                   id: ymca-bet-2022-sessional-2
                   pages: 3
                   title: "Basic Electrical Technology Sessional 2 2022"
-                  upload: "Saumy"
-                - year: 2022
-                  file: ymca-bet-2022.pdf
-                  id: ymca-bet-2022
-                  pages: 3
-                  title: "Basic Electrical Technology 2022"
-                  upload: "Saumy"
-                - year: 2023
-                  file: ymca-bet-set-1-2023.pdf
-                  id: ymca-bet-set-1-2023
-                  pages: 3
-                  title: "Basic Electrical Technology Set 1 2023"
-                  upload: "Saumy"
-                - year: 2023
-                  file: ymca-bet-set-2-2023.pdf
-                  id: ymca-bet-set-2-2023
-                  pages: 3
-                  title: "Basic Electrical Technology Set 2 2023"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-bet-2023-sessional.pdf
@@ -213,20 +219,19 @@
                   pages: 3
                   title: "Basic Electrical Technology Sessional 1 2025"
                   upload: "Sumit"
-                  new: true
                 - year: 2025
                   file: ymca-bet-2025-sessional-2.pdf
                   id: ymca-bet-2025-sessional-2
                   pages: 3
                   title: "Basic Electrical Technology Sessional 2 2025"
                   upload: "Arya Sharma"
-                  new: true
                 - year: 2025
-                  file: ymca-bet-2025.pdf
-                  id: ymca-bet-2025
+                  file: ymca-bet-2025-sessional-3.pdf
+                  id: ymca-bet-2025-sessional-3
                   pages: 3
-                  title: "Basic Electrical Technology 2025"
-                  upload: "Saumy"
+                  title: "Basic Electrical Technology Sessional 3 2025"
+                  upload: "Harshit"
+                  new: true
             - name: Chemistry
               slug: chemistry
               id: chemistry
@@ -245,6 +250,12 @@
                   id: ymca-chemistry-2019
                   pages: 3
                   title: "Chemistry 2019"
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-chemistry-2023.pdf
+                  id: ymca-chemistry-2023
+                  pages: 3
+                  title: "Chemistry 2023"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-chemistry-2022-sessional-1.pdf
@@ -294,20 +305,19 @@
                   pages: 3
                   title: "Chemistry Sessional 1 2025"
                   upload: "Sumit"
-                  new: true
                 - year: 2025
                   file: ymca-chemistry-2025-sessional-2.pdf
                   id: ymca-chemistry-2025-sessional-2
                   pages: 3
                   title: "Chemistry Sessional 2 2025"
                   upload: "Arya Sharma"
-                  new: true
-                - year: 2023
-                  file: ymca-chemistry-2023.pdf
-                  id: ymca-chemistry-2023
+                - year: 2025
+                  file: ymca-chemistry-2025-sessional-3.pdf
+                  id: ymca-chemistry-2025-sessional-3
                   pages: 3
-                  title: "Chemistry 2023"
-                  upload: "Saumy"
+                  title: "Chemistry Sessional 3 2025"
+                  upload: "Harshit"
+                  new: true
             - name: English
               slug: english
               id: english
@@ -315,50 +325,12 @@
               keywords: ["english", "communication", "skills"]
               icon: comment-dots
               pyqs:
-                - year: 2021
-                  file: ymca-english-2021-sessional-1.pdf
-                  id: ymca-english-2021-sessional-1
-                  pages: 3
-                  title: "English Sessional 1 2021"
-                  upload: "Saumy"
-                - year: 2021
-                  file: ymca-english-2021-sessional-2.pdf
-                  id: ymca-english-2021-sessional-2
-                  pages: 3
-                  title: "English Sessional 2 2021"
-                  upload: "Saumy"
-                - year: 2022
-                  file: ymca-english-2022-sessional.pdf
-                  id: ymca-english-2022-sessional
-                  pages: 3
-                  title: "English Sessional 2022"
-                  upload: "Saumy"
                 - year: 2022
                   file: ymca-english-2022.pdf
                   id: ymca-english-2022
                   pages: 3
                   title: "English 2022"
                   upload: "Saumy"
-                - year: 2023
-                  file: ymca-english-2023-sessional.pdf
-                  id: ymca-english-2023-sessional
-                  pages: 3
-                  title: "English Sessional 2023"
-                  upload: "Saumy"
-                - year: 2025
-                  file: ymca-english-2025-sessional-1.pdf
-                  id: ymca-english-2025-sessional-1
-                  pages: 3
-                  title: "English Sessional 1 2025"
-                  upload: "Sumit"
-                  new: true
-                - year: 2025
-                  file: ymca-english-2025-sessional-2.pdf
-                  id: ymca-english-2025-sessional-2
-                  pages: 3
-                  title: "English Sessional 2 2025"
-                  upload: "Arya Sharma"
-                  new: true
                 - year: 2023
                   file: ymca-english-set-1-2023.pdf
                   id: ymca-english-set-1-2023
@@ -383,6 +355,49 @@
                   pages: 3
                   title: "English 2025"
                   upload: "Saumy"
+                - year: 2021
+                  file: ymca-english-2021-sessional-1.pdf
+                  id: ymca-english-2021-sessional-1
+                  pages: 3
+                  title: "English Sessional 1 2021"
+                  upload: "Saumy"
+                - year: 2021
+                  file: ymca-english-2021-sessional-2.pdf
+                  id: ymca-english-2021-sessional-2
+                  pages: 3
+                  title: "English Sessional 2 2021"
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-english-2022-sessional.pdf
+                  id: ymca-english-2022-sessional
+                  pages: 3
+                  title: "English Sessional 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-english-2023-sessional.pdf
+                  id: ymca-english-2023-sessional
+                  pages: 3
+                  title: "English Sessional 2023"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-english-2025-sessional-1.pdf
+                  id: ymca-english-2025-sessional-1
+                  pages: 3
+                  title: "English Sessional 1 2025"
+                  upload: "Sumit"
+                - year: 2025
+                  file: ymca-english-2025-sessional-2.pdf
+                  id: ymca-english-2025-sessional-2
+                  pages: 3
+                  title: "English Sessional 2 2025"
+                  upload: "Arya Sharma"
+                - year: 2025
+                  file: ymca-english-2025-sessional-3.pdf
+                  id: ymca-english-2025-sessional-3
+                  pages: 3
+                  title: "English Sessional 3 2025"
+                  upload: "Harshit"
+                  new: true
             - name: Mathematics 101-C
               slug: maths-101-c
               id: maths-101-c
@@ -416,6 +431,18 @@
                   title: "Mathematics 103-A 2022"
                   upload: "Saumy"
                 - year: 2023
+                  file: ymca-maths-103-a-2023.pdf
+                  id: ymca-maths-103-a-2023
+                  pages: 3
+                  title: "Mathematics 103-A 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-maths-103-a-2024.pdf
+                  id: ymca-maths-103-a-2024
+                  pages: 3
+                  title: "Mathematics 103-A 2024"
+                  upload: "Saumy"
+                - year: 2023
                   file: ymca-maths-103-a-2023-sessional.pdf
                   id: ymca-maths-103-a-2023-sessional
                   pages: 3
@@ -428,18 +455,6 @@
                   title: "Mathematics 103-A Sessional 1 2025"
                   upload: "Arya Sharma"
                   new: true
-                - year: 2023
-                  file: ymca-maths-103-a-2023.pdf
-                  id: ymca-maths-103-a-2023
-                  pages: 3
-                  title: "Mathematics 103-A 2023"
-                  upload: "Saumy"
-                - year: 2024
-                  file: ymca-maths-103-a-2024.pdf
-                  id: ymca-maths-103-a-2024
-                  pages: 3
-                  title: "Mathematics 103-A 2024"
-                  upload: "Saumy"
             - name: Mathematics 103-D
               slug: maths-103-d
               id: maths-103-d
@@ -466,16 +481,16 @@
                   title: "Mathematics 103-D 2022"
                   upload: "Saumy"
                 - year: 2023
-                  file: ymca-maths-103-d-2023-sessional.pdf
-                  id: ymca-maths-103-d-2023-sessional
-                  pages: 3
-                  title: "Mathematics 103-D Sessional 2023"
-                  upload: "Saumy"
-                - year: 2023
                   file: ymca-maths-103-d-2023.pdf
                   id: ymca-maths-103-d-2023
                   pages: 3
                   title: "Mathematics 103-D 2023"
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-maths-103-d-2023-sessional.pdf
+                  id: ymca-maths-103-d-2023-sessional
+                  pages: 3
+                  title: "Mathematics 103-D Sessional 2023"
                   upload: "Saumy"
             - name: Semiconductor Physics
               slug: semiconductor
@@ -533,12 +548,6 @@
                   pages: 3
                   title: "Waves and Optics 2019"
                   upload: "Saumy"
-                - year: 2022
-                  file: ymca-waves-2022-sessional.pdf
-                  id: ymca-waves-2022-sessional
-                  pages: 3
-                  title: "Waves and Optics Sessional 2022"
-                  upload: "Saumy"
                 - year: 2023
                   file: ymca-waves-2023.pdf
                   id: ymca-waves-2023
@@ -551,6 +560,19 @@
                   pages: 3
                   title: "Waves and Optics 2024"
                   upload: "Saumy"
+                - year: 2022
+                  file: ymca-waves-2022-sessional.pdf
+                  id: ymca-waves-2022-sessional
+                  pages: 3
+                  title: "Waves and Optics Sessional 2022"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-waves-2025-sessional.pdf
+                  id: ymca-waves-2025-sessional
+                  pages: 3
+                  title: "Waves and Optics Sessional 2025"
+                  upload: "Harshit"
+                  new: true
         - number: 2
           slug: sem2
           id: sem2
@@ -602,6 +624,12 @@
                   title: "Electromagnetic Theory 2022"
                   upload: "Saumy"
                 - year: 2024
+                  file: ymca-emt-2024.pdf
+                  id: ymca-emt-2024
+                  pages: 3
+                  title: "Electromagnetic Theory 2024"
+                  upload: "Saumy"
+                - year: 2024
                   file: ymca-emt-2024-sessional-1.pdf
                   id: ymca-emt-2024-sessional-1
                   pages: 3
@@ -612,12 +640,6 @@
                   id: ymca-emt-2024-sessional-2
                   pages: 3
                   title: "Electromagnetic Theory Sessional 2 2024"
-                  upload: "Saumy"
-                - year: 2024
-                  file: ymca-emt-2024.pdf
-                  id: ymca-emt-2024
-                  pages: 3
-                  title: "Electromagnetic Theory 2024"
                   upload: "Saumy"
             - name: Environment and Ecology
               slug: ene
@@ -651,6 +673,12 @@
                   title: "Environment and Ecology 2023"
                   upload: "Saumy"
                 - year: 2024
+                  file: ymca-ene-2024.pdf
+                  id: ymca-ene-2024
+                  pages: 3
+                  title: "Environment and Ecology 2024"
+                  upload: "Saumy"
+                - year: 2024
                   file: ymca-ene-2024-sessional-1.pdf
                   id: ymca-ene-2024-sessional-1
                   pages: 3
@@ -661,12 +689,6 @@
                   id: ymca-ene-2024-sessional-2
                   pages: 3
                   title: "Environment and Ecology Sessional 2 2024"
-                  upload: "Saumy"
-                - year: 2024
-                  file: ymca-ene-2024.pdf
-                  id: ymca-ene-2024
-                  pages: 3
-                  title: "Environment and Ecology 2024"
                   upload: "Saumy"
             - name: Mathematics 106-A
               slug: maths-106-a
@@ -707,28 +729,10 @@
                   title: "Mathematics 106-D 2019"
                   upload: "Saumy"
                 - year: 2022
-                  file: ymca-maths-106-d-2022-sessional-1.pdf
-                  id: ymca-maths-106-d-2022-sessional-1
-                  pages: 3
-                  title: "Mathematics 106-D Sessional 1 2022"
-                  upload: "Saumy"
-                - year: 2022
-                  file: ymca-maths-106-d-2022-sessional-2.pdf
-                  id: ymca-maths-106-d-2022-sessional-2
-                  pages: 3
-                  title: "Mathematics 106-D Sessional 2 2022"
-                  upload: "Saumy"
-                - year: 2022
                   file: ymca-maths-106-d-2022.pdf
                   id: ymca-maths-106-d-2022
                   pages: 3
                   title: "Mathematics 106-D 2022"
-                  upload: "Saumy"
-                - year: 2023
-                  file: ymca-maths-106-d-2023-sessional.pdf
-                  id: ymca-maths-106-d-2023-sessional
-                  pages: 3
-                  title: "Mathematics 106-D Sessional 2023"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-106-d-2023.pdf
@@ -741,6 +745,24 @@
                   id: ymca-maths-106-d-2024-sessional
                   pages: 3
                   title: "Mathematics 106-D Sessional 2024"
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-maths-106-d-2022-sessional-1.pdf
+                  id: ymca-maths-106-d-2022-sessional-1
+                  pages: 3
+                  title: "Mathematics 106-D Sessional 1 2022"
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-maths-106-d-2022-sessional-2.pdf
+                  id: ymca-maths-106-d-2022-sessional-2
+                  pages: 3
+                  title: "Mathematics 106-D Sessional 2 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-maths-106-d-2023-sessional.pdf
+                  id: ymca-maths-106-d-2023-sessional
+                  pages: 3
+                  title: "Mathematics 106-D Sessional 2023"
                   upload: "Saumy"
             - name: Mathematics 106-E
               slug: maths-106-e
@@ -804,18 +826,6 @@
                   pages: 3
                   title: "Programming for Problem Solving Set 2 2022"
                   upload: "Saumy"
-                - year: 2022
-                  file: ymca-pps-2022-sessional-1.pdf
-                  id: ymca-pps-2022-sessional-1
-                  pages: 3
-                  title: "Programming for Problem Solving Sessional 1 2022"
-                  upload: "Saumy"
-                - year: 2022
-                  file: ymca-pps-2022-sessional-2.pdf
-                  id: ymca-pps-2022-sessional-2
-                  pages: 3
-                  title: "Programming for Problem Solving Sessional 2 2022"
-                  upload: "Saumy"
                 - year: 2023
                   file: ymca-pps-set-1-2023.pdf
                   id: ymca-pps-set-1-2023
@@ -827,6 +837,37 @@
                   id: ymca-pps-set-2-2023
                   pages: 3
                   title: "Programming for Problem Solving Set 2 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-pps-set-1-2024.pdf
+                  id: ymca-pps-set-1-2024
+                  pages: 3
+                  title: "Programming for Problem Solving Set 1 2024"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-pps-set-2-2024.pdf
+                  id: ymca-pps-set-2-2024
+                  pages: 3
+                  title: "Programming for Problem Solving Set 2 2024"
+                  upload: "Saumy"
+                - year: 2023
+                  file: xtreme-ends-of-pps-repeated-pyqs.pdf
+                  id: xtreme-ends-of-pps-repeated-pyqs
+                  pages: 55
+                  title: "Xtreme Ends of PPS - Repeated PYQs"
+                  new: true
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-pps-2022-sessional-1.pdf
+                  id: ymca-pps-2022-sessional-1
+                  pages: 3
+                  title: "Programming for Problem Solving Sessional 1 2022"
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-pps-2022-sessional-2.pdf
+                  id: ymca-pps-2022-sessional-2
+                  pages: 3
+                  title: "Programming for Problem Solving Sessional 2 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-pps-2023-sessional-1.pdf
@@ -841,18 +882,6 @@
                   title: "Programming for Problem Solving Sessional 2 2023"
                   upload: "Saumy"
                 - year: 2024
-                  file: ymca-pps-set-1-2024.pdf
-                  id: ymca-pps-set-1-2024
-                  pages: 3
-                  title: "Programming for Problem Solving Set 1 2024"
-                  upload: "Saumy"
-                - year: 2024
-                  file: ymca-pps-set-2-2024.pdf
-                  id: ymca-pps-set-2-2024
-                  pages: 3
-                  title: "Programming for Problem Solving Set 2 2024"
-                  upload: "Saumy"
-                - year: 2024
                   file: ymca-pps-2024-sessional-1.pdf
                   id: ymca-pps-2024-sessional-1
                   pages: 3
@@ -863,13 +892,6 @@
                   id: ymca-pps-2024-sessional-2
                   pages: 3
                   title: "Programming for Problem Solving Sessional 2 2024"
-                  upload: "Saumy"
-                - year: 2023
-                  file: xtreme-ends-of-pps-repeated-pyqs.pdf
-                  id: xtreme-ends-of-pps-repeated-pyqs
-                  pages: 55
-                  title: "Xtreme Ends of PPS - Repeated PYQs"
-                  new: true
                   upload: "Saumy"
     - name: Computer Engineering
       slug: computer-engineering
@@ -1434,7 +1456,7 @@
               slug: toc
               pyqs:
                 - year: 2023
-                  file: ymca-toc--2023.pdf
+                  file: ymca-toc-2023.pdf
                   id: ymca-toc-2023  # Add this unique identifier
                   pages: 3
                   title: "Theory of Computation 2023"
