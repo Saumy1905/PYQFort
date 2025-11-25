@@ -10563,7 +10563,7 @@ window.COLLEGE_DATA = {
           description: "Civil Engineering Branch",
           keywords: ["civil", "engineering", "structures", "construction", "infrastructure"],
           icon: "building",
-          branches: [
+          semesters: [
             {
               number: 3,
               slug: "sem3",
