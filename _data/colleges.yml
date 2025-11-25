@@ -1455,6 +1455,27 @@
               icon: file-code
               slug: toc
               pyqs:
+                - year: 2019
+                  file: ymca-toc-2019.pdf
+                  id: ymca-toc-2019
+                  pages: 3
+                  title: "Theory of Computation 2019"
+                  new: true
+                  upload: "Neha"
+                - year: 2022
+                  file: ymca-toc-set-1-2022.pdf
+                  id: ymca-toc-set-1-2022 
+                  pages: 3
+                  title: "Theory of Computation Set 1 2022"
+                  new: true
+                  upload: "Neha"
+                - year: 2022
+                  file: ymca-toc-set-2-2022.pdf
+                  id: ymca-toc-set-2-2022 
+                  pages: 3
+                  title: "Theory of Computation Set 2 2022"
+                  new: true
+                  upload: "Neha"
                 - year: 2023
                   file: ymca-toc-2023.pdf
                   id: ymca-toc-2023  # Add this unique identifier
@@ -1467,7 +1488,6 @@
                   pages: 3
                   title: "Theory of Computation 2024"
                   upload: "Saumy"
-                  new: true
             - name: Constitution
               id: constitution
               description: Study of the Indian Constitution
@@ -1595,6 +1615,48 @@
                   title: "Machine Learning 2024 set 2"
                   upload: "Saumy"
                   new: true
+            - name: Sessional
+              id: sessional
+              slug: sessional
+              description: Subjects for Sessional Exams
+              keywords: ["sessional", "exams"]
+              new: true
+              pyqs:
+                - year: 2025
+                  file: ymca-dbms-2025-mid-1.pdf
+                  id: ymca-dbms-2025-mid-1
+                  pages: 3
+                  title: "DBMS 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-ml-2025-mid-1.pdf
+                  id: ymca-ml-2025-mid-1
+                  pages: 3
+                  title: "ML 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-oop-2025-mid-1.pdf
+                  id: ymca-oop-2025-mid-1
+                  pages: 3
+                  title: "OOP 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-sns-2025-mid-1.pdf
+                  id: ymca-sns-2025-mid-1
+                  pages: 3
+                  title: "SNS 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-toc-2025-mid-1.pdf
+                  id: ymca-toc-2025-mid-1
+                  pages: 3
+                  title: "TOC 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
         - number: 6
           slug: sem6
           id: sem6
@@ -4616,8 +4678,29 @@
               icon: file-code
               slug: toc
               pyqs:
+                - year: 2019
+                  file: ymca-toc-2019.pdf
+                  id: ymca-toc-2019
+                  pages: 3
+                  title: "Theory of Computation 2019"
+                  new: true
+                  upload: "Neha"
+                - year: 2022
+                  file: ymca-toc-set-1-2022.pdf
+                  id: ymca-toc-set-1-2022 
+                  pages: 3
+                  title: "Theory of Computation Set 1 2022"
+                  new: true
+                  upload: "Neha"
+                - year: 2022
+                  file: ymca-toc-set-2-2022.pdf
+                  id: ymca-toc-set-2-2022 
+                  pages: 3
+                  title: "Theory of Computation Set 2 2022"
+                  new: true
+                  upload: "Neha"
                 - year: 2023
-                  file: ymca-toc--2023.pdf
+                  file: ymca-toc-2023.pdf
                   id: ymca-toc-2023  # Add this unique identifier
                   pages: 3
                   title: "Theory of Computation 2023"
@@ -5694,10 +5777,24 @@
                   title: "Refrigeration and Air Conditioning 2022 Mid 1"
                   upload: "Saumy"
                 - year: 2025
+                  file: ymca-anpc-2025-mid-2.pdf
+                  id: ymca-anpc-2025-mid-2
+                  pages: 3
+                  title: "Air and Noise Pollution Control 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
                   file: ymca-dom-2025-mid-1.pdf
                   id: ymca-dom-2025-mid-1
                   pages: 3
                   title: "Dynamics of Machines 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-dom-2025-mid-2.pdf
+                  id: ymca-dom-2025-mid-2
+                  pages: 3
+                  title: "Dynamics of Machines 2025 Mid 2"
                   new: true
                   upload: "Saumy"
                 - year: 2025
@@ -5708,10 +5805,24 @@
                   new: true
                   upload: "Saumy"
                 - year: 2025
+                  file: ymca-dme-2025-mid-2.pdf
+                  id: ymca-dme-2025-mid-2
+                  pages: 3
+                  title: "Design of Machine Elements 1 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
                   file: ymca-hmt-2025-mid-1.pdf
                   id: ymca-hmt-2025-mid-1
                   pages: 3
                   title: "Heat and Mass Transfer 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-hmt-2025-mid-2.pdf
+                  id: ymca-hmt-2025-mid-2
+                  pages: 3
+                  title: "Heat and Mass Transfer 2025 Mid 2"
                   new: true
                   upload: "Saumy"
                 - year: 2025
@@ -5722,6 +5833,13 @@
                   new: true
                   upload: "Saumy"
                 - year: 2025
+                  file: ymca-industrial-engineering-2025-mid-2.pdf
+                  id: ymca-industrial-engineering-2025-mid-2
+                  pages: 3
+                  title: "Industrial Engineering 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
                   file: ymca-rac-2025-mid-1.pdf
                   id: ymca-rac-2025-mid-1
                   pages: 3
@@ -5729,10 +5847,24 @@
                   new: true
                   upload: "Saumy"
                 - year: 2025
+                  file: ymca-rac-2025-mid-2.pdf
+                  id: ymca-rac-2025-mid-2
+                  pages: 3
+                  title: "Refrigeration and Air Conditioning 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
                   file: ymca-eitk-2025-mid-1.pdf
                   id: ymca-eitk-2025-mid-1
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-eitk-2025-mid-2.pdf
+                  id: ymca-eitk-2025-mid-2
+                  pages: 3
+                  title: "Essence of Indian Traditional Knowledge 2025 Mid 2"
                   new: true
                   upload: "Saumy"
         - number: 6

@@ -1544,6 +1544,27 @@ window.COLLEGE_DATA = {
                   slug: "toc",
                   pyqs: [
                     {
+                      year: 2019,
+                      file: "ymca-toc-2019.pdf",
+                      id: "ymca-toc-2019",
+                      pages: 3,
+                      title: "Theory of Computation 2019",
+                    },
+                    {
+                      year: 2022,
+                      file: "ymca-toc-set-1-2022.pdf",
+                      id: "ymca-toc-set-1-2022",
+                      pages: 3,
+                      title: "Theory of Computation Set 1 2022",
+                    },
+                    {
+                      year: 2022,
+                      file: "ymca-toc-set-2-2022.pdf",
+                      id: "ymca-toc-set-2-2022",
+                      pages: 3,
+                      title: "Theory of Computation Set 2 2022",
+                    },
+                    {
                       year: 2023,
                       file: "ymca-toc-2023.pdf",
                       id: "ymca-toc-2023",
