@@ -10556,6 +10556,148 @@ window.COLLEGE_DATA = {
             },
           ],
         },
+        {
+          name: "Civil Engineering",
+          slug: "civil-engineering",
+          id: "civil-engineering",
+          description: "Civil Engineering Branch",
+          keywords: ["civil", "engineering", "structures", "construction", "infrastructure"],
+          icon: "building",
+          branches: [
+            {
+              number: 3,
+              slug: "sem3",
+              id: "sem3",
+              description: "Subjects for Semester 3",
+              keywords: ["semester 3", "civil", "engineering", "subjects"],
+              subjects: [
+                {
+                  name: "Building Construction",
+                  slug: "building-construction",
+                  id: "building-construction",
+                  description: "Fundamentals of building construction",
+                  keywords: ["building", "construction", "materials"],
+                  icon: "building",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nit-kur-building-construction-2025-mid-1.pdf",
+                      id: "nit-kur-building-construction-2025-mid-1",
+                      pages: 3,
+                      title: "Building Construction 2025 Midterm 1",
+                    }
+                  ]
+                },
+                {
+                  name: "Design of Steel Structure",
+                  slug: "dss",
+                  id: "dss",
+                  description: "Principles of designing steel structures",
+                  keywords: ["design", "steel", "structures"],
+                  icon: "building-columns",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nit-kur-dss-2025-mid-2.pdf",
+                      id: "nit-kur-dss-2025-mid-2",
+                      pages: 3,
+                      title: "Design of Steel Structure 2025 Midterm 2",
+                    }
+                  ]
+                },
+                {
+                  name: "Fluid Mechanics - 1",
+                  slug: "fmm",
+                  id: "fmm",
+                  description: "Fundamentals of fluid mechanics",
+                  keywords: ["fluid", "mechanics", "fundamentals"],
+                  icon: "water",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nit-kur-fmm-2025-mid-1.pdf",
+                      id: "nit-kur-fmm-2025-mid-1",
+                      pages: 3,
+                      title: "Fluid Mechanics - 1 2025 Midterm 1",
+                    },
+                    {
+                      year: 2025,
+                      file: "nit-kur-fmm-2025-mid-2.pdf",
+                      id: "nit-kur-fmm-2025-mid-2",
+                      pages: 3,
+                      title: "Fluid Mechanics - 1 2025 Midterm 2",
+                    }
+                  ]
+                },
+                {
+                  name: "Machine Learning and Data Analytics",
+                  slug: "ml",
+                  id: "ml",
+                  description: "Principles of machine learning and data analytics",
+                  keywords: ["machine", "learning", "data", "analytics"],
+                  icon: "brain",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nit-kur-ml-2025-mid-1.pdf",
+                      id: "nit-kur-ml-2025-mid-1",
+                      pages: 3,
+                      title: "Machine Learning and Data Analytics 2025 Midterm 1",
+                    },
+                    {
+                      year: 2025,
+                      file: "nit-kur-ml-2025-mid-2.pdf",
+                      id: "nit-kur-ml-2025-mid-2",
+                      pages: 3,
+                      title: "Machine Learning and Data Analytics 2025 Midterm 2",
+                    }
+                  ]
+                },
+                {
+                  name: "Structural Analysis",
+                  slug: "structural-analysis",
+                  id: "structural-analysis",
+                  description: "Study of structural analysis methods",
+                  keywords: ["structural", "analysis"],
+                  icon: "building",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nit-kur-structural-analysis-2025-mid-1.pdf",
+                      id: "nit-kur-structural-analysis-2025-mid-1",
+                      pages: 3,
+                      title: "Structural Analysis 2025 Midterm 1",
+                    }
+                  ]
+                },
+                {
+                  name: "Surveying",
+                  slug: "surveying",
+                  id: "surveying",
+                  description: "Fundamentals of surveying techniques",
+                  keywords: ["surveying", "techniques", "fundamentals"],
+                  icon: "map-marked-alt",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nit-kur-surveying-2025-mid-1.pdf",
+                      id: "nit-kur-surveying-2025-mid-1",
+                      pages: 3,
+                      title: "Surveying 2025 Midterm 1",
+                    },
+                    {
+                      year: 2025,
+                      file: "nit-kur-surveying-2025-mid-2.pdf",
+                      id: "nit-kur-surveying-2025-mid-2",
+                      pages: 3,
+                      title: "Surveying 2025 Midterm 2",
+                    }
+                  ]
+                },
+              ]
+            }
+          ]
+        },
       ],
     },
   ],
