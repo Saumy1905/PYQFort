@@ -5573,8 +5573,14 @@
                   id: ymca-eitk-set-2-2024  # Add this unique identifier
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge 2024 set 2"
-                  new: true
                   upload: "PT"
+                - year: 2025
+                  file: ymca-eitk-set-1-2025.pdf
+                  id: ymca-eitk-set-1-2025
+                  pages: 3
+                  title: "Essence of Indian Traditional Knowledge 2025 set 1"
+                  new: true
+                  upload: "Akr"
             - name: Refrigeration and Air Conditioning
               slug: rac
               id: rac
