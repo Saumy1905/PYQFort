@@ -963,9 +963,43 @@
               slug: aec
               id: aec
               pyqs:
+                - year: 2017
+                  file: ymca-aec-2017.pdf
+                  id: ymca-aec-2017  # Add this unique identifier
+                  pages: 3
+                  title: "Applied Electronic Circuit 2017"
+                  new: true
+                  upload: "Srishti"
+                - year: 2018
+                  file: ymca-aec-2018.pdf
+                  id: ymca-aec-2018  # Add this unique identifier
+                  pages: 3
+                  title: "Applied Electronic Circuit 2018"
+                  new: true
+                  upload: "Srishti"
+                - year: 2019
+                  file: ymca-aec-2019.pdf
+                  id: ymca-aec-2019
+                  pages: 3
+                  title: "Applied Electronic Circuit 2019"
+                  upload: "Saumy"
+                - year: 2020
+                  file: ymca-aec-2020.pdf
+                  id: ymca-aec-2020
+                  pages: 3
+                  title: "AEC 2020 (Marked as Incomplete Question Paper)"
+                  new: true
+                  upload: "Srishti"
+                - year: 2021
+                  file: ymca-aec-2021.pdf
+                  id: ymca-aec-2021
+                  pages: 3
+                  title: "Applied Electronic Circuit 2021"
+                  new: true
+                  upload: "Srishti"
                 - year: 2024
                   file: ymca-aec-2024.pdf
-                  id: ymca-aec-2024  # Add this unique identifier
+                  id: ymca-aec-2024
                   difficulty: "intermediate"
                   exam_type: "semester"
                   pages: 3
@@ -976,12 +1010,6 @@
                   id: ymca-aec-2023  # Add this unique identifier
                   pages: 3
                   title: "Applied Electronic Circuit 2023"
-                  upload: "Saumy"
-                - year: 2019
-                  file: ymca-aec-2019.pdf
-                  id: ymca-aec-2019  # Add this unique identifier
-                  pages: 3
-                  title: "Applied Electronic Circuit 2019"
                   upload: "Saumy"
             - name: Calculus and Ordinary Differential Equations
               description: Mathematical concepts in engineering
