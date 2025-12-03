@@ -1020,10 +1020,24 @@
               pyqs:
                 - year: 2023
                   file: ymca-cde-2023.pdf
-                  id: ymca-cde-2023  # Add this unique identifier
+                  id: ymca-cde-2023
                   pages: 3
                   title: "Calculus and Ordinary Differential Equations 2023"
                   upload: "Saumy"
+                - year: 2024
+                  file: ymca-cde-2024.pdf
+                  id: ymca-cde-2024
+                  pages: 3
+                  title: "Calculus and Ordinary Differential Equations 2024"
+                  new: true
+                  upload: "Devesh Goyal"
+                - year: 2024
+                  file: ymca-cde-2024-mid-1.pdf
+                  id: ymca-cde-2024-mid-1
+                  pages: 3
+                  title: "Calculus and Ordinary Differential Equations Mid 1 2024"
+                  new: true
+                  upload: "Devesh Goyal"
             - name: Digital electronics
               description: Fundamentals of digital systems
               keywords: ["digital", "electronics", "systems"]
