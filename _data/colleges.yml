@@ -1669,35 +1669,44 @@
                   id: ymca-dbms-2025-mid-1
                   pages: 3
                   title: "DBMS 2025 Mid 1"
-                  new: true
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-ml-2025-mid-1.pdf
                   id: ymca-ml-2025-mid-1
                   pages: 3
                   title: "ML 2025 Mid 1"
-                  new: true
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-ml-2025-mid-2.pdf
+                  id: ymca-ml-2025-mid-2
+                  pages: 3
+                  title: "ML 2025 Mid 2"
+                  new: true
+                  upload: "Devesh Goyal"
+                - year: 2025
+                  file: ymca-ml-2025-mid-3.pdf
+                  id: ymca-ml-2025-mid-3
+                  pages: 3
+                  title: "ML 2025 Mid 3"
+                  new: true
+                  upload: "Devesh Goyal"
                 - year: 2025
                   file: ymca-oop-2025-mid-1.pdf
                   id: ymca-oop-2025-mid-1
                   pages: 3
                   title: "OOP 2025 Mid 1"
-                  new: true
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-sns-2025-mid-1.pdf
                   id: ymca-sns-2025-mid-1
                   pages: 3
                   title: "SNS 2025 Mid 1"
-                  new: true
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-toc-2025-mid-1.pdf
                   id: ymca-toc-2025-mid-1
                   pages: 3
                   title: "TOC 2025 Mid 1"
-                  new: true
                   upload: "Saumy"
         - number: 6
           slug: sem6
