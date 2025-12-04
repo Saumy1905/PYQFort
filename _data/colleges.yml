@@ -5664,41 +5664,47 @@
               pyqs:
                 - year: 2018
                   file: ymca-hmt-2018.pdf
-                  id: ymca-hmt-2018  # Add this unique identifier
+                  id: ymca-hmt-2018
                   pages: 3
                   title: "Heat and Mass Transfer 2018"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-hmt-set-1-2022.pdf
-                  id: ymca-hmt-set-1-2022  # Add this unique identifier
+                  id: ymca-hmt-set-1-2022
                   pages: 3
                   title: "Heat and Mass Transfer 2022 set 1"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-hmt-set-2-2022.pdf
-                  id: ymca-hmt-set-2-2022  # Add this unique identifier
+                  id: ymca-hmt-set-2-2022
                   pages: 3
                   title: "Heat and Mass Transfer 2022 set 2"
                   upload: "Saumy"
                 - year: 2016
                   file: ymca-hmt-2016.pdf
-                  id: ymca-hmt-2016  # Add this unique identifier
+                  id: ymca-hmt-2016
                   pages: 3
                   title: "Heat and Mass Transfer 2016"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-hmt-2023.pdf
-                  id: ymca-hmt-2023  # Add this unique identifier
+                  id: ymca-hmt-2023
                   pages: 3
                   title: "Heat and Mass Transfer 2023"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-hmt-2024.pdf
-                  id: ymca-hmt-2024  # Add this unique identifier
+                  id: ymca-hmt-2024
                   pages: 3
                   title: "Heat and Mass Transfer 2024"
-                  new: true
                   upload: "PT"
+                - year: 2025
+                  file: ymca-hmt-set-1-2025.pdf
+                  id: ymca-hmt-set-1-2025
+                  pages: 3
+                  title: "Heat and Mass Transfer 2025 set 1"
+                  new: true
+                  upload: "Nitin Sorout"
             - name: Design of Machine Elements 1
               slug: dme
               id: dme
