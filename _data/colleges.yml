@@ -469,12 +469,6 @@
                   title: "Mathematics 103-D 2019"
                   upload: "Saumy"
                 - year: 2022
-                  file: ymca-maths-103-d-2022-sessional.pdf
-                  id: ymca-maths-103-d-2022-sessional
-                  pages: 3
-                  title: "Mathematics 103-D Sessional 2022"
-                  upload: "Saumy"
-                - year: 2022
                   file: ymca-maths-103-d-2022.pdf
                   id: ymca-maths-103-d-2022
                   pages: 3
@@ -486,11 +480,66 @@
                   pages: 3
                   title: "Mathematics 103-D 2023"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-maths-103-d-2025.pdf
+                  id: ymca-maths-103-d-2025
+                  pages: 3
+                  title: "Mathematics 103-D 2025"
+                  new: true
+                  upload: "Yashasvi Mudgal"
+                - year: 2022
+                  file: ymca-maths-103-d-2022-sessional.pdf
+                  id: ymca-maths-103-d-2022-sessional
+                  pages: 3
+                  title: "Mathematics 103-D Sessional 2022"
+                  upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-103-d-2023-sessional.pdf
                   id: ymca-maths-103-d-2023-sessional
                   pages: 3
                   title: "Mathematics 103-D Sessional 2023"
+                  upload: "Saumy"
+            - name: Mathematics 103-E
+              slug: maths-103-e
+              id: maths-103-e
+              description: Advanced mathematics for engineering
+              keywords: ["mathematics", "engineering", "calculus"]
+              icon: calculator
+              pyqs:
+                - year: 2022
+                  file: ymca-maths-103-e-2022.pdf
+                  id: ymca-maths-103-e-2022
+                  pages: 3
+                  title: "Mathematics 103-E 2022"
+                  new: true
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-maths-103-e-2023.pdf
+                  id: ymca-maths-103-e-2023
+                  pages: 3
+                  title: "Mathematics 103-E 2023"
+                  new: true
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-maths-103-e-2024.pdf
+                  id: ymca-maths-103-e-2024
+                  pages: 3
+                  title: "Mathematics 103-E 2024"
+                  new: true
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-maths-103-e-2024-mid-1.pdf
+                  id: ymca-maths-103-e-2024-mid-1
+                  pages: 3
+                  title: "Mathematics 103-E Mid 1 2024"
+                  new: true
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-maths-103-e-2024-mid-2.pdf
+                  id: ymca-maths-103-e-2024-mid-2
+                  pages: 3
+                  title: "Mathematics 103-E Mid 2 2024"
+                  new: true
                   upload: "Saumy"
             - name: Semiconductor Physics
               slug: semiconductor
@@ -1422,29 +1471,42 @@
               pyqs:
                 - year: 2018
                   file: ymca-dbms-2018.pdf
-                  id: ymca-dbms-2018  # Add this unique identifier
+                  id: ymca-dbms-2018
                   pages: 3
                   title: "Database Management Systems 2018"
                   upload: "Saumy"
                 - year: 2019
                   file: ymca-dbms-2019.pdf
-                  id: ymca-dbms-2019  # Add this unique identifier
+                  id: ymca-dbms-2019
                   pages: 3
                   title: "Database Management Systems 2019"
                   upload: "Saumy"
+                - year: 2022
+                  file: ymca-dbms-set-1-2022.pdf
+                  id: ymca-dbms-set-1-2022
+                  pages: 3
+                  title: "Database Management Systems Set 1 2022"
+                  new: true
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-dbms-set-2-2022.pdf
+                  id: ymca-dbms-set-2-2022
+                  pages: 3
+                  title: "Database Management Systems Set 2 2022"
+                  new: true
+                  upload: "Saumy"
                 - year: 2023
                   file: ymca-dbms-2023.pdf
-                  id: ymca-dbms-2023  # Add this unique identifier
+                  id: ymca-dbms-2023
                   pages: 3
                   title: "Database Management Systems 2023"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-dbms-2024.pdf
-                  id: ymca-dbms-2024  # Add this unique identifier
+                  id: ymca-dbms-2024
                   pages: 3
                   title: "Database Management Systems 2024"
                   upload: "Saumy"
-                  new: true
             - name: Biology
               id: biology
               description: Biological concepts in engineering
@@ -1669,7 +1731,15 @@
                   id: ymca-dbms-2025-mid-1
                   pages: 3
                   title: "DBMS 2025 Mid 1"
-                  upload: "Saumy"
+                  new: true
+                  upload: "Devesh Goyal"
+                - year: 2025
+                  file: ymca-dbms-2025-mid-2.pdf
+                  id: ymca-dbms-2025-mid-2
+                  pages: 3
+                  title: "DBMS 2025 Mid 2"
+                  new: true
+                  upload: "Devesh Goyal"
                 - year: 2025
                   file: ymca-ml-2025-mid-1.pdf
                   id: ymca-ml-2025-mid-1
