@@ -527,6 +527,13 @@
                   title: "Mathematics 103-E 2024"
                   new: true
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-maths-103-e-2025.pdf
+                  id: ymca-maths-103-e-2025
+                  pages: 3
+                  title: "Mathematics 103-E 2025"
+                  new: true
+                  upload: "Vicky Gupta"
                 - year: 2024
                   file: ymca-maths-103-e-2024-mid-1.pdf
                   id: ymca-maths-103-e-2024-mid-1
@@ -4778,6 +4785,20 @@
                   id: ymca-dbms-2019
                   pages: 3
                   title: "Database Management Systems 2019"
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-dbms-set-1-2022.pdf
+                  id: ymca-dbms-set-1-2022
+                  pages: 3
+                  title: "Database Management Systems Set 1 2022"
+                  new: true
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-dbms-set-2-2022.pdf
+                  id: ymca-dbms-set-2-2022
+                  pages: 3
+                  title: "Database Management Systems Set 2 2022"
+                  new: true
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-dbms-2023.pdf
