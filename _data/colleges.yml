@@ -1346,7 +1346,7 @@
                   id: ymca-coa-2019  # Add this unique identifier
                   pages: 3
                   title: "Computer Organization and Architecture 2019"
-                  upload: "Saumy"
+                  upload: "Saumy" 
                 - year: 2025
                   file: yma-coa-praxian-analysis-2025.pdf
                   id: ymca-coa-praxian-analysis-2025
