@@ -29,7 +29,7 @@ layout: default
       <!-- Filter Buttons -->
       <div class="subject-filter">
         <button class="filter-btn active" data-filter="all">All</button>
-        {% assign years = subject_data.pyqs | map: 'year' | uniq | sort %}
+        {% assign years = subject_data.pyqs | map: 'year' | compact | uniq | sort %}
         {% for year in years %}
           <button class="filter-btn" data-filter="{{ year }}">{{ year }}</button>
         {% endfor %}

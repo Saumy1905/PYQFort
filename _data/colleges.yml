@@ -166,11 +166,18 @@
                   title: "Basic Electrical Technology Set 2 2023"
                   upload: "Saumy"
                 - year: 2025
-                  file: ymca-bet-2025.pdf
-                  id: ymca-bet-2025
+                  file: ymca-bet-set-1-2025.pdf
+                  id: ymca-bet-set-1-2025
                   pages: 3
-                  title: "Basic Electrical Technology 2025"
+                  title: "Basic Electrical Technology Set 1 2025"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-bet-set-2-2025.pdf
+                  id: ymca-bet-set-2-2025
+                  pages: 3
+                  title: "Basic Electrical Technology Set 2 2025"
+                  new: true
+                  upload: "Deepesh Sharma"
                 - year: 2021
                   file: ymca-bet-2021-sessional-1.pdf
                   id: ymca-bet-2021-sessional-1
@@ -231,7 +238,6 @@
                   pages: 3
                   title: "Basic Electrical Technology Sessional 3 2025"
                   upload: "Harshit"
-                  new: true
             - name: Chemistry
               slug: chemistry
               id: chemistry
@@ -257,6 +263,13 @@
                   pages: 3
                   title: "Chemistry 2023"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-chemistry-2025.pdf
+                  id: ymca-chemistry-2025
+                  pages: 3
+                  title: "Chemistry 2025"
+                  new: true
+                  upload: "Deepesh Sharma"
                 - year: 2022
                   file: ymca-chemistry-2022-sessional-1.pdf
                   id: ymca-chemistry-2022-sessional-1
@@ -499,6 +512,43 @@
                   pages: 3
                   title: "Mathematics 103-D Sessional 2023"
                   upload: "Saumy"
+            - name: Mathematics HAS 103-C
+              slug: maths-has-103-c
+              id: maths-has-103-c
+              description: Advanced mathematics for engineering
+              keywords: ["mathematics", "engineering", "calculus"]
+              icon: calculator
+              pyqs:
+                - year: 2017
+                  file: ymca-maths-has-103-c-2017.pdf
+                  id: ymca-maths-has-103-c-2017
+                  pages: 3
+                  title: "Mathematics HAS 103-C 2017"
+                  upload: "Saumy"
+                - year: 2018
+                  file: ymca-maths-has-103-c-2018.pdf
+                  id: ymca-maths-has-103-c-2018
+                  pages: 3
+                  title: "Mathematics HAS 103-C 2018"
+                  upload: "Saumy"
+                - year: 2019
+                  file: ymca-maths-has-103-c-2019.pdf
+                  id: ymca-maths-has-103-c-2019
+                  pages: 3
+                  title: "Mathematics HAS 103-C 2019"
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-maths-has-103-c-2022.pdf
+                  id: ymca-maths-has-103-c-2022
+                  pages: 3
+                  title: "Mathematics HAS 103-C 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-maths-has-103-c-2023.pdf
+                  id: ymca-maths-has-103-c-2023
+                  pages: 3
+                  title: "Mathematics HAS 103-C 2023"
+                  upload: "Saumy"
             - name: Mathematics 103-E
               slug: maths-103-e
               id: maths-103-e
@@ -616,6 +666,13 @@
                   pages: 3
                   title: "Waves and Optics 2024"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-waves-2025.pdf
+                  id: ymca-waves-2025
+                  pages: 3
+                  title: "Waves and Optics 2025"
+                  new: true
+                  upload: "Yudvanshi Ritesh"
                 - year: 2022
                   file: ymca-waves-2022-sessional.pdf
                   id: ymca-waves-2022-sessional
@@ -1493,14 +1550,12 @@
                   id: ymca-dbms-set-1-2022
                   pages: 3
                   title: "Database Management Systems Set 1 2022"
-                  new: true
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-dbms-set-2-2022.pdf
                   id: ymca-dbms-set-2-2022
                   pages: 3
                   title: "Database Management Systems Set 2 2022"
-                  new: true
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-dbms-2023.pdf
@@ -1514,6 +1569,13 @@
                   pages: 3
                   title: "Database Management Systems 2024"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-dbms-2025.pdf
+                  id: ymca-dbms-2025
+                  pages: 3
+                  title: "Database Management Systems 2025"
+                  new: true
+                  upload: "Devesh Goyal"
             - name: Biology
               id: biology
               description: Biological concepts in engineering
@@ -1682,6 +1744,19 @@
                   pages: 3
                   title: "Universal Human Values 2023-set-2"
                   upload: "Saumy"
+            - name: OOPS
+              id: oops
+              description: Principles of object-oriented programming
+              keywords: ["object", "oriented", "programming"]
+              icon: cube
+              slug: oops
+              pyqs:
+                - year: 2023
+                  file: ymca-oops-2023.pdf
+                  id: ymca-oops-2023  # Add this unique identifier
+                  pages: 3
+                  title: "OOPS 2023"
+                  upload: "Devesh Goyal"
             - name: Machine Learning
               slug: ml
               id: ml
@@ -1768,11 +1843,17 @@
                   new: true
                   upload: "Devesh Goyal"
                 - year: 2025
-                  file: ymca-oop-2025-mid-1.pdf
-                  id: ymca-oop-2025-mid-1
+                  file: ymca-oops-2025-mid-1.pdf
+                  id: ymca-oops-2025-mid-1
                   pages: 3
-                  title: "OOP 2025 Mid 1"
+                  title: "OOPS 2025 Mid 1"
                   upload: "Saumy"
+                - Year: 2025
+                  file: ymca-oops-2025-mid-2.pdf
+                  id: ymca-oops-2025-mid-2
+                  pages: 3
+                  title: "OOPS 2025 Mid 2"
+                  upload: "Devesh Goyal"
                 - year: 2025
                   file: ymca-sns-2025-mid-1.pdf
                   id: ymca-sns-2025-mid-1
@@ -6006,6 +6087,18 @@
                   pages: 3
                   title: "Refrigeration and Air Conditioning 2025 Mid 2"
                   new: true
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-eitk-2023-mid-1.pdf
+                  id: ymca-eitk-2023-mid-1
+                  pages: 3
+                  title: "Essence of Indian Traditional Knowledge 2023 Mid 1"
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-eitk-2023-mid-2.pdf
+                  id: ymca-eitk-2023-mid-2
+                  pages: 3
+                  title: "Essence of Indian Traditional Knowledge 2023 Mid 2"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-eitk-2025-mid-1.pdf
