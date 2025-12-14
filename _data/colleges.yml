@@ -5598,31 +5598,31 @@
               pyqs:
                 - year: 2019
                   file: ymca-manufacturing-2019.pdf
-                  id: ymca-manufacturing-2019  # Add this unique identifier
+                  id: ymca-manufacturing-2019
                   pages: 3
                   title: "Manufacturing 2019"
                   upload: "Saumy"
                 - year: 2018
                   file: ymca-manufacturing-2018.pdf
-                  id: ymca-manufacturing-2018  # Add this unique identifier
+                  id: ymca-manufacturing-2018
                   pages: 3
                   title: "Manufacturing 2018"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-manufacturing-2022.pdf
-                  id: ymca-manufacturing-2022  # Add this unique identifier
+                  id: ymca-manufacturing-2022
                   pages: 3
                   title: "Manufacturing 2022"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-manufacturing-2024.pdf
-                  id: ymca-manufacturing-2024  # Add this unique identifier
+                  id: ymca-manufacturing-2024
                   pages: 3
                   title: "Manufacturing 2024"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-manufacturing-2025.pdf
-                  id: ymca-manufacturing-2025  # Add this unique identifier
+                  id: ymca-manufacturing-2025
                   pages: 3
                   title: "Manufacturing 2025"
                   upload: "Saumy"
@@ -5636,25 +5636,25 @@
               pyqs:
                 - year: 2019
                   file: ymca-material-2019.pdf
-                  id: ymca-material-2019  # Add this unique identifier
+                  id: ymca-material-2019
                   pages: 3
                   title: "Material Engineering 2019"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-material-2022.pdf
-                  id: ymca-material-2022  # Add this unique identifier
+                  id: ymca-material-2022
                   pages: 3
                   title: "Material Engineering 2022"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-material-2024.pdf
-                  id: ymca-material-2024  # Add this unique identifier
+                  id: ymca-material-2024
                   pages: 3
                   title: "Material Engineering 2024"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-material-2025.pdf
-                  id: ymca-material-2025  # Add this unique identifier
+                  id: ymca-material-2025
                   pages: 3
                   title: "Material Engineering 2025"
                   upload: "Saumy"
@@ -5668,31 +5668,31 @@
               pyqs:
                 - year: 2019
                   file: ymca-som-2-2019.pdf
-                  id: ymca-som-2-2019  # Add this unique identifier
+                  id: ymca-som-2-2019
                   pages: 3
                   title: "Strength of Material 2 2019"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-som-2-2022.pdf
-                  id: ymca-som-2-2022  # Add this unique identifier
+                  id: ymca-som-2-2022
                   pages: 3
                   title: "Strength of Material 2 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-som-2-2023.pdf
-                  id: ymca-som-2-2023  # Add this unique identifier
+                  id: ymca-som-2-2023
                   pages: 3
                   title: "Strength of Material 2 2023"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-som-2-2024.pdf
-                  id: ymca-som-2-2024  # Add this unique identifier
+                  id: ymca-som-2-2024
                   pages: 3
                   title: "Strength of Material 2 2024"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-som-2-2025.pdf
-                  id: ymca-som-2-2025  # Add this unique identifier
+                  id: ymca-som-2-2025
                   pages: 3
                   title: "Strength of Material 2 2025"
                   upload: "Saumy"
@@ -5703,7 +5703,7 @@
           description: Subjects for Semester 5
           keywords: ["semester 5", "mechanical", "engineering"]
           subjects:
-            - name: Air and Noise Pollution Control
+            - name: ANPC
               slug: anpc
               id: anpc
               description: Study of air and noise pollution control methods
@@ -5712,21 +5712,49 @@
               pyqs:
                 - year: 2023
                   file: ymca-anpc-2023-set-1.pdf
-                  id: ymca-anpc-2023-set-1  # Add this unique identifier
+                  id: ymca-anpc-2023-set-1
                   pages: 3
-                  title: "Air and Noise Pollution Control 2023 set 1"
+                  title: "ANPC 2023 set 1"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-anpc-2023-set-2.pdf
-                  id: ymca-anpc-2023-set-2  # Add this unique identifier
+                  id: ymca-anpc-2023-set-2
                   pages: 3
-                  title: "Air and Noise Pollution Control 2023 set 2"
+                  title: "ANPC 2023 set 2"
                   upload: "Saumy"
                 - year: 2024
-                  file: ymca-anpc-2024.pdf
-                  id: ymca-anpc-2024  # Add this unique identifier
+                  file: ymca-anpc-set-1-2024.pdf
+                  id: ymca-anpc-set-1-2024
                   pages: 3
-                  title: "Air and Noise Pollution Control 2024"
+                  title: "ANPC 2024 set 1"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-anpc-set-2-2024.pdf
+                  id: ymca-anpc-set-2-2024
+                  pages: 3
+                  title: "ANPC 2024 set 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-anpc-set-1-2025.pdf
+                  id: ymca-anpc-set-1-2025
+                  pages: 3
+                  title: "ANPC 2025 set 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-anpc-set-2-2025.pdf
+                  id: ymca-anpc-set-2-2025
+                  pages: 3
+                  title: "ANPC 2025 set 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-anpc-set-3-2025.pdf
+                  id: ymca-anpc-set-3-2025
+                  pages: 3
+                  title: "ANPC (MSc (EVS)) 2025 set 3"
+                  new: true
                   upload: "Saumy"
             - name: Dynamics of Machines
               slug: dom
@@ -5737,19 +5765,19 @@
               pyqs:
                 - year: 2022
                   file: ymca-dom-2022.pdf
-                  id: ymca-dom-2022  # Add this unique identifier
+                  id: ymca-dom-2022
                   pages: 3
                   title: "Dynamics of Machines 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-dom-2023.pdf
-                  id: ymca-dom-2023  # Add this unique identifier
+                  id: ymca-dom-2023
                   pages: 3
                   title: "Dynamics of Machines 2023"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-dom-2024.pdf
-                  id: ymca-dom-2024  # Add this unique identifier
+                  id: ymca-dom-2024
                   pages: 3
                   title: "Dynamics of Machines 2024"
                   new: true
@@ -5763,37 +5791,37 @@
               pyqs:
                 - year: 2022
                   file: ymca-eitk-2022.pdf
-                  id: ymca-eitk-2022  # Add this unique identifier
+                  id: ymca-eitk-2022
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-eitk-set-1-2023.pdf
-                  id: ymca-eitk-set-1-2023  # Add this unique identifier
+                  id: ymca-eitk-set-1-2023
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge 2023 set 1"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-eitk-set-2-2023.pdf
-                  id: ymca-eitk-set-2-2023  # Add this unique identifier
+                  id: ymca-eitk-set-2-2023
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge 2023 set 2"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-eitk-set-3-2023.pdf
-                  id: ymca-eitk-set-3-2023  # Add this unique identifier
+                  id: ymca-eitk-set-3-2023
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge 2023 set 3"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-eitk-set-1-2024.pdf
-                  id: ymca-eitk-set-1-2024  # Add this unique identifier
+                  id: ymca-eitk-set-1-2024
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge 2024 set 1"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-eitk-set-2-2024.pdf
-                  id: ymca-eitk-set-2-2024  # Add this unique identifier
+                  id: ymca-eitk-set-2-2024
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge 2024 set 2"
                   upload: "PT"
@@ -5813,25 +5841,25 @@
               pyqs:
                 - year: 2019
                   file: ymca-rac-2019.pdf
-                  id: ymca-rac-2019  # Add this unique identifier
+                  id: ymca-rac-2019
                   pages: 3
                   title: "Refrigeration and Air Conditioning 2019"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-rac-2022.pdf
-                  id: ymca-rac-2022  # Add this unique identifier
+                  id: ymca-rac-2022
                   pages: 3
                   title: "Refrigeration and Air Conditioning 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-rac-2023.pdf
-                  id: ymca-rac-2023  # Add this unique identifier
+                  id: ymca-rac-2023
                   pages: 3
                   title: "Refrigeration and Air Conditioning 2023"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-rac-2024.pdf
-                  id: ymca-rac-2024  # Add this unique identifier
+                  id: ymca-rac-2024
                   pages: 3
                   title: "Refrigeration and Air Conditioning 2024"
                   new: true
@@ -5886,7 +5914,7 @@
                   title: "Heat and Mass Transfer 2025 set 1"
                   new: true
                   upload: "Nitin Sorout"
-            - name: Design of Machine Elements 1
+            - name: DME 1
               slug: dme
               id: dme
               description: Study of machine design principles and applications.
@@ -5895,35 +5923,55 @@
               pyqs:
                 - year: 2016
                   file: ymca-dme-2016.pdf
-                  id: ymca-dme-2016  # Add this unique identifier
+                  id: ymca-dme-2016
                   pages: 3
-                  title: "Design of Machine Elements 1 2016"
+                  title: "DME 1 2016"
                   upload: "Saumy"
                 - year: 2018
                   file: ymca-dme-2018.pdf
-                  id: ymca-dme-2018  # Add this unique identifier
+                  id: ymca-dme-2018
                   pages: 3
-                  title: "Design of Machine Elements 1 2018"
+                  title: "DME 1 2018"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-dme-2022.pdf
-                  id: ymca-dme-2022  # Add this unique identifier
+                  id: ymca-dme-2022
                   pages: 3
-                  title: "Design of Machine Elements 1 2022"
+                  title: "DME 1 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-dme-2023.pdf
-                  id: ymca-dme-2023  # Add this unique identifier
+                  id: ymca-dme-2023
                   pages: 3
-                  title: "Design of Machine Elements 1 2023"
+                  title: "DME 1 2023"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-dme-2024.pdf
-                  id: ymca-dme-2024  # Add this unique identifier
+                  id: ymca-dme-2024
                   pages: 3
-                  title: "Design of Machine Elements 1 2024"
-                  new: true
+                  title: "DME 1 2024"
                   upload: "PT"
+                - year: 2024
+                  file: ymca-design-machine-elements-2024.pdf
+                  id: ymca-design-machine-elements-2024
+                  pages: 3
+                  title: "DME 2024 (RAI)"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-dme-set-1-2025.pdf
+                  id: ymca-dme-set-1-2025
+                  pages: 3
+                  title: "DME 1 2025 set 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-dme-set-2-2025.pdf
+                  id: ymca-dme-set-2-2025
+                  pages: 3
+                  title: "DME 1 2025 set 2 (RAI)"
+                  new: true
+                  upload: "Saumy"
             - name: Industrial Engineering
               slug: industrial-engineering
               id: industrial-engineering
@@ -5981,42 +6029,38 @@
               keywords: ["sessional", "exams"]
               new: true
               pyqs:
-                - year: 2022
-                  file: ymca-dom-2022-mid-1.pdf
-                  id: ymca-dom-2022-mid-1
+                - year: 2025
+                  file: ymca-anpc-2025-mid-2.pdf
+                  id: ymca-anpc-2025-mid-2
                   pages: 3
-                  title: "Dynamics of Machines 2022 Mid 1"
+                  title: "ANPC 2025 Mid 2"
+                  new: true
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-dme-2022-mid-1.pdf
                   id: ymca-dme-2022-mid-1
                   pages: 3
-                  title: "Design of Machine Elements 1 2022 Mid 1"
-                  upload: "Saumy"
-                - year: 2022
-                  file: ymca-hmt-2022-mid-1.pdf
-                  id: ymca-hmt-2022-mid-1
-                  pages: 3
-                  title: "Heat and Mass Transfer 2022 Mid 1"
-                  upload: "Saumy"
-                - year: 2022
-                  file: ymca-industrial-engineering-2022-mid-1.pdf
-                  id: ymca-industrial-engineering-2022-mid-1
-                  pages: 3
-                  title: "Industrial Engineering 2022 Mid 1"
-                  upload: "Saumy"
-                - year: 2022
-                  file: ymca-rac-2022-mid-1.pdf
-                  id: ymca-rac-2022-mid-1
-                  pages: 3
-                  title: "Refrigeration and Air Conditioning 2022 Mid 1"
+                  title: "DME 1 2022 Mid 1"
                   upload: "Saumy"
                 - year: 2025
-                  file: ymca-anpc-2025-mid-2.pdf
-                  id: ymca-anpc-2025-mid-2
+                  file: ymca-dme-2025-mid-1.pdf
+                  id: ymca-dme-2025-mid-1
                   pages: 3
-                  title: "Air and Noise Pollution Control 2025 Mid 2"
+                  title: "DME 1 2025 Mid 1"
                   new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-dme-2025-mid-2.pdf
+                  id: ymca-dme-2025-mid-2
+                  pages: 3
+                  title: "DME 1 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-dom-2022-mid-1.pdf
+                  id: ymca-dom-2022-mid-1
+                  pages: 3
+                  title: "Dynamics of Machines 2022 Mid 1"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-dom-2025-mid-1.pdf
@@ -6032,86 +6076,90 @@
                   title: "Dynamics of Machines 2025 Mid 2"
                   new: true
                   upload: "Saumy"
-                - year: 2025
-                  file: ymca-dme-2025-mid-1.pdf
-                  id: ymca-dme-2025-mid-1
-                  pages: 3
-                  title: "Design of Machine Elements 1 2025 Mid 1"
-                  new: true
-                  upload: "Saumy"
-                - year: 2025
-                  file: ymca-dme-2025-mid-2.pdf
-                  id: ymca-dme-2025-mid-2
-                  pages: 3
-                  title: "Design of Machine Elements 1 2025 Mid 2"
-                  new: true
-                  upload: "Saumy"
-                - year: 2025
-                  file: ymca-hmt-2025-mid-1.pdf
-                  id: ymca-hmt-2025-mid-1
-                  pages: 3
-                  title: "Heat and Mass Transfer 2025 Mid 1"
-                  new: true
-                  upload: "Saumy"
-                - year: 2025
-                  file: ymca-hmt-2025-mid-2.pdf
-                  id: ymca-hmt-2025-mid-2
-                  pages: 3
-                  title: "Heat and Mass Transfer 2025 Mid 2"
-                  new: true
-                  upload: "Saumy"
-                - year: 2025
-                  file: ymca-industrial-engineering-2025-mid-1.pdf
-                  id: ymca-industrial-engineering-2025-mid-1
-                  pages: 3
-                  title: "Industrial Engineering 2025 Mid 1"
-                  new: true
-                  upload: "Saumy"
-                - year: 2025
-                  file: ymca-industrial-engineering-2025-mid-2.pdf
-                  id: ymca-industrial-engineering-2025-mid-2
-                  pages: 3
-                  title: "Industrial Engineering 2025 Mid 2"
-                  new: true
-                  upload: "Saumy"
-                - year: 2025
-                  file: ymca-rac-2025-mid-1.pdf
-                  id: ymca-rac-2025-mid-1
-                  pages: 3
-                  title: "Refrigeration and Air Conditioning 2025 Mid 1"
-                  new: true
-                  upload: "Saumy"
-                - year: 2025
-                  file: ymca-rac-2025-mid-2.pdf
-                  id: ymca-rac-2025-mid-2
-                  pages: 3
-                  title: "Refrigeration and Air Conditioning 2025 Mid 2"
-                  new: true
-                  upload: "Saumy"
                 - year: 2023
                   file: ymca-eitk-2023-mid-1.pdf
                   id: ymca-eitk-2023-mid-1
                   pages: 3
-                  title: "Essence of Indian Traditional Knowledge 2023 Mid 1"
+                  title: "EITK 2023 Mid 1"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-eitk-2023-mid-2.pdf
                   id: ymca-eitk-2023-mid-2
                   pages: 3
-                  title: "Essence of Indian Traditional Knowledge 2023 Mid 2"
+                  title: "EITK 2023 Mid 2"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-eitk-2025-mid-1.pdf
                   id: ymca-eitk-2025-mid-1
                   pages: 3
-                  title: "Essence of Indian Traditional Knowledge 2025 Mid 1"
+                  title: "EITK 2025 Mid 1"
                   new: true
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-eitk-2025-mid-2.pdf
                   id: ymca-eitk-2025-mid-2
                   pages: 3
-                  title: "Essence of Indian Traditional Knowledge 2025 Mid 2"
+                  title: "EITK 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-hmt-2022-mid-1.pdf
+                  id: ymca-hmt-2022-mid-1
+                  pages: 3
+                  title: "HMT 2022 Mid 1"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-hmt-2025-mid-1.pdf
+                  id: ymca-hmt-2025-mid-1
+                  pages: 3
+                  title: "HMT 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-hmt-2025-mid-2.pdf
+                  id: ymca-hmt-2025-mid-2
+                  pages: 3
+                  title: "HMT 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-industrial-engineering-2022-mid-1.pdf
+                  id: ymca-industrial-engineering-2022-mid-1
+                  pages: 3
+                  title: "IE 2022 Mid 1"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-industrial-engineering-2025-mid-1.pdf
+                  id: ymca-industrial-engineering-2025-mid-1
+                  pages: 3
+                  title: "IE 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-industrial-engineering-2025-mid-2.pdf
+                  id: ymca-industrial-engineering-2025-mid-2
+                  pages: 3
+                  title: "IE 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-rac-2022-mid-1.pdf
+                  id: ymca-rac-2022-mid-1
+                  pages: 3
+                  title: "RAC 2022 Mid 1"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-rac-2025-mid-1.pdf
+                  id: ymca-rac-2025-mid-1
+                  pages: 3
+                  title: "RAC 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-rac-2025-mid-2.pdf
+                  id: ymca-rac-2025-mid-2
+                  pages: 3
+                  title: "RAC 2025 Mid 2"
                   new: true
                   upload: "Saumy"
         - number: 6
@@ -6324,8 +6372,14 @@
                   file: ymca-design-machine-elements-2024.pdf
                   id: ymca-design-machine-elements-2024
                   pages: 3
-                  title: "Design of Machine Elements 2024"
+                  title: "DME 2024"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-dme-set-2-2025.pdf
+                  id: ymca-dme-set-2-2025
+                  pages: 3
+                  title: "DME 2025"
+                  new: true
                   upload: "Saumy"
             - name: Kinematics of Robots
               slug: kinematics-of-robots
