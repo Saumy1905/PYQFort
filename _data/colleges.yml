@@ -363,11 +363,17 @@
                   title: "English 2024"
                   upload: "Saumy"
                 - year: 2025
-                  file: ymca-english-2025.pdf
-                  id: ymca-english-2025
+                  file: ymca-english-set-1-2025.pdf
+                  id: ymca-english-set-1-2025
                   pages: 3
-                  title: "English 2025"
+                  title: "English Set 1 2025"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-english-set-2-2025.pdf
+                  id: ymca-english-set-2-2025
+                  pages: 3
+                  title: "English Set 2 2025"
+                  upload: "Deepesh Sharma"
                 - year: 2021
                   file: ymca-english-2021-sessional-1.pdf
                   id: ymca-english-2021-sessional-1
