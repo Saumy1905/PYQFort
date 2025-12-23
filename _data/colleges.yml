@@ -1872,6 +1872,20 @@
                   pages: 3
                   title: "TOC 2025 Mid 1"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-toc-2025-mid-2.pdf
+                  id: ymca-toc-2025-mid-2
+                  pages: 3
+                  title: "TOC 2025 Mid 2"
+                  new: true
+                  upload: "Devesh Goyal"
+                - year: 2025
+                  file: ymca-toc-2025-mid-3.pdf
+                  id: ymca-toc-2025-mid-3
+                  pages: 3
+                  title: "TOC 2025 Mid 3"
+                  new: true
+                  upload: "Devesh Goyal"
         - number: 6
           slug: sem6
           id: sem6
