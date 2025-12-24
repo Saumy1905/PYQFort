@@ -1892,7 +1892,7 @@
           description: Subjects for Semester 6
           keywords: ["semester 6", "engineering", "subjects"]
           subjects:
-            - name: Computer Networks
+            - name: CN
               id: computer-networks
               description: Principles of computer networking
               keywords: ["computer", "networks", "principles"]
@@ -1903,25 +1903,25 @@
                   file: ymca-computer-networks-2017.pdf
                   id: ymca-computer-networks-2017  # Add this unique identifier
                   pages: 3
-                  title: "Computer Networks 2017"
+                  title: "CN 2017"
                   upload: "Saumy"
                 - year: 2018
                   file: ymca-computer-networks-2018.pdf
                   id: ymca-computer-networks-2018  # Add this unique identifier
                   pages: 3
-                  title: "Computer Networks 2018"
+                  title: "CN 2018"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-computer-networks-2023.pdf
                   id: ymca-computer-networks-2023  # Add this unique identifier
                   pages: 3
-                  title: "Computer Networks 2023"
+                  title: "CN 2023"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-computer-networks-2024.pdf
                   id: ymca-computer-networks-2024  # Add this unique identifier
                   pages: 3
-                  title: "Computer Networks 2024"
+                  title: "CN 2024"
                   upload: "Saumy"
             - name: AI Expert System
               id: ai-exp-system
@@ -5533,7 +5533,7 @@
           description: Subjects for Semester 4
           keywords: ["semester 4", "mechanical", "engineering"]
           subjects:
-            - name: Applied Thermodynamics
+            - name: AT
               slug: applied-thermo
               id: applied-thermo
               description: Advanced concepts in thermodynamics
@@ -5544,34 +5544,34 @@
                   file: ymca-applied-thermo-2018.pdf
                   id: ymca-applied-thermo-2018  # Add this unique identifier
                   pages: 3
-                  title: "Applied Thermodynamics 2018"
+                  title: "AT 2018"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-applied-thermo-2024.pdf
                   id: ymca-applied-thermo-2024  # Add this unique identifier
                   pages: 3
-                  title: "Applied Thermodynamics 2024"
+                  title: "AT 2024"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-applied-thermo-set-1-2022.pdf
                   id: ymca-applied-thermo-set-1-2022  # Add
                   pages: 3
-                  title: "Applied Thermodynamics Set 1 2022"
+                  title: "AT Set 1 2022"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-applied-thermo-set-2-2022.pdf
                   id: ymca-applied-thermo-set-2-2022  # Add
                   pages: 3
-                  title: "Applied Thermodynamics Set 2 2022"
+                  title: "AT Set 2 2022"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-applied-thermo-2025.pdf
                   id: ymca-applied-thermo-2025  # Add this unique identifier
                   pages: 3
-                  title: "Applied Thermodynamics 2025"
-                  upload: "Saumy"
+                  title: "AT 2025"
                   new: true
-            - name: Kinematics of Machines
+                  upload: "Saumy"
+            - name: KOM
               slug: kom
               id: kom
               description: Study of kinematics in machines
@@ -5582,33 +5582,33 @@
                   file: ymca-kom-2024.pdf
                   id: ymca-kom-2024  # Add this unique identifier
                   pages: 3
-                  title: "Kinematics of Machines 2024"
+                  title: "KOM 2024"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-kom-2022.pdf
                   id: ymca-kom-2022  # Add this unique identifier
                   pages: 3
-                  title: "Kinematics of Machines 2022"
+                  title: "KOM 2022"
                   upload: "Saumy"
                 - year: 2019
                   file: ymca-kom-set-1-2019.pdf
                   id: ymca-kom-set-1-2019  # Add this unique identifier
                   pages: 3
-                  title: "Kinematics of Machines Set 1 2019"
+                  title: "KOM Set 1 2019"
                   upload: "Saumy"
                 - year: 2019
                   file: ymca-kom-set-2-2019.pdf
                   id: ymca-kom-set-2-2019  # Add this unique identifier
                   pages: 3
-                  title: "Kinematics of Machines Set 2 2019"
+                  title: "KOM Set 2 2019"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-kom-2025.pdf
                   id: ymca-kom-2025  # Add this unique identifier
                   pages: 3
-                  title: "Kinematics of Machines 2025"
-                  upload: "Saumy"
+                  title: "KOM 2025"
                   new: true
+                  upload: "Saumy"
             - name: Manufacturing
               slug: manufacturing
               id: manufacturing
@@ -5645,9 +5645,9 @@
                   id: ymca-manufacturing-2025
                   pages: 3
                   title: "Manufacturing 2025"
-                  upload: "Saumy"
                   new: true
-            - name: Material Engineering
+                  upload: "Saumy"
+            - name: ME
               slug: material
               id: material
               description: Study of material properties and applications
@@ -5658,28 +5658,28 @@
                   file: ymca-material-2019.pdf
                   id: ymca-material-2019
                   pages: 3
-                  title: "Material Engineering 2019"
+                  title: "ME 2019"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-material-2022.pdf
                   id: ymca-material-2022
                   pages: 3
-                  title: "Material Engineering 2022"
+                  title: "ME 2022"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-material-2024.pdf
                   id: ymca-material-2024
                   pages: 3
-                  title: "Material Engineering 2024"
+                  title: "ME 2024"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-material-2025.pdf
                   id: ymca-material-2025
                   pages: 3
-                  title: "Material Engineering 2025"
+                  title: "ME 2025"
                   upload: "Saumy"
                   new: true
-            - name: Strength of Material 2
+            - name: SOM-2
               slug: som-2
               id: som-2
               description: Advanced concepts in strength of materials
@@ -5690,33 +5690,117 @@
                   file: ymca-som-2-2019.pdf
                   id: ymca-som-2-2019
                   pages: 3
-                  title: "Strength of Material 2 2019"
+                  title: "SOM-2 2019"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-som-2-2022.pdf
                   id: ymca-som-2-2022
                   pages: 3
-                  title: "Strength of Material 2 2022"
+                  title: "SOM-2 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-som-2-2023.pdf
                   id: ymca-som-2-2023
                   pages: 3
-                  title: "Strength of Material 2 2023"
+                  title: "SOM-2 2023"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-som-2-2024.pdf
                   id: ymca-som-2-2024
                   pages: 3
-                  title: "Strength of Material 2 2024"
+                  title: "SOM-2 2024"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-som-2-2025.pdf
                   id: ymca-som-2-2025
                   pages: 3
-                  title: "Strength of Material 2 2025"
-                  upload: "Saumy"
+                  title: "SOM-2 2025"
                   new: true
+                  upload: "Saumy"
+            - name: Sessional
+              id: sessional
+              slug: sessional
+              description: Subjects for Sessional Exams
+              keywords: ["sessional", "exams"]
+              new: true
+              pyqs:
+                - year: 2025
+                  file: ymca-at-mid-1-2025.pdf
+                  id: ymca-at-mid-1-2025
+                  pages: 3
+                  title: "AT 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-at-mid-2-2025.pdf
+                  id: ymca-at-mid-2-2025
+                  pages: 3
+                  title: "AT 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-kom-mid-1-2025.pdf
+                  id: ymca-kom-mid-1-2025
+                  pages: 3
+                  title: "KOM 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-kom-mid-2-2025.pdf
+                  id: ymca-kom-mid-2-2025
+                  pages: 3
+                  title: "KOM 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-manufacturing-mid-1-2025.pdf
+                  id: ymca-manufacturing-mid-1-2025
+                  pages: 3
+                  title: "Manufacturing 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-manufacturing-mid-2-2025.pdf
+                  id: ymca-manufacturing-mid-2-2025
+                  pages: 3
+                  title: "Manufacturing 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-material-mid-1-2025.pdf
+                  id: ymca-material-mid-1-2025
+                  pages: 3
+                  title: "ME 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-material-mid-2-2025.pdf
+                  id: ymca-material-mid-2-2025
+                  pages: 3
+                  title: "ME 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-nrbc-mid-1-2025.pdf
+                  id: ymca-nrbc-mid-1-2025
+                  pages: 3
+                  title: "NRBC 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-som-2-mid-1-2025.pdf
+                  id: ymca-som-2-mid-1-2025
+                  pages: 3
+                  title: "SOM-2 2025 Mid 1"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-som-2-mid-2-2025.pdf
+                  id: ymca-som-2-mid-2-2025
+                  pages: 3
+                  title: "SOM-2 2025 Mid 2"
+                  new: true
+                  upload: "Saumy"
         - number: 5
           slug: sem5
           id: sem5
@@ -5753,27 +5837,30 @@
                   id: ymca-anpc-set-2-2024
                   pages: 3
                   title: "ANPC 2024 set 2"
-                  new: true
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-anpc-set-1-2025.pdf
                   id: ymca-anpc-set-1-2025
                   pages: 3
                   title: "ANPC 2025 set 1"
-                  new: true
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-anpc-set-2-2025.pdf
                   id: ymca-anpc-set-2-2025
                   pages: 3
                   title: "ANPC 2025 set 2"
-                  new: true
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-anpc-set-3-2025.pdf
                   id: ymca-anpc-set-3-2025
                   pages: 3
                   title: "ANPC (MSc (EVS)) 2025 set 3"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-anpc-set-4-2025.pdf
+                  id: ymca-anpc-set-4-2025
+                  pages: 3
+                  title: "ANPC 2025 set 4"
                   new: true
                   upload: "Saumy"
             - name: Dynamics of Machines
@@ -5800,9 +5887,15 @@
                   id: ymca-dom-2024
                   pages: 3
                   title: "Dynamics of Machines 2024"
-                  new: true
                   upload: "PT"
-            - name: Essence of Indian Traditional Knowledge
+                - year: 2025
+                  file: ymca-dom-2025.pdf
+                  id: ymca-dom-2025
+                  pages: 3
+                  title: "Dynamics of Machines 2025"
+                  new: true
+                  upload: "Saumy"
+            - name: EITK
               slug: eitk
               id: eitk
               description: Study of Indian traditional knowledge systems
@@ -5813,45 +5906,51 @@
                   file: ymca-eitk-2022.pdf
                   id: ymca-eitk-2022
                   pages: 3
-                  title: "Essence of Indian Traditional Knowledge 2022"
+                  title: "EITK 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-eitk-set-1-2023.pdf
                   id: ymca-eitk-set-1-2023
                   pages: 3
-                  title: "Essence of Indian Traditional Knowledge 2023 set 1"
+                  title: "EITK 2023 set 1"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-eitk-set-2-2023.pdf
                   id: ymca-eitk-set-2-2023
                   pages: 3
-                  title: "Essence of Indian Traditional Knowledge 2023 set 2"
+                  title: "EITK 2023 set 2"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-eitk-set-3-2023.pdf
                   id: ymca-eitk-set-3-2023
                   pages: 3
-                  title: "Essence of Indian Traditional Knowledge 2023 set 3"
+                  title: "EITK 2023 set 3"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-eitk-set-1-2024.pdf
                   id: ymca-eitk-set-1-2024
                   pages: 3
-                  title: "Essence of Indian Traditional Knowledge 2024 set 1"
+                  title: "EITK 2024 set 1"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-eitk-set-2-2024.pdf
                   id: ymca-eitk-set-2-2024
                   pages: 3
-                  title: "Essence of Indian Traditional Knowledge 2024 set 2"
+                  title: "EITK 2024 set 2"
                   upload: "PT"
                 - year: 2025
                   file: ymca-eitk-set-1-2025.pdf
                   id: ymca-eitk-set-1-2025
                   pages: 3
-                  title: "Essence of Indian Traditional Knowledge 2025 set 1"
-                  new: true
+                  title: "EITK 2025 set 1"
                   upload: "Akr"
+                - year: 2025
+                  file: ymca-eitk-set-2-2025.pdf
+                  id: ymca-eitk-set-2-2025
+                  pages: 3
+                  title: "EITK 2025 set 2"
+                  new: true
+                  upload: "Saumy"
             - name: Refrigeration and Air Conditioning
               slug: rac
               id: rac
@@ -5882,8 +5981,14 @@
                   id: ymca-rac-2024
                   pages: 3
                   title: "Refrigeration and Air Conditioning 2024"
-                  new: true
                   upload: "PT"
+                - year: 2025
+                  file: ymca-rac-2025.pdf
+                  id: ymca-rac-2025
+                  pages: 3
+                  title: "Refrigeration and Air Conditioning 2025"
+                  new: true
+                  upload: "Saumy"
             - name: Heat and Mass Transfer
               slug: hmt
               id: hmt
@@ -5932,8 +6037,14 @@
                   id: ymca-hmt-set-1-2025
                   pages: 3
                   title: "Heat and Mass Transfer 2025 set 1"
-                  new: true
                   upload: "Nitin Sorout"
+                - year: 2025
+                  file: ymca-hmt-set-2-2025.pdf
+                  id: ymca-hmt-set-2-2025
+                  pages: 3
+                  title: "Heat and Mass Transfer 2025 set 2"
+                  new: true
+                  upload: "Saumy"
             - name: DME 1
               slug: dme
               id: dme
@@ -5976,20 +6087,24 @@
                   id: ymca-design-machine-elements-2024
                   pages: 3
                   title: "DME 2024 (RAI)"
-                  new: true
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-dme-set-1-2025.pdf
                   id: ymca-dme-set-1-2025
                   pages: 3
                   title: "DME 1 2025 set 1"
-                  new: true
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-dme-set-2-2025.pdf
                   id: ymca-dme-set-2-2025
                   pages: 3
                   title: "DME 1 2025 set 2 (RAI)"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-dme-set-3-2025.pdf
+                  id: ymca-dme-set-3-2025
+                  pages: 3
+                  title: "DME 1 2025 set 3"
                   new: true
                   upload: "Saumy"
             - name: Industrial Engineering
@@ -6037,11 +6152,17 @@
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-industrial-engineering-2024.pdf
-                  id: ymca-industrial-engineering-2024  # Add this unique identifier
+                  id: ymca-industrial-engineering-2024
                   pages: 3
                   title: "Industrial Engineering 2024"
-                  new: true
                   upload: "PT"
+                - year: 2025
+                  file: ymca-industrial-engineering-2025.pdf
+                  id: ymca-industrial-engineering-2025
+                  pages: 3
+                  title: "Industrial Engineering 2025"
+                  new: true
+                  upload: "Saumy"
             - name: Sessional
               id: sessional
               slug: sessional
