@@ -1618,7 +1618,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Disable 3D transforms on mobile for better performance */
+/* Disable 3D transforms on mobile for better performance
 @media (max-width: 768px), (hover: none) {
   .college-card,
   .branch-card,
@@ -1635,7 +1635,7 @@ h1, h2, h3, h4, h5, h6 {
   .pdf-card:hover {
     transform: none;
   }
-}
+} */
 
 /* Ripple effect for buttons */
 .btn {
