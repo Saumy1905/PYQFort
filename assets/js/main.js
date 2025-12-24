@@ -23,9 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Setup scroll-based navigation hiding/showing
-  setupScrollNavigation();
-  
   // Toggle dark mode
   const themeToggle = document.querySelector('.theme-toggle');
   const html = document.documentElement; // Use <html> for dark-theme class
@@ -1216,6 +1213,12 @@ function initializeCardAnimations() {
 }
 
 function initializeHoverEffects() {
+  // Skip hover effects on touch devices to prevent conflicts
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  if (isTouchDevice) {
+    return;
+  }
+  
   // Simple outward hover effect for cards (excluding search result cards)
   const cards = document.querySelectorAll('.college-card, .branch-card, .semester-card, .subject-card, .pdf-card');
   cards.forEach(card => {
@@ -1530,10 +1533,20 @@ function checkURLParameters() {
 
 // ============================================== [SCROLL-BASED NAVIGATION] ==============================================
 
+// Guard to prevent multiple initializations
+let scrollNavigationInitialized = false;
+
 function setupScrollNavigation() {
   // Get the header element
   const header = document.querySelector('.site-header');
   if (!header) return;
+  
+  // Prevent duplicate initialization
+  if (scrollNavigationInitialized) {
+    console.warn('Scroll navigation already initialized, skipping');
+    return;
+  }
+  scrollNavigationInitialized = true;
 
   // Add a new class to the header for styling purposes
   header.classList.add('scroll-nav');
@@ -1543,6 +1556,9 @@ function setupScrollNavigation() {
   let scrollThreshold = 100; // Minimum scroll amount before showing/hiding
   let scrollDelayTimer;
   let isHeaderVisible = true;
+  
+  // Detect if device is mobile/touch for better throttling
+  const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
   // Add CSS styles for the slide-up and slide-down animations
   const style = document.createElement('style');
@@ -1604,7 +1620,7 @@ function setupScrollNavigation() {
       }
       
       lastScrollTop = scrollTop;
-    }, 10); // Small delay for performance
+    }, isMobile ? 50 : 10); // Higher delay on mobile for smoother animations
   });
 
   // Show header when hovering near the top of the page
