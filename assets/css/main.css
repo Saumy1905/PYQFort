@@ -1618,24 +1618,31 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Disable 3D transforms on mobile for better performance
+/* Elegant touch feedback for mobile devices */
 @media (max-width: 768px), (hover: none) {
   .college-card,
   .branch-card,
   .semester-card,
   .subject-card,
   .pdf-card {
-    transform-style: flat;
+    /* Maintain 3D context for elegant effects */
+    transform-style: preserve-3d;
+    /* Smooth transitions optimized for touch */
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+    /* Hardware acceleration for smooth performance */
+    will-change: transform;
   }
   
-  .college-card:hover,
-  .branch-card:hover,
-  .semester-card:hover,
-  .subject-card:hover,
-  .pdf-card:hover {
-    transform: none;
+  /* Active state for touch feedback */
+  .college-card:active,
+  .branch-card:active,
+  .semester-card:active,
+  .subject-card:active,
+  .pdf-card:active {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   }
-} */
+}
 
 /* Ripple effect for buttons */
 .btn {

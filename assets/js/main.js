@@ -1213,21 +1213,24 @@ function initializeCardAnimations() {
 }
 
 function initializeHoverEffects() {
-  // Skip hover effects on touch devices to prevent conflicts
   const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  if (isTouchDevice) {
-    return;
-  }
-  
-  // Simple outward hover effect for cards (excluding search result cards)
   const cards = document.querySelectorAll('.college-card, .branch-card, .semester-card, .subject-card, .pdf-card');
+  
   cards.forEach(card => {
-    // Only add event listeners if they don't already exist
-    if (!card.dataset.hoverInitialized) {
+    if (card.dataset.hoverInitialized) return;
+    
+    if (isTouchDevice) {
+      // Elegant touch effects for mobile
+      card.addEventListener('touchstart', handleTouchStart, { passive: true });
+      card.addEventListener('touchend', handleTouchEnd, { passive: true });
+      card.addEventListener('touchcancel', handleTouchEnd, { passive: true });
+    } else {
+      // Desktop hover effects
       card.addEventListener('mouseenter', handleCardHover);
       card.addEventListener('mouseleave', resetCardHover);
-      card.dataset.hoverInitialized = 'true';
     }
+    
+    card.dataset.hoverInitialized = 'true';
   });
 }
 
@@ -1247,6 +1250,31 @@ function resetCardHover(e) {
   // Reset to normal position
   card.style.transform = 'translateZ(0) scale(1)';
   card.style.boxShadow = '';
+}
+
+// Elegant touch handlers for mobile devices
+function handleTouchStart(e) {
+  const card = e.currentTarget;
+  
+  // Smooth 3D lift effect - card elegantly comes forward
+  card.style.willChange = 'transform, box-shadow';
+  card.style.transition = 'transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease';
+  card.style.transform = 'translateY(-8px) scale(1.02)';
+  card.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.15)';
+}
+
+function handleTouchEnd(e) {
+  const card = e.currentTarget;
+  
+  // Smooth return with elegant easing
+  card.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s ease';
+  card.style.transform = 'translateY(0) scale(1)';
+  card.style.boxShadow = '';
+  
+  // Clean up after animation
+  setTimeout(() => {
+    card.style.willChange = 'auto';
+  }, 500);
 }
 
 // ============================================== [ADVANCED FILTERING] ==============================================
