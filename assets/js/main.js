@@ -102,6 +102,9 @@ document.addEventListener('DOMContentLoaded', function() {
   if (document.querySelector('.pdf-viewer-container')) {
     initializePDFViewer();
   }
+  
+  // Initialize syllabus documentation feature
+  initializeSyllabusModal();
 });
 
 // ============================================== [PDF VIEWER FUNCTIONALITY] =======================
@@ -1669,6 +1672,60 @@ function setupScrollNavigation() {
       isHeaderVisible = true;
     }
   });
+}
+
+// ============================================== [SYLLABUS DOCUMENTATION FEATURE] ==============================================
+
+function initializeSyllabusModal() {
+  const toggleBtn = document.getElementById('syllabus-toggle');
+  const modal = document.getElementById('syllabus-modal');
+  const closeBtn = document.getElementById('syllabus-close');
+  const overlay = document.getElementById('syllabus-overlay');
+  
+  if (!toggleBtn || !modal) return;
+  
+  // Open modal
+  toggleBtn.addEventListener('click', function() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+    
+    // Add escape key listener
+    document.addEventListener('keydown', handleEscapeKey);
+  });
+  
+  // Close modal function
+  function closeSyllabusModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scroll
+    
+    // Remove escape key listener
+    document.removeEventListener('keydown', handleEscapeKey);
+  }
+  
+  // Close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeSyllabusModal);
+  }
+  
+  // Close on overlay click
+  if (overlay) {
+    overlay.addEventListener('click', closeSyllabusModal);
+  }
+  
+  // Escape key handler
+  function handleEscapeKey(e) {
+    if (e.key === 'Escape') {
+      closeSyllabusModal();
+    }
+  }
+  
+  // Prevent modal content click from closing
+  const syllabusContainer = modal?.querySelector('.syllabus-container');
+  if (syllabusContainer) {
+    syllabusContainer.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  }
 }
 
 // ============================================== [GLOBAL HELPER FUNCTIONS] ==============================================
