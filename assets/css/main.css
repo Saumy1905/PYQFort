@@ -3235,12 +3235,4 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     justify-content: center;
   }
-  
-  .syllabus-header h2 span {
-    display: none;
-  }
-  
-  .syllabus-header h2::after {
-    content: 'Syllabus';
-  }
 }
