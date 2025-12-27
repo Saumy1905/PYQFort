@@ -15,7 +15,38 @@ layout: default
   <header class="subject-header">
     <h1 class="page-title">{{ page.subject_name }} ({{ page.code }})</h1>
     <p class="page-description">{{ page.description }}</p>
+    
+    {% if page.subject_content %}
+    <!-- Subject Documentation Button -->
+    <div class="subject-doc-action">
+      <button class="btn-subject-doc" id="subject-doc-toggle" aria-label="View Subject Documentation">
+        <i class="fas fa-file-alt"></i>
+        <span>Subject Guide</span>
+      </button>
+    </div>
+    {% endif %}
   </header>
+
+  {% if page.subject_content %}
+  <!-- Subject Documentation Modal -->
+  <div class="subject-doc-modal" id="subject-doc-modal" aria-hidden="true">
+    <div class="subject-doc-overlay" id="subject-doc-overlay"></div>
+    <div class="subject-doc-container">
+      <div class="subject-doc-header">
+        <h2>
+          <i class="fas fa-book"></i>
+          Subject Documentation
+        </h2>
+        <button class="subject-doc-close" id="subject-doc-close" aria-label="Close Subject Documentation">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="subject-doc-content">
+        {{ page.subject_content | markdownify }}
+      </div>
+    </div>
+  </div>
+  {% endif %}
 
   <!-- PDF Grid -->
   <section class="pdf-grid">

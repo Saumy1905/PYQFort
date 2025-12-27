@@ -105,6 +105,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize syllabus documentation feature
   initializeSyllabusModal();
+  
+  // Initialize subject documentation feature
+  initializeSubjectDocModal();
 });
 
 // ============================================== [PDF VIEWER FUNCTIONALITY] =======================
@@ -1723,6 +1726,60 @@ function initializeSyllabusModal() {
   const syllabusContainer = modal?.querySelector('.syllabus-container');
   if (syllabusContainer) {
     syllabusContainer.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  }
+}
+
+// ============================================== [SUBJECT DOCUMENTATION FEATURE] ==============================================
+
+function initializeSubjectDocModal() {
+  const toggleBtn = document.getElementById('subject-doc-toggle');
+  const modal = document.getElementById('subject-doc-modal');
+  const closeBtn = document.getElementById('subject-doc-close');
+  const overlay = document.getElementById('subject-doc-overlay');
+  
+  if (!toggleBtn || !modal) return;
+  
+  // Open modal
+  toggleBtn.addEventListener('click', function() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+    
+    // Add escape key listener
+    document.addEventListener('keydown', handleSubjectDocEscapeKey);
+  });
+  
+  // Close modal function
+  function closeSubjectDocModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scroll
+    
+    // Remove escape key listener
+    document.removeEventListener('keydown', handleSubjectDocEscapeKey);
+  }
+  
+  // Close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeSubjectDocModal);
+  }
+  
+  // Close on overlay click
+  if (overlay) {
+    overlay.addEventListener('click', closeSubjectDocModal);
+  }
+  
+  // Escape key handler
+  function handleSubjectDocEscapeKey(e) {
+    if (e.key === 'Escape') {
+      closeSubjectDocModal();
+    }
+  }
+  
+  // Prevent modal content click from closing
+  const subjectDocContainer = modal?.querySelector('.subject-doc-container');
+  if (subjectDocContainer) {
+    subjectDocContainer.addEventListener('click', function(e) {
       e.stopPropagation();
     });
   }

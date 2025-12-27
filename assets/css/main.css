@@ -3236,3 +3236,341 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
   }
 }
+
+/* ===== SUBJECT DOCUMENTATION FEATURE ===== */
+
+/* Subject Documentation Action Button */
+.subject-doc-action {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-subject-doc {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(240, 147, 251, 0.3);
+}
+
+.btn-subject-doc:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);
+}
+
+.btn-subject-doc:active {
+  transform: translateY(0);
+}
+
+.btn-subject-doc i {
+  font-size: 1.1rem;
+}
+
+/* Subject Documentation Modal */
+.subject-doc-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.subject-doc-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.subject-doc-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.subject-doc-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  max-height: 85vh;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  animation: slideUpDoc 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1;
+}
+
+@keyframes slideUpDoc {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.subject-doc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid var(--border-color);
+  background: linear-gradient(135deg, #f093fb15 0%, #f5576c15 100%);
+  border-radius: 16px 16px 0 0;
+}
+
+.subject-doc-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.subject-doc-header i {
+  color: #f093fb;
+  font-size: 1.75rem;
+}
+
+.subject-doc-close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subject-doc-close:hover {
+  background: var(--hover-bg);
+  transform: rotate(90deg);
+}
+
+.subject-doc-content {
+  padding: 2rem;
+  overflow-y: auto;
+  flex: 1;
+  color: var(--text-color);
+}
+
+/* Markdown Content Styling for Subject Documentation */
+.subject-doc-content h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  color: var(--heading-color);
+  border-bottom: 3px solid #f093fb;
+  padding-bottom: 0.75rem;
+}
+
+.subject-doc-content h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  color: var(--heading-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subject-doc-content h2::before {
+  content: '📖';
+  font-size: 1.25rem;
+}
+
+.subject-doc-content h3 {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 0.75rem 0;
+  color: var(--text-color);
+}
+
+.subject-doc-content p {
+  margin: 0.75rem 0;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.subject-doc-content strong {
+  color: #f093fb;
+  font-weight: 600;
+}
+
+.subject-doc-content ul, .subject-doc-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+  line-height: 1.8;
+}
+
+.subject-doc-content li {
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+.subject-doc-content ul li::marker {
+  color: #f093fb;
+}
+
+.subject-doc-content hr {
+  border: none;
+  border-top: 2px solid var(--border-color);
+  margin: 1.5rem 0;
+  opacity: 0.3;
+}
+
+.subject-doc-content code {
+  background: var(--hover-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #f093fb;
+}
+
+.subject-doc-content pre {
+  background: var(--hover-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.subject-doc-content blockquote {
+  border-left: 4px solid #f093fb;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* Custom Scrollbar for Subject Documentation Content */
+.subject-doc-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.subject-doc-content::-webkit-scrollbar-track {
+  background: var(--hover-bg);
+  border-radius: 4px;
+}
+
+.subject-doc-content::-webkit-scrollbar-thumb {
+  background: #f093fb;
+  border-radius: 4px;
+}
+
+.subject-doc-content::-webkit-scrollbar-thumb:hover {
+  background: #f5576c;
+}
+
+/* Dark Theme Support for Subject Documentation */
+.dark-theme .btn-subject-doc {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 4px 12px rgba(240, 147, 251, 0.4);
+}
+
+.dark-theme .subject-doc-overlay {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.dark-theme .subject-doc-container {
+  background: var(--card-bg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.dark-theme .subject-doc-header {
+  background: linear-gradient(135deg, #f093fb20 0%, #f5576c20 100%);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .subject-doc-content strong {
+  color: #ffb3fb;
+}
+
+.dark-theme .subject-doc-content code {
+  background: rgba(240, 147, 251, 0.15);
+  color: #ffb3fb;
+}
+
+/* Responsive Design for Subject Documentation */
+@media (max-width: 768px) {
+  .btn-subject-doc {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .subject-doc-container {
+    max-height: 90vh;
+    margin: 0.5rem;
+    border-radius: 12px;
+  }
+  
+  .subject-doc-header {
+    padding: 1rem 1.25rem;
+  }
+  
+  .subject-doc-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .subject-doc-header i {
+    font-size: 1.5rem;
+  }
+  
+  .subject-doc-content {
+    padding: 1.25rem;
+  }
+  
+  .subject-doc-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .subject-doc-content h2 {
+    font-size: 1.25rem;
+  }
+  
+  .subject-doc-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .subject-doc-content ul, .subject-doc-content ol {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subject-doc-action {
+    margin-top: 1rem;
+  }
+  
+  .btn-subject-doc {
+    width: 100%;
+    justify-content: center;
+  }
+}
