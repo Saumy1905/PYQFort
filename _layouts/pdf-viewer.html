@@ -64,6 +64,12 @@ layout: default
         <span>PraxPod</span>
       </a>
       {% endif %}
+      {% if page.pyq_content %}
+      <button class="btn-action btn-pyq-doc" id="pyq-doc-toggle" title="View Question Solutions">
+        <i class="fas fa-lightbulb"></i>
+        <span>Solutions</span>
+      </button>
+      {% endif %}
     </div>
     
     <div class="action-group">
@@ -85,6 +91,27 @@ layout: default
       {% endif %} -->
     </div>
   </div>
+
+  {% if page.pyq_content %}
+  <!-- PYQ Documentation Modal -->
+  <div class="pyq-doc-modal" id="pyq-doc-modal" aria-hidden="true">
+    <div class="pyq-doc-overlay" id="pyq-doc-overlay"></div>
+    <div class="pyq-doc-container">
+      <div class="pyq-doc-header">
+        <h2>
+          <i class="fas fa-question-circle"></i>
+          Question Solutions & Hints
+        </h2>
+        <button class="pyq-doc-close" id="pyq-doc-close" aria-label="Close Solutions">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="pyq-doc-content">
+        {{ page.pyq_content | markdownify }}
+      </div>
+    </div>
+  </div>
+  {% endif %}
 
   <!-- PDF Viewer Container -->
   <div class="pdf-viewer-container">

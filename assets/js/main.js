@@ -108,6 +108,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize subject documentation feature
   initializeSubjectDocModal();
+  
+  // Initialize PYQ documentation feature
+  initializePyqDocModal();
 });
 
 // ============================================== [PDF VIEWER FUNCTIONALITY] =======================
@@ -1780,6 +1783,60 @@ function initializeSubjectDocModal() {
   const subjectDocContainer = modal?.querySelector('.subject-doc-container');
   if (subjectDocContainer) {
     subjectDocContainer.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  }
+}
+
+// ============================================== [PYQ DOCUMENTATION FEATURE] ==============================================
+
+function initializePyqDocModal() {
+  const toggleBtn = document.getElementById('pyq-doc-toggle');
+  const modal = document.getElementById('pyq-doc-modal');
+  const closeBtn = document.getElementById('pyq-doc-close');
+  const overlay = document.getElementById('pyq-doc-overlay');
+  
+  if (!toggleBtn || !modal) return;
+  
+  // Open modal
+  toggleBtn.addEventListener('click', function() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+    
+    // Add escape key listener
+    document.addEventListener('keydown', handlePyqDocEscapeKey);
+  });
+  
+  // Close modal function
+  function closePyqDocModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scroll
+    
+    // Remove escape key listener
+    document.removeEventListener('keydown', handlePyqDocEscapeKey);
+  }
+  
+  // Close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closePyqDocModal);
+  }
+  
+  // Close on overlay click
+  if (overlay) {
+    overlay.addEventListener('click', closePyqDocModal);
+  }
+  
+  // Escape key handler
+  function handlePyqDocEscapeKey(e) {
+    if (e.key === 'Escape') {
+      closePyqDocModal();
+    }
+  }
+  
+  // Prevent modal content click from closing
+  const pyqDocContainer = modal?.querySelector('.pyq-doc-container');
+  if (pyqDocContainer) {
+    pyqDocContainer.addEventListener('click', function(e) {
       e.stopPropagation();
     });
   }
