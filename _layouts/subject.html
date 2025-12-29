@@ -15,16 +15,6 @@ layout: default
   <header class="subject-header">
     <h1 class="page-title">{{ page.subject_name }} ({{ page.code }})</h1>
     <p class="page-description">{{ page.description }}</p>
-    
-    {% if page.subject_content %}
-    <!-- Subject Documentation Button -->
-    <div class="subject-doc-action">
-      <button class="btn-subject-doc" id="subject-doc-toggle" aria-label="View Subject Documentation">
-        <i class="fas fa-file-alt"></i>
-        <span>Subject Guide</span>
-      </button>
-    </div>
-    {% endif %}
   </header>
 
   {% if page.subject_content %}
@@ -57,6 +47,16 @@ layout: default
     {% assign subject_data = semester_data.subjects | where: "slug", page.subject_slug | first %}
     
     {% if subject_data and subject_data.pyqs %}
+      {% if page.subject_content %}
+      <!-- Subject Documentation Button - Positioned Above Filters -->
+      <div class="subject-doc-action">
+        <button class="btn-subject-doc" id="subject-doc-toggle" aria-label="View Subject Documentation">
+          <i class="fas fa-file-alt"></i>
+          <span>Subject Guide</span>
+        </button>
+      </div>
+      {% endif %}
+      
       <!-- Filter Buttons -->
       <div class="subject-filter">
         <button class="filter-btn active" data-filter="all">All</button>
