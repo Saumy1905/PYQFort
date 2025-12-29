@@ -14,16 +14,6 @@ layout: default
   <header class="semester-header">
     <h1 class="page-title">{{ page.semester_name }} - {{ page.branch_name }}</h1>
     <p class="page-description">{{ page.description | default: "View subjects and Previous Year Question Papers" }}</p>
-    
-    {% if page.syllabus_content %}
-    <!-- Syllabus Documentation Button -->
-    <div class="syllabus-action">
-      <button class="btn-syllabus" id="syllabus-toggle" aria-label="View Syllabus Documentation">
-        <i class="fas fa-book-open"></i>
-        <span>CVT</span>
-      </button>
-    </div>
-    {% endif %}
   </header>
 
   {% if page.syllabus_content %}
@@ -55,6 +45,16 @@ layout: default
     {% assign semester_data = branch_data.semesters | where: "slug", page.semester_slug | first %}
     
     {% if semester_data and semester_data.subjects %}
+      {% if page.syllabus_content %}
+      <!-- Syllabus Documentation Button - Positioned Above Subject Grid -->
+      <div class="syllabus-action">
+        <button class="btn-syllabus" id="syllabus-toggle" aria-label="View Syllabus Documentation">
+          <i class="fas fa-book-open"></i>
+          <span>CVT</span>
+        </button>
+      </div>
+      {% endif %}
+      
       {% comment %} 1. Get and prepare data with null safety {% endcomment %}
       {% assign subject_marketing_cards = semester_data.subject_marketing_cards | default: empty %}
       {% assign filtered_marketing_cards = subject_marketing_cards | where: 'type', 'subject_integrated' | default: empty %}

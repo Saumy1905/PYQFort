@@ -2904,9 +2904,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Syllabus Action Button */
 .syllabus-action {
-  margin-top: 1.5rem;
+  margin: 2.5rem 0 1.5rem 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .btn-syllabus {
@@ -2917,21 +2920,24 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #ffffff;
   border: none;
-  border-radius: 12px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.25);
+  letter-spacing: 0.3px;
 }
 
 .btn-syllabus:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
 .btn-syllabus:active {
   transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
 }
 
 .btn-syllabus i {
