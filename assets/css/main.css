@@ -3595,6 +3595,9 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, #ffa726 0%, #fb8c00 100%) !important;
   color: #ffffff !important;
   box-shadow: 0 2px 8px rgba(255, 167, 38, 0.3) !important;
+  padding: 0.6rem 1.15rem !important;
+  font-size: 0.9rem !important;
+  gap: 0.5rem !important;
 }
 
 .btn-pyq-doc:hover {
@@ -3893,13 +3896,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Mobile Responsive Design for PYQ Documentation Button */
-@media (max-width: 768px) {
-  .btn-pyq-doc {
-    padding: 0.5rem 0.875rem !important;
-    font-size: 0.85rem !important;
-  }
-}
-
 @media (max-width: 480px) {
   .btn-pyq-doc {
     padding: 0.5rem 0.75rem !important;
