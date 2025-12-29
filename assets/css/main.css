@@ -3892,13 +3892,26 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Mobile Responsive Design for PYQ Documentation Button */
+@media (max-width: 768px) {
+  .btn-pyq-doc {
+    padding: 0.5rem 0.875rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
 @media (max-width: 480px) {
-  .btn-pyq-doc span {
-    display: none;
+  .btn-pyq-doc {
+    padding: 0.5rem 0.75rem !important;
+    min-width: auto !important;
   }
   
-  .btn-pyq-doc::after {
-    content: 'Solutions';
-    margin-left: 0;
+  .btn-pyq-doc span {
+    display: none !important;
+  }
+  
+  .btn-pyq-doc i {
+    margin: 0 !important;
+    font-size: 1.1rem !important;
   }
 }
