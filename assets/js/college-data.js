@@ -10700,5 +10700,602 @@ window.COLLEGE_DATA = {
         },
       ],
     },
+    {
+      name: "ABV IIITM, Gwalior",
+      slug: "abviiitm",
+      id: "abviiitm",
+      description: "Explore branches and Previous Year Question Papers",
+      keywords: ["abv-iiitm", "iiitm gwalior", "information technology", "management"],
+      icon: "university",
+      branches: [
+        {
+          name: "Fresher Year",
+          slug: "acr",
+          id: "acr",
+          description: "Academic Common Subjects for Freshers",
+          keywords: ["common", "first year", "freshers", "foundation"],
+          icon: "book",
+          semesters: [
+            {
+              number: 1,
+              slug: "sem1",
+              id: "sem1",
+              description: "Subjects for Semester 1",
+              keywords: ["semester 1", "common", "foundation"],
+              subjects: [
+                {
+                  name: "Engineering Drawing and Practice",
+                  slug: "edp",
+                  id: "edp",
+                  description: "Engineering Drawing and Practice",
+                  keywords: ["edp", "drawing", "practice"],
+                  icon: "pencil-ruler",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-edp_major-2023.pdf",
+                      id: "abviiitm-edp_major-2023",
+                      pages: 10,
+                      title: "EDP Major 2023"
+                    },
+                    {
+                      year: 2023,
+                      file: "abviiitm-edp_minor-2023.pdf",
+                      id: "abviiitm-edp_minor-2023",
+                      pages: 10,
+                      title: "EDP Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "FEE",
+                  slug: "fee",
+                  id: "fee",
+                  description: "Fundamental of Electrical and Electronics",
+                  keywords: ["fee", "electrical", "electronics"],
+                  icon: "plug",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-fee_major-2023.pdf",
+                      id: "abviiitm-fee_major-2023",
+                      pages: 10,
+                      title: "Fee Major 2023"
+                    },
+                    {
+                      year: 2023,
+                      file: "abviiitm-fee_minor-2023.pdf",
+                      id: "abviiitm-fee_minor-2023",
+                      pages: 10,
+                      title: "Fee Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Mathematics",
+                  slug: "maths",
+                  id: "maths",
+                  description: "Mathematics",
+                  keywords: ["maths", "mathematics"],
+                  icon: "calculator",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-maths_major-2023.pdf",
+                      id: "abviiitm-maths_major-2023",
+                      pages: 10,
+                      title: "Maths Major 2023"
+                    },
+                    {
+                      year: 2023,
+                      file: "abviiitm-maths_minor-2023.pdf",
+                      id: "abviiitm-maths_minor-2023",
+                      pages: 10,
+                      title: "Maths Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Physical Education",
+                  slug: "physical-edu",
+                  id: "physical-edu",
+                  description: "Physical Education",
+                  keywords: ["physical", "education", "sports"],
+                  icon: "running",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-physical-edu_major-2023.pdf",
+                      id: "abviiitm-physical-edu_major-2023",
+                      pages: 10,
+                      title: "Physical Education Major 2023"
+                    },
+                    {
+                      year: 2023,
+                      file: "abviiitm-physical-edu_minor-2023.pdf",
+                      id: "abviiitm-physical-edu_minor-2023",
+                      pages: 10,
+                      title: "Physical Education Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Physics",
+                  slug: "physics",
+                  id: "physics",
+                  description: "Physics",
+                  keywords: ["physics"],
+                  icon: "atom",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-physics_major-2023.pdf",
+                      id: "abviiitm-physics_major-2023",
+                      pages: 10,
+                      title: "Physics Major 2023"
+                    },
+                    {
+                      year: 2023,
+                      file: "abviiitm-physics_minor-2023.pdf",
+                      id: "abviiitm-physics_minor-2023",
+                      pages: 10,
+                      title: "Physics Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Programming",
+                  slug: "programming",
+                  id: "programming",
+                  description: "Programming",
+                  keywords: ["programming", "coding"],
+                  icon: "code",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-programming_major-2023.pdf",
+                      id: "abviiitm-programming_major-2023",
+                      pages: 10,
+                      title: "Programming Major 2023"
+                    },
+                    {
+                      year: 2023,
+                      file: "abviiitm-programming_minor-2023.pdf",
+                      id: "abviiitm-programming_minor-2023",
+                      pages: 10,
+                      title: "Programming Minor 2023"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              number: 2,
+              slug: "sem2",
+              id: "sem2",
+              description: "Subjects for Semester 2",
+              keywords: ["semester 2", "common", "foundation"],
+              subjects: [
+                {
+                  name: "Data Structures",
+                  slug: "data-structures",
+                  id: "data-structures",
+                  description: "Data Structures",
+                  keywords: ["data structures", "ds"],
+                  icon: "sitemap",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-data-structures_minor-2023.pdf",
+                      id: "abviiitm-data-structures_minor-2023",
+                      pages: 10,
+                      title: "Data Structures Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Digital Electronics",
+                  slug: "digital-electronics",
+                  id: "digital-electronics",
+                  description: "Digital Electronics",
+                  keywords: ["digital", "electronics"],
+                  icon: "microchip",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-digital-electronics_minor-2023.pdf",
+                      id: "abviiitm-digital-electronics_minor-2023",
+                      pages: 10,
+                      title: "Digital Electronics Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Environmental Science",
+                  slug: "env-science",
+                  id: "env-science",
+                  description: "Environmental Science",
+                  keywords: ["environment", "science"],
+                  icon: "leaf",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-env-science_minor-2023.pdf",
+                      id: "abviiitm-env-science_minor-2023",
+                      pages: 10,
+                      title: "Environmental Science Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Hardware",
+                  slug: "hardware",
+                  id: "hardware",
+                  description: "Hardware",
+                  keywords: ["hardware"],
+                  icon: "server",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-hardware_major-2023.pdf",
+                      id: "abviiitm-hardware_major-2023",
+                      pages: 10,
+                      title: "Hardware Major 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Mathematics (MAT)",
+                  slug: "mat",
+                  id: "mat",
+                  description: "Mathematics",
+                  keywords: ["mat", "mathematics"],
+                  icon: "calculator",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-mat_minor-2023.pdf",
+                      id: "abviiitm-mat_minor-2023",
+                      pages: 10,
+                      title: "MAT Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Object Oriented Programming",
+                  slug: "oops",
+                  id: "oops",
+                  description: "OOPs",
+                  keywords: ["oops", "object oriented"],
+                  icon: "code-branch",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-oops_minor-2023.pdf.pdf",
+                      id: "abviiitm-oops_minor-2023",
+                      pages: 10,
+                      title: "OOPs Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Probability",
+                  slug: "probability",
+                  id: "probability",
+                  description: "Probability",
+                  keywords: ["probability", "statistics"],
+                  icon: "dice",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-probability_minor-2023.pdf",
+                      id: "abviiitm-probability_minor-2023",
+                      pages: 10,
+                      title: "Probability Minor 2023"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "Computer Engineering",
+          slug: "computer-engineering",
+          id: "computer-engineering",
+          description: "Computer Engineering Branch",
+          keywords: ["computer", "engineering"],
+          icon: "laptop-code",
+          semesters: [
+            {
+              number: 3,
+              slug: "sem3",
+              id: "sem3",
+              description: "Subjects for Semester 3",
+              subjects: [
+                {
+                  name: "Computer Organization and Architecture",
+                  slug: "coa",
+                  id: "coa",
+                  description: "COA",
+                  keywords: ["coa", "computer organization"],
+                  icon: "microchip",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-coa_major-2023.pdf",
+                      id: "abviiitm-coa_major-2023",
+                      pages: 10,
+                      title: "COA Major 2023"
+                    },
+                    {
+                      year: 2024,
+                      file: "abviiitm-coa_major-2024.pdf",
+                      id: "abviiitm-coa_major-2024",
+                      pages: 10,
+                      title: "COA Major 2024"
+                    },
+                    {
+                      year: 2023,
+                      file: "abviiitm-coa_minor-2023.pdf",
+                      id: "abviiitm-coa_minor-2023",
+                      pages: 10,
+                      title: "COA Minor 2023"
+                    },
+                    {
+                      year: 2024,
+                      file: "abviiitm-coa_minor-2024.pdf",
+                      id: "abviiitm-coa_minor-2024",
+                      pages: 10,
+                      title: "COA Minor 2024"
+                    }
+                  ]
+                },
+                {
+                  name: "Design and Analysis of Algorithms",
+                  slug: "daa",
+                  id: "daa",
+                  description: "DAA",
+                  keywords: ["daa", "algorithms"],
+                  icon: "chart-line",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-daa_minor-2023.pdf",
+                      id: "abviiitm-daa_minor-2023",
+                      pages: 10,
+                      title: "DAA Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Database Management Systems",
+                  slug: "dbms",
+                  id: "dbms",
+                  description: "DBMS",
+                  keywords: ["dbms", "database"],
+                  icon: "database",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-dbms_major-2023.pdf",
+                      id: "abviiitm-dbms_major-2023",
+                      pages: 10,
+                      title: "DBMS Major 2023"
+                    },
+                    {
+                      year: 2023,
+                      file: "abviiitm-dbms_minor-2023.pdf",
+                      id: "abviiitm-dbms_minor-2023",
+                      pages: 10,
+                      title: "DBMS Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Discrete Mathematics",
+                  slug: "discrete-maths",
+                  id: "discrete-maths",
+                  description: "Discrete Maths",
+                  keywords: ["discrete", "maths"],
+                  icon: "calculator",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-discrete-maths_minor-2023.pdf",
+                      id: "abviiitm-discrete-maths_minor-2023",
+                      pages: 10,
+                      title: "Discrete Maths Minor 2023"
+                    }
+                  ]
+                },
+                {
+                  name: "Indian Constitution, Ethics, Morals and Values",
+                  slug: "icemv",
+                  id: "icemv",
+                  description: "ICEMV / ICEMS",
+                  keywords: ["constitution", "ethics", "values"],
+                  icon: "balance-scale",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-icems_major-2023.pdf",
+                      id: "abviiitm-icems_major-2023",
+                      pages: 10,
+                      title: "ICEMS Major 2023"
+                    },
+                    {
+                      year: 2024,
+                      file: "abviiitm-icems_major-2024.pdf",
+                      id: "abviiitm-icems_major-2024",
+                      pages: 10,
+                      title: "ICEMS Major 2024"
+                    },
+                    {
+                      year: 2023,
+                      file: "abviiitm-icems_minor-2023.pdf",
+                      id: "abviiitm-icems_minor-2023",
+                      pages: 10,
+                      title: "ICEMS Minor 2023"
+                    },
+                    {
+                      year: 2024,
+                      file: "abviiitm-icems_minor-2024.pdf",
+                      id: "abviiitm-icems_minor-2024",
+                      pages: 10,
+                      title: "ICEMS Minor 2024"
+                    }
+                  ]
+                },
+                {
+                  name: "Principles of Programming Languages",
+                  slug: "ppl",
+                  id: "ppl",
+                  description: "PPL",
+                  keywords: ["ppl", "programming languages"],
+                  icon: "code",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "abviiitm-ppl_minor-2023.pdf",
+                      id: "abviiitm-ppl_minor-2023",
+                      pages: 10,
+                      title: "PPL Minor 2023"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "Mathematics and Scientific Computing",
+          slug: "mnc",
+          id: "mnc",
+          description: "Mathematics and Scientific Computing",
+          keywords: ["mnc", "maths", "computing"],
+          icon: "laptop-code",
+          semesters: [
+            {
+              number: 4,
+              slug: "sem4",
+              id: "sem4",
+              description: "Subjects for Semester 4",
+              subjects: [
+                {
+                  name: "Advanced Numerical Methods",
+                  slug: "anm",
+                  id: "anm",
+                  description: "Advanced Numerical Methods",
+                  keywords: ["numerical", "methods"],
+                  icon: "square-root-alt",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "abviiitm-anm_major-2025.pdf",
+                      id: "abviiitm-anm_major-2025",
+                      pages: 10,
+                      title: "ANM Major 2025"
+                    }
+                  ]
+                },
+                {
+                  name: "Entrepreneurship and Innovation",
+                  slug: "eni",
+                  id: "eni",
+                  description: "Entrepreneurship and Innovation",
+                  keywords: ["entrepreneurship", "innovation"],
+                  icon: "lightbulb",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "abviiitm-eni_minor-2025.pdf",
+                      id: "abviiitm-eni_minor-2025",
+                      pages: 10,
+                      title: "ENI Minor 2025"
+                    }
+                  ]
+                },
+                {
+                  name: "Multivariate Data Analytics",
+                  slug: "mda",
+                  id: "mda",
+                  description: "Multivariate Data Analytics",
+                  keywords: ["multivariate", "data analytics"],
+                  icon: "brain",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "abviiitm-mda_major-2025.pdf",
+                      id: "abviiitm-mda_major-2025",
+                      pages: 10,
+                      title: "MDA Major 2025"
+                    }
+                  ]
+                },
+                {
+                  name: "Mobile and Network Infrastructure",
+                  slug: "mni",
+                  id: "mni",
+                  description: "Mobile and Network Infrastructure",
+                  keywords: ["mobile", "network"],
+                  icon: "wifi",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "abviiitm-mni_minor-2025.pdf",
+                      id: "abviiitm-mni_minor-2025",
+                      pages: 10,
+                      title: "MNI Minor 2025"
+                    }
+                  ]
+                },
+                {
+                  name: "Operating Systems",
+                  slug: "os",
+                  id: "os",
+                  description: "Operating Systems",
+                  keywords: ["os", "operating systems"],
+                  icon: "cog",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "abviiitm-os_minor-2025.pdf",
+                      id: "abviiitm-os_minor-2025",
+                      pages: 10,
+                      title: "OS Minor 2025"
+                    }
+                  ]
+                },
+                {
+                  name: "Software Engineering",
+                  slug: "se",
+                  id: "se",
+                  description: "Software Engineering",
+                  keywords: ["software", "engineering"],
+                  icon: "project-diagram",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "abviiitm-sa_major-2025.pdf",
+                      id: "abviiitm-sa_major-2025",
+                      pages: 10,
+                      title: "SA Major 2025"
+                    },
+                    {
+                      year: 2025,
+                      file: "abviiitm-se_minor-2025.pdf",
+                      id: "abviiitm-se_minor-2025",
+                      pages: 10,
+                      title: "SE Minor 2025"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   ],
 };
