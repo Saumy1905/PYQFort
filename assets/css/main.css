@@ -322,12 +322,92 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 } */
 
-.college-icon {
-  padding: 2rem;
-  font-size: 3rem;
-  text-align: center;
-  background-color: var(--primary-color);
+.college-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.college-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.college-card:hover .college-image {
+  transform: scale(1.05);
+}
+
+.college-icon-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
   color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Dark theme support for college images */
+.dark-theme .college-image {
+  background-color: #2a2a2a;
+  filter: brightness(0.95);
+}
+
+.dark-theme .college-card:hover .college-image {
+  filter: brightness(1);
+}
+
+/* Responsive design for college images */
+@media (max-width: 992px) {
+  .college-image-container {
+    height: 180px;
+  }
+  
+  .college-image {
+    padding: 1.25rem;
+  }
+  
+  .college-icon-fallback {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .college-image-container {
+    height: 160px;
+  }
+  
+  .college-image {
+    padding: 1rem;
+  }
+  
+  .college-icon-fallback {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .college-image-container {
+    height: 140px;
+  }
+  
+  .college-image {
+    padding: 0.75rem;
+  }
+  
+  .college-icon-fallback {
+    font-size: 2.5rem;
+  }
 }
 
 .college-content {

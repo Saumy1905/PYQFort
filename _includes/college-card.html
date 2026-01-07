@@ -1,6 +1,14 @@
 <div class="college-card">
-  <div class="college-icon">
-    <i class="fas fa-{{ include.icon }}"></i>
+  <div class="college-image-container">
+    {% assign image_path = '/assets/images/college-images/' | append: include.slug | append: '.png' | relative_url %}
+    {% assign icon_fallback = include.icon | default: 'university' %}
+    <img src="{{ image_path }}" 
+         alt="{{ include.name }}" 
+         class="college-image"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="college-icon-fallback" style="display: none;">
+      <i class="fas fa-{{ icon_fallback }}"></i>
+    </div>
   </div>
   <div class="college-content">
     <h2 class="college-title">{{ include.name }}</h2>
