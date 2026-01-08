@@ -125,7 +125,7 @@ let rotation = 0;
 
 // Mobile scrolling viewer variables
 let mobilePdfDoc = null;
-let mobileScale = 3.0;
+let mobileScale = 3.0; // Set to 300% (maximum) by default for mobile
 let mobileRenderedPages = new Set();
 
 // PDF Viewer initialization
