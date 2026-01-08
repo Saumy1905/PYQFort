@@ -162,6 +162,20 @@ layout: default
       </div>
     </div>
 
+    <!-- Mobile Scrolling PDF Viewer (PDF.js based) -->
+    <div class="viewer-content" id="mobile-scroll-viewer">
+      <div class="mobile-scroll-container">
+        <div class="mobile-scroll-loading">
+          <div class="loading-spinner"></div>
+          <p>Loading PDF pages...</p>
+          <p class="loading-progress"><span id="mobile-load-progress">0</span>%</p>
+        </div>
+        <div class="mobile-scroll-content" id="mobile-scroll-content">
+          <!-- PDF pages will be rendered here -->
+        </div>
+      </div>
+    </div>
+
     <!-- PDF.js Viewer -->
     <div class="viewer-content" id="pdfjs-viewer">
       <div class="pdfjs-container">

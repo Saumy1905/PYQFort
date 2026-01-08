@@ -2007,6 +2007,75 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+/* Mobile Scrolling PDF Viewer */
+.mobile-scroll-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--viewer-bg, #525659);
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.mobile-scroll-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--text-color);
+  z-index: 10;
+}
+
+.mobile-scroll-loading .loading-spinner {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+}
+
+.loading-progress {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+}
+
+.mobile-scroll-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
+  min-height: 100%;
+}
+
+.mobile-pdf-page {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+}
+
+.mobile-pdf-page canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mobile-page-number {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 .iframe-fallback {
   position: absolute;
   top: 0;
