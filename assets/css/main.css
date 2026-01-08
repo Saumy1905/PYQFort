@@ -2094,8 +2094,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .pdf-progress-indicator {
     padding: 6px 12px;
-    top: 8px;
-    right: 8px;
+    bottom: 8px;
+    left: 8px;
   }
   
   .progress-bar-container {
