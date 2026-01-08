@@ -130,7 +130,7 @@ let mobileRenderedPages = new Set();
 
 // Desktop secondary scrolling viewer variables (for PDF.js viewer)
 let pdfjsScrollDoc = null;
-let pdfjsScale = 2.0; // Set to 200% by default for desktop secondary viewer
+let pdfjsScale = 5.0; // Set to 500% by default for desktop secondary viewer
 let pdfjsRenderedPages = new Set();
 
 // PDF Viewer initialization
@@ -289,9 +289,6 @@ function loadPDFJSScrollViewer() {
     // Initialize reading progress tracker for PDF.js viewer
     initializePDFJSReadingProgress(container);
     
-    // Setup zoom controls
-    setupPDFJSZoomControls();
-    
   }).catch(err => {
     console.error('Error loading PDF for PDF.js scroll viewer:', err);
     if (loading) {
@@ -373,74 +370,6 @@ function renderPDFJSPage(pageNumber) {
       pdfjsRenderedPages.add(pageNumber);
     });
   });
-}
-
-function setupPDFJSZoomControls() {
-  const zoomInBtn = document.getElementById('pdfjs-zoom-in');
-  const zoomOutBtn = document.getElementById('pdfjs-zoom-out');
-  const zoomResetBtn = document.getElementById('pdfjs-zoom-reset');
-  const zoomLevel = document.getElementById('pdfjs-zoom-level');
-  
-  if (zoomInBtn) {
-    zoomInBtn.addEventListener('click', () => {
-      changePDFJSZoom(0.25); // Increase by 25%
-    });
-  }
-  
-  if (zoomOutBtn) {
-    zoomOutBtn.addEventListener('click', () => {
-      changePDFJSZoom(-0.25); // Decrease by 25%
-    });
-  }
-  
-  if (zoomResetBtn) {
-    zoomResetBtn.addEventListener('click', () => {
-      resetPDFJSZoom();
-    });
-  }
-  
-  // Update zoom level display
-  updatePDFJSZoomDisplay();
-}
-
-function changePDFJSZoom(delta) {
-  // Change zoom level
-  pdfjsScale += delta;
-  
-  // Limit zoom between 50% (0.5) and 500% (5.0)
-  pdfjsScale = Math.max(0.5, Math.min(5.0, pdfjsScale));
-  
-  // Update zoom display
-  updatePDFJSZoomDisplay();
-  
-  // Re-render all pages with new zoom
-  reRenderAllPDFJSPages();
-}
-
-function resetPDFJSZoom() {
-  pdfjsScale = 2.0; // Reset to 200%
-  updatePDFJSZoomDisplay();
-  reRenderAllPDFJSPages();
-}
-
-function updatePDFJSZoomDisplay() {
-  const zoomLevel = document.getElementById('pdfjs-zoom-level');
-  if (zoomLevel) {
-    const percentage = Math.round(pdfjsScale * 100);
-    zoomLevel.textContent = `${percentage}%`;
-  }
-}
-
-function reRenderAllPDFJSPages() {
-  if (!pdfjsScrollDoc) return;
-  
-  const numPages = pdfjsScrollDoc.numPages;
-  pdfjsRenderedPages.clear();
-  
-  // Re-render all pages
-  for (let pageNumber = 1; pageNumber <= numPages; pageNumber++) {
-    renderPDFJSPage(pageNumber);
-  }
 }
 
 function setupFullscreen() {
