@@ -119,31 +119,12 @@ layout: default
     <div class="viewer-content active" id="iframe-viewer">
       <div class="iframe-container">
         <iframe 
-          src="{{ page.file | relative_url }}#toolbar=1&navpanes=1&scrollbar=1&view=FitH" 
+          src="{{ page.file | relative_url }}#toolbar=1" 
           class="pdf-iframe" 
           id="pdf-iframe" 
           title="PDF Viewer for {{ page.title }}"
-          type="application/pdf"
-          loading="lazy"
-          allow="fullscreen"
-          allowfullscreen="true"
-          webkitallowfullscreen="true"
-          mozallowfullscreen="true">
+          loading="lazy">
         </iframe>
-        <!-- Mobile-friendly object fallback -->
-        <object 
-          data="{{ page.file | relative_url }}#toolbar=1&navpanes=1&scrollbar=1&view=FitH" 
-          type="application/pdf" 
-          class="pdf-object" 
-          id="pdf-object"
-          aria-label="PDF Viewer for {{ page.title }}">
-          <embed 
-            src="{{ page.file | relative_url }}#toolbar=1&navpanes=1&scrollbar=1&view=FitH" 
-            type="application/pdf" 
-            class="pdf-embed"
-            aria-label="PDF Viewer for {{ page.title }}">
-          </embed>
-        </object>
         <div class="iframe-fallback">
           <div class="fallback-content">
             <i class="fas fa-exclamation-triangle"></i>
@@ -158,20 +139,6 @@ layout: default
               </button>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile Scrolling PDF Viewer (PDF.js based) -->
-    <div class="viewer-content" id="mobile-scroll-viewer">
-      <div class="mobile-scroll-container">
-        <div class="mobile-scroll-loading">
-          <div class="loading-spinner"></div>
-          <p>Loading PDF pages...</p>
-          <p class="loading-progress"><span id="mobile-load-progress">0</span>%</p>
-        </div>
-        <div class="mobile-scroll-content" id="mobile-scroll-content">
-          <!-- PDF pages will be rendered here -->
         </div>
       </div>
     </div>

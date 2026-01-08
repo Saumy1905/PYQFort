@@ -122,48 +122,23 @@ let pageIsRendering = false;
 let pageNumIsPending = null;
 let scale = 5.0; // Set to 500% by default for PDF.js
 let rotation = 0;
-let mobileScrollPdf = null; // Store mobile PDF instance
-let mobileScrollPages = [];
 
 // PDF Viewer initialization
 function initializePDFViewer() {
-  // Detect mobile device
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  const isTablet = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent);
-  const isMobileOrTablet = isMobile || isTablet || window.innerWidth <= 768;
-  
   // Set up iframe error handling
   const iframe = document.getElementById('pdf-iframe');
-  
   if (iframe) {
     iframe.addEventListener('error', function() {
-      console.log('Iframe error event triggered');
       showIframeFallback();
     });
     
     // Check if iframe loaded successfully
     iframe.addEventListener('load', function() {
       hideLoading();
-      console.log('PDF iframe loaded successfully');
     });
   }
   
-  // Initialize mobile scrolling viewer for mobile devices
-  if (isMobileOrTablet) {
-    console.log('Mobile device detected, initializing mobile scroll viewer');
-    initializeMobileScrollViewer();
-    // Switch to mobile scroll viewer on mobile
-    setTimeout(() => {
-      const iframeViewer = document.getElementById('iframe-viewer');
-      const mobileViewer = document.getElementById('mobile-scroll-viewer');
-      if (iframeViewer && mobileViewer) {
-        iframeViewer.classList.remove('active');
-        mobileViewer.classList.add('active');
-      }
-    }, 100);
-  }
-  
-  // Set up PDF.js viewer (secondary viewer)
+  // Set up PDF.js viewer
   initializePDFJS();
   
   // Set up viewer switching
@@ -252,102 +227,6 @@ function showError(message) {
     }
     errorDiv.style.display = 'flex';
   }
-}
-
-// Mobile Scrolling PDF Viewer Initialization
-function initializeMobileScrollViewer() {
-  const iframe = document.getElementById('pdf-iframe');
-  if (!iframe) return;
-  
-  const pdfUrl = iframe.src.split('#')[0];
-  const container = document.getElementById('mobile-scroll-content');
-  const loadingDiv = document.querySelector('.mobile-scroll-loading');
-  const progressSpan = document.getElementById('mobile-load-progress');
-  
-  if (!container) return;
-  
-  console.log('Loading PDF for mobile scroll viewer:', pdfUrl);
-  
-  // Load PDF using PDF.js
-  const loadingTask = pdfjsLib.getDocument(pdfUrl);
-  
-  loadingTask.promise.then(function(pdf) {
-    mobileScrollPdf = pdf;
-    const numPages = pdf.numPages;
-    console.log('PDF loaded with', numPages, 'pages');
-    
-    // Clear container
-    container.innerHTML = '';
-    
-    // Render all pages
-    const renderPromises = [];
-    for (let pageNumber = 1; pageNumber <= numPages; pageNumber++) {
-      renderPromises.push(renderMobilePage(pdf, pageNumber, container, progressSpan, numPages));
-    }
-    
-    Promise.all(renderPromises).then(() => {
-      if (loadingDiv) {
-        loadingDiv.style.display = 'none';
-      }
-      console.log('All pages rendered successfully');
-    }).catch(error => {
-      console.error('Error rendering pages:', error);
-      if (loadingDiv) {
-        loadingDiv.innerHTML = '<p>Error loading PDF. Please try the download option.</p>';
-      }
-    });
-    
-  }).catch(function(error) {
-    console.error('Error loading PDF:', error);
-    if (loadingDiv) {
-      loadingDiv.innerHTML = '<p>Error loading PDF. Please try the download option.</p>';
-    }
-  });
-}
-
-function renderMobilePage(pdf, pageNumber, container, progressSpan, totalPages) {
-  return pdf.getPage(pageNumber).then(function(page) {
-    // Calculate scale based on container width
-    const containerWidth = container.clientWidth || window.innerWidth - 32; // 16px padding on each side
-    const viewport = page.getViewport({ scale: 1 });
-    const scale = (containerWidth * 0.95) / viewport.width; // 95% of container width
-    const scaledViewport = page.getViewport({ scale: scale });
-    
-    // Create page container
-    const pageDiv = document.createElement('div');
-    pageDiv.className = 'mobile-pdf-page';
-    pageDiv.setAttribute('data-page-number', pageNumber);
-    
-    // Create canvas
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
-    canvas.width = scaledViewport.width;
-    canvas.height = scaledViewport.height;
-    
-    // Create page number label
-    const pageLabel = document.createElement('div');
-    pageLabel.className = 'mobile-page-number';
-    pageLabel.textContent = `Page ${pageNumber} of ${totalPages}`;
-    
-    pageDiv.appendChild(canvas);
-    pageDiv.appendChild(pageLabel);
-    container.appendChild(pageDiv);
-    
-    // Render page
-    const renderContext = {
-      canvasContext: context,
-      viewport: scaledViewport
-    };
-    
-    return page.render(renderContext).promise.then(() => {
-      // Update progress
-      const progress = Math.round((pageNumber / totalPages) * 100);
-      if (progressSpan) {
-        progressSpan.textContent = progress;
-      }
-      console.log(`Rendered page ${pageNumber}/${totalPages}`);
-    });
-  });
 }
 
 // PDF.js functionality
