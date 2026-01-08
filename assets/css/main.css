@@ -2021,6 +2021,96 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   background: var(--viewer-bg, #525659);
+  position: relative;
+}
+
+/* Reading Progress Indicator */
+.pdf-progress-indicator {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.pdf-progress-indicator.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.progress-bar-container {
+  width: 60px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+  width: 0%;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+.progress-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #000b2f;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.progress-percentage {
+  font-size: 0.9rem;
+  min-width: 35px;
+  text-align: right;
+}
+
+.progress-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Alternative compact version for smaller screens */
+@media (max-width: 480px) {
+  .pdf-progress-indicator {
+    padding: 6px 12px;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .progress-bar-container {
+    width: 50px;
+    height: 5px;
+  }
+  
+  .progress-text {
+    font-size: 0.8rem;
+  }
+  
+  .progress-percentage {
+    font-size: 0.85rem;
+    min-width: 30px;
+  }
 }
 
 .mobile-scroll-container {
@@ -2098,6 +2188,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .dark-theme .mobile-pdf-loading p {
   color: var(--text-color, #b0b0b0);
+}
+
+/* Dark theme for progress indicator */
+.dark-theme .pdf-progress-indicator {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .progress-bar-container {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .progress-bar {
+  background: linear-gradient(90deg, #5dade2, #52be80);
+  box-shadow: 0 0 8px rgba(93, 173, 226, 0.5);
 }
 
 .iframe-fallback {

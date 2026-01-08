@@ -567,6 +567,9 @@ function initializeMobileScrollViewer() {
     // Render all pages
     renderAllMobilePages();
     
+    // Initialize reading progress tracker
+    initializeReadingProgress(container);
+    
   }).catch(err => {
     console.error('Error loading PDF for mobile viewer:', err);
     if (loading) {
@@ -649,6 +652,106 @@ function renderMobilePage(pageNumber) {
     });
   });
 }
+
+// ============================================== [READING PROGRESS TRACKER] =======================
+
+/**
+ * Initialize reading progress tracker for PDF viewer
+ * @param {HTMLElement} scrollContainer - The scrollable container element
+ * @param {Object} options - Configuration options
+ * @param {boolean} options.enabled - Whether to enable progress tracking (default: true for mobile)
+ * @param {string} options.storageKey - LocalStorage key for saving progress (optional)
+ */
+function initializeReadingProgress(scrollContainer, options = {}) {
+  if (!scrollContainer) return;
+  
+  const config = {
+    enabled: options.enabled !== undefined ? options.enabled : true,
+    storageKey: options.storageKey || null,
+    ...options
+  };
+  
+  if (!config.enabled) return;
+  
+  const progressIndicator = document.getElementById('pdf-progress-indicator');
+  const progressBar = document.getElementById('progress-bar');
+  const progressText = document.querySelector('.progress-percentage');
+  
+  if (!progressIndicator || !progressBar || !progressText) return;
+  
+  let scrollTimeout;
+  
+  // Function to calculate and update progress
+  function updateProgress() {
+    const scrollTop = scrollContainer.scrollTop;
+    const scrollHeight = scrollContainer.scrollHeight;
+    const clientHeight = scrollContainer.clientHeight;
+    
+    // Calculate percentage (how far user has scrolled)
+    const maxScroll = scrollHeight - clientHeight;
+    const percentage = maxScroll > 0 ? Math.round((scrollTop / maxScroll) * 100) : 0;
+    
+    // Ensure percentage is between 0 and 100
+    const clampedPercentage = Math.min(100, Math.max(0, percentage));
+    
+    // Update progress bar
+    progressBar.style.width = `${clampedPercentage}%`;
+    
+    // Update progress text
+    progressText.textContent = `${clampedPercentage}%`;
+    
+    // Save progress to localStorage if enabled
+    if (config.storageKey) {
+      try {
+        localStorage.setItem(config.storageKey, clampedPercentage.toString());
+      } catch (e) {
+        console.warn('Failed to save reading progress:', e);
+      }
+    }
+    
+    // Hide indicator after 2 seconds of no scrolling
+    clearTimeout(scrollTimeout);
+    progressIndicator.classList.add('visible');
+    
+    scrollTimeout = setTimeout(() => {
+      progressIndicator.classList.remove('visible');
+    }, 2000);
+  }
+  
+  // Attach scroll listener
+  scrollContainer.addEventListener('scroll', updateProgress, { passive: true });
+  
+  // Initial update
+  setTimeout(() => {
+    updateProgress();
+    
+    // Restore saved progress if available
+    if (config.storageKey) {
+      try {
+        const savedProgress = localStorage.getItem(config.storageKey);
+        if (savedProgress) {
+          const percentage = parseInt(savedProgress, 10);
+          // Scroll to saved position
+          const maxScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+          const targetScroll = (percentage / 100) * maxScroll;
+          scrollContainer.scrollTop = targetScroll;
+        }
+      } catch (e) {
+        console.warn('Failed to restore reading progress:', e);
+      }
+    }
+  }, 500);
+  
+  // Show indicator briefly on load
+  setTimeout(() => {
+    progressIndicator.classList.add('visible');
+    setTimeout(() => {
+      progressIndicator.classList.remove('visible');
+    }, 3000);
+  }, 1000);
+}
+
+// ============================================== [END READING PROGRESS TRACKER] =======================
 
 // ============================================== [END MOBILE SCROLLING VIEWER] =======================
 
