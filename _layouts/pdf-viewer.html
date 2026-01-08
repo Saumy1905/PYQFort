@@ -115,24 +115,35 @@ layout: default
 
   <!-- PDF Viewer Container -->
   <div class="pdf-viewer-container">
-    <!-- Mobile Viewing Hint -->
-    <div class="mobile-pdf-hint">
-      <div class="mobile-hint-content">
-        <i class="fas fa-info-circle"></i>
-        <span><strong>Mobile Tip:</strong> Swipe left/right to navigate pages, pinch to zoom</span>
-      </div>
-    </div>
-    
     <!-- Default Iframe Viewer -->
     <div class="viewer-content active" id="iframe-viewer">
       <div class="iframe-container">
         <iframe 
-          src="{{ page.file | relative_url }}#toolbar=1" 
+          src="{{ page.file | relative_url }}#toolbar=1&navpanes=1&scrollbar=1&view=FitH" 
           class="pdf-iframe" 
           id="pdf-iframe" 
           title="PDF Viewer for {{ page.title }}"
-          loading="lazy">
+          type="application/pdf"
+          loading="lazy"
+          allow="fullscreen"
+          allowfullscreen="true"
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true">
         </iframe>
+        <!-- Mobile-friendly object fallback -->
+        <object 
+          data="{{ page.file | relative_url }}#toolbar=1&navpanes=1&scrollbar=1&view=FitH" 
+          type="application/pdf" 
+          class="pdf-object" 
+          id="pdf-object"
+          aria-label="PDF Viewer for {{ page.title }}">
+          <embed 
+            src="{{ page.file | relative_url }}#toolbar=1&navpanes=1&scrollbar=1&view=FitH" 
+            type="application/pdf" 
+            class="pdf-embed"
+            aria-label="PDF Viewer for {{ page.title }}">
+          </embed>
+        </object>
         <div class="iframe-fallback">
           <div class="fallback-content">
             <i class="fas fa-exclamation-triangle"></i>
