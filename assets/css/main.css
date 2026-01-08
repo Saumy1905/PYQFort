@@ -2332,7 +2332,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .pdfjs-page-container {
   margin-bottom: 20px;
-  background: white;
+  background: black;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   overflow: hidden;
@@ -2345,7 +2345,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .pdfjs-pdf-canvas {
   display: block;
-  max-width: 100%;
+  max-width: 75%;
   height: auto;
 }
 
