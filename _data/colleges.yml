@@ -5387,6 +5387,14 @@
                   pages: 3
                   title: "Thermodynamics 2024"
                   upload: "Saumy"
+                - year: 2025
+                  file: thermodynamics-notes.pdf
+                  id: thermodynamics-notes
+                  pages: 10
+                  title: "Thermodynamics Notes"
+                  new: true
+                  pyqfort_notes: true
+                  upload: "Saumy"
             - name: Sessional
               id: sessional
               slug: sessional

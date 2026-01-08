@@ -66,7 +66,43 @@ layout: default
         {% endfor %}
       </div>
 
-      {% for pyq in subject_data.pyqs %}
+      {% comment %} Separate notes from PYQs if pyqfort_notes feature is enabled {% endcomment %}
+      {% if page.pyqfort_notes == "show" %}
+        {% assign notes_items = subject_data.pyqs | where: "pyqfort_notes", true %}
+        {% assign pyq_items = subject_data.pyqs | where_exp: "item", "item.pyqfort_notes != true" %}
+        
+        {% comment %} Display Notes Cards First {% endcomment %}
+        {% if notes_items.size > 0 %}
+          {% for note in notes_items %}
+            {% assign safe_college = page.college_slug | slugify %}
+            {% assign safe_branch = page.branch_slug | slugify %}
+            {% assign safe_semester = page.semester_slug | slugify %}
+            {% assign safe_subject = page.subject_slug | slugify %}
+            {% assign pdf_id = note.id | default: note.year %}
+            {% capture view_url %}/pdf-viewer/{{ safe_college }}/{{ safe_branch }}/{{ safe_semester }}/{{ safe_subject }}/{{ pdf_id }}{% endcapture %}
+            {% assign view_url = view_url | relative_url %}
+            {% capture download_url %}/assets/pdfs/{{ note.file }}{% endcapture %}
+            {% assign download_url = download_url | relative_url %}
+            
+            <div class="subject-card notes-card-container" data-category="{{ note.year }}">
+              {% include notes-card.html 
+                title=note.title
+                pages=note.pages
+                date=note.year
+                view_url=view_url
+                download_url=download_url
+                new=note.new
+                upload=note.upload
+              %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% else %}
+        {% assign pyq_items = subject_data.pyqs %}
+      {% endif %}
+
+      {% comment %} Display PYQ Cards {% endcomment %}
+      {% for pyq in pyq_items %}
   {% comment %} Use the unique ID from data {% endcomment %}
   {% assign safe_college = page.college_slug | slugify %}
   {% assign safe_branch = page.branch_slug | slugify %}

@@ -1,0 +1,183 @@
+<style>
+  .notes-card {
+    display: flex;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .dark-theme .notes-card {
+    background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+    box-shadow: 0 8px 20px rgba(85, 104, 211, 0.4);
+  }
+  
+  .notes-card:hover {
+    transform: translateZ(20px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+  }
+  
+  .notes-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+  }
+  
+  .notes-icon {
+    position: relative;
+    padding: 2rem;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    min-width: 90px;
+  }
+  
+  .notes-icon i {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  }
+  
+  .tag-new-notes {
+    position: absolute;
+    top: 0px;
+    right: -10px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(255, 71, 87, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .notes-content {
+    position: relative;
+    padding: 1.5rem;
+    flex-grow: 1;
+    color: white;
+  }
+  
+  .notes-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .notes-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .notes-meta {
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+  }
+  
+  .notes-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn-notes-view {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #667eea;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .btn-notes-view:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    color: #667eea;
+  }
+  
+  .notes-uploader {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .notes-uploader i {
+    font-size: 14px;
+  }
+  
+  .notes-uploader:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+  }
+</style>
+
+<div class="notes-card">
+  <div class="notes-icon">
+    <i class="fas fa-book-open"></i>
+    {% if include.new %}
+    <span class="tag-new-notes">NEW</span>
+    {% endif %}
+  </div>
+  <div class="notes-content">
+    <div class="notes-badge">
+      <i class="fas fa-graduation-cap"></i> Study Notes
+    </div>
+    <h3 class="notes-title">{{ include.title }}</h3>
+    <p class="notes-meta">
+      {% if include.pages %}
+        <i class="fas fa-file-alt"></i> {{ include.pages }} pages
+      {% endif %}
+    </p>
+    <div class="notes-actions">
+      <a href="{{ include.view_url }}" class="btn-notes-view">
+        <i class="fas fa-eye"></i> View Notes
+      </a>
+    </div>
+    {% if include.upload %}
+    <div class="notes-uploader">
+      <i class="fas fa-user-circle"></i>
+      <span>{{ include.upload }}</span>
+    </div>
+    {% endif %}
+  </div>
+</div>
