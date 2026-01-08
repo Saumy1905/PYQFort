@@ -154,6 +154,37 @@ function initializePDFViewer() {
   // Initialize mobile scrolling viewer for mobile devices
   if (isMobile) {
     initializeMobileScrollViewer();
+  } else {
+    // For desktop, set PDF.js as default and load it
+    currentViewer = 'pdfjs';
+    
+    // Update UI to show PDF.js as active
+    document.querySelectorAll('.viewer-tab').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    const pdfjsTab = document.querySelector('[data-viewer="pdfjs"]');
+    if (pdfjsTab) {
+      pdfjsTab.classList.add('active');
+    }
+    
+    // Update viewer content to show PDF.js viewer
+    document.querySelectorAll('.viewer-content').forEach(content => {
+      content.classList.remove('active');
+    });
+    const pdfjsViewer = document.getElementById('pdfjs-viewer');
+    if (pdfjsViewer) {
+      pdfjsViewer.classList.add('active');
+    }
+    
+    // Update description
+    const descElement = document.getElementById('viewer-description');
+    if (descElement) {
+      descElement.innerHTML = 
+        '<i class="fas fa-info-circle"></i> Scrollable PDF.js viewer with reading progress tracker';
+    }
+    
+    // Load PDF.js viewer
+    loadPDFJSScrollViewer();
   }
   
   // Set up PDF.js viewer (secondary viewer)
