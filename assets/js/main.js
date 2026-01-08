@@ -123,8 +123,16 @@ let pageNumIsPending = null;
 let scale = 5.0; // Set to 500% by default for PDF.js
 let rotation = 0;
 
+// Mobile scrolling viewer variables
+let mobilePdfDoc = null;
+let mobileScale = 1.5;
+let mobileRenderedPages = new Set();
+
 // PDF Viewer initialization
 function initializePDFViewer() {
+  // Detect device type
+  const isMobile = window.innerWidth <= 768;
+  
   // Set up iframe error handling
   const iframe = document.getElementById('pdf-iframe');
   if (iframe) {
@@ -138,7 +146,12 @@ function initializePDFViewer() {
     });
   }
   
-  // Set up PDF.js viewer
+  // Initialize mobile scrolling viewer for mobile devices
+  if (isMobile) {
+    initializeMobileScrollViewer();
+  }
+  
+  // Set up PDF.js viewer (secondary viewer)
   initializePDFJS();
   
   // Set up viewer switching
@@ -177,7 +190,9 @@ function switchViewer(viewerType) {
   
   // Update description
   const descriptions = {
-    iframe: 'Default browser PDF viewer with standard controls',
+    iframe: window.innerWidth <= 768 
+      ? 'Mobile-optimized scrolling PDF viewer with touch-friendly controls'
+      : 'Default browser PDF viewer with standard controls',
     pdfjs: 'Advanced PDF.js viewer with enhanced features and better mobile support'
   };
   
@@ -519,6 +534,177 @@ function setupPrint() {
     });
   }
 }
+
+// ============================================== [MOBILE SCROLLING VIEWER] =======================
+
+function initializeMobileScrollViewer() {
+  const container = document.getElementById('mobile-scroll-container');
+  if (!container) return;
+  
+  // Get PDF URL
+  const iframe = document.getElementById('pdf-iframe');
+  if (!iframe) return;
+  
+  const pdfUrl = iframe.src.split('#')[0];
+  
+  // Check if PDF.js is available
+  if (typeof pdfjsLib === 'undefined') {
+    console.warn('PDF.js library not loaded for mobile viewer');
+    return;
+  }
+  
+  // Show loading
+  const loading = container.querySelector('.mobile-pdf-loading');
+  if (loading) loading.style.display = 'flex';
+  
+  // Load PDF
+  pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+    mobilePdfDoc = pdf;
+    
+    // Hide loading
+    if (loading) loading.style.display = 'none';
+    
+    // Render all pages
+    renderAllMobilePages();
+    
+    // Set up zoom controls
+    setupMobileZoomControls();
+    
+  }).catch(err => {
+    console.error('Error loading PDF for mobile viewer:', err);
+    if (loading) {
+      loading.innerHTML = '<p>Error loading PDF. Please try downloading instead.</p>';
+    }
+  });
+}
+
+function renderAllMobilePages() {
+  if (!mobilePdfDoc) return;
+  
+  const container = document.getElementById('mobile-scroll-container');
+  if (!container) return;
+  
+  // Clear existing loading message
+  const loading = container.querySelector('.mobile-pdf-loading');
+  if (loading) loading.remove();
+  
+  const numPages = mobilePdfDoc.numPages;
+  
+  // Create canvases for all pages
+  for (let pageNumber = 1; pageNumber <= numPages; pageNumber++) {
+    const pageContainer = document.createElement('div');
+    pageContainer.className = 'mobile-page-container';
+    pageContainer.dataset.pageNumber = pageNumber;
+    
+    const canvas = document.createElement('canvas');
+    canvas.id = `mobile-canvas-${pageNumber}`;
+    canvas.className = 'mobile-pdf-canvas';
+    
+    pageContainer.appendChild(canvas);
+    container.appendChild(pageContainer);
+  }
+  
+  // Render first 3 pages immediately for quick initial display
+  for (let pageNumber = 1; pageNumber <= Math.min(3, numPages); pageNumber++) {
+    renderMobilePage(pageNumber);
+  }
+  
+  // Render remaining pages with a slight delay to improve initial load
+  if (numPages > 3) {
+    setTimeout(() => {
+      for (let pageNumber = 4; pageNumber <= numPages; pageNumber++) {
+        renderMobilePage(pageNumber);
+      }
+    }, 500);
+  }
+}
+
+function renderMobilePage(pageNumber) {
+  if (!mobilePdfDoc) return;
+  
+  mobilePdfDoc.getPage(pageNumber).then(page => {
+    const canvas = document.getElementById(`mobile-canvas-${pageNumber}`);
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    
+    // Calculate scale based on container width for mobile
+    const container = document.getElementById('mobile-scroll-container');
+    if (!container) return;
+    
+    const containerWidth = container.clientWidth - 20; // Account for padding
+    const viewport = page.getViewport({ scale: 1 });
+    
+    // Scale to fit width of container
+    const calculatedScale = (containerWidth / viewport.width) * mobileScale;
+    const scaledViewport = page.getViewport({ scale: calculatedScale });
+    
+    canvas.height = scaledViewport.height;
+    canvas.width = scaledViewport.width;
+    
+    const renderContext = {
+      canvasContext: ctx,
+      viewport: scaledViewport
+    };
+    
+    page.render(renderContext).promise.then(() => {
+      mobileRenderedPages.add(pageNumber);
+    });
+  });
+}
+
+function setupMobileZoomControls() {
+  const zoomInBtn = document.getElementById('mobile-zoom-in');
+  const zoomOutBtn = document.getElementById('mobile-zoom-out');
+  const fitWidthBtn = document.getElementById('mobile-fit-width');
+  const zoomDisplay = document.getElementById('mobile-zoom-display');
+  
+  if (zoomInBtn) {
+    zoomInBtn.addEventListener('click', () => {
+      mobileScale = Math.min(mobileScale * 1.2, 3); // Max 300%
+      updateMobileZoom();
+    });
+  }
+  
+  if (zoomOutBtn) {
+    zoomOutBtn.addEventListener('click', () => {
+      mobileScale = Math.max(mobileScale * 0.8, 0.5); // Min 50%
+      updateMobileZoom();
+    });
+  }
+  
+  if (fitWidthBtn) {
+    fitWidthBtn.addEventListener('click', () => {
+      mobileScale = 1.0; // Reset to fit width
+      updateMobileZoom();
+    });
+  }
+  
+  // Update display
+  updateMobileZoomDisplay();
+}
+
+function updateMobileZoom() {
+  if (!mobilePdfDoc) return;
+  
+  // Re-render all pages with new scale
+  const numPages = mobilePdfDoc.numPages;
+  for (let pageNumber = 1; pageNumber <= numPages; pageNumber++) {
+    renderMobilePage(pageNumber);
+  }
+  
+  updateMobileZoomDisplay();
+}
+
+function updateMobileZoomDisplay() {
+  const zoomDisplay = document.getElementById('mobile-zoom-display');
+  if (zoomDisplay) {
+    const percentage = Math.round(mobileScale * 100);
+    zoomDisplay.textContent = `${percentage}%`;
+  }
+}
+
+// ============================================== [END MOBILE SCROLLING VIEWER] =======================
 
 // ==============================================  [SEARCH FUNCTIONALITY] =======================
 
@@ -1857,11 +2043,31 @@ window.loadMoreResults = loadMoreResults;
 
 // Handle window resize for responsive behavior
 window.addEventListener('resize', function() {
+  // Handle PDF.js viewer resize
   if (pdfDoc && currentViewer === 'pdfjs') {
     // Re-render current page with new scale
     setTimeout(() => {
       queueRenderPage(pageNum);
     }, 100);
+  }
+  
+  // Handle mobile scrolling viewer resize
+  if (mobilePdfDoc && window.innerWidth <= 768) {
+    setTimeout(() => {
+      updateMobileZoom();
+    }, 100);
+  }
+  
+  // Handle viewport changes between mobile and desktop
+  const wasMobile = document.querySelector('.mobile-scroll-viewer') && 
+                    document.querySelector('.mobile-scroll-viewer').style.display !== 'none';
+  const isMobile = window.innerWidth <= 768;
+  
+  if (wasMobile !== isMobile && currentViewer === 'iframe') {
+    // Reinitialize mobile viewer if switching to mobile
+    if (isMobile && !mobilePdfDoc) {
+      initializeMobileScrollViewer();
+    }
   }
 });
 
