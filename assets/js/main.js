@@ -128,6 +128,11 @@ let mobilePdfDoc = null;
 let mobileScale = 3.0; // Set to 300% (maximum) by default for mobile
 let mobileRenderedPages = new Set();
 
+// Desktop secondary scrolling viewer variables (for PDF.js viewer)
+let pdfjsScrollDoc = null;
+let pdfjsScale = 2.0; // Set to 200% by default for desktop secondary viewer
+let pdfjsRenderedPages = new Set();
+
 // PDF Viewer initialization
 function initializePDFViewer() {
   // Detect device type
@@ -193,7 +198,7 @@ function switchViewer(viewerType) {
     iframe: window.innerWidth <= 768 
       ? 'Mobile-optimized scrolling PDF viewer with touch-friendly controls'
       : 'Default browser PDF viewer with standard controls',
-    pdfjs: 'Advanced PDF.js viewer with enhanced features and better mobile support'
+    pdfjs: 'Scrollable PDF.js viewer with reading progress tracker'
   };
   
   const descElement = document.getElementById('viewer-description');
@@ -202,15 +207,9 @@ function switchViewer(viewerType) {
       `<i class="fas fa-info-circle"></i> ${descriptions[viewerType]}`;
   }
   
-  // If switching to PDF.js, load the PDF with 500% zoom
-  if (viewerType === 'pdfjs' && !pdfDoc) {
-    scale = 5.0; // Set to 500% zoom
-    loadPDFJS();
-  } else if (viewerType === 'pdfjs' && pdfDoc) {
-    // If PDF already loaded, just update zoom to 500%
-    scale = 5.0;
-    updateZoomSelect();
-    queueRenderPage(pageNum);
+  // If switching to PDF.js, load the scrollable viewer
+  if (viewerType === 'pdfjs' && !pdfjsScrollDoc) {
+    loadPDFJSScrollViewer();
   }
 }
 
@@ -246,133 +245,121 @@ function showError(message) {
 
 // PDF.js functionality
 function initializePDFJS() {
-  // Set up PDF.js controls
-  const prevBtn = document.getElementById('prev-page');
-  const nextBtn = document.getElementById('next-page');
-  const pageNumInput = document.getElementById('page-num');
-  const zoomSelect = document.getElementById('zoom-select');
-  const zoomInBtn = document.getElementById('zoom-in');
-  const zoomOutBtn = document.getElementById('zoom-out');
-  const rotateLeftBtn = document.getElementById('rotate-left');
-  const rotateRightBtn = document.getElementById('rotate-right');
-  
-  if (prevBtn) prevBtn.addEventListener('click', onPrevPage);
-  if (nextBtn) nextBtn.addEventListener('click', onNextPage);
-  if (pageNumInput) {
-    pageNumInput.addEventListener('change', function() {
-      const pageNumber = parseInt(this.value);
-      if (pageNumber > 0 && pageNumber <= (pdfDoc ? pdfDoc.numPages : 1)) {
-        pageNum = pageNumber;
-        queueRenderPage(pageNum);
-      }
-    });
-  }
-  
-  if (zoomSelect) {
-    zoomSelect.addEventListener('change', function() {
-      handleZoomChange(this.value);
-    });
-  }
-  
-  if (zoomInBtn) zoomInBtn.addEventListener('click', () => changeZoom(1.25));
-  if (zoomOutBtn) zoomOutBtn.addEventListener('click', () => changeZoom(0.8));
-  if (rotateLeftBtn) rotateLeftBtn.addEventListener('click', () => rotatePages(-90));
-  if (rotateRightBtn) rotateRightBtn.addEventListener('click', () => rotatePages(90));
+  // Initialize scrollable PDF.js viewer (will load when user switches to it)
+  // No need to load immediately, will load on viewer switch
 }
 
-function loadPDFJS() {
-  const loading = document.querySelector('.pdfjs-loading');
-  if (loading) loading.style.display = 'block';
+function loadPDFJSScrollViewer() {
+  const container = document.getElementById('pdfjs-scroll-container');
+  if (!container) return;
   
-  // Get PDF URL from the page
+  // Get PDF URL from iframe
   const iframe = document.getElementById('pdf-iframe');
-  if (!iframe) return;
+  let pdfUrl = '';
   
-  const pdfUrl = iframe.src.split('#')[0];
+  if (iframe && iframe.src) {
+    pdfUrl = iframe.src.split('#')[0]; // Remove hash parameters
+  }
   
-  // Check if PDF.js is available
-  if (typeof pdfjsLib === 'undefined') {
-    console.warn('PDF.js library not loaded');
-    if (loading) loading.style.display = 'none';
+  if (!pdfUrl) {
+    console.warn('PDF URL not found for PDF.js scroll viewer');
     return;
   }
   
-  // Set default zoom to 500%
-  scale = 5.0;
+  // Check if PDF.js is available
+  if (typeof pdfjsLib === 'undefined') {
+    console.warn('PDF.js library not loaded for secondary viewer');
+    return;
+  }
   
-  pdfjsLib.getDocument(pdfUrl).promise.then(pdfDoc_ => {
-    pdfDoc = pdfDoc_;
-    const pageCount = document.getElementById('page-count');
-    if (pageCount) {
-      pageCount.textContent = pdfDoc.numPages;
-    }
+  // Show loading
+  const loading = container.querySelector('.pdfjs-loading');
+  if (loading) loading.style.display = 'flex';
+  
+  // Load PDF
+  pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+    pdfjsScrollDoc = pdf;
     
-    // Set max value for page input
-    const pageNumInput = document.getElementById('page-num');
-    if (pageNumInput) {
-      pageNumInput.max = pdfDoc.numPages;
-    }
-    
-    // Set zoom select to 500%
-    updateZoomSelect();
-    
-    // Render first page
-    renderPage(pageNum);
-    
+    // Hide loading
     if (loading) loading.style.display = 'none';
+    
+    // Render all pages
+    renderAllPDFJSPages();
+    
+    // Initialize reading progress tracker for PDF.js viewer
+    initializePDFJSReadingProgress(container);
+    
+    // Setup zoom controls
+    setupPDFJSZoomControls();
+    
   }).catch(err => {
-    console.error('Error loading PDF:', err);
-    showError('Failed to load PDF with PDF.js viewer');
-    if (loading) loading.style.display = 'none';
+    console.error('Error loading PDF for PDF.js scroll viewer:', err);
+    if (loading) {
+      loading.innerHTML = '<p>Error loading PDF. Please try downloading instead.</p>';
+    }
   });
 }
 
-function updateZoomSelect() {
-  const zoomSelect = document.getElementById('zoom-select');
-  if (zoomSelect) {
-    // Check if 500% option exists, if not create it
-    let option500 = zoomSelect.querySelector('option[value="5"]');
-    if (!option500) {
-      option500 = document.createElement('option');
-      option500.value = '5';
-      option500.textContent = '500%';
-      zoomSelect.appendChild(option500);
-    }
+function renderAllPDFJSPages() {
+  if (!pdfjsScrollDoc) return;
+  
+  const container = document.getElementById('pdfjs-scroll-container');
+  if (!container) return;
+  
+  // Clear existing loading message
+  const loading = container.querySelector('.pdfjs-loading');
+  if (loading) loading.remove();
+  
+  const numPages = pdfjsScrollDoc.numPages;
+  
+  // Create canvases for all pages
+  for (let pageNumber = 1; pageNumber <= numPages; pageNumber++) {
+    const pageContainer = document.createElement('div');
+    pageContainer.className = 'pdfjs-page-container';
+    pageContainer.dataset.pageNumber = pageNumber;
     
-    // Set to 500%
-    zoomSelect.value = '5';
+    const canvas = document.createElement('canvas');
+    canvas.id = `pdfjs-canvas-${pageNumber}`;
+    canvas.className = 'pdfjs-pdf-canvas';
+    
+    pageContainer.appendChild(canvas);
+    container.appendChild(pageContainer);
+  }
+  
+  // Render first 3 pages immediately for quick initial display
+  for (let pageNumber = 1; pageNumber <= Math.min(3, numPages); pageNumber++) {
+    renderPDFJSPage(pageNumber);
+  }
+  
+  // Render remaining pages with a slight delay to improve initial load
+  if (numPages > 3) {
+    setTimeout(() => {
+      for (let pageNumber = 4; pageNumber <= numPages; pageNumber++) {
+        renderPDFJSPage(pageNumber);
+      }
+    }, 500);
   }
 }
 
-function renderPage(num) {
-  if (!pdfDoc) return;
+function renderPDFJSPage(pageNumber) {
+  if (!pdfjsScrollDoc) return;
   
-  pageIsRendering = true;
-  
-  pdfDoc.getPage(num).then(page => {
-    const canvas = document.getElementById('pdf-canvas');
+  pdfjsScrollDoc.getPage(pageNumber).then(page => {
+    const canvas = document.getElementById(`pdfjs-canvas-${pageNumber}`);
     if (!canvas) return;
     
     const ctx = canvas.getContext('2d');
     
     // Calculate scale based on container width
-    const container = document.querySelector('.pdfjs-content');
+    const container = document.getElementById('pdfjs-scroll-container');
     if (!container) return;
     
     const containerWidth = container.clientWidth - 40; // Account for padding
-    const viewport = page.getViewport({ scale: 1, rotation: rotation });
+    const viewport = page.getViewport({ scale: 1 });
     
-    let calculatedScale = scale;
-    const zoomSelect = document.getElementById('zoom-select');
-    if (zoomSelect) {
-      if (zoomSelect.value === 'auto') {
-        calculatedScale = containerWidth / viewport.width;
-      } else if (zoomSelect.value === 'page-width') {
-        calculatedScale = containerWidth / viewport.width;
-      }
-    }
-    
-    const scaledViewport = page.getViewport({ scale: calculatedScale, rotation: rotation });
+    // Scale to fit width of container
+    const calculatedScale = (containerWidth / viewport.width) * pdfjsScale;
+    const scaledViewport = page.getViewport({ scale: calculatedScale });
     
     canvas.height = scaledViewport.height;
     canvas.width = scaledViewport.width;
@@ -383,107 +370,76 @@ function renderPage(num) {
     };
     
     page.render(renderContext).promise.then(() => {
-      pageIsRendering = false;
-      
-      if (pageNumIsPending !== null) {
-        renderPage(pageNumIsPending);
-        pageNumIsPending = null;
-      }
-      
-      // Update page number in input
-      const pageNumInput = document.getElementById('page-num');
-      if (pageNumInput) {
-        pageNumInput.value = num;
-      }
-      
-      // Update navigation buttons
-      updateNavigationButtons();
+      pdfjsRenderedPages.add(pageNumber);
     });
   });
 }
 
-function queueRenderPage(num) {
-  if (pageIsRendering) {
-    pageNumIsPending = num;
-  } else {
-    renderPage(num);
+function setupPDFJSZoomControls() {
+  const zoomInBtn = document.getElementById('pdfjs-zoom-in');
+  const zoomOutBtn = document.getElementById('pdfjs-zoom-out');
+  const zoomResetBtn = document.getElementById('pdfjs-zoom-reset');
+  const zoomLevel = document.getElementById('pdfjs-zoom-level');
+  
+  if (zoomInBtn) {
+    zoomInBtn.addEventListener('click', () => {
+      changePDFJSZoom(0.25); // Increase by 25%
+    });
+  }
+  
+  if (zoomOutBtn) {
+    zoomOutBtn.addEventListener('click', () => {
+      changePDFJSZoom(-0.25); // Decrease by 25%
+    });
+  }
+  
+  if (zoomResetBtn) {
+    zoomResetBtn.addEventListener('click', () => {
+      resetPDFJSZoom();
+    });
+  }
+  
+  // Update zoom level display
+  updatePDFJSZoomDisplay();
+}
+
+function changePDFJSZoom(delta) {
+  // Change zoom level
+  pdfjsScale += delta;
+  
+  // Limit zoom between 50% (0.5) and 500% (5.0)
+  pdfjsScale = Math.max(0.5, Math.min(5.0, pdfjsScale));
+  
+  // Update zoom display
+  updatePDFJSZoomDisplay();
+  
+  // Re-render all pages with new zoom
+  reRenderAllPDFJSPages();
+}
+
+function resetPDFJSZoom() {
+  pdfjsScale = 2.0; // Reset to 200%
+  updatePDFJSZoomDisplay();
+  reRenderAllPDFJSPages();
+}
+
+function updatePDFJSZoomDisplay() {
+  const zoomLevel = document.getElementById('pdfjs-zoom-level');
+  if (zoomLevel) {
+    const percentage = Math.round(pdfjsScale * 100);
+    zoomLevel.textContent = `${percentage}%`;
   }
 }
 
-function onPrevPage() {
-  if (pageNum <= 1) return;
-  pageNum--;
-  queueRenderPage(pageNum);
-}
-
-function onNextPage() {
-  if (!pdfDoc || pageNum >= pdfDoc.numPages) return;
-  pageNum++;
-  queueRenderPage(pageNum);
-}
-
-function updateNavigationButtons() {
-  const prevBtn = document.getElementById('prev-page');
-  const nextBtn = document.getElementById('next-page');
+function reRenderAllPDFJSPages() {
+  if (!pdfjsScrollDoc) return;
   
-  if (prevBtn) prevBtn.disabled = pageNum <= 1;
-  if (nextBtn) nextBtn.disabled = !pdfDoc || pageNum >= pdfDoc.numPages;
-}
-
-function handleZoomChange(zoomValue) {
-  switch(zoomValue) {
-    case 'auto':
-    case 'page-width':
-      // These are calculated in renderPage
-      break;
-    case 'page-actual':
-      scale = 1;
-      break;
-    default:
-      scale = parseFloat(zoomValue);
-  }
+  const numPages = pdfjsScrollDoc.numPages;
+  pdfjsRenderedPages.clear();
   
-  if (pdfDoc) {
-    queueRenderPage(pageNum);
-  }
-}
-
-function changeZoom(factor) {
-  scale *= factor;
-  scale = Math.max(0.25, Math.min(5, scale)); // Limit zoom between 25% and 500%
-  
-  // Update select to show custom zoom
-  const zoomSelect = document.getElementById('zoom-select');
-  if (zoomSelect) {
-    const percentage = Math.round(scale * 100) + '%';
-    zoomSelect.value = scale.toString();
-    
-    // If this isn't a standard zoom level, we might need to handle it differently
-    if (!zoomSelect.value) {
-      // Create a temporary option for custom zoom
-      const existingCustom = zoomSelect.querySelector('[data-custom]');
-      if (existingCustom) existingCustom.remove();
-      
-      const customOption = document.createElement('option');
-      customOption.value = scale.toString();
-      customOption.textContent = percentage;
-      customOption.setAttribute('data-custom', 'true');
-      customOption.selected = true;
-      zoomSelect.appendChild(customOption);
-    }
-  }
-  
-  if (pdfDoc) {
-    queueRenderPage(pageNum);
-  }
-}
-
-function rotatePages(degrees) {
-  rotation += degrees;
-  rotation = rotation % 360;
-  
-  if (pdfDoc) {
-    queueRenderPage(pageNum);
+  // Re-render all pages
+  for (let pageNumber = 1; pageNumber <= numPages; pageNumber++) {
+    renderPDFJSPage(pageNumber);
   }
 }
 
@@ -676,6 +632,96 @@ function initializeReadingProgress(scrollContainer, options = {}) {
   const progressIndicator = document.getElementById('pdf-progress-indicator');
   const progressBar = document.getElementById('progress-bar');
   const progressText = document.querySelector('.progress-percentage');
+  
+  if (!progressIndicator || !progressBar || !progressText) return;
+  
+  let scrollTimeout;
+  
+  // Function to calculate and update progress
+  function updateProgress() {
+    const scrollTop = scrollContainer.scrollTop;
+    const scrollHeight = scrollContainer.scrollHeight;
+    const clientHeight = scrollContainer.clientHeight;
+    
+    // Calculate percentage (how far user has scrolled)
+    const maxScroll = scrollHeight - clientHeight;
+    const percentage = maxScroll > 0 ? Math.round((scrollTop / maxScroll) * 100) : 0;
+    
+    // Ensure percentage is between 0 and 100
+    const clampedPercentage = Math.min(100, Math.max(0, percentage));
+    
+    // Update progress bar
+    progressBar.style.width = `${clampedPercentage}%`;
+    
+    // Update progress text
+    progressText.textContent = `${clampedPercentage}%`;
+    
+    // Save progress to localStorage if enabled
+    if (config.storageKey) {
+      try {
+        localStorage.setItem(config.storageKey, clampedPercentage.toString());
+      } catch (e) {
+        console.warn('Failed to save reading progress:', e);
+      }
+    }
+    
+    // Hide indicator after 2 seconds of no scrolling
+    clearTimeout(scrollTimeout);
+    progressIndicator.classList.add('visible');
+    
+    scrollTimeout = setTimeout(() => {
+      progressIndicator.classList.remove('visible');
+    }, 2000);
+  }
+  
+  // Attach scroll listener
+  scrollContainer.addEventListener('scroll', updateProgress, { passive: true });
+  
+  // Initial update
+  setTimeout(() => {
+    updateProgress();
+    
+    // Restore saved progress if available
+    if (config.storageKey) {
+      try {
+        const savedProgress = localStorage.getItem(config.storageKey);
+        if (savedProgress) {
+          const percentage = parseInt(savedProgress, 10);
+          // Scroll to saved position
+          const maxScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+          const targetScroll = (percentage / 100) * maxScroll;
+          scrollContainer.scrollTop = targetScroll;
+        }
+      } catch (e) {
+        console.warn('Failed to restore reading progress:', e);
+      }
+    }
+  }, 500);
+  
+  // Show indicator briefly on load
+  setTimeout(() => {
+    progressIndicator.classList.add('visible');
+    setTimeout(() => {
+      progressIndicator.classList.remove('visible');
+    }, 3000);
+  }, 1000);
+}
+
+// PDF.js secondary viewer reading progress tracker
+function initializePDFJSReadingProgress(scrollContainer, options = {}) {
+  if (!scrollContainer) return;
+  
+  const config = {
+    enabled: options.enabled !== undefined ? options.enabled : true,
+    storageKey: options.storageKey || null,
+    ...options
+  };
+  
+  if (!config.enabled) return;
+  
+  const progressIndicator = document.getElementById('pdfjs-progress-indicator');
+  const progressBar = document.getElementById('pdfjs-progress-bar');
+  const progressText = document.querySelector('.pdfjs-progress-percentage');
   
   if (!progressIndicator || !progressBar || !progressText) return;
   
