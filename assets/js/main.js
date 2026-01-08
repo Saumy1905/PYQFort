@@ -567,9 +567,6 @@ function initializeMobileScrollViewer() {
     // Render all pages
     renderAllMobilePages();
     
-    // Set up zoom controls
-    setupMobileZoomControls();
-    
   }).catch(err => {
     console.error('Error loading PDF for mobile viewer:', err);
     if (loading) {
@@ -651,57 +648,6 @@ function renderMobilePage(pageNumber) {
       mobileRenderedPages.add(pageNumber);
     });
   });
-}
-
-function setupMobileZoomControls() {
-  const zoomInBtn = document.getElementById('mobile-zoom-in');
-  const zoomOutBtn = document.getElementById('mobile-zoom-out');
-  const fitWidthBtn = document.getElementById('mobile-fit-width');
-  const zoomDisplay = document.getElementById('mobile-zoom-display');
-  
-  if (zoomInBtn) {
-    zoomInBtn.addEventListener('click', () => {
-      mobileScale = Math.min(mobileScale * 1.2, 3); // Max 300%
-      updateMobileZoom();
-    });
-  }
-  
-  if (zoomOutBtn) {
-    zoomOutBtn.addEventListener('click', () => {
-      mobileScale = Math.max(mobileScale * 0.8, 0.5); // Min 50%
-      updateMobileZoom();
-    });
-  }
-  
-  if (fitWidthBtn) {
-    fitWidthBtn.addEventListener('click', () => {
-      mobileScale = 1.0; // Reset to fit width
-      updateMobileZoom();
-    });
-  }
-  
-  // Update display
-  updateMobileZoomDisplay();
-}
-
-function updateMobileZoom() {
-  if (!mobilePdfDoc) return;
-  
-  // Re-render all pages with new scale
-  const numPages = mobilePdfDoc.numPages;
-  for (let pageNumber = 1; pageNumber <= numPages; pageNumber++) {
-    renderMobilePage(pageNumber);
-  }
-  
-  updateMobileZoomDisplay();
-}
-
-function updateMobileZoomDisplay() {
-  const zoomDisplay = document.getElementById('mobile-zoom-display');
-  if (zoomDisplay) {
-    const percentage = Math.round(mobileScale * 100);
-    zoomDisplay.textContent = `${percentage}%`;
-  }
 }
 
 // ============================================== [END MOBILE SCROLLING VIEWER] =======================
@@ -2048,13 +1994,6 @@ window.addEventListener('resize', function() {
     // Re-render current page with new scale
     setTimeout(() => {
       queueRenderPage(pageNum);
-    }, 100);
-  }
-  
-  // Handle mobile scrolling viewer resize
-  if (mobilePdfDoc && window.innerWidth <= 768) {
-    setTimeout(() => {
-      updateMobileZoom();
     }, 100);
   }
   

@@ -2023,50 +2023,6 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--viewer-bg, #525659);
 }
 
-.mobile-scroll-toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  background: var(--toolbar-bg, #343a40);
-  color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  flex-shrink: 0;
-}
-
-.toolbar-zoom-controls {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.mobile-toolbar-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 0.9rem;
-}
-
-.mobile-toolbar-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.mobile-toolbar-btn:active {
-  transform: scale(0.95);
-}
-
-.mobile-zoom-display {
-  min-width: 50px;
-  text-align: center;
-  font-weight: 600;
-  color: white;
-  font-size: 0.9rem;
-}
-
 .mobile-scroll-container {
   flex: 1;
   overflow-y: auto;
