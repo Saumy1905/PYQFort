@@ -125,7 +125,7 @@ let rotation = 0;
 
 // Mobile scrolling viewer variables
 let mobilePdfDoc = null;
-let mobileScale = 1.5;
+let mobileScale = 3.0;
 let mobileRenderedPages = new Set();
 
 // PDF Viewer initialization
