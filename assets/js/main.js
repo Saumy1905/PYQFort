@@ -150,6 +150,9 @@ function initializePDFViewer() {
   // Set up print functionality
   setupPrint();
   
+  // Set up mobile touch gestures
+  setupMobileTouchGestures();
+  
   // Hide loading after a delay
   setTimeout(hideLoading, 2000);
 }
@@ -187,21 +190,36 @@ function switchViewer(viewerType) {
       `<i class="fas fa-info-circle"></i> ${descriptions[viewerType]}`;
   }
   
-  // If switching to PDF.js, load the PDF with 500% zoom
+  // If switching to PDF.js, load the PDF with appropriate zoom
   if (viewerType === 'pdfjs' && !pdfDoc) {
-    scale = 5.0; // Set to 500% zoom
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isSmallScreen = window.innerWidth <= 768;
+    scale = (isMobile || isSmallScreen) ? 1.5 : 5.0; // Mobile: 150%, Desktop: 500%
     loadPDFJS();
   } else if (viewerType === 'pdfjs' && pdfDoc) {
-    // If PDF already loaded, just update zoom to 500%
-    scale = 5.0;
+    // If PDF already loaded, just update zoom
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isSmallScreen = window.innerWidth <= 768;
+    scale = (isMobile || isSmallScreen) ? 1.5 : 5.0; // Mobile: 150%, Desktop: 500%
     updateZoomSelect();
     queueRenderPage(pageNum);
   }
 }
 
 function setupViewerSwitching() {
-  // Keep iframe as default for all devices
-  // No auto-switching behavior
+  // Detect mobile devices and auto-switch to PDF.js viewer
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  const isSmallScreen = window.innerWidth <= 768;
+  
+  // Auto-switch to PDF.js on mobile devices for better viewing experience
+  if ((isMobile || isSmallScreen) && currentViewer === 'iframe') {
+    // Add a small delay to ensure DOM is ready
+    setTimeout(() => {
+      switchViewer('pdfjs');
+      // Set mobile-friendly zoom level
+      scale = 1.5; // 150% is better for mobile reading
+    }, 500);
+  }
 }
 
 function showIframeFallback() {
@@ -282,8 +300,15 @@ function loadPDFJS() {
     return;
   }
   
-  // Set default zoom to 500%
-  scale = 5.0;
+  // Set mobile-friendly zoom: 150% for mobile, 500% for desktop
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  const isSmallScreen = window.innerWidth <= 768;
+  
+  if (isMobile || isSmallScreen) {
+    scale = 1.5; // Mobile: 150% zoom for better readability
+  } else {
+    scale = 5.0; // Desktop: 500% zoom
+  }
   
   pdfjsLib.getDocument(pdfUrl).promise.then(pdfDoc_ => {
     pdfDoc = pdfDoc_;
@@ -315,17 +340,20 @@ function loadPDFJS() {
 function updateZoomSelect() {
   const zoomSelect = document.getElementById('zoom-select');
   if (zoomSelect) {
-    // Check if 500% option exists, if not create it
-    let option500 = zoomSelect.querySelector('option[value="5"]');
-    if (!option500) {
-      option500 = document.createElement('option');
-      option500.value = '5';
-      option500.textContent = '500%';
-      zoomSelect.appendChild(option500);
+    const currentScale = scale.toString();
+    
+    // Check if current scale option exists, if not create it
+    let currentOption = zoomSelect.querySelector(`option[value="${currentScale}"]`);
+    if (!currentOption) {
+      const percentText = Math.round(scale * 100) + '%';
+      currentOption = document.createElement('option');
+      currentOption.value = currentScale;
+      currentOption.textContent = percentText;
+      zoomSelect.appendChild(currentOption);
     }
     
-    // Set to 500%
-    zoomSelect.value = '5';
+    // Set to current scale
+    zoomSelect.value = currentScale;
   }
 }
 
@@ -517,6 +545,83 @@ function setupPrint() {
         }
       }
     });
+  }
+}
+
+// Mobile Touch Gestures for PDF Viewer
+function setupMobileTouchGestures() {
+  const canvas = document.getElementById('pdf-canvas');
+  if (!canvas) return;
+  
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+  
+  // Detect mobile device
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if (!isMobile && window.innerWidth > 768) return;
+  
+  // Swipe detection
+  canvas.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  }, false);
+  
+  canvas.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleSwipe();
+  }, false);
+  
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+    
+    // Horizontal swipe (page navigation)
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > swipeThreshold) {
+      if (diffX > 0) {
+        // Swipe right - previous page
+        onPrevPage();
+      } else {
+        // Swipe left - next page
+        onNextPage();
+      }
+    }
+  }
+  
+  // Pinch zoom support (basic implementation)
+  let initialDistance = 0;
+  canvas.addEventListener('touchstart', function(e) {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      initialDistance = getDistance(e.touches[0], e.touches[1]);
+    }
+  }, { passive: false });
+  
+  canvas.addEventListener('touchmove', function(e) {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      const currentDistance = getDistance(e.touches[0], e.touches[1]);
+      if (initialDistance > 0) {
+        const diff = currentDistance - initialDistance;
+        if (Math.abs(diff) > 10) {
+          if (diff > 0) {
+            changeZoom(1.1); // Zoom in
+          } else {
+            changeZoom(0.9); // Zoom out
+          }
+          initialDistance = currentDistance;
+        }
+      }
+    }
+  }, { passive: false });
+  
+  function getDistance(touch1, touch2) {
+    const dx = touch1.clientX - touch2.clientX;
+    const dy = touch1.clientY - touch2.clientY;
+    return Math.sqrt(dx * dx + dy * dy);
   }
 }
 
