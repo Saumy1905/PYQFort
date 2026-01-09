@@ -1949,6 +1949,18 @@
                   pages: 3
                   title: "Bhagavad Gita 2024"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-bhagavad-gita-2025-set-1.pdf
+                  id: ymca-bhagavad-gita-2025-set-1
+                  pages: 3
+                  title: "Bhagavad Gita 2025 set 1"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-bhagavad-gita-2025-set-2.pdf
+                  id: ymca-bhagavad-gita-2025-set-2
+                  pages: 3
+                  title: "Bhagavad Gita 2025 set 2"
+                  upload: "Saumy"
             - name: Big Data
               id: big-data
               description: Concepts and technologies in big data
@@ -6317,6 +6329,81 @@
           description: Subjects for Semester 6
           keywords: ["semester 6", "mechanical", "engineering"]
           subjects:
+            - name: Bhagavad Gita
+              id: bhagavad-gita
+              description: Study of the Bhagavad Gita
+              keywords: ["Bhagavad", "Gita", "study"]
+              icon: book-open
+              slug: bhagavad-gita
+              pyqs:
+                - year: 2024
+                  file: ymca-bhagavad-gita-2024.pdf
+                  id: ymca-bhagavad-gita-2024  # Add this unique identifier
+                  pages: 3
+                  title: "Bhagavad Gita 2024"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-bhagavad-gita-2025-set-1.pdf
+                  id: ymca-bhagavad-gita-2025-set-1
+                  pages: 3
+                  title: "Bhagavad Gita 2025 set 1"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-bhagavad-gita-2025-set-2.pdf
+                  id: ymca-bhagavad-gita-2025-set-2
+                  pages: 3
+                  title: "Bhagavad Gita 2025 set 2"
+                  upload: "Saumy"
+            - name: CAD/CAM
+              slug: cad-cam
+              id: cad-cam
+              description: Computer-aided design and manufacturing
+              keywords: ["CAD", "CAM", "computer-aided", "design", "manufacturing"]
+              icon: desktop
+              pyqs:
+                - year: 2022
+                  file: ymca-cad-cam-2022.pdf
+                  id: ymca-cad-cam-2022
+                  pages: 3
+                  title: "CAD/CAM 2022"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-cad-cam-2024.pdf
+                  id: ymca-cad-cam-2024
+                  pages: 3
+                  title: "CAD/CAM 2024"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-cad-cam-2025.pdf
+                  id: ymca-cad-cam-2025
+                  pages: 3
+                  title: "CAD/CAM 2025"
+                  upload: "Saumy"
+            - name: Flexible Manufacturing Systems
+              slug: fms
+              id: fms
+              description: Study of flexible manufacturing systems
+              keywords: ["flexible", "manufacturing", "systems"]
+              icon: cogs
+              pyqs:
+                - year: 2018
+                  file: ymca-fms-2018.pdf
+                  id: ymca-fms-2018
+                  pages: 3
+                  title: "Flexible Manufacturing Systems 2018"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-fms-2024.pdf
+                  id: ymca-fms-2024
+                  pages: 3
+                  title: "Flexible Manufacturing Systems 2024"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-fms-2025.pdf
+                  id: ymca-fms-2025
+                  pages: 3
+                  title: "Flexible Manufacturing Systems 2025"
+                  upload: "Saumy"
             - name: IC Engines
               slug: ic-engines
               id: ic-engines
@@ -6326,17 +6413,86 @@
               pyqs:
                 - year: 2018
                   file: ymca-ic-engines-2018.pdf
-                  id: ymca-ic-engines-2018  # Add this unique identifier
+                  id: ymca-ic-engines-2018
                   pages: 3
                   title: "IC Engines 2018"
                   upload: "Saumy"
+                - year: 2022
+                  file: ymca-ic-engines-2022.pdf
+                  id: ymca-ic-engines-2022
+                  pages: 3
+                  title: "IC Engines 2022"
+                  upload: "Saumy"
                 - year: 2024
                   file: ymca-ic-engines-2024.pdf
-                  id: ymca-ic-engines-2024  # Add this unique identifier
+                  id: ymca-ic-engines-2024
                   pages: 3
                   title: "IC Engines 2024"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-ic-engines-2025.pdf
+                  id: ymca-ic-engines-2025
+                  pages: 3
+                  title: "IC Engines 2025"
                   new: true
                   upload: "Saumy"
+            - name: Machine Design 2
+              slug: machine-design-2
+              id: machine-design-2
+              description: Advanced concepts in machine design
+              keywords: ["machine", "design", "advanced"]
+              icon: wrench
+              pyqs:
+                - year: 2018
+                  file: ymca-machine-design-2-2018.pdf
+                  id: ymca-machine-design-2-2018
+                  pages: 3
+                  title: "Machine Design 2 2018"
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-machine-design-2-2022.pdf
+                  id: ymca-machine-design-2-2022
+                  pages: 3
+                  title: "Machine Design 2 2022"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-machine-design-2-2024.pdf
+                  id: ymca-machine-design-2-2024
+                  pages: 3
+                  title: "Machine Design 2 2024"
+                  upload: "Saumy"
+            - name: Manufacturing Technology
+              slug: mt
+              id: mt
+              description: Advanced manufacturing technologies
+              keywords: ["manufacturing", "technology", "advanced"]
+              icon: industry
+              pyqs:
+                - year: 2022
+                  file: ymca-mt-2022.pdf
+                  id: ymca-mt-2022
+                  pages: 3
+                  title: "Manufacturing Technology 2022"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-mt-2024.pdf
+                  id: ymca-mt-2024
+                  pages: 3
+                  title: "Manufacturing Technology 2024"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-mt-2025.pdf
+                  id: ymca-mt-2025
+                  pages: 3
+                  title: "Manufacturing Technology 2025"
+                  new: true
+                  upload: "Saumy"
+        - number: 7
+          slug: sem7
+          id: sem7
+          description: Subjects for Semester 7
+          keywords: ["semester 7", "mechanical", "engineering"]
+          subjects:
             - name: Automation
               slug: automation
               id: automation
@@ -6350,39 +6506,6 @@
                   pages: 3
                   title: "Automation 2023"
                   upload: "Saumy"
-            - name: Machine Design 2
-              slug: machine-design-2
-              id: machine-design-2
-              description: Advanced concepts in machine design
-              keywords: ["machine", "design", "advanced"]
-              icon: wrench
-              pyqs:
-                - year: 2018
-                  file: ymca-machine-design-2-2018.pdf
-                  id: ymca-machine-design-2-2018  # Add this unique identifier
-                  pages: 3
-                  title: "Machine Design 2 2018"
-                  upload: "Saumy"
-            - name: Mechatronics
-              slug: mechatronics
-              id: mechatronics
-              description: Study of mechatronic systems
-              keywords: ["mechatronics", "systems", "study"]
-              icon: microchip
-              pyqs:
-                - year: 2024
-                  file: ymca-mechatronics-2024.pdf
-                  id: ymca-mechatronics-2024  # Add this unique identifier
-                  pages: 3
-                  title: "Mechatronics 2024"
-                  new: true
-                  upload: "Saumy"
-        - number: 7
-          slug: sem7
-          id: sem7
-          description: Subjects for Semester 7
-          keywords: ["semester 7", "mechanical", "engineering"]
-          subjects:
             - name: HR Management
               slug: hr-management
               id: hr-management
@@ -6395,6 +6518,20 @@
                   id: ymca-hr-management-2018  # Add this unique identifier
                   pages: 3
                   title: "HR Management 2018"
+                  upload: "Saumy"
+            - name: Mechatronics
+              slug: mechatronics
+              id: mechatronics
+              description: Study of mechatronic systems
+              keywords: ["mechatronics", "systems", "study"]
+              icon: microchip
+              pyqs:
+                - year: 2024
+                  file: ymca-mechatronics-2024.pdf
+                  id: ymca-mechatronics-2024
+                  pages: 3
+                  title: "Mechatronics 2024"
+                  new: true
                   upload: "Saumy"
             - name: Marketing Management
               slug: marketing-management
