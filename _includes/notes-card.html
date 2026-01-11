@@ -4,20 +4,16 @@
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: opacity 0.3s ease;
     position: relative;
   }
   
   .dark-theme .notes-card {
     background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
-    box-shadow: 0 8px 20px rgba(85, 104, 211, 0.4);
   }
   
   .notes-card:hover {
-    transform: translateZ(20px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+    opacity: 0.95;
   }
   
   .notes-card::before {
@@ -44,10 +40,6 @@
     min-width: 80px;
   }
   
-  .notes-icon i {
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-  }
-  
   .tag-new-notes {
     position: absolute;
     top: 0px;
@@ -58,7 +50,6 @@
     font-weight: bold;
     padding: 4px 8px;
     border-radius: 6px;
-    box-shadow: 0 3px 6px rgba(255, 71, 87, 0.4);
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -90,7 +81,6 @@
     margin-bottom: 0.5rem;
     color: white;
     font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
   
   .notes-meta {
@@ -114,14 +104,11 @@
     font-weight: 600;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     font-size: 0.95rem;
   }
   
   .btn-notes-view:hover {
     background: white;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     color: #667eea;
   }
   
@@ -148,7 +135,6 @@
   
   .notes-uploader:hover {
     background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
   }
   
   /* Praxian Premium Styles for Notes */
@@ -170,7 +156,6 @@
     font-weight: 600;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     flex: 1;
     position: relative;
     font-size: 0.95rem;
@@ -178,8 +163,6 @@
   
   .btn-notes-access:hover {
     background: white;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     color: #667eea;
   }
   
@@ -204,8 +187,6 @@
   .btn-notes-view-premium:hover {
     background: rgba(255, 255, 255, 0.3);
     border-color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     color: white;
   }
   

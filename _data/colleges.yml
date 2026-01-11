@@ -5404,7 +5404,7 @@
                 - year: 2025
                   file: thermodynamics-notes.pdf
                   id: thermodynamics-notes
-                  pages: 10
+                  pages: 18
                   title: "TD Notes"
                   new: true
                   pyqfort_notes: true
