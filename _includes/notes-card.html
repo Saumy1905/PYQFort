@@ -149,6 +149,88 @@
     background: rgba(255, 255, 255, 0.3);
     transform: scale(1.05);
   }
+  
+  /* Praxian Premium Styles for Notes */
+  .notes-actions-premium {
+    display: flex;
+    gap: 0.6rem;
+  }
+  
+  .btn-notes-access {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #667eea;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    position: relative;
+  }
+  
+  .btn-notes-access:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    color: #667eea;
+  }
+  
+  .btn-notes-view-premium {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    flex: 1;
+  }
+  
+  .btn-notes-view-premium:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: white;
+  }
+  
+  .praxian-asterisk-notes {
+    color: #FF9933;
+    font-weight: bold;
+    font-size: 1.1em;
+    filter: drop-shadow(0 0 2px rgba(255, 153, 51, 0.8));
+    animation: pulse-notes 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-notes {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.1); }
+  }
+  
+  /* Responsive adjustments for praxian buttons in notes */
+  @media (max-width: 768px) {
+    .notes-actions-premium {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .btn-notes-access,
+    .btn-notes-view-premium {
+      width: 100%;
+    }
+  }
 </style>
 
 <div class="notes-card">
@@ -168,11 +250,23 @@
         <i class="fas fa-file-alt"></i> {{ include.pages }} pages
       {% endif %}
     </p>
+    {% if include.praxian and include.praxian_link %}
+    <div class="notes-actions notes-actions-premium">
+      <a href="{{ include.praxian_link }}" class="btn-notes-access" target="_blank" rel="noopener noreferrer">
+        <span class="praxian-asterisk-notes">*</span>
+        Access
+      </a>
+      <a href="{{ include.view_url }}" class="btn-notes-view-premium">
+        <i class="fas fa-eye"></i> View
+      </a>
+    </div>
+    {% else %}
     <div class="notes-actions">
       <a href="{{ include.view_url }}" class="btn-notes-view">
         <i class="fas fa-eye"></i> View Notes
       </a>
     </div>
+    {% endif %}
     {% if include.upload %}
     <div class="notes-uploader">
       <i class="fas fa-user-circle"></i>

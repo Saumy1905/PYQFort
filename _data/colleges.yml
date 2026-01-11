@@ -5384,28 +5384,32 @@
                   file: ymca-thermodynamics-2023.pdf
                   id: ymca-thermodynamics-2023  # Add this unique identifier
                   pages: 3
-                  title: "Thermodynamics 2023"
+                  title: "TD 2023"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-thermodynamics-2022.pdf
                   id: ymca-thermodynamics-2022  # Add this unique identifier
                   pages: 3
-                  title: "Thermodynamics 2022"
+                  title: "TD 2022"
                   upload: "Saumy"
                   new: true
                 - year: 2024
                   file: ymca-thermodynamics-2024.pdf
                   id: ymca-thermodynamics-2024  # Add this unique identifier
                   pages: 3
-                  title: "Thermodynamics 2024"
+                  title: "TD 2024"
+                  praxian: true
+                  praxian_link: "https://custom-name.com/thermodynamics-2024"
                   upload: "Saumy"
                 - year: 2025
                   file: thermodynamics-notes.pdf
                   id: thermodynamics-notes
                   pages: 10
-                  title: "Thermodynamics Notes"
+                  title: "TD Notes"
                   new: true
                   pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://custom-name.com/thermodynamics-notes"
                   upload: "Saumy"
             - name: Sessional
               id: sessional
