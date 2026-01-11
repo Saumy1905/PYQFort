@@ -5399,7 +5399,7 @@
                   pages: 3
                   title: "TD 2024"
                   praxian: true
-                  praxian_link: "https://custom-name.com/thermodynamics-2024"
+                  praxian_link: "https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem3/thermodynamics/ymca-thermodynamics-2024/"
                   upload: "Saumy"
                 - year: 2025
                   file: thermodynamics-notes.pdf
@@ -5409,8 +5409,7 @@
                   new: true
                   pyqfort_notes: true
                   praxian: true
-                  praxian_link: "https://custom-name.com/thermodynamics-notes"
-                  upload: "Saumy"
+                  praxian_link: "https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem3/thermodynamics/thermodynamics-notes/"
             - name: Sessional
               id: sessional
               slug: sessional
