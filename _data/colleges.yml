@@ -1533,8 +1533,6 @@
                   title: "PYQFort OS Module 1"
                   new: true
                   pyqfort_notes: true
-                  upload: "Saumy"
-
         - number: 5
           slug: sem5
           id: sem5
@@ -4778,7 +4776,6 @@
                   title: "PYQFort OS Module 1"
                   new: true
                   pyqfort_notes: true
-                  upload: "Saumy"
             - name: Design and Analysis of Algorithms
               slug: daa
               id: daa
