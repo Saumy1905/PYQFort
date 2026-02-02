@@ -4771,6 +4771,14 @@
                   pages: 3
                   title: "Operating System Praxian Analysis 2025"
                   upload: "Saumy"
+                - year: 2026
+                  file: pyqfort-os-module-1-notes.pdf
+                  id: pyqfort-os-module-1-notes 
+                  pages: 12
+                  title: "PYQFort OS Module 1"
+                  new: true
+                  pyqfort_notes: true
+                  upload: "Saumy"
             - name: Design and Analysis of Algorithms
               slug: daa
               id: daa
