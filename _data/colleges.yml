@@ -1533,6 +1533,13 @@
                   title: "PYQFort OS Module 1"
                   new: true
                   pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-2-notes.pdf
+                  id: pyqfort-os-module-2-notes 
+                  pages: 12
+                  title: "PYQFort OS Module 2"
+                  new: true
+                  pyqfort_notes: true
         - number: 5
           slug: sem5
           id: sem5
@@ -4774,6 +4781,13 @@
                   id: pyqfort-os-module-1-notes 
                   pages: 12
                   title: "PYQFort OS Module 1"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-2-notes.pdf
+                  id: pyqfort-os-module-2-notes 
+                  pages: 12
+                  title: "PYQFort OS Module 2"
                   new: true
                   pyqfort_notes: true
             - name: Design and Analysis of Algorithms
