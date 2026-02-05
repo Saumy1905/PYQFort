@@ -1337,28 +1337,37 @@
               pyqs:
                 - year: 2020
                   file: ymca-coa-2020.pdf
-                  id: ymca-coa-2020  # Add this unique identifier
+                  id: ymca-coa-2020
                   pages: 3
-                  title: "Computer Organization and Architecture 2020"
+                  title: "COA 2020"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-coa-2024.pdf
-                  id: ymca-coa-2024  # Add this unique identifier
+                  id: ymca-coa-2024
                   pages: 3
-                  title: "Computer Organization and Architecture 2024"
+                  title: "COA 2024"
                   upload: "Saumy"
                 - year: 2019
                   file: ymca-coa-2019.pdf
-                  id: ymca-coa-2019  # Add this unique identifier
+                  id: ymca-coa-2019
                   pages: 3
-                  title: "Computer Organization and Architecture 2019"
+                  title: "COA 2019"
                   upload: "Saumy" 
                 - year: 2025
-                  file: yma-coa-praxian-analysis-2025.pdf
+                  file: ymca-coa-praxian-analysis-2025.pdf
                   id: ymca-coa-praxian-analysis-2025
                   pages: 3
                   title: "COA Praxian Analysis 2025"
                   upload: "Saumy"
+                - year: 2026
+                  file: pyqfort-coa-module-1-notes.pdf
+                  id: pyqfort-coa-module-1-notes 
+                  pages: 12
+                  title: "PYQFort COA Module 1"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
             - name: Design and Analysis of Algorithms
               id: daa
               description: Techniques for algorithm design and analysis
@@ -1518,13 +1527,13 @@
                   file: ymca-os-2019.pdf
                   id: ymca-os-2019  # Add this unique identifier
                   pages: 3
-                  title: "Operating System 2019"
+                  title: "OS 2019"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-os-praxian-analysis-2025.pdf
                   id: ymca-os-praxian-analysis-2025  # Add this unique identifier
                   pages: 3
-                  title: "Operating System Praxian Analysis 2025"
+                  title: "OS Praxian Analysis 2025"
                   upload: "Saumy"
                 - year: 2026
                   file: pyqfort-os-module-1-notes.pdf
@@ -4751,26 +4760,35 @@
                   file: ymca-coa-2020.pdf
                   id: ymca-coa-2020  # Add this unique identifier
                   pages: 3
-                  title: "Computer Organization and Architecture 2020"
+                  title: "COA 2020"
                   upload: "Saumy"
                 - year: 2019
                   file: ymca-coa-2019.pdf
                   id: ymca-coa-2019
                   pages: 3
-                  title: "Computer Organization and Architecture 2019"
+                  title: "COA 2019"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-coa-2024.pdf
                   id: ymca-coa-2024
                   pages: 3
-                  title: "Computer Organization and Architecture 2024"
+                  title: "COA 2024"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-coa-praxian-analysis-2025.pdf
                   id: ymca-coa-praxian-analysis-2025
                   pages: 3
-                  title: "Computer Organization and Architecture Praxian Analysis 2025"
+                  title: "COA Praxian Analysis 2025"
                   upload: "Saumy"
+                - year: 2026
+                  file: pyqfort-coa-module-1-notes.pdf
+                  id: pyqfort-coa-module-1-notes 
+                  pages: 12
+                  title: "PYQFort COA Module 1"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
             - name: Operating System
               slug: os
               id: os
@@ -4782,13 +4800,13 @@
                   file: ymca-os-2019.pdf
                   id: ymca-os-2019
                   pages: 3
-                  title: "Operating System 2019"
+                  title: "OS 2019"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-os-praxian-analysis-2025.pdf
                   id: ymca-os-praxian-analysis-2025
                   pages: 3
-                  title: "Operating System Praxian Analysis 2025"
+                  title: "OS Praxian Analysis 2025"
                   upload: "Saumy"
                 - year: 2026
                   file: pyqfort-os-module-1-notes.pdf
