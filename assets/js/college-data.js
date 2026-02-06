@@ -1208,6 +1208,13 @@ window.COLLEGE_DATA = {
                       pages: 21,
                       title: "PYQFort COA Module 2 Notes",
                     },
+                    {
+                      year: 2026,
+                      file: "pyqfort-coa-module-3-notes.pdf",
+                      id: "pyqfort-coa-module-3-notes",
+                      pages: 12,
+                      title: "PYQFort COA Module 3 Notes",
+                    },
                   ],
                 },
                 {
@@ -4587,7 +4594,14 @@ window.COLLEGE_DATA = {
                       id: "pyqfort-coa-module-2-notes",
                       pages: 21,
                       title: "PYQFort COA Module 2 Notes",
-                    }
+                    },
+                    {
+                      year: 2026,
+                      file: "pyqfort-coa-module-3-notes.pdf",
+                      id: "pyqfort-coa-module-3-notes",
+                      pages: 12,
+                      title: "PYQFort COA Module 3 Notes",
+                    },
                   ],
                 },
                 {
