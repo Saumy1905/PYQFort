@@ -1368,6 +1368,15 @@
                   pyqfort_notes: true
                   praxian: true
                   praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-coa-module-2-notes.pdf
+                  id: pyqfort-coa-module-2-notes 
+                  pages: 21
+                  title: "PYQFort COA Module 2"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
             - name: Design and Analysis of Algorithms
               id: daa
               description: Techniques for algorithm design and analysis
@@ -4789,6 +4798,15 @@
                   pyqfort_notes: true
                   praxian: true
                   praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-coa-module-2-notes.pdf
+                  id: pyqfort-coa-module-2-notes 
+                  pages: 21
+                  title: "PYQFort COA Module 2"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
             - name: Operating System
               slug: os
               id: os
