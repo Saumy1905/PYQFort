@@ -1384,6 +1384,13 @@
                   title: "PYQFort COA Module 3"
                   new: true
                   pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-coa-module-4-notes.pdf
+                  id: pyqfort-coa-module-4-notes 
+                  pages: 8
+                  title: "PYQFort COA Module 4"
+                  new: true
+                  pyqfort_notes: true
             - name: Design and Analysis of Algorithms
               id: daa
               description: Techniques for algorithm design and analysis
@@ -4819,6 +4826,13 @@
                   id: pyqfort-coa-module-3-notes 
                   pages: 12
                   title: "PYQFort COA Module 3"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-coa-module-4-notes.pdf
+                  id: pyqfort-coa-module-4-notes 
+                  pages: 8
+                  title: "PYQFort COA Module 4"
                   new: true
                   pyqfort_notes: true
             - name: Operating System
