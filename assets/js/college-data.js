@@ -1449,6 +1449,20 @@ window.COLLEGE_DATA = {
                       pages: 13,
                       title: "PYQFort OS Module 4 Notes",
                     },
+                    {
+                      year: 2026,
+                      file: "pyqfort-os-module-5-notes.pdf",
+                      id: "pyqfort-os-module-5-notes",
+                      pages: 24,
+                      title: "PYQFort OS Module 5 Notes",
+                    },
+                    {
+                      year: 2026,
+                      file: "pyqfort-os-module-6-notes.pdf",
+                      id: "pyqfort-os-module-6-notes",
+                      pages: 25,
+                      title: "PYQFort OS Module 6 Notes",
+                    }
                   ],
                 },
               ],
@@ -4668,6 +4682,20 @@ window.COLLEGE_DATA = {
                       pages: 13,
                       title: "PYQFort OS Module 4 Notes",
                     },
+                    {
+                      year: 2026,
+                      file: "pyqfort-os-module-5-notes.pdf",
+                      id: "pyqfort-os-module-5-notes",
+                      pages: 24,
+                      title: "PYQFort OS Module 5 Notes",
+                    },
+                    {
+                      year: 2026,
+                      file: "pyqfort-os-module-6-notes.pdf",
+                      id: "pyqfort-os-module-6-notes",
+                      pages: 25,
+                      title: "PYQFort OS Module 6 Notes",
+                    }
                   ],
                 },
                 {

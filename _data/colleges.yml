@@ -1287,45 +1287,29 @@
           keywords: ["semester 4", "engineering", "subjects"]
           # Computer Engineering Semester 4 specific subject marketing cards
           subject_marketing_cards:
-            - title: "Computer Organization and Architecture"
-              description: "Computer System Architecture 3rd edition by Morris mano | 616 pages | Pearson"
-              url: "https://amzn.to/48ECtP2"
-              image: "marketing/ymca-coa-ce-sem4.jpg"
-              badge: "COA"
-              theme: "blue"
-              meta_text: "Computer Organization and Architecture"
-              type: "subject_integrated"
-            - title: "Design and Analysis of Algorithms"
-              description: "Fundamentals of Computer Algorithms 2nd edition by Sartaj Sahni | 808 pages"
-              url: "https://amzn.to/4mI3gO2"
-              image: "marketing/ymca-daa-ce-sem4.jpg"
-              badge: "DAA"
-              theme: "blue"
-              meta_text: "Design and Analysis of Algorithms"
-              type: "subject_integrated"
-            - title: "Economics for Engineers"
-              description: "Economics for Engineers by tr jain"
-              url: "https://amzn.to/4mJGXHN"
-              image: "marketing/ymca-economics-ce-sem4.jpg"
-              badge: "Eco"
-              theme: "blue"
-              meta_text: "Economics for Engineers"
-              type: "subject_integrated"
-            - title: "Environmental science"
-              description: "Perspectives in Environmental Science 8th edition by cp kaushik | 352 pages"
-              url: "https://amzn.to/46JqgpU"
-              image: "marketing/ymca-env-ce-sem4.jpg"
-              badge: "Env"
+            - title: "COA Module-1 Notes"
+              description: "FREE Premium! | 11 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-1-notes.jpg"
+              badge: "FREE Premium"
               theme: "green"
-              meta_text: "Environmental science"
+              meta_text: "Buy Now!"
               type: "subject_integrated"
-            - title: "Operating System"
-              description: "Principles of operating system by naresh chauhan | 784 pages"
-              url: "https://amzn.to/4pNruck"
-              image: "marketing/ymca-os-ce-sem4.jpg"
-              badge: "OS"
+            - title: "COA Module-2 Notes"
+              description: "FREE Premium! | 20 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-2-notes.jpg"
+              badge: "FREE Premium"
+              theme: "green"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "OS Module-5 & 6 Notes"
+              description: "Paid Premium! | 47 pages | for just ₹20"
+              url: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-os-module-5_6-notes.jpg"
+              badge: "Paid Premium"
               theme: "blue"
-              meta_text: "Operating System"
+              meta_text: "Buy Now!"
               type: "subject_integrated"
           subjects:
             - name: Computer Organization and Architecture
@@ -1586,6 +1570,24 @@
                   title: "PYQFort OS Module 4"
                   new: true
                   pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-5-notes.pdf
+                  id: pyqfort-os-module-5-notes 
+                  pages: 24
+                  title: "PYQFort OS Module 5"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-os-module-6-notes.pdf
+                  id: pyqfort-os-module-6-notes 
+                  pages: 25
+                  title: "PYQFort OS Module 6"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
         - number: 5
           slug: sem5
           id: sem5
@@ -4882,6 +4884,24 @@
                   title: "PYQFort OS Module 4"
                   new: true
                   pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-5-notes.pdf
+                  id: pyqfort-os-module-5-notes 
+                  pages: 24
+                  title: "PYQFort OS Module 5"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-os-module-6-notes.pdf
+                  id: pyqfort-os-module-6-notes 
+                  pages: 25
+                  title: "PYQFort OS Module 6"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
             - name: Design and Analysis of Algorithms
               slug: daa
               id: daa
