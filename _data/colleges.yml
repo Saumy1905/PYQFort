@@ -8546,6 +8546,31 @@
           id: sem4
           keywords: ["computer", "engineering", "semester 4"]
           description: Subjects for Semester 4
+          subject_marketing_cards:
+            - title: "COA Module-1 Notes"
+              description: "FREE Premium! | 11 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-1-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "COA Module-2 Notes"
+              description: "FREE Premium! | 20 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-2-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "OS Module-5 & 6 Notes"
+              description: "Paid Premium! | 47 pages | for just ₹20"
+              url: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-os-module-5_6-notes.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
           subjects:
             - name: Computer Organization and Architecture
               slug: coa
@@ -8560,6 +8585,38 @@
                   pages: 10
                   title: "Computer Organization and Architecture 2023"
                   upload: "Saumy"
+                - year: 2026
+                  file: pyqfort-coa-module-1-notes.pdf
+                  id: pyqfort-coa-module-1-notes 
+                  pages: 12
+                  title: "PYQFort COA Module 1"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-coa-module-2-notes.pdf
+                  id: pyqfort-coa-module-2-notes 
+                  pages: 21
+                  title: "PYQFort COA Module 2"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-coa-module-3-notes.pdf
+                  id: pyqfort-coa-module-3-notes 
+                  pages: 12
+                  title: "PYQFort COA Module 3"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-coa-module-4-notes.pdf
+                  id: pyqfort-coa-module-4-notes 
+                  pages: 8
+                  title: "PYQFort COA Module 4"
+                  new: true
+                  pyqfort_notes: true
             - name: Computer Networks
               slug: computer-networks
               id: computer-networks
@@ -8599,6 +8656,52 @@
                   pages: 10
                   title: "Operating Systems 2024"
                   upload: "Saumy"
+                - year: 2026
+                  file: pyqfort-os-module-1-notes.pdf
+                  id: pyqfort-os-module-1-notes 
+                  pages: 12
+                  title: "PYQFort OS Module 1"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-2-notes.pdf
+                  id: pyqfort-os-module-2-notes 
+                  pages: 12
+                  title: "PYQFort OS Module 2"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-3-notes.pdf
+                  id: pyqfort-os-module-3-notes 
+                  pages: 10
+                  title: "PYQFort OS Module 3"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-4-notes.pdf
+                  id: pyqfort-os-module-4-notes 
+                  pages: 13
+                  title: "PYQFort OS Module 4"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-5-notes.pdf
+                  id: pyqfort-os-module-5-notes 
+                  pages: 24
+                  title: "PYQFort OS Module 5"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-os-module-6-notes.pdf
+                  id: pyqfort-os-module-6-notes 
+                  pages: 25
+                  title: "PYQFort OS Module 6"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
             - name: Optimization Techniques & Decision Making 
               slug: otdm
               id: otdm
@@ -8935,6 +9038,31 @@
           id: sem3
           keywords: ["computer", "science", "engineering", "semester 3"]
           description: Subjects for Semester 3
+          subject_marketing_cards:
+            - title: "COA Module-1 Notes"
+              description: "FREE Premium! | 11 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-1-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "COA Module-2 Notes"
+              description: "FREE Premium! | 20 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-2-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "OS Module-5 & 6 Notes"
+              description: "Paid Premium! | 47 pages | for just ₹20"
+              url: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-os-module-5_6-notes.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
           subjects:
             - name: Computer Organization and Architecture
               slug: coa
@@ -9021,6 +9149,38 @@
                   pages: 10
                   title: "Computer Organization and Architecture 2024"
                   upload: "isha0325"
+                - year: 2026
+                  file: pyqfort-coa-module-1-notes.pdf
+                  id: pyqfort-coa-module-1-notes 
+                  pages: 12
+                  title: "PYQFort COA Module 1"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-coa-module-2-notes.pdf
+                  id: pyqfort-coa-module-2-notes 
+                  pages: 21
+                  title: "PYQFort COA Module 2"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-coa-module-3-notes.pdf
+                  id: pyqfort-coa-module-3-notes 
+                  pages: 12
+                  title: "PYQFort COA Module 3"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-coa-module-4-notes.pdf
+                  id: pyqfort-coa-module-4-notes 
+                  pages: 8
+                  title: "PYQFort COA Module 4"
+                  new: true
+                  pyqfort_notes: true
             - name: Design and Analysis of Algorithm
               slug: daa
               id: daa
@@ -9192,6 +9352,31 @@
           id: sem4
           keywords: ["computer", "science", "engineering", "semester 4"]
           description: Subjects for Semester 4
+          subject_marketing_cards:
+            - title: "COA Module-1 Notes"
+              description: "FREE Premium! | 11 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-1-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "COA Module-2 Notes"
+              description: "FREE Premium! | 20 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-2-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "OS Module-5 & 6 Notes"
+              description: "Paid Premium! | 47 pages | for just ₹20"
+              url: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-os-module-5_6-notes.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
           subjects:
             - name: Computer Networks
               slug: computer-networks
@@ -9436,6 +9621,52 @@
                   pages: 10
                   title: "Operating System 2025 Set 4"
                   upload: "isha0325"
+                - year: 2026
+                  file: pyqfort-os-module-1-notes.pdf
+                  id: pyqfort-os-module-1-notes 
+                  pages: 12
+                  title: "PYQFort OS Module 1"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-2-notes.pdf
+                  id: pyqfort-os-module-2-notes 
+                  pages: 12
+                  title: "PYQFort OS Module 2"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-3-notes.pdf
+                  id: pyqfort-os-module-3-notes 
+                  pages: 10
+                  title: "PYQFort OS Module 3"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-4-notes.pdf
+                  id: pyqfort-os-module-4-notes 
+                  pages: 13
+                  title: "PYQFort OS Module 4"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-5-notes.pdf
+                  id: pyqfort-os-module-5-notes 
+                  pages: 24
+                  title: "PYQFort OS Module 5"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-os-module-6-notes.pdf
+                  id: pyqfort-os-module-6-notes 
+                  pages: 25
+                  title: "PYQFort OS Module 6"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
             - name: Soft Computing
               slug: soft-computing
               id: soft-computing
@@ -10358,6 +10589,31 @@
           slug: sem3
           id: sem3
           description: Subjects for Semester 3
+          subject_marketing_cards:
+            - title: "COA Module-1 Notes"
+              description: "FREE Premium! | 11 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-1-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "COA Module-2 Notes"
+              description: "FREE Premium! | 20 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-2-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "OS Module-5 & 6 Notes"
+              description: "Paid Premium! | 47 pages | for just ₹20"
+              url: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-os-module-5_6-notes.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
           subjects:
             - name: Computer Organization and Architecture
               slug: coa
@@ -10386,6 +10642,38 @@
                   id: abviiitm-coa_minor-2024
                   title: "COA Minor 2024"
                   upload: "Y4shu"
+                - year: 2026
+                  file: pyqfort-coa-module-1-notes.pdf
+                  id: pyqfort-coa-module-1-notes 
+                  pages: 12
+                  title: "PYQFort COA Module 1"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-coa-module-2-notes.pdf
+                  id: pyqfort-coa-module-2-notes 
+                  pages: 21
+                  title: "PYQFort COA Module 2"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-coa-module-3-notes.pdf
+                  id: pyqfort-coa-module-3-notes 
+                  pages: 12
+                  title: "PYQFort COA Module 3"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-coa-module-4-notes.pdf
+                  id: pyqfort-coa-module-4-notes 
+                  pages: 8
+                  title: "PYQFort COA Module 4"
+                  new: true
+                  pyqfort_notes: true
             - name: Design and Analysis of Algorithms
               slug: daa
               id: daa
@@ -10477,6 +10765,31 @@
           slug: sem4
           id: sem4
           description: Subjects for Semester 4
+          subject_marketing_cards:
+            - title: "COA Module-1 Notes"
+              description: "FREE Premium! | 11 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-1-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "COA Module-2 Notes"
+              description: "FREE Premium! | 20 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-2-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "OS Module-5 & 6 Notes"
+              description: "Paid Premium! | 47 pages | for just ₹20"
+              url: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-os-module-5_6-notes.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
           subjects:
             - name: Advanced Numerical Methods
               slug: anm
@@ -10538,6 +10851,52 @@
                   id: abviiitm-os_minor-2025
                   title: "OS Minor 2025"
                   upload: "SK8-infi"
+                - year: 2026
+                  file: pyqfort-os-module-1-notes.pdf
+                  id: pyqfort-os-module-1-notes 
+                  pages: 12
+                  title: "PYQFort OS Module 1"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-2-notes.pdf
+                  id: pyqfort-os-module-2-notes 
+                  pages: 12
+                  title: "PYQFort OS Module 2"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-3-notes.pdf
+                  id: pyqfort-os-module-3-notes 
+                  pages: 10
+                  title: "PYQFort OS Module 3"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-4-notes.pdf
+                  id: pyqfort-os-module-4-notes 
+                  pages: 13
+                  title: "PYQFort OS Module 4"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-5-notes.pdf
+                  id: pyqfort-os-module-5-notes 
+                  pages: 24
+                  title: "PYQFort OS Module 5"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-os-module-6-notes.pdf
+                  id: pyqfort-os-module-6-notes 
+                  pages: 25
+                  title: "PYQFort OS Module 6"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
             - name: Software Engineering
               slug: se
               id: se
