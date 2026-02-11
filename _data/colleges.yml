@@ -10914,3 +10914,704 @@
                   id: abviiitm-se_minor-2025
                   title: "SE Minor 2025"
                   upload: "SK8-infi"
+- name: Amity University
+  slug: amity
+  id: amity
+  description: Explore branches and Previous Year Question Papers
+  keywords: ["amity", "amity university", "engineering", "computer science"]
+  icon: university
+  branches:
+    - name: Computer Engineering
+      slug: computer-engineering
+      id: computer-engineering
+      description: Computer Engineering Branch
+      keywords: ["computer", "engineering", "software", "hardware"]
+      icon: laptop-code
+      semesters:
+        - number: 1
+          slug: sem1
+          id: sem1
+          description: Subjects for Semester 1
+          keywords: ["semester 1", "foundation", "first year"]
+          subjects:
+            - name: C Programming
+              slug: c
+              id: c
+              description: C Programming Language
+              keywords: ["c", "programming", "basics"]
+              icon: code
+              pyqs:
+                - year: 2022
+                  file: amity-c-major-2022.pdf
+                  id: amity-c-major-2022
+                  title: "C Major 2022"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-c-major-2023-set-1.pdf
+                  id: amity-c-major-2023-set-1
+                  title: "C Major 2023 Set 1"
+                  upload: "Ishaan Rastogi"
+                - year: 2023
+                  file: amity-c-major-2023-set-2.pdf
+                  id: amity-c-major-2023-set-2
+                  title: "C Major 2023 Set 2"
+                  upload: "Sainava"
+                - year: 2025
+                  file: amity-c-major-2025-set-1.pdf
+                  id: amity-c-major-2025-set-1
+                  title: "C Major 2025 Set 1"
+                  upload: "Ishaan Rastogi"
+                - year: 2025
+                  file: amity-c-major-2025-set-2.pdf
+                  id: amity-c-major-2025-set-2
+                  title: "C Major 2025 Set 2"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-c-minor-2023-set-1.pdf
+                  id: amity-c-minor-2023-set-1
+                  title: "C Minor 2023 Set 1"
+                  upload: "Ishaan Rastogi"
+                - year: 2023
+                  file: amity-c-minor-2023-set-2.pdf
+                  id: amity-c-minor-2023-set-2
+                  title: "C Minor 2023 Set 2"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-c-minor-2024.pdf
+                  id: amity-c-minor-2024
+                  title: "C Minor 2024"
+                  upload: "Ishaan Rastogi"
+            - name: Engineering Mechanics
+              slug: e-mechanics
+              id: e-mechanics
+              description: Engineering Mechanics
+              keywords: ["mechanics", "engineering", "statics", "dynamics"]
+              icon: tools
+              pyqs:
+                - year: 2022
+                  file: amity-e-mechanics-major-2022.pdf
+                  id: amity-e-mechanics-major-2022
+                  title: "Engineering Mechanics Major 2022"
+                  upload: "Ishaan Rastogi"
+                - year: 2023
+                  file: amity-e-mechanics-major-2023.pdf
+                  id: amity-e-mechanics-major-2023
+                  title: "Engineering Mechanics Major 2023"
+                  upload: "Sainava"
+                - year: 2025
+                  file: amity-e-mechanics-major-2025.pdf
+                  id: amity-e-mechanics-major-2025
+                  title: "Engineering Mechanics Major 2025"
+                  upload: "Ishaan Rastogi"
+                - year: 2023
+                  file: amity-e-mechanics-minor-2023.pdf
+                  id: amity-e-mechanics-minor-2023
+                  title: "Engineering Mechanics Minor 2023"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-e-mechanics-minor-2024.pdf
+                  id: amity-e-mechanics-minor-2024
+                  title: "Engineering Mechanics Minor 2024"
+                  upload: "Ishaan Rastogi"
+            - name: Engineering Physics
+              slug: e-physics
+              id: e-physics
+              description: Engineering Physics
+              keywords: ["physics", "engineering", "optics", "mechanics"]
+              icon: atom
+              pyqs:
+                - year: 2022
+                  file: amity-e-physics-major-2022.pdf
+                  id: amity-e-physics-major-2022
+                  title: "Engineering Physics Major 2022"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-e-physics-major-2023.pdf
+                  id: amity-e-physics-major-2023
+                  title: "Engineering Physics Major 2023"
+                  upload: "Ishaan Rastogi"
+                - year: 2025
+                  file: amity-e-physics-major-2025.pdf
+                  id: amity-e-physics-major-2025
+                  title: "Engineering Physics Major 2025"
+                  upload: "Sainava"
+                - year: 2022
+                  file: amity-e-physics-minor-2022.pdf
+                  id: amity-e-physics-minor-2022
+                  title: "Engineering Physics Minor 2022"
+                  upload: "Ishaan Rastogi"
+                - year: 2023
+                  file: amity-e-physics-minor-2023.pdf
+                  id: amity-e-physics-minor-2023
+                  title: "Engineering Physics Minor 2023"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-e-physics-minor-2024.pdf
+                  id: amity-e-physics-minor-2024
+                  title: "Engineering Physics Minor 2024"
+                  upload: "Ishaan Rastogi"
+            - name: Law for Engineers
+              slug: law
+              id: law
+              description: Law for Engineers / Professional Ethics
+              keywords: ["law", "ethics", "constitution"]
+              icon: balance-scale
+              pyqs:
+                - year: 2017
+                  file: amity-law-major-2017.pdf
+                  id: amity-law-major-2017
+                  title: "Law Major 2017"
+                  upload: "Ishaan Rastogi"
+                - year: 2018
+                  file: amity-law-major-2018-set-1.pdf
+                  id: amity-law-major-2018-set-1
+                  title: "Law Major 2018 Set 1"
+                  upload: "Sainava"
+                - year: 2018
+                  file: amity-law-major-2018-set-2.pdf
+                  id: amity-law-major-2018-set-2
+                  title: "Law Major 2018 Set 2"
+                  upload: "Ishaan Rastogi"
+                - year: 2022
+                  file: amity-law-major-2022-set-1.pdf
+                  id: amity-law-major-2022-set-1
+                  title: "Law Major 2022 Set 1"
+                  upload: "Sainava"
+                - year: 2022
+                  file: amity-law-major-2022-set-2.pdf
+                  id: amity-law-major-2022-set-2
+                  title: "Law Major 2022 Set 2"
+                  upload: "Ishaan Rastogi"
+                - year: 2023
+                  file: amity-law-major-2023.pdf
+                  id: amity-law-major-2023
+                  title: "Law Major 2023"
+                  upload: "Sainava"
+                - year: 2025
+                  file: amity-law-major-2025.pdf
+                  id: amity-law-major-2025
+                  title: "Law Major 2025"
+                  upload: "Ishaan Rastogi"
+                - year: 2024
+                  file: amity-law-minor-2024-set-1.pdf
+                  id: amity-law-minor-2024-set-1
+                  title: "Law Minor 2024 Set 1"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-law-minor-2024-set-2.pdf
+                  id: amity-law-minor-2024-set-2
+                  title: "Law Minor 2024 Set 2"
+                  upload: "Ishaan Rastogi"
+            - name: Mathematics I
+              slug: maths-1
+              id: maths-1
+              description: Mathematics - I
+              keywords: ["maths", "calculus", "algebra"]
+              icon: calculator
+              pyqs:
+                - year: 2022
+                  file: amity-maths-1-major-2022.pdf
+                  id: amity-maths-1-major-2022
+                  title: "Maths-I Major 2022"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-maths-1-major-2023.pdf
+                  id: amity-maths-1-major-2023
+                  title: "Maths-I Major 2023"
+                  upload: "Ishaan Rastogi"
+                - year: 2025
+                  file: amity-maths-1-major-2025.pdf
+                  id: amity-maths-1-major-2025
+                  title: "Maths-I Major 2025"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-maths-1-minor-2023.pdf
+                  id: amity-maths-1-minor-2023
+                  title: "Maths-I Minor 2023"
+                  upload: "Ishaan Rastogi"
+                - year: 2024
+                  file: amity-maths-1-minor-2024.pdf
+                  id: amity-maths-1-minor-2024
+                  title: "Maths-I Minor 2024"
+                  upload: "Sainava"
+            - name: Sociology
+              slug: sociology
+              id: sociology
+              description: Sociology / Society, Ethics and Values
+              keywords: ["sociology", "ethics", "society"]
+              icon: users
+              pyqs:
+                - year: 2022
+                  file: amity-socio-major-2022-set-1.pdf
+                  id: amity-socio-major-2022-set-1
+                  title: "Sociology Major 2022 Set 1"
+                  upload: "Ishaan Rastogi"
+                - year: 2022
+                  file: amity-socio-major-2022-set-2.pdf
+                  id: amity-socio-major-2022-set-2
+                  title: "Sociology Major 2022 Set 2"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-socio-major-2023.pdf
+                  id: amity-socio-major-2023
+                  title: "Sociology Major 2023"
+                  upload: "Ishaan Rastogi"
+                - year: 2025
+                  file: amity-socio-major-2025.pdf
+                  id: amity-socio-major-2025
+                  title: "Sociology Major 2025"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-socio-minor-2024.pdf
+                  id: amity-socio-minor-2024
+                  title: "Sociology Minor 2024"
+                  upload: "Ishaan Rastogi"
+        - number: 2
+          slug: sem2
+          id: sem2
+          description: Subjects for Semester 2
+          keywords: ["semester 2", "foundation", "first year"]
+          subjects:
+            - name: Basic Electrical Engineering
+              slug: bee
+              id: bee
+              description: Basic Electrical Engineering
+              keywords: ["bee", "electrical", "circuits"]
+              icon: plug
+              pyqs:
+                - year: 2023
+                  file: amity-bee-major-2023.pdf
+                  id: amity-bee-major-2023
+                  title: "BEE Major 2023"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-bee-major-2024.pdf
+                  id: amity-bee-major-2024
+                  title: "BEE Major 2024"
+                  upload: "Ishaan Rastogi"
+                - year: 2025
+                  file: amity-bee-major-2025.pdf
+                  id: amity-bee-major-2025
+                  title: "BEE Major 2025"
+                  upload: "Sainava"
+                - year: 2022
+                  file: amity-bee-minor-2022-set-1.pdf
+                  id: amity-bee-minor-2022-set-1
+                  title: "BEE Minor 2022 Set 1"
+                  upload: "Ishaan Rastogi"
+                - year: 2022
+                  file: amity-bee-minor-2022-set-2.pdf
+                  id: amity-bee-minor-2022-set-2
+                  title: "BEE Minor 2022 Set 2"
+                  upload: "Sainava"
+                - year: 2022
+                  file: amity-bee-minor-2022-set-3.pdf
+                  id: amity-bee-minor-2022-set-3
+                  title: "BEE Minor 2022 Set 3"
+                  upload: "Ishaan Rastogi"
+                - year: 2024
+                  file: amity-bee-minor-2024-set-1.pdf
+                  id: amity-bee-minor-2024-set-1
+                  title: "BEE Minor 2024 Set 1"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-bee-minor-2024-set-2.pdf
+                  id: amity-bee-minor-2024-set-2
+                  title: "BEE Minor 2024 Set 2"
+                  upload: "Ishaan Rastogi"
+            - name: Engineering Chemistry
+              slug: chemistry
+              id: chemistry
+              description: Engineering Chemistry
+              keywords: ["chemistry", "engineering", "materials"]
+              icon: flask
+              pyqs:
+                - year: 2020
+                  file: amity-chemistry-major-2020.pdf
+                  id: amity-chemistry-major-2020
+                  title: "Chemistry Major 2020"
+                  upload: "Ishaan Rastogi"
+                - year: 2021
+                  file: amity-chemistry-major-2021.pdf
+                  id: amity-chemistry-major-2021
+                  title: "Chemistry Major 2021"
+                  upload: "Sainava"
+                - year: 2022
+                  file: amity-chemistry-major-2022-set-1.pdf
+                  id: amity-chemistry-major-2022-set-1
+                  title: "Chemistry Major 2022 Set 1"
+                  upload: "Ishaan Rastogi"
+                - year: 2022
+                  file: amity-chemistry-major-2022-set-2.pdf
+                  id: amity-chemistry-major-2022-set-2
+                  title: "Chemistry Major 2022 Set 2"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-chemistry-major-2023-set-1.pdf
+                  id: amity-chemistry-major-2023-set-1
+                  title: "Chemistry Major 2023 Set 1"
+                  upload: "Ishaan Rastogi"
+                - year: 2023
+                  file: amity-chemistry-major-2023-set-2.pdf
+                  id: amity-chemistry-major-2023-set-2
+                  title: "Chemistry Major 2023 Set 2"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-chemistry-major-2024.pdf
+                  id: amity-chemistry-major-2024
+                  title: "Chemistry Major 2024"
+                  upload: "Ishaan Rastogi"
+                - year: 2025
+                  file: amity-chemistry-major-2025.pdf
+                  id: amity-chemistry-major-2025
+                  title: "Chemistry Major 2025"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-chemistry-minor-2024.pdf
+                  id: amity-chemistry-minor-2024
+                  title: "Chemistry Minor 2024"
+                  upload: "Ishaan Rastogi"
+            - name: Economics
+              slug: economics
+              id: economics
+              description: Economics for Engineers
+              keywords: ["economics", "engineering", "management"]
+              icon: chart-line
+              pyqs:
+                - year: 2019
+                  file: amity-economics-major-2019.pdf
+                  id: amity-economics-major-2019
+                  title: "Economics Major 2019"
+                  upload: "Sainava"
+                - year: 2022
+                  file: amity-economics-major-2022-set-1.pdf
+                  id: amity-economics-major-2022-set-1
+                  title: "Economics Major 2022 Set 1"
+                  upload: "Ishaan Rastogi"
+                - year: 2022
+                  file: amity-economics-major-2022-set-2.pdf
+                  id: amity-economics-major-2022-set-2
+                  title: "Economics Major 2022 Set 2"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-economics-major-2023.pdf
+                  id: amity-economics-major-2023
+                  title: "Economics Major 2023"
+                  upload: "Ishaan Rastogi"
+                - year: 2024
+                  file: amity-economics-major-2024.pdf
+                  id: amity-economics-major-2024
+                  title: "Economics Major 2024"
+                  upload: "Sainava"
+                - year: 2025
+                  file: amity-economics-major-2025.pdf
+                  id: amity-economics-major-2025
+                  title: "Economics Major 2025"
+                  upload: "Ishaan Rastogi"
+            - name: Environmental Studies
+              slug: evs
+              id: evs
+              description: Environmental Studies
+              keywords: ["evs", "environment", "sustainability"]
+              icon: leaf
+              pyqs:
+                - year: 2021
+                  file: amity-evs-major-2021.pdf
+                  id: amity-evs-major-2021
+                  title: "EVS Major 2021"
+                  upload: "Ishaan Rastogi"
+                - year: 2022
+                  file: amity-evs-major-2022.pdf
+                  id: amity-evs-major-2022
+                  title: "EVS Major 2022"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-evs-major-2023.pdf
+                  id: amity-evs-major-2023
+                  title: "EVS Major 2023"
+                  upload: "Ishaan Rastogi"
+                - year: 2024
+                  file: amity-evs-major-2024.pdf
+                  id: amity-evs-major-2024
+                  title: "EVS Major 2024"
+                  upload: "Sainava"
+                - year: 2025
+                  file: amity-evs-major-2025.pdf
+                  id: amity-evs-major-2025
+                  title: "EVS Major 2025"
+                  upload: "Ishaan Rastogi"
+                - year: 2021
+                  file: amity-evs-minor-2021.pdf
+                  id: amity-evs-minor-2021
+                  title: "EVS Minor 2021"
+                  upload: "Sainava"
+            - name: History
+              slug: history
+              id: history
+              description: History / Indian Constitution & History
+              keywords: ["history", "constitution", "india"]
+              icon: book
+              pyqs:
+                - year: 2015
+                  file: amity-history-major-2015.pdf
+                  id: amity-history-major-2015
+                  title: "History Major 2015"
+                  upload: "Sainava"
+                - year: 2017
+                  file: amity-history-major-2017.pdf
+                  id: amity-history-major-2017
+                  title: "History Major 2017"
+                  upload: "Ishaan Rastogi"
+                - year: 2022
+                  file: amity-history-major-2022-set-1.pdf
+                  id: amity-history-major-2022-set-1
+                  title: "History Major 2022 Set 1"
+                  upload: "Sainava"
+                - year: 2022
+                  file: amity-history-major-2022-set-2.pdf
+                  id: amity-history-major-2022-set-2
+                  title: "History Major 2022 Set 2"
+                  upload: "Ishaan Rastogi"
+                - year: 2023
+                  file: amity-history-major-2023.pdf
+                  id: amity-history-major-2023
+                  title: "History Major 2023"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-history-major-2024.pdf
+                  id: amity-history-major-2024
+                  title: "History Major 2024"
+                  upload: "Ishaan Rastogi"
+                - year: 2025
+                  file: amity-history-major-2025-set-1.pdf
+                  id: amity-history-major-2025-set-1
+                  title: "History Major 2025 Set 1"
+                  upload: "Sainava"
+                - year: 2025
+                  file: amity-history-major-2025-set-2.pdf
+                  id: amity-history-major-2025-set-2
+                  title: "History Major 2025 Set 2"
+                  upload: "Ishaan Rastogi"
+            - name: Mathematics II
+              slug: maths-2
+              id: maths-2
+              description: Mathematics - II
+              keywords: ["maths", "differential", "equations"]
+              icon: calculator
+              pyqs:
+                - year: 2022
+                  file: amity-maths-2-major-2022.pdf
+                  id: amity-maths-2-major-2022
+                  title: "Maths-II Major 2022"
+                  upload: "Ishaan Rastogi"
+                - year: 2023
+                  file: amity-maths-2-major-2023.pdf
+                  id: amity-maths-2-major-2023
+                  title: "Maths-II Major 2023"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-maths-2-major-2024.pdf
+                  id: amity-maths-2-major-2024
+                  title: "Maths-II Major 2024"
+                  upload: "Ishaan Rastogi"
+                - year: 2025
+                  file: amity-maths-2-major-2025.pdf
+                  id: amity-maths-2-major-2025
+                  title: "Maths-II Major 2025"
+                  upload: "Sainava"
+                - year: 2024
+                  file: amity-maths-2-minor-2024.pdf
+                  id: amity-maths-2-minor-2024
+                  title: "Maths-II Minor 2024"
+                  upload: "Ishaan Rastogi"
+        - number: 3
+          slug: sem3
+          id: sem3
+          description: Subjects for Semester 3
+          keywords: ["semester 3", "core", "computer"]
+          subjects:
+            - name: Data Structures
+              slug: data-structures
+              id: data-structures
+              description: Data Structures & Algorithms
+              keywords: ["ds", "data structures", "algorithms"]
+              icon: sitemap
+              pyqs:
+                - year: 2015
+                  file: amity-data-structures-major-2015.pdf
+                  id: amity-data-structures-major-2015
+                  title: "Data Structures Major 2015"
+                  upload: "Sainava"
+                - year: 2016
+                  file: amity-data-structures-major-2016.pdf
+                  id: amity-data-structures-major-2016
+                  title: "Data Structures Major 2016"
+                  upload: "Ishaan Rastogi"
+                - year: 2017
+                  file: amity-data-structures-major-2017.pdf
+                  id: amity-data-structures-major-2017
+                  title: "Data Structures Major 2017"
+                  upload: "Sainava"
+                - year: 2018
+                  file: amity-data-structures-major-2018.pdf
+                  id: amity-data-structures-major-2018
+                  title: "Data Structures Major 2018"
+                  upload: "Ishaan Rastogi"
+                - year: 2019
+                  file: amity-data-structures-major-2019.pdf
+                  id: amity-data-structures-major-2019
+                  title: "Data Structures Major 2019"
+                  upload: "Sainava"
+                - year: 2021
+                  file: amity-data-structures-major-2021.pdf
+                  id: amity-data-structures-major-2021
+                  title: "Data Structures Major 2021"
+                  upload: "Ishaan Rastogi"
+                - year: 2022
+                  file: amity-data-structures-major-2022.pdf
+                  id: amity-data-structures-major-2022
+                  title: "Data Structures Major 2022"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-data-structures-major-2023.pdf
+                  id: amity-data-structures-major-2023
+                  title: "Data Structures Major 2023"
+                  upload: "Ishaan Rastogi"
+            - name: Digital Electronics
+              slug: digital-electronics
+              id: digital-electronics
+              description: Digital Electronics
+              keywords: ["digital", "electronics", "logic"]
+              icon: microchip
+              pyqs:
+                - year: 2017
+                  file: amity-digital-electronics-major-2017.pdf
+                  id: amity-digital-electronics-major-2017
+                  title: "Digital Electronics Major 2017"
+                  upload: "Ishaan Rastogi"
+                - year: 2019
+                  file: amity-digital-electronics-major-2019.pdf
+                  id: amity-digital-electronics-major-2019
+                  title: "Digital Electronics Major 2019"
+                  upload: "Sainava"
+                - year: 2021
+                  file: amity-digital-electronics-major-2021.pdf
+                  id: amity-digital-electronics-major-2021
+                  title: "Digital Electronics Major 2021"
+                  upload: "Ishaan Rastogi"
+                - year: 2022
+                  file: amity-digital-electronics-major-2022.pdf
+                  id: amity-digital-electronics-major-2022
+                  title: "Digital Electronics Major 2022"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-digital-electronics-major-2023.pdf
+                  id: amity-digital-electronics-major-2023
+                  title: "Digital Electronics Major 2023"
+                  upload: "Ishaan Rastogi"
+            - name: Material Science
+              slug: material
+              id: material
+              description: Material Science
+              keywords: ["materials", "science", "engineering"]
+              icon: cubes
+              pyqs:
+                - year: 2014
+                  file: amity-material-major-2014.pdf
+                  id: amity-material-major-2014
+                  title: "Materials Major 2014"
+                  upload: "Sainava"
+                - year: 2016
+                  file: amity-material-major-2016.pdf
+                  id: amity-material-major-2016
+                  title: "Materials Major 2016"
+                  upload: "Ishaan Rastogi"
+                - year: 2017
+                  file: amity-material-major-2017.pdf
+                  id: amity-material-major-2017
+                  title: "Materials Major 2017"
+                  upload: "Sainava"
+                - year: 2022
+                  file: amity-material-major-2022.pdf
+                  id: amity-material-major-2022
+                  title: "Materials Major 2022"
+                  upload: "Ishaan Rastogi"
+                - year: 2023
+                  file: amity-material-major-2023.pdf
+                  id: amity-material-major-2023
+                  title: "Materials Major 2023"
+                  upload: "Sainava"
+                - year: 2015
+                  file: amity-material-minor-2015.pdf
+                  id: amity-material-minor-2015
+                  title: "Materials Minor 2015"
+                  upload: "Ishaan Rastogi"
+            - name: Mathematics III
+              slug: maths-3
+              id: maths-3
+              description: Mathematics - III
+              keywords: ["maths", "probability", "statistics"]
+              icon: calculator
+              pyqs:
+                - year: 2017
+                  file: amity-maths-3-major-2017.pdf
+                  id: amity-maths-3-major-2017
+                  title: "Maths-III Major 2017"
+                  upload: "Ishaan Rastogi"
+                - year: 2019
+                  file: amity-maths-3-major-2019.pdf
+                  id: amity-maths-3-major-2019
+                  title: "Maths-III Major 2019"
+                  upload: "Sainava"
+                - year: 2021
+                  file: amity-maths-3-major-2021.pdf
+                  id: amity-maths-3-major-2021
+                  title: "Maths-III Major 2021"
+                  upload: "Ishaan Rastogi"
+                - year: 2022
+                  file: amity-maths-3-major-2022.pdf
+                  id: amity-maths-3-major-2022
+                  title: "Maths-III Major 2022"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-maths-3-major-2023.pdf
+                  id: amity-maths-3-major-2023
+                  title: "Maths-III Major 2023"
+                  upload: "Ishaan Rastogi"
+            - name: Object Oriented Programming
+              slug: oops
+              id: oops
+              description: Object Oriented Programming
+              keywords: ["oops", "java", "c++"]
+              icon: code-branch
+              pyqs:
+                - year: 2016
+                  file: amity-oops-major-2016.pdf
+                  id: amity-oops-major-2016
+                  title: "OOPs Major 2016"
+                  upload: "Sainava"
+                - year: 2017
+                  file: amity-oops-major-2017.pdf
+                  id: amity-oops-major-2017
+                  title: "OOPs Major 2017"
+                  upload: "Ishaan Rastogi"
+                - year: 2018
+                  file: amity-oops-major-2018.pdf
+                  id: amity-oops-major-2018
+                  title: "OOPs Major 2018"
+                  upload: "Sainava"
+                - year: 2019
+                  file: amity-oops-major-2019.pdf
+                  id: amity-oops-major-2019
+                  title: "OOPs Major 2019"
+                  upload: "Ishaan Rastogi"
+                - year: 2021
+                  file: amity-oops-major-2021.pdf
+                  id: amity-oops-major-2021
+                  title: "OOPs Major 2021"
+                  upload: "Sainava"
+                - year: 2023
+                  file: amity-oops-major-2023.pdf
+                  id: amity-oops-major-2023
+                  title: "OOPs Major 2023"
+                  upload: "Ishaan Rastogi"
