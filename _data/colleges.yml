@@ -417,7 +417,7 @@
                   title: "English Sessional 3 2025"
                   upload: "Harshit"
                   new: true
-            - name: Mathematics 101-C
+            - name: Maths 101-C
               slug: maths-101-c
               id: maths-101-c
               description: Fundamental mathematics for engineering
@@ -428,9 +428,9 @@
                   file: ymca-maths-101-c-2024.pdf
                   id: ymca-maths-101-c-2024
                   pages: 3
-                  title: "Mathematics 101-C 2024"
+                  title: "Maths 101-C 2024"
                   upload: "Saumy"
-            - name: Mathematics 103-A
+            - name: Maths 103-A
               slug: maths-103-a
               id: maths-103-a
               description: Advanced mathematics for engineering
@@ -441,40 +441,40 @@
                   file: ymca-maths-103-a-2019.pdf
                   id: ymca-maths-103-a-2019
                   pages: 3
-                  title: "Mathematics 103-A 2019"
+                  title: "Maths 103-A 2019"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-maths-103-a-2022.pdf
                   id: ymca-maths-103-a-2022
                   pages: 3
-                  title: "Mathematics 103-A 2022"
+                  title: "Maths 103-A 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-103-a-2023.pdf
                   id: ymca-maths-103-a-2023
                   pages: 3
-                  title: "Mathematics 103-A 2023"
+                  title: "Maths 103-A 2023"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-maths-103-a-2024.pdf
                   id: ymca-maths-103-a-2024
                   pages: 3
-                  title: "Mathematics 103-A 2024"
+                  title: "Maths 103-A 2024"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-103-a-2023-sessional.pdf
                   id: ymca-maths-103-a-2023-sessional
                   pages: 3
-                  title: "Mathematics 103-A Sessional 2023"
+                  title: "Maths 103-A Sessional 2023"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-maths-103-a-2025-sessional-1.pdf
                   id: ymca-maths-103-a-2025-sessional-1
                   pages: 3
-                  title: "Mathematics 103-A Sessional 1 2025"
+                  title: "Maths 103-A Sessional 1 2025"
                   upload: "Arya Sharma"
                   new: true
-            - name: Mathematics 103-D
+            - name: Maths 103-D
               slug: maths-103-d
               id: maths-103-d
               description: Advanced mathematics for engineering
@@ -485,40 +485,40 @@
                   file: ymca-maths-103-d-2019.pdf
                   id: ymca-maths-103-d-2019
                   pages: 3
-                  title: "Mathematics 103-D 2019"
+                  title: "Maths 103-D 2019"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-maths-103-d-2022.pdf
                   id: ymca-maths-103-d-2022
                   pages: 3
-                  title: "Mathematics 103-D 2022"
+                  title: "Maths 103-D 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-103-d-2023.pdf
                   id: ymca-maths-103-d-2023
                   pages: 3
-                  title: "Mathematics 103-D 2023"
+                  title: "Maths 103-D 2023"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-maths-103-d-2025.pdf
                   id: ymca-maths-103-d-2025
                   pages: 3
-                  title: "Mathematics 103-D 2025"
+                  title: "Maths 103-D 2025"
                   new: true
                   upload: "Yashasvi Mudgal"
                 - year: 2022
                   file: ymca-maths-103-d-2022-sessional.pdf
                   id: ymca-maths-103-d-2022-sessional
                   pages: 3
-                  title: "Mathematics 103-D Sessional 2022"
+                  title: "Maths 103-D Sessional 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-103-d-2023-sessional.pdf
                   id: ymca-maths-103-d-2023-sessional
                   pages: 3
-                  title: "Mathematics 103-D Sessional 2023"
+                  title: "Maths 103-D Sessional 2023"
                   upload: "Saumy"
-            - name: Mathematics HAS 103-C
+            - name: Maths HAS 103-C
               slug: maths-has-103-c
               id: maths-has-103-c
               description: Advanced mathematics for engineering
@@ -529,33 +529,33 @@
                   file: ymca-maths-has-103-c-2017.pdf
                   id: ymca-maths-has-103-c-2017
                   pages: 3
-                  title: "Mathematics HAS 103-C 2017"
+                  title: "Maths HAS 103-C 2017"
                   upload: "Saumy"
                 - year: 2018
                   file: ymca-maths-has-103-c-2018.pdf
                   id: ymca-maths-has-103-c-2018
                   pages: 3
-                  title: "Mathematics HAS 103-C 2018"
+                  title: "Maths HAS 103-C 2018"
                   upload: "Saumy"
                 - year: 2019
                   file: ymca-maths-has-103-c-2019.pdf
                   id: ymca-maths-has-103-c-2019
                   pages: 3
-                  title: "Mathematics HAS 103-C 2019"
+                  title: "Maths HAS 103-C 2019"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-maths-has-103-c-2022.pdf
                   id: ymca-maths-has-103-c-2022
                   pages: 3
-                  title: "Mathematics HAS 103-C 2022"
+                  title: "Maths HAS 103-C 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-has-103-c-2023.pdf
                   id: ymca-maths-has-103-c-2023
                   pages: 3
-                  title: "Mathematics HAS 103-C 2023"
+                  title: "Maths HAS 103-C 2023"
                   upload: "Saumy"
-            - name: Mathematics 103-E
+            - name: Maths 103-E
               slug: maths-103-e
               id: maths-103-e
               description: Advanced mathematics for engineering
@@ -566,42 +566,42 @@
                   file: ymca-maths-103-e-2022.pdf
                   id: ymca-maths-103-e-2022
                   pages: 3
-                  title: "Mathematics 103-E 2022"
+                  title: "Maths 103-E 2022"
                   new: true
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-103-e-2023.pdf
                   id: ymca-maths-103-e-2023
                   pages: 3
-                  title: "Mathematics 103-E 2023"
+                  title: "Maths 103-E 2023"
                   new: true
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-maths-103-e-2024.pdf
                   id: ymca-maths-103-e-2024
                   pages: 3
-                  title: "Mathematics 103-E 2024"
+                  title: "Maths 103-E 2024"
                   new: true
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-maths-103-e-2025.pdf
                   id: ymca-maths-103-e-2025
                   pages: 3
-                  title: "Mathematics 103-E 2025"
+                  title: "Maths 103-E 2025"
                   new: true
                   upload: "Vicky Gupta"
                 - year: 2024
                   file: ymca-maths-103-e-2024-mid-1.pdf
                   id: ymca-maths-103-e-2024-mid-1
                   pages: 3
-                  title: "Mathematics 103-E Mid 1 2024"
+                  title: "Maths 103-E Mid 1 2024"
                   new: true
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-maths-103-e-2024-mid-2.pdf
                   id: ymca-maths-103-e-2024-mid-2
                   pages: 3
-                  title: "Mathematics 103-E Mid 2 2024"
+                  title: "Maths 103-E Mid 2 2024"
                   new: true
                   upload: "Saumy"
             - name: Semiconductor Physics
@@ -809,7 +809,7 @@
                   pages: 3
                   title: "Environment and Ecology Sessional 2 2024"
                   upload: "Saumy"
-            - name: Mathematics 106-A
+            - name: Maths 106-A
               slug: maths-106-a
               id: maths-106-a
               description: Advanced mathematics for engineering
@@ -820,21 +820,33 @@
                   file: ymca-maths-106-a-2022.pdf
                   id: ymca-maths-106-a-2022
                   pages: 3
-                  title: "Mathematics 106-A 2022"
+                  title: "Maths 106-A 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-106-a-2023.pdf
                   id: ymca-maths-106-a-2023
                   pages: 3
-                  title: "Mathematics 106-A 2023"
+                  title: "Maths 106-A 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-maths-106-a-2024.pdf
+                  id: ymca-maths-106-a-2024
+                  pages: 3
+                  title: "Maths 106-A 2024"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-maths-106-a-2025.pdf
+                  id: ymca-maths-106-a-2025
+                  pages: 3
+                  title: "Maths 106-A 2025"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-maths-106-a-2024-sessional.pdf
                   id: ymca-maths-106-a-2024-sessional
                   pages: 3
-                  title: "Mathematics 106-A Sessional 2024"
+                  title: "Maths 106-A Sessional 2024"
                   upload: "Saumy"
-            - name: Mathematics 106-D
+            - name: Maths 106-D
               slug: maths-106-d
               id: maths-106-d
               description: Advanced mathematics for engineering
@@ -845,37 +857,37 @@
                   file: ymca-maths-106-d-2019.pdf
                   id: ymca-maths-106-d-2019
                   pages: 3
-                  title: "Mathematics 106-D 2019"
+                  title: "Maths 106-D 2019"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-maths-106-d-2022.pdf
                   id: ymca-maths-106-d-2022
                   pages: 3
-                  title: "Mathematics 106-D 2022"
+                  title: "Maths 106-D 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-106-d-2023.pdf
                   id: ymca-maths-106-d-2023
                   pages: 3
-                  title: "Mathematics 106-D 2023"
+                  title: "Maths 106-D 2023"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-maths-106-d-2024-sessional.pdf
                   id: ymca-maths-106-d-2024-sessional
                   pages: 3
-                  title: "Mathematics 106-D Sessional 2024"
+                  title: "Maths 106-D Sessional 2024"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-maths-106-d-2022-sessional-1.pdf
                   id: ymca-maths-106-d-2022-sessional-1
                   pages: 3
-                  title: "Mathematics 106-D Sessional 1 2022"
+                  title: "Maths 106-D Sessional 1 2022"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-maths-106-d-2022-sessional-2.pdf
                   id: ymca-maths-106-d-2022-sessional-2
                   pages: 3
-                  title: "Mathematics 106-D Sessional 2 2022"
+                  title: "Maths 106-D Sessional 2 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-106-d-2023-sessional.pdf
@@ -883,7 +895,7 @@
                   pages: 3
                   title: "Mathematics 106-D Sessional 2023"
                   upload: "Saumy"
-            - name: Mathematics 106-E
+            - name: Maths 106-E
               slug: maths-106-e
               id: maths-106-e
               description: Advanced mathematics for engineering
@@ -894,25 +906,25 @@
                   file: ymca-maths-106-e-2019.pdf
                   id: ymca-maths-106-e-2019
                   pages: 3
-                  title: "Mathematics 106-E 2019"
+                  title: "Maths 106-E 2019"
                   upload: "Saumy"
                 - year: 2022
                   file: ymca-maths-106-e-2022.pdf
                   id: ymca-maths-106-e-2022
                   pages: 3
-                  title: "Mathematics 106-E 2022"
+                  title: "Maths 106-E 2022"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-maths-106-e-2023.pdf
                   id: ymca-maths-106-e-2023
                   pages: 3
-                  title: "Mathematics 106-E 2023"
+                  title: "Maths 106-E 2023"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-maths-106-e-pfq.pdf
                   id: ymca-maths-106-e-pfq
                   pages: 3
-                  title: "Mathematics 106-E PFQ"
+                  title: "Maths 106-E PFQ"
                   upload: "Saumy"
             - name: Programming for Problem Solving
               slug: pps
