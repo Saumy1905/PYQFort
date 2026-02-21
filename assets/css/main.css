@@ -17,6 +17,10 @@
   --filter-tag-color: #1976d2;
   --btn-hover-color: rgba(74, 108, 247, 0.1);
   --box-shadow: rgba(0, 0, 0, 0.1);
+  /* Refact feature gold palette */
+  --refact-color: #D4AF37;
+  --refact-color-dark: #b8941f;
+  --refact-color-hover: rgba(212, 175, 55, 0.12);
 }
 
 /* Dark theme colors */
@@ -35,6 +39,10 @@
   --filter-tag-color: #bfdbfe;
   --btn-hover-color: rgba(93, 123, 249, 0.2);
   --box-shadow: rgba(0, 0, 0, 0.3);
+  /* Refact feature gold palette – brighter for dark backgrounds */
+  --refact-color: #E5C44A;
+  --refact-color-dark: #c9a82e;
+  --refact-color-hover: rgba(229, 196, 74, 0.16);
 }
 
 * {
@@ -4365,14 +4373,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .refact-add-btn:hover {
-  color: var(--primary-color);
-  background-color: var(--btn-hover-color);
+  color: var(--refact-color);
+  background-color: var(--refact-color-hover);
   transform: rotate(20deg) scale(1.15);
 }
 
-/* Saved state – icon turns primary colour and spins once */
+/* Saved state – icon turns gold and spins once */
 .refact-add-btn.refact-saved-btn {
-  color: var(--primary-color);
+  color: var(--refact-color);
   animation: refact-spin-in 0.35s ease forwards;
 }
 
@@ -4383,7 +4391,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .subject-card.refact-saved {
-  box-shadow: 0 0 0 2px var(--primary-color), 0 5px 15px var(--box-shadow);
+  box-shadow: 0 0 0 2px var(--refact-color), 0 5px 15px var(--box-shadow);
 }
 
 /* ── Refact button in header ─────────────────────────────────────── */
@@ -4393,17 +4401,25 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   margin-top: 1.7px;
-  color: var(--text-color);
-  transition: color 0.3s;
+  color: var(--refact-color);
+  transition: color 0.25s, transform 0.25s;
   text-decoration: none;
 }
 
 .refact-header-btn:hover {
-  color: var(--primary-color);
+  color: var(--refact-color-dark);
+  transform: rotate(20deg) scale(1.1);
 }
 
-.refact-header-btn .standard-icon {
-  /* inherits from existing .standard-icon rule */
+/* Dedicated header icon class – gold, separate from .standard-icon */
+.refact-icon {
+  color: var(--refact-color);
+  font-size: 1.33em;
+  transition: color 0.25s;
+}
+
+.refact-header-btn:hover .refact-icon {
+  color: var(--refact-color-dark);
 }
 
 /* Badge */
@@ -4445,7 +4461,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .refact-title-icon {
-  color: var(--primary-color);
+  color: var(--refact-color);
   margin-right: 0.4rem;
 }
 
@@ -4486,7 +4502,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background-color: var(--btn-hover-color);
+  background-color: var(--refact-color-hover);
+  border: 1.5px solid var(--refact-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4495,7 +4512,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .refact-empty-icon {
   font-size: 2rem;
-  color: var(--primary-color);
+  color: var(--refact-color);
 }
 
 .refact-empty h2 {
@@ -4515,9 +4532,10 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   width: 1.6rem;
   height: 1.6rem;
-  background-color: var(--btn-hover-color);
+  background-color: var(--refact-color-hover);
+  border: 1px solid var(--refact-color);
   border-radius: 50%;
-  color: var(--primary-color);
+  color: var(--refact-color);
   font-size: 0.8rem;
   vertical-align: middle;
   margin: 0 2px;
@@ -4558,13 +4576,14 @@ h1, h2, h3, h4, h5, h6 {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background-color: var(--primary-color);
-  color: #fff;
+  background-color: var(--refact-color);
+  color: #1a1500;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.35);
 }
 
 .refact-card-remove {
@@ -4602,7 +4621,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .refact-card-code {
   font-size: 0.8rem;
-  color: var(--primary-color);
+  color: var(--refact-color);
   font-weight: 600;
   margin-bottom: 0.4rem;
   text-transform: uppercase;
@@ -4660,7 +4679,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--card-background);
   color: var(--text-color);
   border: 1px solid var(--border-color);
-  border-left: 4px solid var(--primary-color);
+  border-left: 4px solid var(--refact-color);
   padding: 0.7rem 1.25rem;
   border-radius: 6px;
   font-size: 0.9rem;
@@ -4681,11 +4700,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .refact-toast--add {
-  border-left-color: var(--primary-color);
+  border-left-color: var(--refact-color);
 }
 
 .refact-toast--add i {
-  color: var(--primary-color);
+  color: var(--refact-color);
 }
 
 .refact-toast--remove {
