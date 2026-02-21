@@ -1,4 +1,12 @@
-<div class="subject-card">
+<div class="subject-card"
+  data-refact-name="{{ include.name | default: include.title }}"
+  data-refact-code="{{ include.code | default: include.id }}"
+  data-refact-description="{{ include.description | default: 'Subject information' }}"
+  data-refact-pdf-count="{{ include.pdf_count | default: 0 }}"
+  data-refact-url="{{ include.url }}">
+  <button class="refact-add-btn" aria-label="Add to Refact" title="Save to Refact">
+    <i class="fa-solid fa-rotate"></i>
+  </button>
   <div class="subject-icon">
     <i class="fas fa-book"></i>
   </div>

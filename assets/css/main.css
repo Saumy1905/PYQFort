@@ -4333,3 +4333,423 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   REFACT FEATURE STYLES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Refact add-button on subject cards ──────────────────────────── */
+.subject-card {
+  position: relative;
+}
+
+.refact-add-btn {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: none;
+  border: none;
+  padding: 0.35rem;
+  cursor: pointer;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.25s, background-color 0.25s, transform 0.25s;
+  z-index: 2;
+}
+
+.refact-add-btn:hover {
+  color: var(--primary-color);
+  background-color: var(--btn-hover-color);
+  transform: rotate(20deg) scale(1.15);
+}
+
+/* Saved state – icon turns primary colour and spins once */
+.refact-add-btn.refact-saved-btn {
+  color: var(--primary-color);
+  animation: refact-spin-in 0.35s ease forwards;
+}
+
+@keyframes refact-spin-in {
+  from { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.25); }
+  to   { transform: rotate(360deg) scale(1); }
+}
+
+.subject-card.refact-saved {
+  box-shadow: 0 0 0 2px var(--primary-color), 0 5px 15px var(--box-shadow);
+}
+
+/* ── Refact button in header ─────────────────────────────────────── */
+.refact-header-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.7px;
+  color: var(--text-color);
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.refact-header-btn:hover {
+  color: var(--primary-color);
+}
+
+.refact-header-btn .standard-icon {
+  /* inherits from existing .standard-icon rule */
+}
+
+/* Badge */
+.refact-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.25rem;
+  background-color: #e83151;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  display: none;           /* shown by JS when count > 0 */
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+/* ── Refact page – header ────────────────────────────────────────── */
+.refact-page-header {
+  margin-bottom: 2rem;
+}
+
+.refact-page-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.refact-page-title-row .page-title {
+  margin-bottom: 0;
+}
+
+.refact-title-icon {
+  color: var(--primary-color);
+  margin-right: 0.4rem;
+}
+
+.refact-clear-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  background: none;
+  border: 1px solid var(--danger-color);
+  color: var(--danger-color);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.refact-clear-btn:hover {
+  background-color: var(--danger-color);
+  color: #fff;
+}
+
+/* ── Refact page – empty state ───────────────────────────────────── */
+.refact-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.refact-empty-inner {
+  max-width: 460px;
+}
+
+.refact-empty-icon-wrap {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--btn-hover-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.refact-empty-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.refact-empty h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.refact-empty p {
+  color: var(--secondary-color);
+  margin-bottom: 1.75rem;
+  line-height: 1.7;
+}
+
+.refact-inline-demo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: var(--btn-hover-color);
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+
+/* ── Refact page – subject grid ──────────────────────────────────── */
+.refact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+/* ── Refact card ─────────────────────────────────────────────────── */
+.refact-card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.refact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px var(--box-shadow);
+}
+
+.refact-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem 0;
+}
+
+.refact-card-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.refact-card-remove {
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.3rem;
+  border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.25s, background-color 0.25s;
+  flex-shrink: 0;
+}
+
+.refact-card-remove:hover {
+  color: #fff;
+  background-color: var(--danger-color);
+}
+
+.refact-card-body {
+  padding: 0.75rem 1rem 0.5rem;
+  flex-grow: 1;
+}
+
+.refact-card-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.refact-card-code {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.refact-card-desc {
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.refact-card-meta {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.35rem;
+}
+
+.refact-card-crumb {
+  font-size: 0.78rem;
+  color: var(--secondary-color);
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.refact-card-crumb i {
+  margin-right: 0.2rem;
+  font-size: 0.7rem;
+}
+
+.refact-card-footer {
+  padding: 0.75rem 1rem 1rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 0.65rem;
+}
+
+.refact-card-footer .btn-view {
+  display: block;
+  text-align: center;
+}
+
+/* ── Toast notification ──────────────────────────────────────────── */
+.refact-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary-color);
+  padding: 0.7rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.refact-toast--show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.refact-toast--add {
+  border-left-color: var(--primary-color);
+}
+
+.refact-toast--add i {
+  color: var(--primary-color);
+}
+
+.refact-toast--remove {
+  border-left-color: var(--danger-color);
+}
+
+.refact-toast--remove i {
+  color: var(--danger-color);
+}
+
+/* ── Dark theme adjustments ──────────────────────────────────────── */
+.dark-theme .refact-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+}
+
+.dark-theme .refact-toast {
+  background-color: #2a2a2a;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .refact-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .refact-page-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .refact-empty {
+    padding: 2.5rem 1rem;
+  }
+
+  .refact-add-btn {
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .refact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .refact-toast {
+    bottom: 1rem;
+    max-width: calc(100vw - 2rem);
+    white-space: normal;
+    font-size: 0.85rem;
+  }
+
+  .refact-badge {
+    top: -5px;
+    right: -6px;
+    min-width: 1rem;
+    height: 1rem;
+    font-size: 0.6rem;
+    line-height: 1rem;
+  }
+}

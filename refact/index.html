@@ -1,0 +1,43 @@
+---
+layout: default
+title: Refact – My Saved Subjects
+description: Your personally curated collection of saved subjects for quick access.
+---
+
+<div class="container">
+  <nav class="breadcrumbs">
+    <a href="{{ '/' | relative_url }}">Home</a> &gt;
+    <span>Refact</span>
+  </nav>
+
+  <header class="refact-page-header">
+    <div class="refact-page-title-row">
+      <h1 class="page-title">
+        <i class="fa-solid fa-rotate refact-title-icon"></i> Refact
+      </h1>
+      <button id="refact-clear-all" class="refact-clear-btn" aria-label="Clear all saved subjects" title="Clear all" style="display:none;">
+        <i class="fas fa-trash-alt"></i> Clear All
+      </button>
+    </div>
+    <p class="page-description">Your saved subjects — pick subjects from any semester page and revisit them here instantly.</p>
+  </header>
+
+  <!-- Empty state -->
+  <div id="refact-empty" class="refact-empty">
+    <div class="refact-empty-inner">
+      <div class="refact-empty-icon-wrap">
+        <i class="fa-solid fa-rotate refact-empty-icon"></i>
+      </div>
+      <h2>Nothing saved yet</h2>
+      <p>
+        Browse any semester page and click the
+        <span class="refact-inline-demo"><i class="fa-solid fa-rotate"></i></span>
+        loop icon on a subject card to save it here.
+      </p>
+      <a href="{{ '/' | relative_url }}" class="btn-view">Browse Colleges</a>
+    </div>
+  </div>
+
+  <!-- Saved subjects grid – populated by refact.js -->
+  <div id="refact-grid" class="refact-grid" style="display:none;"></div>
+</div>
