@@ -5706,6 +5706,23 @@
           id: sem4
           description: Subjects for Semester 4
           keywords: ["semester 4", "mechanical", "engineering"]
+          subject_marketing_cards:
+            - title: "MP Module-2 Notes"
+              description: "FREE Premium! | for just ₹0"
+              url: "https://topmate.io/saumy1905/1975551?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-mp-module-2-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "MP Module-3 & 4 Notes"
+              description: "Paid Premium! | for just ₹10"
+              url: "https://topmate.io/saumy1905/1975553?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-mp-module-3_4-notes.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
           subjects:
             - name: AT
               slug: applied-thermo
@@ -6516,6 +6533,23 @@
           id: sem6
           description: Subjects for Semester 6
           keywords: ["semester 6", "mechanical", "engineering"]
+          subject_marketing_cards:
+            - title: "MP Module-2 Notes"
+              description: "FREE Premium! | for just ₹0"
+              url: "https://topmate.io/saumy1905/1975551?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-mp-module-2-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "MP Module-3 & 4 Notes"
+              description: "Paid Premium! | for just ₹10"
+              url: "https://topmate.io/saumy1905/1975553?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-mp-module-3_4-notes.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
           subjects:
             - name: Bhagavad Gita
               id: bhagavad-gita
