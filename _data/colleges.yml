@@ -5824,14 +5824,14 @@
                 - year: 2026
                   file: pyqfort-manufacturing-practices-module-1.pdf
                   id: pyqfort-manufacturing-practices-module-1
-                  pages: 3
+                  pages: 15
                   title: "Manufacturing Practices Module 1"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-manufacturing-practices-module-2.pdf
                   id: pyqfort-manufacturing-practices-module-2
-                  pages: 3
+                  pages: 6
                   title: "Manufacturing Practices Module 2"
                   new: true
                   pyqfort_notes: true
@@ -5840,7 +5840,7 @@
                 - year: 2026
                   file: pyqfort-manufacturing-practices-module-3.pdf
                   id: pyqfort-manufacturing-practices-module-3
-                  pages: 3
+                  pages: 8
                   title: "Manufacturing Practices Module 3"
                   new: true
                   pyqfort_notes: true
@@ -5849,7 +5849,7 @@
                 - year: 2026
                   file: pyqfort-manufacturing-practices-module-4.pdf
                   id: pyqfort-manufacturing-practices-module-4
-                  pages: 3
+                  pages: 8
                   title: "Manufacturing Practices Module 4"
                   new: true
                   pyqfort_notes: true
@@ -6678,14 +6678,14 @@
                 - year: 2026
                   file: pyqfort-manufacturing-practices-module-1.pdf
                   id: pyqfort-manufacturing-practices-module-1
-                  pages: 3
+                  pages: 15
                   title: "Manufacturing Practices Module 1"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-manufacturing-practices-module-2.pdf
                   id: pyqfort-manufacturing-practices-module-2
-                  pages: 3
+                  pages: 6
                   title: "Manufacturing Practices Module 2"
                   new: true
                   pyqfort_notes: true
@@ -6694,7 +6694,7 @@
                 - year: 2026
                   file: pyqfort-manufacturing-practices-module-3.pdf
                   id: pyqfort-manufacturing-practices-module-3
-                  pages: 3
+                  pages: 8
                   title: "Manufacturing Practices Module 3"
                   new: true
                   pyqfort_notes: true
@@ -6703,7 +6703,7 @@
                 - year: 2026
                   file: pyqfort-manufacturing-practices-module-4.pdf
                   id: pyqfort-manufacturing-practices-module-4
-                  pages: 3
+                  pages: 8
                   title: "Manufacturing Practices Module 4"
                   new: true
                   pyqfort_notes: true
