@@ -10177,6 +10177,12 @@
                   pages: 3
                   title: "Analog Electronics 2024"
                   upload: "isha0325"
+                - year: 2026
+                  file: nit-kur-analog-electronics-mid-1-2026.pdf
+                  id: nit-kur-analog-electronics-mid-1-2026
+                  pages: 3
+                  title: "Analog Electronics Mid 1 2026"
+                  upload: "Momin"
             - name: Computer Architecture
               slug: computer-architecture
               id: computer-architecture
@@ -10196,6 +10202,12 @@
                   pages: 3
                   title: "Computer Architecture 2024"
                   upload: "isha0325"
+                - year: 2026
+                  file: nit-kur-computer-architecture-2026-mid-1.pdf
+                  id: nit-kur-computer-architecture-2026-mid-1
+                  pages: 3
+                  title: "Computer Architecture 2026 Mid 1"
+                  upload: "Momin"
             - name: Digital Communication
               slug: digital-communication
               id: digital-communication
@@ -10246,6 +10258,12 @@
                   pages: 3
                   title: "Information Theory 2024"
                   upload: "isha0325"
+                - year: 2026
+                  file: nit-kur-info-theory-2026-mid-1.pdf
+                  id: nit-kur-info-theory-2026-mid-1
+                  pages: 3
+                  title: "Information Theory 2026 Mid 1"
+                  upload: "Momin"
             - name: Linear Algebra
               slug: linear-algebra
               id: linear-algebra
