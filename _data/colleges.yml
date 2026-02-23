@@ -5821,6 +5821,40 @@
                   title: "Manufacturing 2025"
                   new: true
                   upload: "Saumy"
+                - year: 2026
+                  file: pyqfort-manufacturing-practices-module-1.pdf
+                  id: pyqfort-manufacturing-practices-module-1
+                  pages: 3
+                  title: "Manufacturing Practices Module 1"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-manufacturing-practices-module-2.pdf
+                  id: pyqfort-manufacturing-practices-module-2
+                  pages: 3
+                  title: "Manufacturing Practices Module 2"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1975551?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-manufacturing-practices-module-3.pdf
+                  id: pyqfort-manufacturing-practices-module-3
+                  pages: 3
+                  title: "Manufacturing Practices Module 3"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1975553?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-manufacturing-practices-module-4.pdf
+                  id: pyqfort-manufacturing-practices-module-4
+                  pages: 3
+                  title: "Manufacturing Practices Module 4"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1975553?utm_source=public_profile&utm_campaign=saumy1905"
             - name: ME
               slug: material
               id: material
@@ -6641,6 +6675,40 @@
                   title: "Manufacturing Technology 2025"
                   new: true
                   upload: "Saumy"
+                - year: 2026
+                  file: pyqfort-manufacturing-practices-module-1.pdf
+                  id: pyqfort-manufacturing-practices-module-1
+                  pages: 3
+                  title: "Manufacturing Practices Module 1"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-manufacturing-practices-module-2.pdf
+                  id: pyqfort-manufacturing-practices-module-2
+                  pages: 3
+                  title: "Manufacturing Practices Module 2"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1975551?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-manufacturing-practices-module-3.pdf
+                  id: pyqfort-manufacturing-practices-module-3
+                  pages: 3
+                  title: "Manufacturing Practices Module 3"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1975553?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-manufacturing-practices-module-4.pdf
+                  id: pyqfort-manufacturing-practices-module-4
+                  pages: 3
+                  title: "Manufacturing Practices Module 4"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1975553?utm_source=public_profile&utm_campaign=saumy1905"
         - number: 7
           slug: sem7
           id: sem7
