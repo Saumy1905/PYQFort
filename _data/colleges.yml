@@ -5723,6 +5723,14 @@
               theme: "blue"
               meta_text: "Buy Now!"
               type: "subject_integrated"
+            - title: "M.Machining Module-3 & 4 Notes"
+              description: "Paid Premium! | for just ₹20"
+              url: "https://topmate.io/saumy1905/1977013?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/m-machining-module-3_4-notes.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
           subjects:
             - name: AT
               slug: applied-thermo
@@ -5872,6 +5880,38 @@
                   pyqfort_notes: true
                   praxian: true
                   praxian_link: "https://topmate.io/saumy1905/1975553?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: m-machining-module-1-notes.pdf
+                  id: m-machining-module-1-notes
+                  pages: 7
+                  title: "Manufacturing Machining Module 1 Notes"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: m-machining-module-2-notes.pdf
+                  id: m-machining-module-2-notes
+                  pages: 7
+                  title: "Manufacturing Machining Module 2 Notes"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: m-machining-module-3-notes.pdf
+                  id: m-machining-module-3-notes
+                  pages: 16
+                  title: "Manufacturing Machining Module 3 Notes"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1977013?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: m-machining-module-4-notes.pdf
+                  id: m-machining-module-4-notes
+                  pages: 10
+                  title: "Manufacturing Machining Module 4 Notes"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1977013?utm_source=public_profile&utm_campaign=saumy1905"
             - name: ME
               slug: material
               id: material
@@ -6550,6 +6590,14 @@
               theme: "blue"
               meta_text: "Buy Now!"
               type: "subject_integrated"
+            - title: "M.Machining Module-3 & 4 Notes"
+              description: "Paid Premium! | for just ₹20"
+              url: "https://topmate.io/saumy1905/1977013?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/m-machining-module-3_4-notes.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
           subjects:
             - name: Bhagavad Gita
               id: bhagavad-gita
@@ -6683,6 +6731,13 @@
                   pages: 3
                   title: "Machine Design 2 2024"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-machine-design-2-2025.pdf
+                  id: ymca-machine-design-2-2025
+                  pages: 3
+                  title: "Machine Design 2 2025"
+                  upload: "Akr"
+                  new: true
             - name: Manufacturing Technology
               slug: mt
               id: mt
@@ -6743,6 +6798,38 @@
                   pyqfort_notes: true
                   praxian: true
                   praxian_link: "https://topmate.io/saumy1905/1975553?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: m-machining-module-1-notes.pdf
+                  id: m-machining-module-1-notes
+                  pages: 7
+                  title: "Manufacturing Machining Module 1 Notes"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: m-machining-module-2-notes.pdf
+                  id: m-machining-module-2-notes
+                  pages: 7
+                  title: "Manufacturing Machining Module 2 Notes"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: m-machining-module-3-notes.pdf
+                  id: m-machining-module-3-notes
+                  pages: 16
+                  title: "Manufacturing Machining Module 3 Notes"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1977013?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: m-machining-module-4-notes.pdf
+                  id: m-machining-module-4-notes
+                  pages: 10
+                  title: "Manufacturing Machining Module 4 Notes"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1977013?utm_source=public_profile&utm_campaign=saumy1905"
         - number: 7
           slug: sem7
           id: sem7
