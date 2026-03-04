@@ -1,230 +1,182 @@
 ---
 layout: default
-title: "Search PYQs - PYQFort"
-description: "Search through our comprehensive PYQ library with advanced filters and options."
+title: "Search – PYQFort"
+description: "Search PYQs, subjects, and resources across all colleges on PYQFort."
 ---
 
-<div class="search-page">
-  <!-- Search Header -->
-  <section class="search-header">
+<div class="nsearch-page">
+
+  <!-- ── Hero / Search Bar ────────────────────────────────────────── -->
+  <section class="nsearch-hero">
     <div class="container">
-      <div class="header-content">
-        <h1>Search PYQs</h1>
-        <p class="header-subtitle">Find exactly what you need with our powerful search functionality and advanced filtering options.</p>
-      </div>
-    </div>
-  </section>
+      <h1 class="nsearch-title">Search PYQFort</h1>
+      <p class="nsearch-subtitle">Find PYQs, subjects & resources across all colleges instantly</p>
 
-  <!-- Advanced Search Form -->
-  <section class="search-form-section">
-    <div class="container">
-      <div class="search-form-container">
-        <form class="advanced-search-form" id="search-form">
-          <!-- Main Search -->
-          <div class="search-row">
-            <div class="search-field-group">
-              <label for="main-search">Search Terms</label>
-              <div class="search-input-container">
-                <input type="text" id="main-search" name="query" placeholder="Enter keywords, subjects, or college names..." class="search-input-main">
-                <button type="submit" class="search-submit-btn">
-                  <span class="search-icon"><i class="fas fa-search"></i></span>
-                  <span class="search-text">Search</span>
-                </button>
-              </div>
-              <small class="search-help">Search in subjects, colleges, and PDF content</small>
-            </div>
-          </div>
-
-          <!-- Advanced Filters -->
-          <div class="search-filters">
-            <div class="filters-header">
-              <h3>Advanced Filters</h3>
-              <button type="button" class="filters-toggle">
-                <span class="toggle-text">Show Filters</span>
-                <span class="toggle-icon">▼</span>
-              </button>
-            </div>
-
-            <div class="filters-content" id="filters-content">
-              <div class="filter-row">
-                <div class="filter-group">
-                  <label for="college-filter">College</label>
-                  <select id="college-filter" name="college" onchange="updateDependentFilters()">
-                    <option value="">All Colleges</option>
-                    {% for college in site.data.colleges %}
-                    <option value="{{ college.slug }}">{{ college.name }}</option>
-                    {% endfor %}
-                  </select>
-                </div>
-
-                <div class="filter-group">
-                  <label for="branch-filter">Branch</label>
-                  <select id="branch-filter" name="branch" onchange="updateDependentFilters('branch')">
-                    <option value="">All Branches</option>
-                    <option value="computer-engineering">Computer Engineering</option>
-                    <option value="cse">Computer Science</option>
-                  </select>
-                </div>
-
-                <div class="filter-group">
-                  <label for="semester-filter">Semester</label>
-                  <select id="semester-filter" name="semester" onchange="updateDependentFilters('semester')">
-                    <option value="">All Semesters</option>
-                    {% for i in (1..8) %}
-                    <option value="sem{{ i }}">Semester {{ i }}</option>
-                    {% endfor %}
-                  </select>
-                </div>
-              </div>
-
-              <div class="filter-row">
-                <div class="filter-group">
-                  <label for="subject-filter">Subject</label>
-                  <select id="subject-filter" name="subject">
-                    <option value="">All Subjects</option>
-                    <!-- Dynamic options will be populated with JS -->
-                  </select>
-                </div>
-              
-                <div class="filter-group">
-                  <label for="year-filter">Year</label>
-                  <select id="year-filter" name="year">
-                    <option value="">All Years</option>
-                    {% assign current_year = site.time | date: '%Y' | plus: 0 %}
-                    {% for year in (2015..current_year) reversed %}
-                    <option value="{{ year }}">{{ year }}</option>
-                    {% endfor %}
-                  </select>
-                </div>
-
-                <div class="filter-group">
-                  <label for="sort-by">Sort By</label>
-                  <select id="sort-by" name="sort">
-                    <option value="relevance">Relevance</option>
-                    <option value="title">Subject (A-Z)</option>
-                    <option value="year">Year (Newest)</option>
-                    <option value="college">College</option>
-                    <option value="semester">Semester</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div class="filter-actions">
-                <button type="button" class="btn btn-filter-apply" onclick="performAdvancedSearch()">
-                  <i class="fas fa-filter"></i> Apply Filters
-                </button>
-                <button type="button" class="btn btn-filter-clear" onclick="clearFilters()">
-                  <i class="fas fa-times"></i> Clear Filters
-                </button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Search Results -->
-  <section class="search-results-section">
-    <div class="container">
-      <!-- Search Status -->
-      <div class="search-status" id="search-status">
-        <div class="status-info">
-          <span class="results-count" id="results-count">Ready to search</span>
-          <span class="search-time" id="search-time"></span>
-        </div>
-        <div class="view-controls">
-          <button class="view-btn active" data-view="list" onclick="changeResultsView('list')" aria-label="List view">
-            <i class="fas fa-list"></i>
-            <span class="view-label">List</span>
+      <div class="nsearch-bar-wrap">
+        <div class="nsearch-bar" id="nsearch-bar">
+          <i class="fas fa-search nsearch-bar-icon"></i>
+          <input
+            type="text"
+            id="nsearch-input"
+            placeholder="Try &quot;Data Structures&quot;, &quot;YMCA&quot;, &quot;2024&quot;…"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button class="nsearch-clear-btn" id="nsearch-clear" aria-label="Clear search" style="display:none;">
+            <i class="fas fa-times"></i>
           </button>
-          <!-- <button class="view-btn" data-view="grid" onclick="changeResultsView('grid')" aria-label="Grid view">
-            <i class="fas fa-th-large"></i>
-            <span class="view-label">Grid</span>
-          </button> -->
+          <kbd class="nsearch-kbd" id="nsearch-kbd">/</kbd>
         </div>
       </div>
 
-      <!-- Active Search Filters -->
-      <div class="active-search-filters" id="active-filters" style="display: none;">
-        <span class="filters-label">Active filters:</span>
-        <div class="filter-tags" id="filter-tags"></div>
-        <button class="clear-all-filters" onclick="clearAllSearchFilters()">
-          <i class="fas fa-trash-alt"></i> Clear All
+      <!-- Filter Chips -->
+      <div class="nsearch-chips" id="nsearch-chips">
+        <button class="nsearch-chip" data-filter="college" id="nsearch-chip-college">
+          <i class="fas fa-university"></i>
+          <span class="nsearch-chip-label">College</span>
+          <span class="nsearch-chip-val" id="nsearch-chip-college-val"></span>
+          <i class="fas fa-chevron-down nsearch-chip-arrow"></i>
+        </button>
+        <button class="nsearch-chip" data-filter="semester" id="nsearch-chip-semester">
+          <i class="fas fa-layer-group"></i>
+          <span class="nsearch-chip-label">Semester</span>
+          <span class="nsearch-chip-val" id="nsearch-chip-semester-val"></span>
+          <i class="fas fa-chevron-down nsearch-chip-arrow"></i>
+        </button>
+        <button class="nsearch-chip" data-filter="year" id="nsearch-chip-year">
+          <i class="fas fa-calendar-alt"></i>
+          <span class="nsearch-chip-label">Year</span>
+          <span class="nsearch-chip-val" id="nsearch-chip-year-val"></span>
+          <i class="fas fa-chevron-down nsearch-chip-arrow"></i>
+        </button>
+        <button class="nsearch-reset-btn" id="nsearch-reset" style="display:none;">
+          <i class="fas fa-undo"></i> Reset
         </button>
       </div>
 
-      <!-- Results Container -->
-      <div class="results-container">
-        <!-- Welcome State -->
-        <div class="search-welcome" id="search-welcome">
-          <div class="welcome-content">
-            <div class="welcome-icon"><i class="fas fa-search"></i></div>
-            <h2>Search Our PYQ Library</h2>
-            <p>Use the search form above to find PYQs by subjects, colleges, years, and more. Our advanced search helps you discover exactly what you need.</p>
-            
-            <div class="quick-searches">
-              <h3>Quick Searches:</h3>
-              <div class="quick-search-buttons">
-                <button class="quick-search-btn" onclick="quickSearch('', 'ymca')">
-                  <i class="fas fa-university"></i>
-                  <span class="btn-text">YMCA Papers</span>
-                </button>
-                <button class="quick-search-btn" onclick="quickSearch('', '', 'computer-engineering')">
-                  <i class="fas fa-laptop-code"></i>
-                  <span class="btn-text">Computer Engineering</span>
-                </button>
-                <button class="quick-search-btn" onclick="quickSearch('', '', '', '2024')">
-                  <i class="fas fa-calendar-alt"></i>
-                  <span class="btn-text">Latest Papers (2024)</span>
-                </button>
-                <button class="quick-search-btn" onclick="quickSearch('Data Structures')">
-                  <i class="fas fa-code"></i>
-                  <span class="btn-text">Data Structures</span>
-                </button>
-              </div>
-            </div>
+      <!-- Filter Dropdowns (rendered by JS) -->
+      <div class="nsearch-dropdown-anchor">
+        <div class="nsearch-dropdown" id="nsearch-dd-college" style="display:none;"></div>
+        <div class="nsearch-dropdown" id="nsearch-dd-semester" style="display:none;"></div>
+        <div class="nsearch-dropdown" id="nsearch-dd-year" style="display:none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Results Area ─────────────────────────────────────────────── -->
+  <section class="nsearch-body">
+    <div class="container">
+
+      <!-- Status bar -->
+      <div class="nsearch-status" id="nsearch-status" style="display:none;">
+        <span class="nsearch-count" id="nsearch-count"></span>
+        <span class="nsearch-time" id="nsearch-time"></span>
+      </div>
+
+      <!-- Active filter pills -->
+      <div class="nsearch-pills" id="nsearch-pills" style="display:none;"></div>
+
+      <!-- Idle / Welcome -->
+      <div class="nsearch-idle" id="nsearch-idle">
+        <div class="nsearch-idle-hero">
+          <div class="nsearch-idle-icon"><i class="fas fa-search"></i></div>
+          <h2>Explore Our Library</h2>
+          <p>Start typing to search across all colleges, branches, subjects and papers.</p>
+        </div>
+
+        <!-- Recent Searches -->
+        <div class="nsearch-recent" id="nsearch-recent" style="display:none;">
+          <div class="nsearch-section-head">
+            <h3><i class="fas fa-history"></i> Recent</h3>
+            <button class="nsearch-link-btn" id="nsearch-clear-recent">Clear</button>
           </div>
+          <div class="nsearch-recent-list" id="nsearch-recent-list"></div>
         </div>
 
-        <!-- Loading State -->
-        <div class="search-loading" id="search-loading" style="display: none;">
-          <div class="loading-spinner"></div>
-          <p>Searching PYQs...</p>
-        </div>
-
-        <!-- Results List -->
-        <div class="search-results" id="search-results" style="display: none;">
-          <div class="results-list" id="results-list"></div>
-          
-          <!-- Pagination -->
-          <div class="pagination-controls" id="pagination-controls" style="display: none;">
-            <button class="pagination-btn" id="load-more-btn" onclick="loadMoreResults()">
-              <i class="fas fa-sync"></i> Load More Results
+        <!-- Popular Searches -->
+        <div class="nsearch-popular">
+          <div class="nsearch-section-head">
+            <h3><i class="fas fa-bolt"></i> Quick Access</h3>
+          </div>
+          <div class="nsearch-popular-list">
+            <button class="nsearch-popular-btn" data-query="Data Structures">
+              <i class="fas fa-code"></i> Data Structures
+            </button>
+            <button class="nsearch-popular-btn" data-college="ymca">
+              <i class="fas fa-university"></i> YMCA
+            </button>
+            <button class="nsearch-popular-btn" data-college="igdtuw">
+              <i class="fas fa-university"></i> IGDTUW
+            </button>
+            <button class="nsearch-popular-btn" data-query="Mathematics">
+              <i class="fas fa-square-root-alt"></i> Mathematics
+            </button>
+            <button class="nsearch-popular-btn" data-college="nit-kur">
+              <i class="fas fa-university"></i> NIT Kurukshetra
+            </button>
+            <button class="nsearch-popular-btn" data-query="Operating Systems">
+              <i class="fas fa-desktop"></i> Operating Systems
             </button>
           </div>
         </div>
+      </div>
 
-        <!-- No Results State -->
-        <div class="search-no-results" id="no-results" style="display: none;">
-          <div class="no-results-content">
-            <div class="no-results-icon"><i class="fas fa-search"></i></div>
-            <h2>No PYQs Found</h2>
-            <p>We couldn't find any PYQs matching your search criteria. Try adjusting your search terms or filters.</p>
-            
-            <div class="no-results-actions">
-              <button class="btn btn-primary" onclick="clearAllSearchFilters()">
-                <i class="fas fa-sync"></i>
-                <span class="btn-text">Clear All Filters</span>
-              </button>
-              <a href="{{ '/' | relative_url }}" class="btn btn-outline">
-                <i class="fas fa-home"></i>
-                <span class="btn-text">Back to Home</span>
-              </a>
-            </div>
+      <!-- Loading -->
+      <div class="nsearch-loading" id="nsearch-loading" style="display:none;">
+        <div class="nsearch-spinner"></div>
+        <p>Searching…</p>
+      </div>
+
+      <!-- Results Container -->
+      <div class="nsearch-results" id="nsearch-results" style="display:none;">
+
+        <!-- College Results -->
+        <div class="nsearch-group" id="nsearch-grp-colleges" style="display:none;">
+          <div class="nsearch-group-head">
+            <h3><i class="fas fa-university"></i> Colleges</h3>
+            <span class="nsearch-group-count" id="nsearch-cnt-colleges"></span>
           </div>
+          <div class="nsearch-group-list" id="nsearch-list-colleges"></div>
+        </div>
+
+        <!-- Subject Results -->
+        <div class="nsearch-group" id="nsearch-grp-subjects" style="display:none;">
+          <div class="nsearch-group-head">
+            <h3><i class="fas fa-book"></i> Subjects</h3>
+            <span class="nsearch-group-count" id="nsearch-cnt-subjects"></span>
+          </div>
+          <div class="nsearch-group-list" id="nsearch-list-subjects"></div>
+        </div>
+
+        <!-- PYQ / Paper Results -->
+        <div class="nsearch-group" id="nsearch-grp-pyqs" style="display:none;">
+          <div class="nsearch-group-head">
+            <h3><i class="fas fa-file-pdf"></i> Papers</h3>
+            <span class="nsearch-group-count" id="nsearch-cnt-pyqs"></span>
+          </div>
+          <div class="nsearch-group-list" id="nsearch-list-pyqs"></div>
+        </div>
+
+        <!-- Load More -->
+        <div class="nsearch-more-wrap" id="nsearch-more-wrap" style="display:none;">
+          <button class="nsearch-more-btn" id="nsearch-more">
+            <i class="fas fa-chevron-down"></i> Show More Results
+          </button>
         </div>
       </div>
+
+      <!-- No Results -->
+      <div class="nsearch-empty" id="nsearch-empty" style="display:none;">
+        <div class="nsearch-empty-inner">
+          <div class="nsearch-empty-icon"><i class="fas fa-search-minus"></i></div>
+          <h2>No results found</h2>
+          <p>Try different keywords or remove some filters.</p>
+          <button class="btn-view nsearch-empty-reset" id="nsearch-empty-reset">
+            <i class="fas fa-undo"></i> Reset Search
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
 </div>

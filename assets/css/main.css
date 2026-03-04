@@ -1676,6 +1676,925 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-color);
 }
 
+/* ═══════════════════════════════════════════════════════════════════
+   NEW SEARCH UI  (nsearch-* namespace — zero collision with old CSS)
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Page & Hero ─────────────────────────────────────────────────── */
+.nsearch-page {
+  background: var(--background-color);
+  min-height: 70vh;
+}
+
+.nsearch-hero {
+  padding: 3rem 0 1.5rem;
+  text-align: center;
+}
+
+.nsearch-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--text-color);
+}
+
+.nsearch-subtitle {
+  font-size: 1.05rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.75rem;
+}
+
+/* ── Search Bar ──────────────────────────────────────────────────── */
+.nsearch-bar-wrap {
+  max-width: 680px;
+  margin: 0 auto 1.25rem;
+}
+
+.nsearch-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.15rem;
+  background: var(--card-background);
+  border: 2px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px var(--box-shadow);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.nsearch-bar:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 24px rgba(74, 108, 247, 0.13);
+}
+
+.dark-theme .nsearch-bar:focus-within {
+  box-shadow: 0 4px 24px rgba(93, 123, 249, 0.18);
+}
+
+.nsearch-bar-icon {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.nsearch-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  background: transparent;
+  color: var(--text-color);
+  min-width: 0;
+}
+
+.nsearch-bar input::placeholder {
+  color: var(--secondary-color);
+  opacity: 0.7;
+}
+
+.nsearch-clear-btn {
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.nsearch-clear-btn:hover {
+  background: var(--light-gray);
+  color: var(--text-color);
+}
+
+.nsearch-kbd {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.72rem;
+  font-family: inherit;
+  color: var(--secondary-color);
+  background: var(--light-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+/* ── Filter Chips ────────────────────────────────────────────────── */
+.nsearch-chips {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.nsearch-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-color);
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.nsearch-chip:hover {
+  border-color: var(--primary-color);
+  background: var(--btn-hover-color);
+}
+
+.nsearch-chip--open,
+.nsearch-chip--active {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.nsearch-chip--active:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+}
+
+.nsearch-chip-arrow {
+  font-size: 0.6rem;
+  transition: transform 0.2s;
+}
+
+.nsearch-chip--open .nsearch-chip-arrow {
+  transform: rotate(180deg);
+}
+
+.nsearch-chip-val {
+  font-weight: 600;
+}
+
+.nsearch-chip-label {
+  /* hide label when value is shown */
+}
+
+.nsearch-chip--active .nsearch-chip-label {
+  display: none;
+}
+
+.nsearch-reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--danger-color);
+  background: none;
+  border: 1px solid var(--danger-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nsearch-reset-btn:hover {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+/* ── Filter Dropdowns ────────────────────────────────────────────── */
+.nsearch-dropdown-anchor {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.nsearch-dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 12px 36px var(--box-shadow);
+  padding: 0.65rem;
+  z-index: 50;
+  max-height: 280px;
+  overflow-y: auto;
+  animation: nsearchDropIn 0.15s ease;
+}
+
+@keyframes nsearchDropIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.nsearch-dd-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nsearch-dd-grid {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.nsearch-dd-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.88rem;
+  color: var(--text-color);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.nsearch-dd-grid .nsearch-dd-item {
+  width: auto;
+  flex: 0 0 auto;
+}
+
+.nsearch-dd-item:hover {
+  background: var(--btn-hover-color);
+}
+
+/* ── Body / Results Area ─────────────────────────────────────────── */
+.nsearch-body {
+  padding: 1rem 0 3rem;
+}
+
+.nsearch-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.92rem;
+  color: var(--text-color);
+}
+
+.nsearch-count {
+  font-weight: 600;
+}
+
+.nsearch-time {
+  color: var(--secondary-color);
+  font-size: 0.82rem;
+}
+
+/* ── Active Pills ────────────────────────────────────────────────── */
+.nsearch-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.nsearch-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.81rem;
+  background: var(--filter-tag-bg);
+  color: var(--filter-tag-color);
+  border-radius: 20px;
+}
+
+.nsearch-pill-label {
+  font-weight: 600;
+}
+
+.nsearch-pill button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.7rem;
+  padding: 0;
+  margin-left: 0.1rem;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.nsearch-pill button:hover {
+  opacity: 1;
+}
+
+/* ── Idle / Welcome ──────────────────────────────────────────────── */
+.nsearch-idle {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.nsearch-idle-hero {
+  text-align: center;
+  padding: 2.5rem 0 2rem;
+}
+
+.nsearch-idle-icon {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  opacity: 0.45;
+}
+
+.nsearch-idle-hero h2 {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.nsearch-idle-hero p {
+  color: var(--secondary-color);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── Recent Searches ─────────────────────────────────────────────── */
+.nsearch-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.nsearch-section-head h3 {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nsearch-link-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 0.82rem;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+
+.nsearch-link-btn:hover {
+  opacity: 0.7;
+}
+
+.nsearch-recent {
+  margin-bottom: 2rem;
+}
+
+.nsearch-recent-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nsearch-recent-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.82rem;
+  color: var(--text-color);
+  background: var(--light-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.nsearch-recent-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--btn-hover-color);
+}
+
+.nsearch-recent-btn i {
+  font-size: 0.72rem;
+  color: var(--secondary-color);
+}
+
+/* ── Popular / Quick Access ──────────────────────────────────────── */
+.nsearch-popular {
+  margin-bottom: 2rem;
+}
+
+.nsearch-popular-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 0.65rem;
+}
+
+.nsearch-popular-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.88rem;
+  color: var(--text-color);
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s, box-shadow 0.2s;
+  text-align: left;
+}
+
+.nsearch-popular-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--btn-hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--box-shadow);
+}
+
+.nsearch-popular-btn i {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+/* ── Loading ─────────────────────────────────────────────────────── */
+.nsearch-loading {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--secondary-color);
+}
+
+.nsearch-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 0.75rem;
+}
+
+/* ── Result Groups ───────────────────────────────────────────────── */
+.nsearch-group {
+  margin-bottom: 2rem;
+}
+
+.nsearch-group-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.nsearch-group-head h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nsearch-group-head h3 i {
+  color: var(--primary-color);
+}
+
+.nsearch-group-count {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  background: var(--light-gray);
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+}
+
+.nsearch-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+/* ── College Result Card ─────────────────────────────────────────── */
+.nsearch-college-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.nsearch-college-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 16px var(--box-shadow);
+  transform: translateY(-2px);
+  color: var(--text-color);
+}
+
+.nsearch-college-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  background: var(--btn-hover-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.05rem;
+  color: var(--primary-color);
+}
+
+.nsearch-college-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.nsearch-college-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nsearch-college-loc {
+  font-size: 0.78rem;
+  color: var(--secondary-color);
+}
+
+.nsearch-college-loc i {
+  font-size: 0.68rem;
+  margin-right: 0.15rem;
+}
+
+.nsearch-college-arrow {
+  color: var(--secondary-color);
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.nsearch-college-card:hover .nsearch-college-arrow {
+  transform: translateX(3px);
+  color: var(--primary-color);
+}
+
+/* ── Subject Result Card ─────────────────────────────────────────── */
+.nsearch-subject-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.nsearch-subject-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 16px var(--box-shadow);
+  transform: translateY(-2px);
+  color: var(--text-color);
+}
+
+.nsearch-subj-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 8px;
+  background: var(--btn-hover-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.92rem;
+  color: var(--primary-color);
+}
+
+.nsearch-subj-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.nsearch-subj-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nsearch-subj-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+  font-size: 0.74rem;
+}
+
+.nsearch-subj-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  white-space: nowrap;
+}
+
+.nsearch-subj-meta i {
+  font-size: 0.62rem;
+}
+
+.nsearch-subj-arrow {
+  color: var(--secondary-color);
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.nsearch-subject-card:hover .nsearch-subj-arrow {
+  transform: translateX(3px);
+  color: var(--primary-color);
+}
+
+/* ── PYQ / Paper Result Card ─────────────────────────────────────── */
+.nsearch-pyq-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.nsearch-pyq-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 16px var(--box-shadow);
+  transform: translateY(-2px);
+}
+
+.nsearch-pyq-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.nsearch-pyq-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  background: #fee2e2;
+  color: #dc3545;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+.dark-theme .nsearch-pyq-icon {
+  background: rgba(220, 53, 69, 0.15);
+}
+
+.nsearch-pyq-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.nsearch-pyq-title {
+  font-weight: 600;
+  font-size: 0.88rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-color);
+}
+
+.nsearch-pyq-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+  font-size: 0.72rem;
+}
+
+.nsearch-pyq-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  white-space: nowrap;
+}
+
+.nsearch-pyq-meta i {
+  font-size: 0.6rem;
+}
+
+.nsearch-pyq-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.nsearch-pyq-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.76rem;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.nsearch-pyq-btn--subject {
+  color: var(--primary-color);
+  background: var(--btn-hover-color);
+}
+
+.nsearch-pyq-btn--subject:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.nsearch-pyq-btn--pdf {
+  color: #fff;
+  background: var(--primary-color);
+}
+
+.nsearch-pyq-btn--pdf:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+/* ── Load More ───────────────────────────────────────────────────── */
+.nsearch-more-wrap {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.nsearch-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-color);
+  background: var(--light-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.nsearch-more-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--btn-hover-color);
+}
+
+/* ── Empty / No Results ──────────────────────────────────────────── */
+.nsearch-empty {
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.nsearch-empty-inner {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.nsearch-empty-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.nsearch-empty h2 {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.nsearch-empty p {
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+}
+
+.nsearch-empty-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nsearch-hero {
+    padding: 2rem 0 1.25rem;
+  }
+  .nsearch-title {
+    font-size: 1.75rem;
+  }
+  .nsearch-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+  .nsearch-bar {
+    padding: 0.7rem 0.9rem;
+    border-radius: 12px;
+  }
+  .nsearch-bar input {
+    font-size: 1rem;
+  }
+  .nsearch-kbd {
+    display: none;
+  }
+  .nsearch-popular-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .nsearch-pyq-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nsearch-pyq-actions {
+    width: 100%;
+  }
+  .nsearch-pyq-btn {
+    flex: 1;
+    justify-content: center;
+  }
+  .nsearch-pyq-btn span {
+    display: inline;
+  }
+}
+
+@media (max-width: 480px) {
+  .nsearch-title {
+    font-size: 1.45rem;
+  }
+  .nsearch-chips {
+    gap: 0.4rem;
+  }
+  .nsearch-chip {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.76rem;
+  }
+  .nsearch-popular-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .nsearch-popular-btn {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.82rem;
+  }
+  .nsearch-college-card,
+  .nsearch-subject-card,
+  .nsearch-pyq-card {
+    padding: 0.7rem 0.85rem;
+  }
+  .nsearch-subj-meta {
+    gap: 0.35rem;
+    font-size: 0.7rem;
+  }
+  .nsearch-dropdown {
+    max-height: 220px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════ */
+
 /* ===== ENHANCED CARD ANIMATIONS ===== */
 
 .animate-on-scroll {
