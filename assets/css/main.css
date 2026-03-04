@@ -2272,6 +2272,8 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   color: var(--text-color);
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .nsearch-subject-card:hover {
@@ -2352,6 +2354,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border-color);
   border-radius: 10px;
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .nsearch-pyq-card:hover {
@@ -2582,11 +2586,41 @@ h1, h2, h3, h4, h5, h6 {
   .nsearch-college-card,
   .nsearch-subject-card,
   .nsearch-pyq-card {
-    padding: 0.7rem 0.85rem;
+    padding: 0.6rem 0.7rem;
   }
   .nsearch-subj-meta {
-    gap: 0.35rem;
-    font-size: 0.7rem;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.4rem;
+    font-size: 0.66rem;
+    padding-top: 0.15rem;
+  }
+  .nsearch-subj-meta span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .nsearch-pyq-meta {
+    flex-wrap: wrap;
+    gap: 0.25rem 0.4rem;
+    font-size: 0.64rem;
+    padding-top: 0.15rem;
+  }
+  .nsearch-pyq-meta span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .nsearch-subj-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.8rem;
+  }
+  .nsearch-pyq-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 0.75rem;
   }
   .nsearch-dropdown {
     max-height: 220px;
