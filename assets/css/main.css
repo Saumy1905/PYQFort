@@ -2586,41 +2586,19 @@ h1, h2, h3, h4, h5, h6 {
   .nsearch-college-card,
   .nsearch-subject-card,
   .nsearch-pyq-card {
-    padding: 0.6rem 0.7rem;
-  }
-  .nsearch-subj-meta {
-    flex-wrap: wrap;
-    gap: 0.25rem 0.4rem;
-    font-size: 0.66rem;
-    padding-top: 0.15rem;
-  }
-  .nsearch-subj-meta span {
-    max-width: 100%;
+    padding: 0.7rem 0.85rem;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
+  .nsearch-subj-meta,
   .nsearch-pyq-meta {
     flex-wrap: wrap;
-    gap: 0.25rem 0.4rem;
-    font-size: 0.64rem;
-    padding-top: 0.15rem;
+    gap: 0.25rem 0.5rem;
   }
+  .nsearch-subj-meta span,
   .nsearch-pyq-meta span {
-    max-width: 100%;
+    max-width: 48vw;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .nsearch-subj-icon {
-    width: 1.8rem;
-    height: 1.8rem;
-    font-size: 0.8rem;
-  }
-  .nsearch-pyq-icon {
-    width: 1.7rem;
-    height: 1.7rem;
-    font-size: 0.75rem;
   }
   .nsearch-dropdown {
     max-height: 220px;
