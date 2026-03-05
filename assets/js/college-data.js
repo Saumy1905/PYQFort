@@ -145,6 +145,13 @@ window.COLLEGE_DATA = {
                       title: "Basic Electrical Technology Set 2 2023",
                     },
                     {
+                      year: 2024,
+                      file: "ymca-bet-set-1-2024.pdf",
+                      id: "ymca-bet-set-1-2024",
+                      pages: 3,
+                      title: "Basic Electrical Technology Set 1 2024",
+                    },
+                    {
                       year: 2023,
                       file: "ymca-bet-2023-sessional.pdf",
                       id: "ymca-bet-2023-sessional",
@@ -211,6 +218,20 @@ window.COLLEGE_DATA = {
                       title: "Chemistry 2019",
                     },
                     {
+                      year: 2023,
+                      file: "ymca-chemistry-2023.pdf",
+                      id: "ymca-chemistry-2023",
+                      pages: 3,
+                      title: "Chemistry 2023",
+                    },
+                    {
+                      year: 2024,
+                      file: "ymca-chemistry-2024.pdf",
+                      id: "ymca-chemistry-2024",
+                      pages: 3,
+                      title: "Chemistry 2024",
+                    },
+                    {
                       year: 2022,
                       file: "ymca-chemistry-2022-sessional-1.pdf",
                       id: "ymca-chemistry-2022-sessional-1",
@@ -258,13 +279,6 @@ window.COLLEGE_DATA = {
                       id: "ymca-chemistry-2023-sessional-5",
                       pages: 3,
                       title: "Chemistry Sessional 5 2023",
-                    },
-                    {
-                      year: 2023,
-                      file: "ymca-chemistry-2023.pdf",
-                      id: "ymca-chemistry-2023",
-                      pages: 3,
-                      title: "Chemistry 2023",
                     },
                     {
                       year: 2025,
@@ -532,6 +546,13 @@ window.COLLEGE_DATA = {
                       id: "ymca-semiconductor-2023",
                       pages: 3,
                       title: "Semiconductor Physics 2023",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-semiconductor-2025.pdf",
+                      id: "ymca-semiconductor-2025",
+                      pages: 3,
+                      title: "Semiconductor Physics 2025",
                     },
                   ],
                 },
@@ -825,6 +846,15 @@ window.COLLEGE_DATA = {
                     },
                     {
                       year: 2025,
+                      file: "ymca-maths-106-e-2025.pdf",
+                      id: "ymca-maths-106-e-2025",
+                      pages: 3,
+                      title: "Mathematics 106-E 2025",
+                      new: true,
+                      upload: "Saumy"
+                    },
+                    {
+                      year: 2025,
                       file: "ymca-maths-106-e-pfq.pdf",
                       id: "ymca-maths-106-e-pfq",
                       pages: 3,
@@ -924,6 +954,13 @@ window.COLLEGE_DATA = {
                       id: "ymca-pps-set-2-2024",
                       pages: 3,
                       title: "Programming for Problem Solving Set 2 2024",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-pps-set-1-2025.pdf",
+                      id: "ymca-pps-set-1-2025",
+                      pages: 3,
+                      title: "Programming for Problem Solving Set 1 2025",
                     },
                     {
                       year: 2024,

@@ -165,6 +165,12 @@
                   pages: 3
                   title: "BET Set 2 2023"
                   upload: "Saumy"
+                - year: 2024
+                  file: ymca-bet-set-1-2024.pdf
+                  id: ymca-bet-set-1-2024
+                  pages: 3
+                  title: "BET Set 1 2024"
+                  upload: "Saumy"
                 - year: 2025
                   file: ymca-bet-set-1-2025.pdf
                   id: ymca-bet-set-1-2025
@@ -276,6 +282,12 @@
                   id: ymca-chemistry-2023
                   pages: 3
                   title: "Chemistry 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-chemistry-2024.pdf
+                  id: ymca-chemistry-2024
+                  pages: 3
+                  title: "Chemistry 2024"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-chemistry-2025.pdf
@@ -693,6 +705,13 @@
                   pages: 3
                   title: "Semiconductor Physics 2023"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-semiconductor-2025.pdf
+                  id: ymca-semiconductor-2025
+                  pages: 3
+                  title: "Semiconductor Physics 2025"
+                  new: true
+                  upload: "Saumy"
             - name: Waves and Optics
               slug: waves
               id: waves
@@ -967,6 +986,13 @@
                   title: "Maths 106-E 2023"
                   upload: "Saumy"
                 - year: 2025
+                  file: ymca-maths-106-e-2025.pdf
+                  id: ymca-maths-106-e-2025
+                  pages: 3
+                  title: "Maths 106-E 2025"
+                  new: true
+                  upload: "Saumy"
+                - year: 2025
                   file: ymca-maths-106-e-pfq.pdf
                   id: ymca-maths-106-e-pfq
                   pages: 3
@@ -1026,6 +1052,13 @@
                   id: ymca-pps-set-2-2024
                   pages: 3
                   title: "Programming for Problem Solving Set 2 2024"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-pps-set-1-2025.pdf
+                  id: ymca-pps-set-1-2025
+                  pages: 3
+                  title: "Programming for Problem Solving Set 1 2025"
+                  new: true
                   upload: "Saumy"
                 - year: 2023
                   file: xtreme-ends-of-pps-repeated-pyqs.pdf
