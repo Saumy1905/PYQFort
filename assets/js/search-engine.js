@@ -27,7 +27,7 @@
 
   /* ─── Active State ────────────────────────────────────────────────── */
   let activeQuery   = '';
-  let activeFilters = { college: '', semester: '', year: '' };
+  let activeFilters = { college: '', branch: '', semester: '', subject: '', year: '' };
   let lastResults   = { colleges: [], subjects: [], pyqs: [] };
   let pyqsShown     = 0;        // how many PYQs currently displayed (for load-more)
   let subjectsShown = 0;
@@ -135,8 +135,10 @@
     var q      = (query || '').toLowerCase().trim();
     var tokens = q.split(/\s+/).filter(Boolean);
     var fC     = filters.college;
-    var fY     = filters.year  ? parseInt(filters.year, 10)     : 0;
+    var fB     = filters.branch;
     var fS     = filters.semester ? parseInt(filters.semester, 10) : 0;
+    var fSub   = filters.subject;
+    var fY     = filters.year  ? parseInt(filters.year, 10)     : 0;
 
     function score(text, name) {
       if (!q) return 1;                                     // filter-only mode
@@ -173,7 +175,9 @@
       var ss = score(su.searchText, su.name);
       if (ss <= 0) continue;
       if (fC && su.collegeSlug !== fC) continue;
+      if (fB && su.branchSlug !== fB) continue;
       if (fS && su.semester !== fS) continue;
+      if (fSub && su.url !== fSub) continue;
       if (seenSubj[su.url]) continue;
       seenSubj[su.url] = true;
       subjects.push(assign({}, su, { _score: ss }));
@@ -187,8 +191,10 @@
       var ps = score(p.searchText, p.title);
       if (ps <= 0) continue;
       if (fC && p.collegeSlug !== fC) continue;
+      if (fB && p.branchSlug !== fB) continue;
       if (fY && p.year !== fY) continue;
       if (fS && p.semester !== fS) continue;
+      if (fSub && p.url !== fSub) continue;
       pyqs.push(assign({}, p, { _score: ps }));
     }
     pyqs.sort(function (a, b) { return b._score - a._score || (b.year || 0) - (a.year || 0); });
@@ -204,7 +210,7 @@
     var startTime = performance.now();
     activeQuery = (el('nsearch-input').value || '').trim();
 
-    if (!activeQuery && !activeFilters.college && !activeFilters.semester && !activeFilters.year) {
+    if (!activeQuery && !activeFilters.college && !activeFilters.branch && !activeFilters.semester && !activeFilters.subject && !activeFilters.year) {
       showState('idle');
       updatePills();
       updateResetBtn();
@@ -383,6 +389,49 @@
     semHtml += '</div>';
     el('nsearch-dd-semester').innerHTML = semHtml;
 
+    // ── Branch dropdown (unique branch names, sorted, with search)
+    var branchMap = {};
+    for (var b = 0; b < subjectIdx.length; b++) {
+      var br = subjectIdx[b];
+      if (br.branchSlug && !branchMap[br.branchSlug]) branchMap[br.branchSlug] = br.branch;
+    }
+    var branchSlugs = Object.keys(branchMap).sort(function (a, b) { return branchMap[a].localeCompare(branchMap[b]); });
+    el('nsearch-dd-branch').innerHTML =
+      '<input type="text" class="nsearch-dd-search" placeholder="Search branches…" data-dd-filter="branch">' +
+      '<div class="nsearch-dd-list">' +
+      branchSlugs.map(function (slug) {
+        return '<button class="nsearch-dd-item" data-value="' + esc(slug) + '">' + esc(branchMap[slug]) + '</button>';
+      }).join('') +
+      '</div>';
+
+    // ── Subject dropdown (unique subject names, sorted, with search, URL as value)
+    var subjMap = {};
+    for (var u = 0; u < subjectIdx.length; u++) {
+      var su = subjectIdx[u];
+      if (su.url && !subjMap[su.url]) subjMap[su.url] = su.name;
+    }
+    var subjUrls = Object.keys(subjMap).sort(function (a, b) { return subjMap[a].localeCompare(subjMap[b]); });
+    el('nsearch-dd-subject').innerHTML =
+      '<input type="text" class="nsearch-dd-search" placeholder="Search subjects…" data-dd-filter="subject">' +
+      '<div class="nsearch-dd-list">' +
+      subjUrls.map(function (url) {
+        return '<button class="nsearch-dd-item" data-value="' + esc(url) + '">' + esc(subjMap[url]) + '</button>';
+      }).join('') +
+      '</div>';
+
+    // Wire up in-dropdown search filtering
+    document.querySelectorAll('.nsearch-dd-search').forEach(function (inp) {
+      inp.addEventListener('input', function () {
+        var term = inp.value.toLowerCase();
+        var items = inp.parentElement.querySelectorAll('.nsearch-dd-item');
+        items.forEach(function (item) {
+          item.style.display = item.textContent.toLowerCase().indexOf(term) !== -1 ? '' : 'none';
+        });
+      });
+      // Prevent click from closing dropdown
+      inp.addEventListener('click', function (e) { e.stopPropagation(); });
+    });
+
     // ── Year dropdown
     var years = {};
     for (var j = 0; j < pyqIdx.length; j++) { if (pyqIdx[j].year) years[pyqIdx[j].year] = true; }
@@ -407,7 +456,7 @@
   }
 
   function closeAllDropdowns() {
-    ['college', 'semester', 'year'].forEach(function (f) {
+    ['college', 'branch', 'semester', 'subject', 'year'].forEach(function (f) {
       el('nsearch-dd-' + f).style.display = 'none';
       el('nsearch-chip-' + f).classList.remove('nsearch-chip--open');
     });
@@ -430,7 +479,7 @@
   function resetAll() {
     el('nsearch-input').value = '';
     activeQuery = '';
-    activeFilters = { college: '', semester: '', year: '' };
+    activeFilters = { college: '', branch: '', semester: '', subject: '', year: '' };
     updateChipLabels();
     closeAllDropdowns();
     showState('idle');
@@ -450,6 +499,16 @@
       cVal.textContent = '';
       el('nsearch-chip-college').classList.remove('nsearch-chip--active');
     }
+    // Branch
+    var bVal = el('nsearch-chip-branch-val');
+    if (activeFilters.branch) {
+      var brObj = subjectIdx.find(function (s) { return s.branchSlug === activeFilters.branch; });
+      bVal.textContent = brObj ? brObj.branch : activeFilters.branch;
+      el('nsearch-chip-branch').classList.add('nsearch-chip--active');
+    } else {
+      bVal.textContent = '';
+      el('nsearch-chip-branch').classList.remove('nsearch-chip--active');
+    }
     // Semester
     var sVal = el('nsearch-chip-semester-val');
     if (activeFilters.semester) {
@@ -458,6 +517,16 @@
     } else {
       sVal.textContent = '';
       el('nsearch-chip-semester').classList.remove('nsearch-chip--active');
+    }
+    // Subject
+    var subVal = el('nsearch-chip-subject-val');
+    if (activeFilters.subject) {
+      var subObj = subjectIdx.find(function (s) { return s.url === activeFilters.subject; });
+      subVal.textContent = subObj ? subObj.name : 'Selected';
+      el('nsearch-chip-subject').classList.add('nsearch-chip--active');
+    } else {
+      subVal.textContent = '';
+      el('nsearch-chip-subject').classList.remove('nsearch-chip--active');
     }
     // Year
     var yVal = el('nsearch-chip-year-val');
@@ -471,7 +540,7 @@
   }
 
   function updateResetBtn() {
-    var hasAnything = activeQuery || activeFilters.college || activeFilters.semester || activeFilters.year;
+    var hasAnything = activeQuery || activeFilters.college || activeFilters.branch || activeFilters.semester || activeFilters.subject || activeFilters.year;
     elShow('nsearch-reset', !!hasAnything);
   }
 
@@ -490,8 +559,16 @@
       var col = collegeIdx.find(function (c) { return c.slug === activeFilters.college; });
       parts.push(pill('College', col ? col.name : activeFilters.college, function () { clearFilter('college'); }));
     }
+    if (activeFilters.branch) {
+      var brPill = subjectIdx.find(function (s) { return s.branchSlug === activeFilters.branch; });
+      parts.push(pill('Branch', brPill ? brPill.branch : activeFilters.branch, function () { clearFilter('branch'); }));
+    }
     if (activeFilters.semester) {
       parts.push(pill('Semester', activeFilters.semester, function () { clearFilter('semester'); }));
+    }
+    if (activeFilters.subject) {
+      var subPill = subjectIdx.find(function (s) { return s.url === activeFilters.subject; });
+      parts.push(pill('Subject', subPill ? subPill.name : 'Selected', function () { clearFilter('subject'); }));
     }
     if (activeFilters.year) {
       parts.push(pill('Year', activeFilters.year, function () { clearFilter('year'); }));
@@ -556,16 +633,20 @@
     var params = new URLSearchParams(window.location.search);
     var q      = params.get('q') || params.get('query') || '';
     var c      = params.get('college')  || '';
+    var br     = params.get('branch')   || '';
     var s      = params.get('semester') || '';
+    var sub    = params.get('subject')  || '';
     var y      = params.get('year')     || '';
 
-    if (q) el('nsearch-input').value = q;
-    if (c) activeFilters.college  = c;
-    if (s) activeFilters.semester = s;
-    if (y) activeFilters.year     = y;
+    if (q)   el('nsearch-input').value = q;
+    if (c)   activeFilters.college  = c;
+    if (br)  activeFilters.branch   = br;
+    if (s)   activeFilters.semester = s;
+    if (sub) activeFilters.subject  = sub;
+    if (y)   activeFilters.year     = y;
     updateChipLabels();
 
-    if (q || c || s || y) {
+    if (q || c || br || s || sub || y) {
       setTimeout(runSearch, 120);   // tiny delay for COLLEGE_DATA to be ready
     }
   }
@@ -657,12 +738,12 @@
     });
 
     // Chip click → toggle dropdown
-    ['college', 'semester', 'year'].forEach(function (f) {
+    ['college', 'branch', 'semester', 'subject', 'year'].forEach(function (f) {
       el('nsearch-chip-' + f).addEventListener('click', function () { toggleDropdown(f); });
     });
 
     // Dropdown item selection — delegated
-    ['college', 'semester', 'year'].forEach(function (f) {
+    ['college', 'branch', 'semester', 'subject', 'year'].forEach(function (f) {
       el('nsearch-dd-' + f).addEventListener('click', function (e) {
         var btn = e.target.closest('.nsearch-dd-item');
         if (!btn) return;
@@ -717,7 +798,7 @@
     checkURLParams();
 
     // Focus input on page load if no params triggered search
-    if (!activeQuery && !activeFilters.college && !activeFilters.semester && !activeFilters.year) {
+    if (!activeQuery && !activeFilters.college && !activeFilters.branch && !activeFilters.semester && !activeFilters.subject && !activeFilters.year) {
       input.focus();
     }
   }

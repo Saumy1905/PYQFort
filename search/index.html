@@ -37,10 +37,22 @@ description: "Search PYQs, subjects, and resources across all colleges on PYQFor
           <span class="nsearch-chip-val" id="nsearch-chip-college-val"></span>
           <i class="fas fa-chevron-down nsearch-chip-arrow"></i>
         </button>
+        <button class="nsearch-chip" data-filter="branch" id="nsearch-chip-branch">
+          <i class="fas fa-code-branch"></i>
+          <span class="nsearch-chip-label">Branch</span>
+          <span class="nsearch-chip-val" id="nsearch-chip-branch-val"></span>
+          <i class="fas fa-chevron-down nsearch-chip-arrow"></i>
+        </button>
         <button class="nsearch-chip" data-filter="semester" id="nsearch-chip-semester">
           <i class="fas fa-layer-group"></i>
           <span class="nsearch-chip-label">Semester</span>
           <span class="nsearch-chip-val" id="nsearch-chip-semester-val"></span>
+          <i class="fas fa-chevron-down nsearch-chip-arrow"></i>
+        </button>
+        <button class="nsearch-chip" data-filter="subject" id="nsearch-chip-subject">
+          <i class="fas fa-book"></i>
+          <span class="nsearch-chip-label">Subject</span>
+          <span class="nsearch-chip-val" id="nsearch-chip-subject-val"></span>
           <i class="fas fa-chevron-down nsearch-chip-arrow"></i>
         </button>
         <button class="nsearch-chip" data-filter="year" id="nsearch-chip-year">
@@ -57,7 +69,9 @@ description: "Search PYQs, subjects, and resources across all colleges on PYQFor
       <!-- Filter Dropdowns (rendered by JS) -->
       <div class="nsearch-dropdown-anchor">
         <div class="nsearch-dropdown" id="nsearch-dd-college" style="display:none;"></div>
+        <div class="nsearch-dropdown" id="nsearch-dd-branch" style="display:none;"></div>
         <div class="nsearch-dropdown" id="nsearch-dd-semester" style="display:none;"></div>
+        <div class="nsearch-dropdown" id="nsearch-dd-subject" style="display:none;"></div>
         <div class="nsearch-dropdown" id="nsearch-dd-year" style="display:none;"></div>
       </div>
     </div>
