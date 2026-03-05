@@ -312,15 +312,11 @@ h1, h2, h3, h4, h5, h6 {
 .search-form-large-btn:hover {
   background: var(--primary-dark);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(74, 108, 247, 0.3);
 }
 
 .search-form-large-btn:active {
-  transform: translateY(0);
-}
-
-.dark-theme .search-form-large-btn:hover {
-  box-shadow: 0 4px 14px rgba(93, 123, 249, 0.35);
+  transform: scale(0.97);
+  background: var(--primary-dark);
 }
 
 /* Breadcrumbs */
