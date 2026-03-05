@@ -8,9 +8,13 @@ title: Home
     <h1>Welcome to PYQFort</h1>
     <p>Access, view, and download PYQs</p>
     <div class="hero-search">
-      <form class="search-form-large" action="{{ '/search/' | relative_url }}">
-        <input type="text" name="q" placeholder="Search for PDFs...">
-        <button type="submit"><i class="fas fa-search"></i> Search</button>
+      <form class="search-form-large" action="{{ '/search/' | relative_url }}" autocomplete="off">
+        <i class="fas fa-search search-form-large-icon"></i>
+        <input type="text" name="q" placeholder="Search colleges, subjects, papers…" spellcheck="false">
+        <button type="submit" class="search-form-large-btn">
+          <i class="fas fa-arrow-right"></i>
+          <span>Search</span>
+        </button>
       </form>
     </div>
   </div>
