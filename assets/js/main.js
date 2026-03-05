@@ -38,19 +38,56 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
+  // Core function that applies the theme change
+  function applyThemeToggle() {
+    html.classList.toggle('dark-theme');
+    var theme = html.classList.contains('dark-theme') ? 'dark' : 'light';
+    themeToggle.innerHTML = theme === 'dark'
+      ? '<i class="fas fa-sun"></i>'
+      : '<i class="fas fa-moon"></i>';
+    localStorage.setItem('theme', theme);
+  }
+
   if (themeToggle) {
     themeToggle.addEventListener('click', function() {
-      html.classList.toggle('dark-theme');
-      
-      let theme = 'light';
-      if (html.classList.contains('dark-theme')) {
-        theme = 'dark';
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      // Calculate circle origin from button center
+      var rect = themeToggle.getBoundingClientRect();
+      var cx = rect.left + rect.width / 2;
+      var cy = rect.top + rect.height / 2;
+      // Radius needed to cover entire viewport from that point
+      var maxR = Math.hypot(
+        Math.max(cx, window.innerWidth - cx),
+        Math.max(cy, window.innerHeight - cy)
+      );
+
+      // Set CSS custom properties for the clip-path animation origin
+      html.style.setProperty('--reveal-x', cx + 'px');
+      html.style.setProperty('--reveal-y', cy + 'px');
+      html.style.setProperty('--reveal-r', maxR + 'px');
+
+      // Use View Transition API if available (flicker-free atomic DOM update)
+      if (document.startViewTransition) {
+        var transition = document.startViewTransition(function() {
+          applyThemeToggle();
+        });
+        transition.ready.then(function() {
+          // Animate the NEW snapshot from circle(0) to full coverage
+          document.documentElement.animate(
+            [
+              { clipPath: 'circle(0px at ' + cx + 'px ' + cy + 'px)' },
+              { clipPath: 'circle(' + maxR + 'px at ' + cx + 'px ' + cy + 'px)' }
+            ],
+            {
+              duration: 800,
+              easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+              pseudoElement: '::view-transition-new(root)'
+            }
+          );
+        });
       } else {
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        // Fallback: instant toggle for browsers without View Transition API
+        applyThemeToggle();
       }
-      
-      localStorage.setItem('theme', theme);
     });
   }
   

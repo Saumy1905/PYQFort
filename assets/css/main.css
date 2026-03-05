@@ -45,6 +45,23 @@
   --refact-color-hover: rgba(229, 196, 74, 0.16);
 }
 
+/* ── Circular Reveal Theme Transition (View Transition API) ───── */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Old snapshot stays put as the under-layer */
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+/* New snapshot expands over it via clip-path (driven by JS) */
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
 * {
   margin: 0;
   padding: 0;
