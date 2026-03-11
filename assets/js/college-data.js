@@ -3296,6 +3296,62 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "Manufacturing 2025",
                     },
+                    {
+                      year: 2026,
+                      file: "pyqfort-manufacturing-practices-module-1.pdf",
+                      id: "pyqfort-manufacturing-practices-module-1",
+                      pages: 3,
+                      title: "Manufacturing Practices Module 1",
+                    },
+                    {
+                      year: 2026,
+                      file: "pyqfort-manufacturing-practices-module-2.pdf",
+                      id: "pyqfort-manufacturing-practices-module-2",
+                      pages: 3,
+                      title: "Manufacturing Practices Module 2",
+                    },
+                    {
+                      year: 2026,
+                      file: "pyqfort-manufacturing-practices-module-3.pdf",
+                      id: "pyqfort-manufacturing-practices-module-3",
+                      pages: 3,
+                      title: "Manufacturing Practices Module 3",
+                    },
+                    {
+                      year: 2026,
+                      file: "pyqfort-manufacturing-practices-module-4.pdf",
+                      id: "pyqfort-manufacturing-practices-module-4",
+                      pages: 3,
+                      title: "Manufacturing Practices Module 4",
+                    },
+                    {
+                      year: 2026,
+                      file: "m-machining-module-1-notes.pdf",
+                      id: "m-machining-module-1-notes",
+                      pages: 3,
+                      title: "Machining Module 1 Notes",
+                    },
+                    {
+                      year: 2026,
+                      file: "m-machining-module-2-notes.pdf",
+                      id: "m-machining-module-2-notes",
+                      pages: 3,
+                      title: "Machining Module 2 Notes",
+                    },
+                    {
+                      year: 2026,
+                      file: "m-machining-module-3-notes.pdf",
+                      id: "m-machining-module-3-notes",
+                      pages: 3,
+                      title: "Machining Module 3 Notes",
+                    },
+                    {
+                      year: 2026,
+                      file: "m-machining-module-4-notes.pdf",
+                      id: "m-machining-module-4-notes",
+                      pages: 3,
+                      title: "Machining Module 4 Notes",
+                    }
                   ],
                 },
                 {
@@ -12468,6 +12524,496 @@ window.COLLEGE_DATA = {
           ]
         }
       ]
+    },
+    {
+      name: "Netaji Subhas University of Technology",
+      slug: "nsut",
+      id: "nsut",
+      description: "Explore branches and Previous Year Question Papers",
+      keywords: ["nsut", "netaji subhas", "delhi", "engineering", "nsit"],
+      icon: "university",
+      branches: [
+        {
+          name: "Computer Engineering",
+          slug: "computer-engineering",
+          id: "computer-engineering",
+          description: "Computer Engineering Branch",
+          keywords: ["computer", "engineering", "software", "hardware", "cse"],
+          icon: "laptop-code",
+          semesters: [
+            {
+              number: 1,
+              slug: "sem1",
+              id: "sem1",
+              description: "Subjects for Semester 1",
+              keywords: ["semester 1", "foundation", "first year"],
+              subjects: [
+                {
+                  name: "Computer Programming",
+                  slug: "computer-programming",
+                  id: "computer-programming",
+                  description: "Computer Programming",
+                  keywords: ["programming", "c", "cpp", "basics"],
+                  icon: "code",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-computer-programming-raw.pdf",
+                      id: "nsut-computer-programming-raw",
+                      pages: 10,
+                      title: "Computer Programming Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Electrical Engineering",
+                  slug: "ee-engineering",
+                  id: "ee-engineering",
+                  description: "Electrical Engineering (Basics / Fundamentals)",
+                  keywords: ["electrical", "engineering", "circuits"],
+                  icon: "plug",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-ee-engineering-raw.pdf",
+                      id: "nsut-ee-engineering-raw",
+                      pages: 10,
+                      title: "Electrical Engineering Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Mathematics I",
+                  slug: "maths-1",
+                  id: "maths-1",
+                  description: "Mathematics - I",
+                  keywords: ["maths", "calculus", "algebra"],
+                  icon: "calculator",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-maths-1-raw.pdf",
+                      id: "nsut-maths-1-raw",
+                      pages: 10,
+                      title: "Mathematics I Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Mechanical Engineering",
+                  slug: "me",
+                  id: "me",
+                  description: "Mechanical Engineering (Basics / Engineering Mechanics)",
+                  keywords: ["mechanical", "engineering", "mechanics"],
+                  icon: "tools",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-me-raw.pdf",
+                      id: "nsut-me-raw",
+                      pages: 10,
+                      title: "Mechanical Engineering Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Physics",
+                  slug: "physics",
+                  id: "physics",
+                  description: "Engineering Physics",
+                  keywords: ["physics", "engineering", "optics", "mechanics"],
+                  icon: "atom",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-physics-raw.pdf",
+                      id: "nsut-physics-raw",
+                      pages: 10,
+                      title: "Physics Raw"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              number: 2,
+              slug: "sem2",
+              id: "sem2",
+              description: "Subjects for Semester 2",
+              keywords: ["semester 2", "foundation", "first year"],
+              subjects: [
+                {
+                  name: "Chemistry",
+                  slug: "chemistry",
+                  id: "chemistry",
+                  description: "Engineering Chemistry",
+                  keywords: ["chemistry", "engineering", "materials"],
+                  icon: "flask",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-chemistry-raw.pdf",
+                      id: "nsut-chemistry-raw",
+                      pages: 10,
+                      title: "Chemistry Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Data Structures",
+                  slug: "data-structures",
+                  id: "data-structures",
+                  description: "Data Structures",
+                  keywords: ["data structures", "ds", "algorithms"],
+                  icon: "sitemap",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-data-structures-raw.pdf",
+                      id: "nsut-data-structures-raw",
+                      pages: 10,
+                      title: "Data Structures Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Digital Logic Design",
+                  slug: "digital-logic-design",
+                  id: "digital-logic-design",
+                  description: "Digital Logic Design",
+                  keywords: ["digital", "logic", "design", "gates"],
+                  icon: "microchip",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-digital-logic-design-raw.pdf",
+                      id: "nsut-digital-logic-design-raw",
+                      pages: 10,
+                      title: "Digital Logic Design Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Discrete Structures",
+                  slug: "discrete-structures",
+                  id: "discrete-structures",
+                  description: "Discrete Mathematical Structures",
+                  keywords: ["discrete", "maths", "structures", "logic"],
+                  icon: "th",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-discrete-structures-raw.pdf",
+                      id: "nsut-discrete-structures-raw",
+                      pages: 10,
+                      title: "Discrete Structures Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "English",
+                  slug: "english",
+                  id: "english",
+                  description: "English / Communication Skills",
+                  keywords: ["english", "communication", "skills"],
+                  icon: "comment-dots",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-english-raw.pdf",
+                      id: "nsut-english-raw",
+                      pages: 10,
+                      title: "English Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Mathematics II",
+                  slug: "maths-2",
+                  id: "maths-2",
+                  description: "Mathematics - II",
+                  keywords: ["maths", "differential", "equations"],
+                  icon: "calculator",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-maths-2-raw.pdf",
+                      id: "nsut-maths-2-raw",
+                      pages: 10,
+                      title: "Mathematics II Raw"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              number: 3,
+              slug: "sem3",
+              id: "sem3",
+              description: "Subjects for Semester 3",
+              keywords: ["semester 3", "core", "computer"],
+              subjects: [
+                {
+                  name: "Computer Organization and Architecture",
+                  slug: "coa",
+                  id: "coa",
+                  description: "Computer Organization and Architecture",
+                  keywords: ["coa", "computer organization", "architecture"],
+                  icon: "microchip",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-coa-raw.pdf",
+                      id: "nsut-coa-raw",
+                      pages: 10,
+                      title: "COA Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Design and Analysis of Algorithms",
+                  slug: "daa",
+                  id: "daa",
+                  description: "Design and Analysis of Algorithms",
+                  keywords: ["daa", "algorithms", "complexity"],
+                  icon: "chart-line",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-daa-raw.pdf",
+                      id: "nsut-daa-raw",
+                      pages: 10,
+                      title: "DAA Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Database Management Systems",
+                  slug: "dbms",
+                  id: "dbms",
+                  description: "Database Management Systems",
+                  keywords: ["dbms", "database", "sql"],
+                  icon: "database",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-dbms-raw.pdf",
+                      id: "nsut-dbms-raw",
+                      pages: 10,
+                      title: "DBMS Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Microprocessor",
+                  slug: "microprocessor",
+                  id: "microprocessor",
+                  description: "Microprocessor and Microcontroller",
+                  keywords: ["microprocessor", "8085", "8086"],
+                  icon: "cpu",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-microprocessor-raw.pdf",
+                      id: "nsut-microprocessor-raw",
+                      pages: 10,
+                      title: "Microprocessor Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Web Technologies",
+                  slug: "web-technologies",
+                  id: "web-technologies",
+                  description: "Web Technologies",
+                  keywords: ["web", "html", "css", "javascript"],
+                  icon: "globe",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-web-technologies-raw.pdf",
+                      id: "nsut-web-technologies-raw",
+                      pages: 10,
+                      title: "Web Technologies Raw"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              number: 4,
+              slug: "sem4",
+              id: "sem4",
+              description: "Subjects for Semester 4",
+              keywords: ["semester 4", "core", "computer"],
+              subjects: [
+                {
+                  name: "Big Data",
+                  slug: "big-data",
+                  id: "big-data",
+                  description: "Big Data Analytics / Technologies",
+                  keywords: ["big data", "hadoop", "spark"],
+                  icon: "database",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-big-data-raw.pdf",
+                      id: "nsut-big-data-raw",
+                      pages: 10,
+                      title: "Big Data Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Data Communications",
+                  slug: "data-communications",
+                  id: "data-communications",
+                  description: "Data Communications / Computer Networks",
+                  keywords: ["data communications", "networks", "protocols"],
+                  icon: "network-wired",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-data-communications-raw.pdf",
+                      id: "nsut-data-communications-raw",
+                      pages: 10,
+                      title: "Data Communications Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Multimedia Analysis",
+                  slug: "multimedia-analysis",
+                  id: "multimedia-analysis",
+                  description: "Multimedia Analysis / Processing",
+                  keywords: ["multimedia", "analysis", "image", "video"],
+                  icon: "photo-video",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-multimedia-analysis-raw.pdf",
+                      id: "nsut-multimedia-analysis-raw",
+                      pages: 10,
+                      title: "Multimedia Analysis Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Operating Systems",
+                  slug: "operating-system",
+                  id: "operating-system",
+                  description: "Operating Systems",
+                  keywords: ["os", "operating systems", "processes"],
+                  icon: "cog",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-operating-system-raw.pdf",
+                      id: "nsut-operating-system-raw",
+                      pages: 10,
+                      title: "Operating System Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Theory of Automata",
+                  slug: "theory-of-automata",
+                  id: "theory-of-automata",
+                  description: "Theory of Automata and Computation",
+                  keywords: ["automata", "theory", "computation", "turing"],
+                  icon: "brain",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-theory-of-automata-raw.pdf",
+                      id: "nsut-theory-of-automata-raw",
+                      pages: 10,
+                      title: "Theory of Automata Raw"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              number: 5,
+              slug: "sem5",
+              id: "sem5",
+              description: "Subjects for Semester 5",
+              keywords: ["semester 5", "advanced", "computer"],
+              subjects: [
+                {
+                  name: "Compiler Construction",
+                  slug: "compiler-construction",
+                  id: "compiler-construction",
+                  description: "Compiler Construction / Design",
+                  keywords: ["compiler", "construction", "parsing"],
+                  icon: "code",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-compiler-construction-raw.pdf",
+                      id: "nsut-compiler-construction-raw",
+                      pages: 10,
+                      title: "Compiler Construction Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Data Handling",
+                  slug: "data-handling",
+                  id: "data-handling",
+                  description: "Data Handling / Big Data Handling (or similar)",
+                  keywords: ["data handling", "processing"],
+                  icon: "database",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-data-handling-raw.pdf",
+                      id: "nsut-data-handling-raw",
+                      pages: 10,
+                      title: "Data Handling Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Data Mining",
+                  slug: "data-mining",
+                  id: "data-mining",
+                  description: "Data Mining and Warehousing",
+                  keywords: ["data mining", "warehousing", "patterns"],
+                  icon: "search",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-data-mining-raw.pdf",
+                      id: "nsut-data-mining-raw",
+                      pages: 10,
+                      title: "Data Mining Raw"
+                    }
+                  ]
+                },
+                {
+                  name: "Distributed Computing",
+                  slug: "distributed-computing",
+                  id: "distributed-computing",
+                  description: "Distributed Computing / Systems",
+                  keywords: ["distributed", "computing", "systems"],
+                  icon: "network-wired",
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "nsut-distributed-computing-raw.pdf",
+                      id: "nsut-distributed-computing-raw",
+                      pages: 10,
+                      title: "Distributed Computing Raw"
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
   ],
 };

@@ -11913,3 +11913,475 @@
                   id: amity-oops-major-2023
                   title: "OOPs Major 2023"
                   upload: "Ishaan Rastogi"
+- name: Netaji Subhas University of Technology
+  slug: nsut
+  id: nsut
+  description: Explore branches and Previous Year Question Papers
+  keywords: ["nsut", "netaji subhas", "delhi", "engineering", "nsit"]
+  icon: university
+  branches:
+    - name: Computer Engineering
+      slug: computer-engineering
+      id: computer-engineering
+      description: Computer Engineering Branch
+      keywords: ["computer", "engineering", "software", "hardware", "cse"]
+      icon: laptop-code
+      semesters:
+        - number: 1
+          slug: sem1
+          id: sem1
+          description: Subjects for Semester 1
+          keywords: ["semester 1", "foundation", "first year"]
+          subjects:
+            - name: Computer Programming
+              slug: computer-programming
+              id: computer-programming
+              description: Computer Programming
+              keywords: ["programming", "c", "cpp", "basics"]
+              icon: code
+              pyqs:
+                - year: 2025
+                  file: nsut-computer-programming-raw.pdf
+                  id: nsut-computer-programming-raw
+                  title: "Computer Programming Raw"
+                  upload: "Megha"
+            - name: Electrical Engineering
+              slug: ee-engineering
+              id: ee-engineering
+              description: Electrical Engineering (Basics / Fundamentals)
+              keywords: ["electrical", "engineering", "circuits"]
+              icon: plug
+              pyqs:
+                - year: 2025
+                  file: nsut-ee-engineering-raw.pdf
+                  id: nsut-ee-engineering-raw
+                  title: "Electrical Engineering Raw"
+                  upload: "Megha"
+            - name: Mathematics I
+              slug: maths-1
+              id: maths-1
+              description: Mathematics - I
+              keywords: ["maths", "calculus", "algebra"]
+              icon: calculator
+              pyqs:
+                - year: 2025
+                  file: nsut-maths-1-raw.pdf
+                  id: nsut-maths-1-raw
+                  title: "Mathematics I Raw"
+                  upload: "Megha"
+            - name: Mechanical Engineering
+              slug: me
+              id: me
+              description: Mechanical Engineering (Basics / Engineering Mechanics)
+              keywords: ["mechanical", "engineering", "mechanics"]
+              icon: tools
+              pyqs:
+                - year: 2025
+                  file: nsut-me-raw.pdf
+                  id: nsut-me-raw
+                  title: "Mechanical Engineering Raw"
+                  upload: "Megha"
+            - name: Physics
+              slug: physics
+              id: physics
+              description: Engineering Physics
+              keywords: ["physics", "engineering", "optics", "mechanics"]
+              icon: atom
+              pyqs:
+                - year: 2025
+                  file: nsut-physics-raw.pdf
+                  id: nsut-physics-raw
+                  title: "Physics Raw"
+                  upload: "Megha"
+        - number: 2
+          slug: sem2
+          id: sem2
+          description: Subjects for Semester 2
+          keywords: ["semester 2", "foundation", "first year"]
+          subjects:
+            - name: Chemistry
+              slug: chemistry
+              id: chemistry
+              description: Engineering Chemistry
+              keywords: ["chemistry", "engineering", "materials"]
+              icon: flask
+              pyqs:
+                - year: 2025
+                  file: nsut-chemistry-raw.pdf
+                  id: nsut-chemistry-raw
+                  title: "Chemistry Raw"
+                  upload: "Megha"
+            - name: Data Structures
+              slug: data-structures
+              id: data-structures
+              description: Data Structures
+              keywords: ["data structures", "ds", "algorithms"]
+              icon: sitemap
+              pyqs:
+                - year: 2025
+                  file: nsut-data-structures-raw.pdf
+                  id: nsut-data-structures-raw
+                  title: "Data Structures Raw"
+                  upload: "Megha"
+            - name: Digital Logic Design
+              slug: digital-logic-design
+              id: digital-logic-design
+              description: Digital Logic Design
+              keywords: ["digital", "logic", "design", "gates"]
+              icon: microchip
+              pyqs:
+                - year: 2025
+                  file: nsut-digital-logic-design-raw.pdf
+                  id: nsut-digital-logic-design-raw
+                  title: "Digital Logic Design Raw"
+                  upload: "Megha"
+            - name: Discrete Structures
+              slug: discrete-structures
+              id: discrete-structures
+              description: Discrete Mathematical Structures
+              keywords: ["discrete", "maths", "structures", "logic"]
+              icon: th
+              pyqs:
+                - year: 2025
+                  file: nsut-discrete-structures-raw.pdf
+                  id: nsut-discrete-structures-raw
+                  title: "Discrete Structures Raw"
+                  upload: "Megha"
+            - name: English
+              slug: english
+              id: english
+              description: English / Communication Skills
+              keywords: ["english", "communication", "skills"]
+              icon: comment-dots
+              pyqs:
+                - year: 2025
+                  file: nsut-english-raw.pdf
+                  id: nsut-english-raw
+                  title: "English Raw"
+                  upload: "Megha"
+            - name: Mathematics II
+              slug: maths-2
+              id: maths-2
+              description: Mathematics - II
+              keywords: ["maths", "differential", "equations"]
+              icon: calculator
+              pyqs:
+                - year: 2025
+                  file: nsut-maths-2-raw.pdf
+                  id: nsut-maths-2-raw
+                  title: "Mathematics II Raw"
+                  upload: "Megha"
+        - number: 3
+          slug: sem3
+          id: sem3
+          description: Subjects for Semester 3
+          keywords: ["semester 3", "core", "computer"]
+          subject_marketing_cards:
+            - title: "COA Module-1 Notes"
+              description: "FREE Premium! | 11 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-1-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "COA Module-2 Notes"
+              description: "FREE Premium! | 20 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-2-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "OS Module-5 & 6 Notes"
+              description: "Paid Premium! | 47 pages | for just ₹20"
+              url: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-os-module-5_6-notes.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+          subjects:
+            - name: Computer Organization and Architecture
+              slug: coa
+              id: coa
+              description: Computer Organization and Architecture
+              keywords: ["coa", "computer organization", "architecture"]
+              icon: microchip
+              pyqs:
+                - year: 2025
+                  file: nsut-coa-raw.pdf
+                  id: nsut-coa-raw
+                  title: "COA Raw"
+                  upload: "Megha"
+                - year: 2026
+                  file: pyqfort-coa-module-1-notes.pdf
+                  id: pyqfort-coa-module-1-notes 
+                  pages: 12
+                  title: "PYQFort COA Module 1"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-coa-module-2-notes.pdf
+                  id: pyqfort-coa-module-2-notes 
+                  pages: 21
+                  title: "PYQFort COA Module 2"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-coa-module-3-notes.pdf
+                  id: pyqfort-coa-module-3-notes 
+                  pages: 12
+                  title: "PYQFort COA Module 3"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-coa-module-4-notes.pdf
+                  id: pyqfort-coa-module-4-notes 
+                  pages: 8
+                  title: "PYQFort COA Module 4"
+                  new: true
+                  pyqfort_notes: true
+            - name: Design and Analysis of Algorithms
+              slug: daa
+              id: daa
+              description: Design and Analysis of Algorithms
+              keywords: ["daa", "algorithms", "complexity"]
+              icon: chart-line
+              pyqs:
+                - year: 2025
+                  file: nsut-daa-raw.pdf
+                  id: nsut-daa-raw
+                  title: "DAA Raw"
+                  upload: "Megha"
+            - name: Database Management Systems
+              slug: dbms
+              id: dbms
+              description: Database Management Systems
+              keywords: ["dbms", "database", "sql"]
+              icon: database
+              pyqs:
+                - year: 2025
+                  file: nsut-dbms-raw.pdf
+                  id: nsut-dbms-raw
+                  title: "DBMS Raw"
+                  upload: "Megha"
+            - name: Microprocessor
+              slug: microprocessor
+              id: microprocessor
+              description: Microprocessor and Microcontroller
+              keywords: ["microprocessor", "8085", "8086"]
+              icon: cpu
+              pyqs:
+                - year: 2025
+                  file: nsut-microprocessor-raw.pdf
+                  id: nsut-microprocessor-raw
+                  title: "Microprocessor Raw"
+                  upload: "Megha"
+            - name: Web Technologies
+              slug: web-technologies
+              id: web-technologies
+              description: Web Technologies
+              keywords: ["web", "html", "css", "javascript"]
+              icon: globe
+              pyqs:
+                - year: 2025
+                  file: nsut-web-technologies-raw.pdf
+                  id: nsut-web-technologies-raw
+                  title: "Web Technologies Raw"
+                  upload: "Megha"
+        - number: 4
+          slug: sem4
+          id: sem4
+          description: Subjects for Semester 4
+          keywords: ["semester 4", "core", "computer"]
+          subject_marketing_cards:
+            - title: "COA Module-1 Notes"
+              description: "FREE Premium! | 11 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-1-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "COA Module-2 Notes"
+              description: "FREE Premium! | 20 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-coa-module-2-notes.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+            - title: "OS Module-5 & 6 Notes"
+              description: "Paid Premium! | 47 pages | for just ₹20"
+              url: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-os-module-5_6-notes.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
+          subjects:
+            - name: Big Data
+              slug: big-data
+              id: big-data
+              description: Big Data Analytics / Technologies
+              keywords: ["big data", "hadoop", "spark"]
+              icon: database
+              pyqs:
+                - year: 2025
+                  file: nsut-big-data-raw.pdf
+                  id: nsut-big-data-raw
+                  title: "Big Data Raw"
+                  upload: "Megha"
+            - name: Data Communications
+              slug: data-communications
+              id: data-communications
+              description: Data Communications / Computer Networks
+              keywords: ["data communications", "networks", "protocols"]
+              icon: network-wired
+              pyqs:
+                - year: 2025
+                  file: nsut-data-communications-raw.pdf
+                  id: nsut-data-communications-raw
+                  title: "Data Communications Raw"
+                  upload: "Megha"
+            - name: Multimedia Analysis
+              slug: multimedia-analysis
+              id: multimedia-analysis
+              description: Multimedia Analysis / Processing
+              keywords: ["multimedia", "analysis", "image", "video"]
+              icon: photo-video
+              pyqs:
+                - year: 2025
+                  file: nsut-multimedia-analysis-raw.pdf
+                  id: nsut-multimedia-analysis-raw
+                  title: "Multimedia Analysis Raw"
+                  upload: "Megha"
+            - name: Operating Systems
+              slug: operating-system
+              id: operating-system
+              description: Operating Systems
+              keywords: ["os", "operating systems", "processes"]
+              icon: cog
+              pyqs:
+                - year: 2025
+                  file: nsut-operating-system-raw.pdf
+                  id: nsut-operating-system-raw
+                  title: "Operating System Raw"
+                  upload: "Megha"
+                - year: 2026
+                  file: pyqfort-os-module-1-notes.pdf
+                  id: pyqfort-os-module-1-notes 
+                  pages: 12
+                  title: "PYQFort OS Module 1"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-2-notes.pdf
+                  id: pyqfort-os-module-2-notes 
+                  pages: 12
+                  title: "PYQFort OS Module 2"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-3-notes.pdf
+                  id: pyqfort-os-module-3-notes 
+                  pages: 10
+                  title: "PYQFort OS Module 3"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-4-notes.pdf
+                  id: pyqfort-os-module-4-notes 
+                  pages: 13
+                  title: "PYQFort OS Module 4"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-os-module-5-notes.pdf
+                  id: pyqfort-os-module-5-notes 
+                  pages: 24
+                  title: "PYQFort OS Module 5"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-os-module-6-notes.pdf
+                  id: pyqfort-os-module-6-notes 
+                  pages: 25
+                  title: "PYQFort OS Module 6"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+            - name: Theory of Automata
+              slug: theory-of-automata
+              id: theory-of-automata
+              description: Theory of Automata and Computation
+              keywords: ["automata", "theory", "computation", "turing"]
+              icon: brain
+              pyqs:
+                - year: 2025
+                  file: nsut-theory-of-automata-raw.pdf
+                  id: nsut-theory-of-automata-raw
+                  title: "Theory of Automata Raw"
+                  upload: "Megha"
+        - number: 5
+          slug: sem5
+          id: sem5
+          description: Subjects for Semester 5
+          keywords: ["semester 5", "advanced", "computer"]
+          subjects:
+            - name: Compiler Construction
+              slug: compiler-construction
+              id: compiler-construction
+              description: Compiler Construction / Design
+              keywords: ["compiler", "construction", "parsing"]
+              icon: code
+              pyqs:
+                - year: 2025
+                  file: nsut-compiler-construction-raw.pdf
+                  id: nsut-compiler-construction-raw
+                  title: "Compiler Construction Raw"
+                  upload: "Megha"
+            - name: Data Handling
+              slug: data-handling
+              id: data-handling
+              description: Data Handling / Big Data Handling (or similar)
+              keywords: ["data handling", "processing"]
+              icon: database
+              pyqs:
+                - year: 2025
+                  file: nsut-data-handling-raw.pdf
+                  id: nsut-data-handling-raw
+                  title: "Data Handling Raw"
+                  upload: "Megha"
+            - name: Data Mining
+              slug: data-mining
+              id: data-mining
+              description: Data Mining and Warehousing
+              keywords: ["data mining", "warehousing", "patterns"]
+              icon: search
+              pyqs:
+                - year: 2025
+                  file: nsut-data-mining-raw.pdf
+                  id: nsut-data-mining-raw
+                  title: "Data Mining Raw"
+                  upload: "Megha"
+            - name: Distributed Computing
+              slug: distributed-computing
+              id: distributed-computing
+              description: Distributed Computing / Systems
+              keywords: ["distributed", "computing", "systems"]
+              icon: network-wired
+              pyqs:
+                - year: 2025
+                  file: nsut-distributed-computing-raw.pdf
+                  id: nsut-distributed-computing-raw
+                  title: "Distributed Computing Raw"
+                  upload: "Megha"
