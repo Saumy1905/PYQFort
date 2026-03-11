@@ -80,24 +80,29 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
-    padding: 0.7rem 1rem;
-    background-color: transparent;
+    padding: 0.65rem 1rem;
+    background: transparent;
     color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 10px;
     font-weight: 600;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
     flex: 1;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     min-width: 0;
+    text-decoration: none;
+    cursor: pointer;
   }
   
   .btn-view-premium:hover {
-    background-color: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(74, 108, 247, 0.3);
+    background: var(--primary-color);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  .btn-view-premium:active {
+    transform: scale(0.97);
   }
   
   .praxian-asterisk {

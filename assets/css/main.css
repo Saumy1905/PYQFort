@@ -356,7 +356,6 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
-  perspective: 1000px;
 }
 
 .college-card {
@@ -488,19 +487,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-view {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 4px;
-  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
   text-align: center;
-  transition: background-color 0.3s;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.15s;
 }
 
 .btn-view:hover {
-  background-color: var(--primary-dark);
-  color: white;
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+.btn-view:active {
+  transform: scale(0.97);
+  background: var(--primary-dark);
 }
 
 /* Semester cards */
@@ -509,7 +521,6 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
-  perspective: 1000px;
 }
 
 .semester-card {
@@ -559,7 +570,6 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
-  perspective: 1000px;
 }
 
 .subject-card {
@@ -569,13 +579,12 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  transform-style: preserve-3d;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .subject-card:hover {
-  transform: translateZ(20px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
 .subject-title {
@@ -603,7 +612,6 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
-  perspective: 1000px;
 }
 
 .pdf-card {
@@ -658,20 +666,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-download {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  background: transparent;
   color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 4px;
-  font-weight: 500;
+  border: 1.5px solid var(--primary-color);
+  border-radius: 10px;
+  cursor: pointer;
   text-align: center;
-  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
 }
 
 .btn-download:hover {
-  background-color: var(--primary-color);
-  color: white;
+  background: var(--primary-color);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-download:active {
+  transform: scale(0.97);
 }
 
 /* PDF List */
@@ -2708,7 +2728,6 @@ h1, h2, h3, h4, h5, h6 {
 .semester-card,
 .subject-card,
 .pdf-card {
-  transform-style: preserve-3d;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -2717,8 +2736,8 @@ h1, h2, h3, h4, h5, h6 {
 .semester-card:hover,
 .subject-card:hover,
 .pdf-card:hover {
-  transform: translateZ(20px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
 /* Elegant touch feedback for mobile devices */
@@ -2728,12 +2747,8 @@ h1, h2, h3, h4, h5, h6 {
   .semester-card,
   .subject-card,
   .pdf-card {
-    /* Maintain 3D context for elegant effects */
-    transform-style: preserve-3d;
     /* Smooth transitions optimized for touch */
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
-    /* Hardware acceleration for smooth performance */
-    will-change: transform;
   }
   
   /* Active state for touch feedback */
