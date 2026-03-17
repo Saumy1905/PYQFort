@@ -3435,6 +3435,133 @@ window.COLLEGE_DATA = {
                     },
                   ],
                 },
+                {
+                  name: "Sessional",
+                  id: "sessional",
+                  description: "Subjects for Sessional Exams",
+                  keywords: ["sessional", "exams"],
+                  pyqs: [
+                    {
+                      year: 2025,
+                      file: "ymca-at-mid-1-2025.pdf",
+                      id: "ymca-at-mid-1-2025",
+                      pages: 3,
+                      title: "AT 2025 Mid 1"
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-at-mid-2-2025.pdf",
+                      id: "ymca-at-mid-2-2025",
+                      pages: 3,
+                      title: "AT 2025 Mid 2"
+                    },
+                    {
+                      year: 2026,
+                      file: "ymca-at-mid-1-2026.pdf",
+                      id: "ymca-at-mid-1-2026",
+                      pages: 3,
+                      title: "AT 2026 Mid 1"
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-kom-mid-1-2025.pdf",
+                      id: "ymca-kom-mid-1-2025",
+                      pages: 3,
+                      title: "KOM 2025 Mid 1"
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-kom-mid-2-2025.pdf",
+                      id: "ymca-kom-mid-2-2025",
+                      pages: 3,
+                      title: "KOM 2025 Mid 2"
+                    },
+                    {
+                      year: 2026,
+                      file: "ymca-kom-mid-1-2026.pdf",
+                      id: "ymca-kom-mid-1-2026",
+                      pages: 3,
+                      title: "KOM 2026 Mid 1"
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-manufacturing-mid-1-2025.pdf",
+                      id: "ymca-manufacturing-mid-1-2025",
+                      pages: 3,
+                      title: "Manufacturing 2025 Mid 1"
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-manufacturing-mid-2-2025.pdf",
+                      id: "ymca-manufacturing-mid-2-2025",
+                      pages: 3,
+                      title: "Manufacturing 2025 Mid 2"
+                    },
+                    {
+                      year: 2026,
+                      file: "ymca-manufacturing-mid-1-2026.pdf",
+                      id: "ymca-manufacturing-mid-1-2026",
+                      pages: 3,
+                      title: "Manufacturing 2026 Mid 1"
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-material-mid-1-2025.pdf",
+                      id: "ymca-material-mid-1-2025",
+                      pages: 3,
+                      title: "ME 2025 Mid 1"
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-material-mid-2-2025.pdf",
+                      id: "ymca-material-mid-2-2025",
+                      pages: 3,
+                      title: "ME 2025 Mid 2"
+                    },
+                    {
+                      year: 2026,
+                      file: "ymca-material-mid-1-2026.pdf",
+                      id: "ymca-material-mid-1-2026",
+                      pages: 3,
+                      title: "ME 2026 Mid 1"
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-nrbc-mid-1-2025.pdf",
+                      id: "ymca-nrbc-mid-1-2025",
+                      pages: 3,
+                      title: "NRBC 2025 Mid 1"
+                    },
+                    {
+                      year: 2026,
+                      file: "ymca-nrbc-mid-1-2026.pdf",
+                      id: "ymca-nrbc-mid-1-2026",
+                      pages: 3,
+                      title: "NRBC 2026 Mid 1"
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-som-2-mid-1-2025.pdf",
+                      id: "ymca-som-2-mid-1-2025",
+                      pages: 3,
+                      title: "SOM-2 2025 Mid 1"
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-som-2-mid-2-2025.pdf",
+                      id: "ymca-som-2-mid-2-2025",
+                      pages: 3,
+                      title: "SOM-2 2025 Mid 2"
+                    },
+                    {
+                      year: 2026,
+                      file: "ymca-som-2-mid-1-2026.pdf",
+                      id: "ymca-som-2-mid-1-2026",
+                      pages: 3,
+                      title: "SOM-2 2026 Mid 1"
+                    }
+                  ],
+                }
               ],
             },
             {
