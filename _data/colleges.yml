@@ -6759,6 +6759,25 @@
                   pages: 3
                   title: "CAD/CAM 2025"
                   upload: "Saumy"
+            - name: EPWMS
+              slug: epwms
+              id: epwms
+              description: Study of energy and power in mechanical systems
+              keywords: ["energy", "power", "mechanical", "systems"]
+              icon: bolt
+              pyqs:
+                - year: 2025
+                  file: ymca-epwms-2025.pdf
+                  id: ymca-epwms-2025
+                  pages: 3
+                  title: "EPWMS 2025"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-epwms-2025-sessional.pdf
+                  id: ymca-epwms-2025-sessional
+                  pages: 3
+                  title: "EPWMS 2025 Sessional"
+                  upload: "Saumy"
             - name: Flexible Manufacturing Systems
               slug: fms
               id: fms
@@ -6940,6 +6959,19 @@
                   pyqfort_notes: true
                   praxian: true
                   praxian_link: "https://topmate.io/saumy1905/1977013?utm_source=public_profile&utm_campaign=saumy1905"
+            - name: WSES
+              slug: wses
+              id: wses
+              description: Study of work system engineering and safety
+              keywords: ["work system", "engineering", "safety"]
+              icon: hard-hat
+              pyqs:
+                - year: 2023
+                  file: ymca-wses-2023.pdf
+                  id: ymca-wses-2023
+                  pages: 3
+                  title: "WSES 2023"
+                  upload: "Saumy"
         - number: 7
           slug: sem7
           id: sem7
