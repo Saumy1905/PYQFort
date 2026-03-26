@@ -174,6 +174,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 0.35rem;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
 }
 
 /* ── Unified Utility Icon Buttons ────────────────────────────────── */
@@ -1185,7 +1187,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .site-header .container {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   
   .site-nav {
@@ -1203,6 +1205,22 @@ h1, h2, h3, h4, h5, h6 {
   
   .menu-toggle {
     display: block;
+  }
+
+  /* Compact utility icons for mobile */
+  .header-right {
+    gap: 0.2rem;
+  }
+
+  .util-icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .util-icon-btn .util-svg {
+    width: 18px;
+    height: 18px;
   }
   
   .hero h1 {

@@ -19,16 +19,32 @@
       background-color: var(--bg-color);
       color: var(--text-color);
     }
+    /* Prevent theme-icon flash: hide sun by default, show it when .is-dark */
+    .theme-toggle .theme-icon-sun { opacity: 0; position: absolute; }
+    .theme-toggle .theme-icon-moon { opacity: 1; position: absolute; }
+    .theme-toggle.is-dark .theme-icon-sun { opacity: 1; }
+    .theme-toggle.is-dark .theme-icon-moon { opacity: 0; }
   </style>
 
   <!-- Inline script to apply theme immediately -->
   <script>
     (function() {
       // Check localStorage for theme preference
-      const theme = localStorage.getItem('theme');
+      var theme = localStorage.getItem('theme');
+      var isDark = theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
       // Apply dark-theme class if saved or system prefers dark mode
-      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      if (isDark) {
         document.documentElement.classList.add('dark-theme');
+      }
+      // Synchronously mark theme-toggle so the correct icon renders on first paint
+      // (the button doesn't exist yet in <head>, so we use a DOMContentLoaded-racing
+      //  MutationObserver that fires as soon as the element is parsed)
+      if (isDark) {
+        var mo = new MutationObserver(function(mutations, obs) {
+          var btn = document.querySelector('.theme-toggle');
+          if (btn) { btn.classList.add('is-dark'); obs.disconnect(); }
+        });
+        mo.observe(document.documentElement, { childList: true, subtree: true });
       }
     })();
   </script>
