@@ -5951,15 +5951,6 @@ h1, h2, h3, h4, h5, h6 {
 .neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(7) { transition-delay: 0.22s; }
 .neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(8) { transition-delay: 0.25s; }
 .neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(9) { transition-delay: 0.28s; }
-.neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(10) { transition-delay: 0.31s; }
-.neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(11) { transition-delay: 0.34s; }
-.neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(12) { transition-delay: 0.37s; }
-.neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(13) { transition-delay: 0.40s; }
-.neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(14) { transition-delay: 0.43s; }
-.neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(15) { transition-delay: 0.46s; }
-.neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(16) { transition-delay: 0.49s; }
-.neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(17) { transition-delay: 0.52s; }
-.neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(18) { transition-delay: 0.55s; }
 
 /* Reset delays when closing so items disappear immediately */
 .neo-grid-overlay:not(.neo-grid-active) .neo-grid-item {
