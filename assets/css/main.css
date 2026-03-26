@@ -5823,7 +5823,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(8px);
   opacity: 0;
   transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
