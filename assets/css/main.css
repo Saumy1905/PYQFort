@@ -5843,7 +5843,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 70px;
   right: 20px;
   width: 320px;
-  max-height: calc(100vh - 100px);
+  max-height: calc(70vh - 100px);
   overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -6073,7 +6073,7 @@ body.neo-grid-body-lock {
     transform: scale(0.85) translateX(50%) translateY(20px);
     transform-origin: bottom center;
     width: min(90vw, 340px);
-    max-height: calc(100vh - 60px);
+    max-height: calc(63vh - 60px);
     padding: 20px;
     gap: 6px;
     border-radius: 24px;
@@ -6105,6 +6105,7 @@ body.neo-grid-body-lock {
 @media (max-width: 400px) {
   .neo-grid-panel {
     width: min(92vw, 310px);
+    max-height: calc(60vh - 60px);
     padding: 16px;
     gap: 4px;
     border-radius: 22px;
