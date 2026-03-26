@@ -118,6 +118,49 @@
     </div>
   </header>
 
+  <!-- Neo-Grid Menu Overlay -->
+  <div id="neo-grid-overlay" class="neo-grid-overlay" aria-hidden="true">
+    <div class="neo-grid-backdrop"></div>
+    <div class="neo-grid-panel" role="navigation" aria-label="Quick Navigation Menu">
+      <a href="{{ '/' | relative_url }}" class="neo-grid-item">
+        <span class="neo-grid-icon"><i class="fa-solid fa-house"></i></span>
+        <span class="neo-grid-label">Home</span>
+      </a>
+      <a href="{{ '/search/' | relative_url }}" class="neo-grid-item">
+        <span class="neo-grid-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span class="neo-grid-label">Search</span>
+      </a>
+      <a href="{{ '/about/' | relative_url }}" class="neo-grid-item">
+        <span class="neo-grid-icon"><i class="fa-solid fa-circle-info"></i></span>
+        <span class="neo-grid-label">About</span>
+      </a>
+      <a href="{{ '/refact/' | relative_url }}" class="neo-grid-item">
+        <span class="neo-grid-icon"><i class="fa-solid fa-rotate"></i></span>
+        <span class="neo-grid-label">Refact</span>
+      </a>
+      <a href="https://tally.so/r/wz6BKa" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
+        <span class="neo-grid-icon"><i class="fa-solid fa-plus"></i></span>
+        <span class="neo-grid-label">Add PYQs</span>
+      </a>
+      <a href="https://tally.so/r/n0W0EN" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
+        <span class="neo-grid-icon"><i class="fa-solid fa-bug"></i></span>
+        <span class="neo-grid-label">Bug Report</span>
+      </a>
+      <a href="https://whatsapp.com/channel/0029VbA8ahgDzgT43SB9VH1V" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
+        <span class="neo-grid-icon"><i class="fa-brands fa-whatsapp"></i></span>
+        <span class="neo-grid-label">WhatsApp</span>
+      </a>
+      <a href="https://www.linkedin.com/company/pyqfort" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
+        <span class="neo-grid-icon"><i class="fa-brands fa-linkedin"></i></span>
+        <span class="neo-grid-label">LinkedIn</span>
+      </a>
+      <a href="https://www.instagram.com/pyqfort" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
+        <span class="neo-grid-icon"><i class="fa-brands fa-instagram"></i></span>
+        <span class="neo-grid-label">Instagram</span>
+      </a>
+    </div>
+  </div>
+
   <main class="site-content">
     {{ content }}
   </main>

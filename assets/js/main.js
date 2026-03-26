@@ -1,12 +1,57 @@
 document.addEventListener('DOMContentLoaded', function() {
   
-  // Toggle mobile menu
+  // Neo-Grid Menu
   const menuToggle = document.querySelector('.menu-toggle');
-  const siteNav = document.querySelector('.site-nav');
-  
-  if (menuToggle && siteNav) {
+  const neoOverlay = document.getElementById('neo-grid-overlay');
+  const neoBackdrop = neoOverlay ? neoOverlay.querySelector('.neo-grid-backdrop') : null;
+  const neoGridItems = neoOverlay ? neoOverlay.querySelectorAll('.neo-grid-item') : [];
+
+  function openNeoGrid() {
+    if (!neoOverlay) return;
+    neoOverlay.classList.add('neo-grid-active');
+    neoOverlay.setAttribute('aria-hidden', 'false');
+    menuToggle.classList.add('neo-grid-open');
+    menuToggle.querySelector('i').classList.replace('fa-bars', 'fa-xmark');
+    document.body.classList.add('neo-grid-body-lock');
+  }
+
+  function closeNeoGrid() {
+    if (!neoOverlay) return;
+    neoOverlay.classList.remove('neo-grid-active');
+    neoOverlay.setAttribute('aria-hidden', 'true');
+    menuToggle.classList.remove('neo-grid-open');
+    menuToggle.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
+    document.body.classList.remove('neo-grid-body-lock');
+  }
+
+  if (menuToggle && neoOverlay) {
+    // Toggle on button click
     menuToggle.addEventListener('click', function() {
-      siteNav.classList.toggle('active');
+      if (neoOverlay.classList.contains('neo-grid-active')) {
+        closeNeoGrid();
+      } else {
+        openNeoGrid();
+      }
+    });
+
+    // Close on backdrop click
+    if (neoBackdrop) {
+      neoBackdrop.addEventListener('click', closeNeoGrid);
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && neoOverlay.classList.contains('neo-grid-active')) {
+        closeNeoGrid();
+      }
+    });
+
+    // Close on grid item click (for internal links)
+    neoGridItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+        // Small delay so the user sees the press animation
+        setTimeout(closeNeoGrid, 150);
+      });
     });
   }
   
