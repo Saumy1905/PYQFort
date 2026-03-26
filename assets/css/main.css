@@ -172,12 +172,151 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-right {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.35rem;
 }
 
-.search-toggle,
-.theme-toggle,
-.menu-toggle {
+/* ── Unified Utility Icon Buttons ────────────────────────────────── */
+.util-icon-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s ease,
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.25s ease;
+}
+
+.util-icon-btn:hover {
+  background-color: rgba(74, 108, 247, 0.08);
+  color: var(--primary-color);
+  transform: scale(1.08);
+}
+
+.util-icon-btn:active {
+  transform: scale(0.94);
+  transition-duration: 0.1s;
+}
+
+.dark-theme .util-icon-btn:hover {
+  background-color: rgba(93, 123, 249, 0.14);
+  color: var(--primary-color);
+}
+
+/* SVG icon base */
+.util-svg {
+  display: block;
+  flex-shrink: 0;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Refact icon: gold identity ─────────────────────────────────── */
+.util-icon-btn.refact-header-btn {
+  color: var(--refact-color);
+}
+
+.util-icon-btn.refact-header-btn:hover {
+  background-color: var(--refact-color-hover);
+  color: var(--refact-color-dark);
+}
+
+.util-icon-btn.refact-header-btn:hover .refact-svg {
+  transform: rotate(30deg);
+}
+
+/* ── Add icon: primary blue identity ────────────────────────────── */
+.util-icon-btn.add-pyq-button {
+  color: var(--primary-color);
+}
+
+.util-icon-btn.add-pyq-button:hover {
+  background-color: rgba(74, 108, 247, 0.1);
+  color: var(--primary-dark);
+}
+
+.dark-theme .util-icon-btn.add-pyq-button:hover {
+  background-color: rgba(93, 123, 249, 0.16);
+  color: var(--primary-color);
+}
+
+/* ── Theme toggle icon transition ───────────────────────────────── */
+.theme-toggle .theme-icon-moon,
+.theme-toggle .theme-icon-sun {
+  position: absolute;
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle .theme-icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.theme-toggle .theme-icon-sun {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+  pointer-events: none;
+}
+
+/* Active states set by JS */
+.theme-toggle.is-dark .theme-icon-moon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+  pointer-events: none;
+}
+
+.theme-toggle.is-dark .theme-icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* ── Menu toggle icon morph ─────────────────────────────────────── */
+.menu-toggle .menu-icon-bars,
+.menu-toggle .menu-icon-x {
+  position: absolute;
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.menu-toggle .menu-icon-bars {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.menu-toggle .menu-icon-x {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+  pointer-events: none;
+}
+
+.menu-toggle.neo-grid-open .menu-icon-bars {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+  pointer-events: none;
+}
+
+.menu-toggle.neo-grid-open .menu-icon-x {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Keep legacy .search-toggle for compatibility */
+.search-toggle {
   background: none;
   border: none;
   color: var(--text-color);
@@ -187,9 +326,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: color 0.3s;
 }
 
-.search-toggle:hover,
-.theme-toggle:hover,
-.menu-toggle:hover {
+.search-toggle:hover {
   color: var(--primary-color);
 }
 
@@ -5423,33 +5560,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 2px var(--refact-color), 0 5px 15px var(--box-shadow);
 }
 
-/* ── Refact button in header ─────────────────────────────────────── */
-.refact-header-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1.7px;
-  color: var(--refact-color);
-  transition: color 0.25s, transform 0.25s;
-  text-decoration: none;
-}
-
-.refact-header-btn:hover {
-  color: var(--refact-color-dark);
-  transform: rotate(20deg) scale(1.1);
-}
-
-/* Dedicated header icon class – gold, separate from .standard-icon */
-.refact-icon {
-  color: var(--refact-color);
-  font-size: 1.33em;
-  transition: color 0.25s;
-}
-
-.refact-header-btn:hover .refact-icon {
-  color: var(--refact-color-dark);
-}
+/* ── Refact button in header: styles now unified via .util-icon-btn ── */
+/* (see .util-icon-btn.refact-header-btn in the Header section above) */
 
 /* Badge */
 .refact-badge {
@@ -6029,15 +6141,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
-/* Menu toggle icon morph */
-.menu-toggle i {
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  display: inline-block;
-}
-
-.menu-toggle.neo-grid-open i {
-  transform: rotate(90deg);
-}
+/* Menu toggle icon morph: now handled via SVG swap in header CSS above */
 
 /* Body scroll lock when overlay is open */
 body.neo-grid-body-lock {

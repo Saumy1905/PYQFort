@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     neoOverlay.classList.add('neo-grid-active');
     neoOverlay.setAttribute('aria-hidden', 'false');
     menuToggle.classList.add('neo-grid-open');
-    menuToggle.querySelector('i').classList.replace('fa-bars', 'fa-xmark');
+    // SVG icon swap is handled by CSS via .neo-grid-open class
     document.body.classList.add('neo-grid-body-lock');
   }
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     neoOverlay.classList.remove('neo-grid-active');
     neoOverlay.setAttribute('aria-hidden', 'true');
     menuToggle.classList.remove('neo-grid-open');
-    menuToggle.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
+    // SVG icon swap is handled by CSS via removing .neo-grid-open class
     document.body.classList.remove('neo-grid-body-lock');
   }
 
@@ -72,14 +72,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const themeToggle = document.querySelector('.theme-toggle');
   const html = document.documentElement; // Use <html> for dark-theme class
   
-  // Update toggle icon based on current theme
-  if (html.classList.contains('dark-theme')) {
-    if (themeToggle) {
-      themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    }
-  } else {
-    if (themeToggle) {
-      themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+  // Update toggle icon based on current theme (SVG version)
+  if (themeToggle) {
+    if (html.classList.contains('dark-theme')) {
+      themeToggle.classList.add('is-dark');
+    } else {
+      themeToggle.classList.remove('is-dark');
     }
   }
   
@@ -87,9 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
   function applyThemeToggle() {
     html.classList.toggle('dark-theme');
     var theme = html.classList.contains('dark-theme') ? 'dark' : 'light';
-    themeToggle.innerHTML = theme === 'dark'
-      ? '<i class="fas fa-sun"></i>'
-      : '<i class="fas fa-moon"></i>';
+    if (theme === 'dark') {
+      themeToggle.classList.add('is-dark');
+    } else {
+      themeToggle.classList.remove('is-dark');
+    }
     localStorage.setItem('theme', theme);
   }
 
