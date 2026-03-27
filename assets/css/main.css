@@ -6257,6 +6257,31 @@ body.neo-grid-body-lock {
   display: grid;
 }
 
+.trio-nested-notes-grid-group {
+  display: none;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.trio-nested-notes-grid-group.is-visible {
+  display: grid;
+}
+
+.neo-grid-note-item .neo-grid-icon {
+  color: #4a6cf7;
+}
+
+.neo-grid-note-item .neo-grid-label {
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+.dark-theme .neo-grid-note-item .neo-grid-icon {
+  color: #7f9cff;
+}
+
 .neo-grid-doc-modal {
   position: fixed;
   inset: 0;
@@ -6439,6 +6464,10 @@ body.neo-grid-body-lock {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .trio-nested-notes-grid-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .neo-grid-doc-container {
     width: min(96vw, 900px);
     max-height: 92vh;
@@ -6477,6 +6506,10 @@ body.neo-grid-body-lock {
 
   .neo-grid-nav-btn {
     font-size: 0.8rem;
+  }
+
+  .trio-nested-notes-grid-group {
+    grid-template-columns: 1fr;
   }
 
   .neo-grid-doc-header h2 {

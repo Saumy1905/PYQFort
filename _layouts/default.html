@@ -227,37 +227,77 @@
       </button>
 
       <div class="duo-nested-subject-grid-group" data-member-group="computer">
-        <a href="#" class="neo-grid-item" data-doc-path="{{ '/premium/computer/os.md' | relative_url }}" data-doc-title="OS">
+        <a href="#" class="neo-grid-item" trio-nested-grid="notes-os" data-trio-grid="notes-os">
           <span class="neo-grid-icon"><i class="fa-solid fa-desktop"></i></span>
           <span class="neo-grid-label">OS</span>
         </a>
-        <a href="#" class="neo-grid-item" data-doc-path="{{ '/premium/computer/coa.md' | relative_url }}" data-doc-title="COA">
+        <a href="#" class="neo-grid-item" trio-nested-grid="notes-coa" data-trio-grid="notes-coa">
           <span class="neo-grid-icon"><i class="fa-solid fa-memory"></i></span>
           <span class="neo-grid-label">COA</span>
         </a>
       </div>
 
       <div class="duo-nested-subject-grid-group" data-member-group="mechanical">
-        <a href="#" class="neo-grid-item" data-doc-path="{{ '/premium/mechanical/manufacturing.md' | relative_url }}" data-doc-title="Manufacturing">
+        <a href="#" class="neo-grid-item" trio-nested-grid="notes-manufacturing" data-trio-grid="notes-manufacturing">
           <span class="neo-grid-icon"><i class="fa-solid fa-industry"></i></span>
           <span class="neo-grid-label">Manufacturing</span>
         </a>
       </div>
     </div>
 
-    <div class="neo-grid-doc-modal" id="neo-grid-doc-modal" aria-hidden="true">
-      <div class="neo-grid-doc-overlay" id="neo-grid-doc-overlay"></div>
-      <div class="neo-grid-doc-container">
-        <div class="neo-grid-doc-header">
-          <h2>
-            <i class="fas fa-book"></i>
-            <span id="neo-grid-doc-title">Subject Overview</span>
-          </h2>
-          <button class="neo-grid-doc-close" id="neo-grid-doc-close" aria-label="Close Premium documentation">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-        <div class="neo-grid-doc-content" id="neo-grid-doc-content"></div>
+    <div class="neo-grid-panel neo-grid-panel-nested" data-panel="trio-nested-notes-grid" aria-hidden="true">
+      <button type="button" class="neo-grid-nav-btn" data-neo-back aria-label="Back to Premium subjects">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back</span>
+      </button>
+
+      <div class="trio-nested-notes-grid-group" data-trio-group="notes-os">
+        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/os/ymca-os-2019" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
+          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
+          <span class="neo-grid-label">PYQ-2019</span>
+        </a>
+        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/os/ymca-os-praxian-analysis-2025" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
+          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
+          <span class="neo-grid-label">Praxian-2025</span>
+        </a>
+      </div>
+
+      <div class="trio-nested-notes-grid-group" data-trio-group="notes-coa">
+        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/coa/ymca-coa-2019" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
+          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
+          <span class="neo-grid-label">PYQ-2019</span>
+        </a>
+        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/coa/ymca-coa-2020" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
+          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
+          <span class="neo-grid-label">PYQ-2020</span>
+        </a>
+        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/coa/ymca-coa-2024" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
+          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
+          <span class="neo-grid-label">PYQ-2024</span>
+        </a>
+        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/coa/ymca-coa-praxian-analysis-2025" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
+          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
+          <span class="neo-grid-label">Praxian-2025</span>
+        </a>
+      </div>
+
+      <div class="trio-nested-notes-grid-group" data-trio-group="notes-manufacturing">
+        <a href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/pyqfort-manufacturing-practices-module-1" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
+          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
+          <span class="neo-grid-label">Module-1</span>
+        </a>
+        <a href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/pyqfort-manufacturing-practices-module-2" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
+          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
+          <span class="neo-grid-label">Module-2</span>
+        </a>
+        <a href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/pyqfort-manufacturing-practices-module-3" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
+          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
+          <span class="neo-grid-label">Module-3</span>
+        </a>
+        <a href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/pyqfort-manufacturing-practices-module-4" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
+          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
+          <span class="neo-grid-label">Module-4</span>
+        </a>
       </div>
     </div>
   </div>

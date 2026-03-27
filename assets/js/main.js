@@ -5,66 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const neoOverlay = document.getElementById('neo-grid-overlay');
   const neoBackdrop = neoOverlay ? neoOverlay.querySelector('.neo-grid-backdrop') : null;
   const neoPanels = neoOverlay ? Array.from(neoOverlay.querySelectorAll('.neo-grid-panel[data-panel]')) : [];
-  const neoDocModal = document.getElementById('neo-grid-doc-modal');
-  const neoDocOverlay = document.getElementById('neo-grid-doc-overlay');
-  const neoDocClose = document.getElementById('neo-grid-doc-close');
-  const neoDocTitle = document.getElementById('neo-grid-doc-title');
-  const neoDocContent = document.getElementById('neo-grid-doc-content');
   let neoPanelHistory = ['base'];
-
-  function renderSimpleMarkdown(markdown) {
-    if (!markdown) return '<p>No documentation content available yet.</p>';
-
-    // Kramdown / extended Markdown: strip inline attribute lists after links, e.g. {:target="_blank" ...}
-    var md = markdown.replace(/\{:[^}]*\}/g, '');
-
-    var html = md
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
-
-    html = html.replace(/^###\s+(.+)$/gm, '<h3>$1</h3>');
-    html = html.replace(/^##\s+(.+)$/gm, '<h2>$1</h2>');
-    html = html.replace(/^#\s+(.+)$/gm, '<h1>$1</h1>');
-    html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
-    html = html.replace(/`(.+?)`/g, '<code>$1</code>');
-    html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
-
-    var lines = html.split('\n');
-    var inList = false;
-    var parsedLines = lines.map(function(line) {
-      if (/^\s*---\s*$/.test(line)) {
-        if (inList) {
-          inList = false;
-          return '</ul><hr>';
-        }
-        return '<hr>';
-      }
-
-      if (/^\s*-\s+/.test(line)) {
-        var listItem = line.replace(/^\s*-\s+/, '');
-        if (!inList) {
-          inList = true;
-          return '<ul><li>' + listItem + '</li>';
-        }
-        return '<li>' + listItem + '</li>';
-      }
-
-      if (inList) {
-        inList = false;
-        if (line.trim()) return '</ul><p>' + line + '</p>';
-        return '</ul>';
-      }
-
-      if (!line.trim()) return '';
-      if (/^<h[1-3]>/.test(line)) return line;
-      return '<p>' + line + '</p>';
-    });
-
-    if (inList) parsedLines.push('</ul>');
-    return parsedLines.filter(Boolean).join('');
-  }
 
   var STORAGE_NEO_MENU_NOTIFICATION = 'pyqfort_neo_menu_notification';
   var STORAGE_PREMIUM_NESTED_NOTIFICATION = 'pyqfort_premium_nested_notification';
@@ -162,24 +103,33 @@ document.addEventListener('DOMContentLoaded', function() {
     return anyVisible;
   }
 
-  function closeNeoDocModal() {
-    if (!neoDocModal) return;
-    neoDocModal.classList.remove('active');
-    neoDocModal.setAttribute('aria-hidden', 'true');
-  }
+  function showTrioGroup(trioKey) {
+    const trioPanel = neoOverlay ? neoOverlay.querySelector('[data-panel="trio-nested-notes-grid"]') : null;
+    if (!trioPanel) return false;
 
-  function openNeoDocModal() {
-    if (!neoDocModal) return;
-    neoDocModal.classList.add('active');
-    neoDocModal.setAttribute('aria-hidden', 'false');
+    const trioGroups = trioPanel.querySelectorAll('.trio-nested-notes-grid-group');
+    let anyVisible = false;
+
+    trioGroups.forEach(function(group) {
+      const isMatch = group.getAttribute('data-trio-group') === trioKey;
+      group.classList.toggle('is-visible', isMatch);
+      if (isMatch) anyVisible = true;
+    });
+
+    return anyVisible;
   }
 
   function resetNeoNestedState() {
     neoPanelHistory = ['base'];
     setActiveNeoPanel('base', false);
 
-    const groups = neoOverlay ? neoOverlay.querySelectorAll('.duo-nested-subject-grid-group') : [];
-    groups.forEach(function(group) {
+    const duoGroups = neoOverlay ? neoOverlay.querySelectorAll('.duo-nested-subject-grid-group') : [];
+    duoGroups.forEach(function(group) {
+      group.classList.remove('is-visible');
+    });
+
+    const trioGroups = neoOverlay ? neoOverlay.querySelectorAll('.trio-nested-notes-grid-group') : [];
+    trioGroups.forEach(function(group) {
       group.classList.remove('is-visible');
     });
   }
@@ -187,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
   function openNeoGrid() {
     if (!neoOverlay) return;
     resetNeoNestedState();
-    closeNeoDocModal();
     neoOverlay.classList.add('neo-grid-active');
     neoOverlay.setAttribute('aria-hidden', 'false');
     menuToggle.classList.add('neo-grid-open');
@@ -197,7 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function closeNeoGrid() {
     if (!neoOverlay) return;
-    closeNeoDocModal();
     neoOverlay.classList.remove('neo-grid-active');
     neoOverlay.setAttribute('aria-hidden', 'true');
     menuToggle.classList.remove('neo-grid-open');
@@ -223,10 +171,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close on Escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && neoOverlay.classList.contains('neo-grid-active')) {
-        if (neoDocModal && neoDocModal.classList.contains('active')) {
-          closeNeoDocModal();
-          return;
-        }
         if (neoPanelHistory.length > 1) {
           neoPanelHistory.pop();
           setActiveNeoPanel(neoPanelHistory[neoPanelHistory.length - 1], false);
@@ -235,14 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
         closeNeoGrid();
       }
     });
-
-    if (neoDocClose) {
-      neoDocClose.addEventListener('click', closeNeoDocModal);
-    }
-
-    if (neoDocOverlay) {
-      neoDocOverlay.addEventListener('click', closeNeoDocModal);
-    }
 
     neoOverlay.addEventListener('click', function(e) {
       const clickedLink = e.target.closest('.neo-grid-item');
@@ -277,31 +213,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      const docPath = clickedLink.dataset.docPath;
-      if (docPath) {
+      const trioGrid = clickedLink.getAttribute('trio-nested-grid') || clickedLink.dataset.trioGrid;
+      if (trioGrid) {
         e.preventDefault();
-        const docTitle = clickedLink.dataset.docTitle || clickedLink.textContent.trim();
-        if (neoDocTitle) neoDocTitle.textContent = docTitle;
-        if (neoDocContent) {
-          neoDocContent.innerHTML = '<p>Loading documentation...</p>';
+        if (showTrioGroup(trioGrid)) {
+          setActiveNeoPanel('trio-nested-notes-grid', true);
         }
-        openNeoDocModal();
-
-        fetch(docPath)
-          .then(function(response) {
-            if (!response.ok) {
-              throw new Error('Unable to load markdown file');
-            }
-            return response.text();
-          })
-          .then(function(markdown) {
-            if (!neoDocContent) return;
-            neoDocContent.innerHTML = renderSimpleMarkdown(markdown);
-          })
-          .catch(function() {
-            if (!neoDocContent) return;
-            neoDocContent.innerHTML = '<h3>Content unavailable</h3><p>This premium subject documentation is not available yet. Please try another subject.</p>';
-          });
         return;
       }
 
