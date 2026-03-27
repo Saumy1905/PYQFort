@@ -133,7 +133,7 @@
   <!-- Neo-Grid Menu Overlay -->
   <div id="neo-grid-overlay" class="neo-grid-overlay" aria-hidden="true">
     <div class="neo-grid-backdrop"></div>
-    <div class="neo-grid-panel" role="navigation" aria-label="Quick Navigation Menu">
+    <div class="neo-grid-panel neo-grid-panel-base neo-grid-panel-active" role="navigation" aria-label="Quick Navigation Menu" data-panel="base">
       <a href="{{ '/' | relative_url }}" class="neo-grid-item">
         <span class="neo-grid-icon"><i class="fa-solid fa-house"></i></span>
         <span class="neo-grid-label">Home</span>
@@ -149,6 +149,10 @@
       <a href="{{ '/refact/' | relative_url }}" class="neo-grid-item">
         <span class="neo-grid-icon"><i class="fa-solid fa-rotate"></i></span>
         <span class="neo-grid-label">Refact</span>
+      </a>
+      <a href="#" class="neo-grid-item" nested-grid="nested-grid-special" data-nested-grid="nested-grid-special" aria-label="Open Premium Subjects">
+        <span class="neo-grid-icon"><i class="fa-solid fa-crown"></i></span>
+        <span class="neo-grid-label">Premium</span>
       </a>
       <a href="https://tally.so/r/wz6BKa" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
         <span class="neo-grid-icon"><i class="fa-solid fa-plus"></i></span>
@@ -170,6 +174,90 @@
         <span class="neo-grid-icon"><i class="fa-brands fa-instagram"></i></span>
         <span class="neo-grid-label">Instagram</span>
       </a>
+    </div>
+
+    <div class="neo-grid-panel neo-grid-panel-nested" data-panel="nested-grid-special" aria-hidden="true">
+      <button type="button" class="neo-grid-nav-btn" data-neo-back aria-label="Back to menu">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back</span>
+      </button>
+      <a href="#" class="neo-grid-item" nested-member="computer" data-nested-member="computer">
+        <span class="neo-grid-icon"><i class="fa-solid fa-computer"></i></span>
+        <span class="neo-grid-label">Computer</span>
+      </a>
+      <a href="#" class="neo-grid-item" nested-member="mechanical" data-nested-member="mechanical">
+        <span class="neo-grid-icon"><i class="fa-solid fa-gears"></i></span>
+        <span class="neo-grid-label">Mechanical</span>
+      </a>
+      <a href="#" class="neo-grid-item" nested-member="electronics" data-nested-member="electronics">
+        <span class="neo-grid-icon"><i class="fa-solid fa-microchip"></i></span>
+        <span class="neo-grid-label">Electronics</span>
+      </a>
+      <a href="#" class="neo-grid-item" nested-member="electrical" data-nested-member="electrical">
+        <span class="neo-grid-icon"><i class="fa-solid fa-bolt"></i></span>
+        <span class="neo-grid-label">Electrical</span>
+      </a>
+      <a href="#" class="neo-grid-item" nested-member="civil" data-nested-member="civil">
+        <span class="neo-grid-icon"><i class="fa-solid fa-road"></i></span>
+        <span class="neo-grid-label">Civil</span>
+      </a>
+      <a href="#" class="neo-grid-item" nested-member="bba" data-nested-member="bba">
+        <span class="neo-grid-icon"><i class="fa-solid fa-briefcase"></i></span>
+        <span class="neo-grid-label">BBA</span>
+      </a>
+      <a href="#" class="neo-grid-item" nested-member="maths" data-nested-member="maths">
+        <span class="neo-grid-icon"><i class="fa-solid fa-square-root-variable"></i></span>
+        <span class="neo-grid-label">Maths</span>
+      </a>
+      <a href="#" class="neo-grid-item" nested-member="physics" data-nested-member="physics">
+        <span class="neo-grid-icon"><i class="fa-solid fa-atom"></i></span>
+        <span class="neo-grid-label">Physics</span>
+      </a>
+      <a href="#" class="neo-grid-item" nested-member="chemistry" data-nested-member="chemistry">
+        <span class="neo-grid-icon"><i class="fa-solid fa-flask-vial"></i></span>
+        <span class="neo-grid-label">Chemistry</span>
+      </a>
+    </div>
+
+    <div class="neo-grid-panel neo-grid-panel-nested" data-panel="duo-nested-subject-grid" aria-hidden="true">
+      <button type="button" class="neo-grid-nav-btn" data-neo-back aria-label="Back to Premium streams">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back</span>
+      </button>
+
+      <div class="duo-nested-subject-grid-group" data-member-group="computer">
+        <a href="#" class="neo-grid-item" data-doc-path="{{ '/premium/computer/os.md' | relative_url }}" data-doc-title="OS">
+          <span class="neo-grid-icon"><i class="fa-solid fa-desktop"></i></span>
+          <span class="neo-grid-label">OS</span>
+        </a>
+        <a href="#" class="neo-grid-item" data-doc-path="{{ '/premium/computer/coa.md' | relative_url }}" data-doc-title="COA">
+          <span class="neo-grid-icon"><i class="fa-solid fa-memory"></i></span>
+          <span class="neo-grid-label">COA</span>
+        </a>
+      </div>
+
+      <div class="duo-nested-subject-grid-group" data-member-group="mechanical">
+        <a href="#" class="neo-grid-item" data-doc-path="{{ '/premium/mechanical/manufacturing.md' | relative_url }}" data-doc-title="Manufacturing">
+          <span class="neo-grid-icon"><i class="fa-solid fa-industry"></i></span>
+          <span class="neo-grid-label">Manufacturing</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="neo-grid-doc-modal" id="neo-grid-doc-modal" aria-hidden="true">
+      <div class="neo-grid-doc-overlay" id="neo-grid-doc-overlay"></div>
+      <div class="neo-grid-doc-container">
+        <div class="neo-grid-doc-header">
+          <h2>
+            <i class="fas fa-book"></i>
+            <span id="neo-grid-doc-title">Subject Overview</span>
+          </h2>
+          <button class="neo-grid-doc-close" id="neo-grid-doc-close" aria-label="Close Premium documentation">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="neo-grid-doc-content" id="neo-grid-doc-content"></div>
+      </div>
     </div>
   </div>
 

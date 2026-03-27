@@ -4,24 +4,127 @@ document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const neoOverlay = document.getElementById('neo-grid-overlay');
   const neoBackdrop = neoOverlay ? neoOverlay.querySelector('.neo-grid-backdrop') : null;
-  const neoGridItems = neoOverlay ? neoOverlay.querySelectorAll('.neo-grid-item') : [];
+  const neoPanels = neoOverlay ? Array.from(neoOverlay.querySelectorAll('.neo-grid-panel[data-panel]')) : [];
+  const neoDocModal = document.getElementById('neo-grid-doc-modal');
+  const neoDocOverlay = document.getElementById('neo-grid-doc-overlay');
+  const neoDocClose = document.getElementById('neo-grid-doc-close');
+  const neoDocTitle = document.getElementById('neo-grid-doc-title');
+  const neoDocContent = document.getElementById('neo-grid-doc-content');
+  let neoPanelHistory = ['base'];
+
+  function renderSimpleMarkdown(markdown) {
+    if (!markdown) return '<p>No documentation content available yet.</p>';
+
+    let html = markdown
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+
+    html = html.replace(/^###\s+(.+)$/gm, '<h3>$1</h3>');
+    html = html.replace(/^##\s+(.+)$/gm, '<h2>$1</h2>');
+    html = html.replace(/^#\s+(.+)$/gm, '<h1>$1</h1>');
+    html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+    html = html.replace(/`(.+?)`/g, '<code>$1</code>');
+    html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+
+    const lines = html.split('\n');
+    let inList = false;
+    const parsedLines = lines.map(function(line) {
+      if (/^\s*-\s+/.test(line)) {
+        const listItem = line.replace(/^\s*-\s+/, '');
+        if (!inList) {
+          inList = true;
+          return '<ul><li>' + listItem + '</li>';
+        }
+        return '<li>' + listItem + '</li>';
+      }
+
+      if (inList) {
+        inList = false;
+        if (line.trim()) return '</ul><p>' + line + '</p>';
+        return '</ul>';
+      }
+
+      if (!line.trim()) return '';
+      if (/^<h[1-3]>/.test(line)) return line;
+      return '<p>' + line + '</p>';
+    });
+
+    if (inList) parsedLines.push('</ul>');
+    return parsedLines.filter(Boolean).join('');
+  }
+
+  function setActiveNeoPanel(panelName, pushToHistory) {
+    if (!neoPanels.length) return;
+    neoPanels.forEach(function(panel) {
+      const isMatch = panel.getAttribute('data-panel') === panelName;
+      panel.classList.toggle('neo-grid-panel-active', isMatch);
+      panel.setAttribute('aria-hidden', isMatch ? 'false' : 'true');
+    });
+
+    if (pushToHistory) {
+      const lastPanel = neoPanelHistory[neoPanelHistory.length - 1];
+      if (lastPanel !== panelName) neoPanelHistory.push(panelName);
+    }
+  }
+
+  function showSubjectGroup(member) {
+    const subjectPanel = neoOverlay ? neoOverlay.querySelector('[data-panel="duo-nested-subject-grid"]') : null;
+    if (!subjectPanel) return false;
+
+    const subjectGroups = subjectPanel.querySelectorAll('.duo-nested-subject-grid-group');
+    let anyVisible = false;
+
+    subjectGroups.forEach(function(group) {
+      const isMatch = group.getAttribute('data-member-group') === member;
+      group.classList.toggle('is-visible', isMatch);
+      if (isMatch) anyVisible = true;
+    });
+
+    return anyVisible;
+  }
+
+  function closeNeoDocModal() {
+    if (!neoDocModal) return;
+    neoDocModal.classList.remove('active');
+    neoDocModal.setAttribute('aria-hidden', 'true');
+  }
+
+  function openNeoDocModal() {
+    if (!neoDocModal) return;
+    neoDocModal.classList.add('active');
+    neoDocModal.setAttribute('aria-hidden', 'false');
+  }
+
+  function resetNeoNestedState() {
+    neoPanelHistory = ['base'];
+    setActiveNeoPanel('base', false);
+
+    const groups = neoOverlay ? neoOverlay.querySelectorAll('.duo-nested-subject-grid-group') : [];
+    groups.forEach(function(group) {
+      group.classList.remove('is-visible');
+    });
+  }
 
   function openNeoGrid() {
     if (!neoOverlay) return;
+    resetNeoNestedState();
+    closeNeoDocModal();
     neoOverlay.classList.add('neo-grid-active');
     neoOverlay.setAttribute('aria-hidden', 'false');
     menuToggle.classList.add('neo-grid-open');
-    // SVG icon swap is handled by CSS via .neo-grid-open class
     document.body.classList.add('neo-grid-body-lock');
   }
 
   function closeNeoGrid() {
     if (!neoOverlay) return;
+    closeNeoDocModal();
     neoOverlay.classList.remove('neo-grid-active');
     neoOverlay.setAttribute('aria-hidden', 'true');
     menuToggle.classList.remove('neo-grid-open');
-    // SVG icon swap is handled by CSS via removing .neo-grid-open class
     document.body.classList.remove('neo-grid-body-lock');
+    resetNeoNestedState();
   }
 
   if (menuToggle && neoOverlay) {
@@ -42,16 +145,87 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close on Escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && neoOverlay.classList.contains('neo-grid-active')) {
+        if (neoDocModal && neoDocModal.classList.contains('active')) {
+          closeNeoDocModal();
+          return;
+        }
+        if (neoPanelHistory.length > 1) {
+          neoPanelHistory.pop();
+          setActiveNeoPanel(neoPanelHistory[neoPanelHistory.length - 1], false);
+          return;
+        }
         closeNeoGrid();
       }
     });
 
-    // Close on grid item click (for internal links)
-    neoGridItems.forEach(function(item) {
-      item.addEventListener('click', function() {
-        // Small delay so the user sees the press animation
-        setTimeout(closeNeoGrid, 150);
-      });
+    if (neoDocClose) {
+      neoDocClose.addEventListener('click', closeNeoDocModal);
+    }
+
+    if (neoDocOverlay) {
+      neoDocOverlay.addEventListener('click', closeNeoDocModal);
+    }
+
+    neoOverlay.addEventListener('click', function(e) {
+      const clickedLink = e.target.closest('.neo-grid-item');
+      const backBtn = e.target.closest('[data-neo-back]');
+      if (!clickedLink && !backBtn) return;
+
+      if (backBtn) {
+        e.preventDefault();
+        if (neoPanelHistory.length > 1) {
+          neoPanelHistory.pop();
+          setActiveNeoPanel(neoPanelHistory[neoPanelHistory.length - 1], false);
+        }
+        return;
+      }
+
+      const nestedGrid = clickedLink.getAttribute('nested-grid') || clickedLink.dataset.nestedGrid;
+      if (nestedGrid) {
+        e.preventDefault();
+        setActiveNeoPanel(nestedGrid, true);
+        return;
+      }
+
+      const nestedMember = clickedLink.getAttribute('nested-member') || clickedLink.dataset.nestedMember;
+      if (nestedMember) {
+        e.preventDefault();
+        if (showSubjectGroup(nestedMember)) {
+          setActiveNeoPanel('duo-nested-subject-grid', true);
+        }
+        return;
+      }
+
+      const docPath = clickedLink.dataset.docPath;
+      if (docPath) {
+        e.preventDefault();
+        const docTitle = clickedLink.dataset.docTitle || clickedLink.textContent.trim();
+        if (neoDocTitle) neoDocTitle.textContent = docTitle;
+        if (neoDocContent) {
+          neoDocContent.innerHTML = '<p>Loading documentation...</p>';
+        }
+        openNeoDocModal();
+
+        fetch(docPath)
+          .then(function(response) {
+            if (!response.ok) {
+              throw new Error('Unable to load markdown file');
+            }
+            return response.text();
+          })
+          .then(function(markdown) {
+            if (!neoDocContent) return;
+            neoDocContent.innerHTML = renderSimpleMarkdown(markdown);
+          })
+          .catch(function() {
+            if (!neoDocContent) return;
+            neoDocContent.innerHTML = '<h3>Content unavailable</h3><p>This premium subject documentation is not available yet. Please try another subject.</p>';
+          });
+        return;
+      }
+
+      // Default behavior for normal links: close overlay
+      setTimeout(closeNeoGrid, 150);
     });
   }
   
