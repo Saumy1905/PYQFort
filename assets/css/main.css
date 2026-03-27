@@ -258,6 +258,8 @@ h1, h2, h3, h4, h5, h6 {
 .theme-toggle .theme-icon-moon,
 .theme-toggle .theme-icon-sun {
   position: absolute;
+  inset: 0;
+  margin: auto;
   transition:
     opacity 0.35s ease,
     transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -287,15 +289,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ── Menu toggle icon morph ─────────────────────────────────────── */
-.menu-toggle .menu-icon-bars,
+.menu-toggle .menu-icon-bento,
 .menu-toggle .menu-icon-x {
   position: absolute;
+  inset: 0;
+  margin: auto;
   transition:
     opacity 0.3s ease,
     transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.menu-toggle .menu-icon-bars {
+.menu-toggle .menu-icon-bento {
   opacity: 1;
   transform: rotate(0deg) scale(1);
 }
@@ -306,7 +310,7 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 
-.menu-toggle.neo-grid-open .menu-icon-bars {
+.menu-toggle.neo-grid-open .menu-icon-bento {
   opacity: 0;
   transform: rotate(90deg) scale(0.5);
   pointer-events: none;
