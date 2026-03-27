@@ -15,7 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function renderSimpleMarkdown(markdown) {
     if (!markdown) return '<p>No documentation content available yet.</p>';
 
-    let html = markdown
+    // Kramdown / extended Markdown: strip inline attribute lists after links, e.g. {:target="_blank" ...}
+    var md = markdown.replace(/\{:[^}]*\}/g, '');
+
+    var html = md
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;');
@@ -28,11 +31,19 @@ document.addEventListener('DOMContentLoaded', function() {
     html = html.replace(/`(.+?)`/g, '<code>$1</code>');
     html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
 
-    const lines = html.split('\n');
-    let inList = false;
-    const parsedLines = lines.map(function(line) {
+    var lines = html.split('\n');
+    var inList = false;
+    var parsedLines = lines.map(function(line) {
+      if (/^\s*---\s*$/.test(line)) {
+        if (inList) {
+          inList = false;
+          return '</ul><hr>';
+        }
+        return '<hr>';
+      }
+
       if (/^\s*-\s+/.test(line)) {
-        const listItem = line.replace(/^\s*-\s+/, '');
+        var listItem = line.replace(/^\s*-\s+/, '');
         if (!inList) {
           inList = true;
           return '<ul><li>' + listItem + '</li>';
@@ -53,6 +64,72 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (inList) parsedLines.push('</ul>');
     return parsedLines.filter(Boolean).join('');
+  }
+
+  var STORAGE_NEO_MENU_NOTIFICATION = 'pyqfort_neo_menu_notification';
+  var STORAGE_PREMIUM_NESTED_NOTIFICATION = 'pyqfort_premium_nested_notification';
+
+  function dismissNeoMenuNotification() {
+    var btn = document.querySelector('.menu-toggle');
+    if (!btn) return;
+    var ver = btn.getAttribute('neo-menu-notification');
+    if (!ver) return;
+    try {
+      localStorage.setItem(STORAGE_NEO_MENU_NOTIFICATION, ver);
+    } catch (e) { /* ignore */ }
+    var dot = btn.querySelector('.neo-menu-notification-dot');
+    if (dot) dot.classList.remove('is-visible');
+  }
+
+  function dismissPremiumNestedNotification() {
+    var item = document.querySelector('.neo-grid-item[data-nested-grid="nested-grid-special"]');
+    if (!item) return;
+    var ver = item.getAttribute('nested-notification');
+    if (!ver) return;
+    try {
+      localStorage.setItem(STORAGE_PREMIUM_NESTED_NOTIFICATION, ver);
+    } catch (e) { /* ignore */ }
+    var dot = item.querySelector('.neo-nested-notification-dot');
+    if (dot) dot.classList.remove('is-visible');
+  }
+
+  function syncNeoNotificationDots() {
+    var menuBtn = document.querySelector('.menu-toggle');
+    var premiumItem = document.querySelector('.neo-grid-item[data-nested-grid="nested-grid-special"]');
+
+    if (menuBtn) {
+      var menuVer = menuBtn.getAttribute('neo-menu-notification');
+      var menuDot = menuBtn.querySelector('.neo-menu-notification-dot');
+      if (menuDot) {
+        if (menuVer) {
+          var seenMenu = '';
+          try {
+            seenMenu = localStorage.getItem(STORAGE_NEO_MENU_NOTIFICATION) || '';
+          } catch (e) { /* ignore */ }
+          if (seenMenu !== menuVer) menuDot.classList.add('is-visible');
+          else menuDot.classList.remove('is-visible');
+        } else {
+          menuDot.classList.remove('is-visible');
+        }
+      }
+    }
+
+    if (premiumItem) {
+      var premVer = premiumItem.getAttribute('nested-notification');
+      var premDot = premiumItem.querySelector('.neo-nested-notification-dot');
+      if (premDot) {
+        if (premVer) {
+          var seenPrem = '';
+          try {
+            seenPrem = localStorage.getItem(STORAGE_PREMIUM_NESTED_NOTIFICATION) || '';
+          } catch (e) { /* ignore */ }
+          if (seenPrem !== premVer) premDot.classList.add('is-visible');
+          else premDot.classList.remove('is-visible');
+        } else {
+          premDot.classList.remove('is-visible');
+        }
+      }
+    }
   }
 
   function setActiveNeoPanel(panelName, pushToHistory) {
@@ -115,6 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
     neoOverlay.setAttribute('aria-hidden', 'false');
     menuToggle.classList.add('neo-grid-open');
     document.body.classList.add('neo-grid-body-lock');
+    dismissNeoMenuNotification();
   }
 
   function closeNeoGrid() {
@@ -184,6 +262,9 @@ document.addEventListener('DOMContentLoaded', function() {
       if (nestedGrid) {
         e.preventDefault();
         setActiveNeoPanel(nestedGrid, true);
+        if (nestedGrid === 'nested-grid-special') {
+          dismissPremiumNestedNotification();
+        }
         return;
       }
 
@@ -228,7 +309,9 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(closeNeoGrid, 150);
     });
   }
-  
+
+  syncNeoNotificationDots();
+
   // Toggle search bar
   const searchToggle = document.querySelector('.search-toggle');
   const searchContainer = document.querySelector('.search-container');

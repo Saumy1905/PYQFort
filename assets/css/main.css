@@ -6118,6 +6118,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Item icon */
 .neo-grid-icon {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6175,6 +6176,54 @@ h1, h2, h3, h4, h5, h6 {
 /* Body scroll lock when overlay is open */
 body.neo-grid-body-lock {
   overflow: hidden;
+}
+
+/* neo-menu-notification: indicator on header menu (bento) button */
+.neo-menu-notification-dot {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e83151;
+  box-shadow: 0 0 0 2px var(--bg-color, #ffffff);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 3;
+}
+
+.dark-theme .neo-menu-notification-dot {
+  box-shadow: 0 0 0 2px var(--bg-color, #1a1a1a);
+}
+
+.neo-menu-notification-dot.is-visible {
+  opacity: 1;
+}
+
+/* nested-notification: Premium tile in neo grid */
+.neo-nested-notification-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e83151;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+}
+
+.dark-theme .neo-nested-notification-dot {
+  box-shadow: 0 0 0 2px rgba(26, 26, 26, 0.96);
+}
+
+.neo-nested-notification-dot.is-visible {
+  opacity: 1;
 }
 
 .neo-grid-nav-btn {
@@ -6307,6 +6356,32 @@ body.neo-grid-body-lock {
   background: var(--hover-bg);
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
+}
+
+.neo-grid-doc-content a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.neo-grid-doc-content a:hover {
+  color: var(--primary-dark, var(--primary-color));
+}
+
+.neo-grid-doc-content hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 1.1rem 0;
+  opacity: 0.55;
+}
+
+.neo-grid-doc-content ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.neo-grid-doc-content strong {
+  font-weight: 600;
 }
 
 /* ===== NEO-GRID RESPONSIVE ===== */
