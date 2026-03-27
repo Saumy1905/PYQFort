@@ -6145,12 +6145,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Social icon color overrides (base panel order only) */
-.neo-grid-panel-base .neo-grid-item:nth-child(8) .neo-grid-icon { color: #25D366; }  /* WhatsApp */
-.neo-grid-panel-base .neo-grid-item:nth-child(9) .neo-grid-icon { color: #0A66C2; }  /* LinkedIn */
-.neo-grid-panel-base .neo-grid-item:nth-child(10) .neo-grid-icon { color: #E4405F; }  /* Instagram */
-.neo-grid-panel-base .neo-grid-item:nth-child(8) .neo-grid-icon { background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(37, 211, 102, 0.05) 100%); }
-.neo-grid-panel-base .neo-grid-item:nth-child(9) .neo-grid-icon { background: linear-gradient(135deg, rgba(10, 102, 194, 0.1) 0%, rgba(10, 102, 194, 0.05) 100%); }
-.neo-grid-panel-base .neo-grid-item:nth-child(10) .neo-grid-icon { background: linear-gradient(135deg, rgba(228, 64, 95, 0.1) 0%, rgba(228, 64, 95, 0.05) 100%); }
+.neo-grid-panel-base .neo-grid-item:nth-child(7) .neo-grid-icon { color: #25D366; }  /* WhatsApp */
+.neo-grid-panel-base .neo-grid-item:nth-child(8) .neo-grid-icon { color: #0A66C2; }  /* LinkedIn */
+.neo-grid-panel-base .neo-grid-item:nth-child(9) .neo-grid-icon { color: #E4405F; }  /* Instagram */
+.neo-grid-panel-base .neo-grid-item:nth-child(7) .neo-grid-icon { background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(37, 211, 102, 0.05) 100%); }
+.neo-grid-panel-base .neo-grid-item:nth-child(8) .neo-grid-icon { background: linear-gradient(135deg, rgba(10, 102, 194, 0.1) 0%, rgba(10, 102, 194, 0.05) 100%); }
+.neo-grid-panel-base .neo-grid-item:nth-child(9) .neo-grid-icon { background: linear-gradient(135deg, rgba(228, 64, 95, 0.1) 0%, rgba(228, 64, 95, 0.05) 100%); }
 
 /* Item label */
 .neo-grid-label {
@@ -6176,54 +6176,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Body scroll lock when overlay is open */
 body.neo-grid-body-lock {
   overflow: hidden;
-}
-
-/* neo-menu-notification: indicator on header menu (bento) button */
-.neo-menu-notification-dot {
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #e83151;
-  box-shadow: 0 0 0 2px var(--bg-color, #ffffff);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
-  z-index: 3;
-}
-
-.dark-theme .neo-menu-notification-dot {
-  box-shadow: 0 0 0 2px var(--bg-color, #1a1a1a);
-}
-
-.neo-menu-notification-dot.is-visible {
-  opacity: 1;
-}
-
-/* nested-notification: Premium tile in neo grid */
-.neo-nested-notification-dot {
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #e83151;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.95);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
-  z-index: 2;
-}
-
-.dark-theme .neo-nested-notification-dot {
-  box-shadow: 0 0 0 2px rgba(26, 26, 26, 0.96);
-}
-
-.neo-nested-notification-dot.is-visible {
-  opacity: 1;
 }
 
 .neo-grid-nav-btn {
