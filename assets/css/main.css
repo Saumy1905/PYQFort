@@ -6460,10 +6460,6 @@ body.neo-grid-body-lock {
     font-size: 0.8rem;
   }
 
-  .trio-nested-notes-grid-group {
-    grid-template-columns: 1fr;
-  }
-
   .neo-grid-doc-header h2 {
     font-size: 1.05rem;
   }
