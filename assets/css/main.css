@@ -6178,6 +6178,52 @@ body.neo-grid-body-lock {
   overflow: hidden;
 }
 
+/* notification-dot / data-notification-dot: update indicator (default off unless value is true) */
+.neo-notification-dot {
+  display: none;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e83151;
+  box-shadow: 0 0 0 2px var(--bg-color, #ffffff);
+  pointer-events: none;
+  z-index: 5;
+  flex-shrink: 0;
+}
+
+.dark-theme .neo-notification-dot {
+  box-shadow: 0 0 0 2px var(--bg-color, #1a1a1a);
+}
+
+/* Header bento: pin dot to top-right of button (above icon stack) */
+.util-icon-btn.menu-toggle > .neo-notification-dot {
+  top: 3px;
+  right: 3px;
+}
+
+.util-icon-btn.menu-toggle[notification-dot="true"] > .neo-notification-dot,
+.util-icon-btn.menu-toggle[data-notification-dot="true"] > .neo-notification-dot {
+  display: block;
+}
+
+.util-icon-btn.menu-toggle[notification-dot="false"] > .neo-notification-dot,
+.util-icon-btn.menu-toggle[data-notification-dot="false"] > .neo-notification-dot {
+  display: none !important;
+}
+
+.neo-grid-item[notification-dot="true"] .neo-grid-icon > .neo-notification-dot,
+.neo-grid-item[data-notification-dot="true"] .neo-grid-icon > .neo-notification-dot {
+  display: block;
+}
+
+.neo-grid-item[notification-dot="false"] .neo-grid-icon > .neo-notification-dot,
+.neo-grid-item[data-notification-dot="false"] .neo-grid-icon > .neo-notification-dot {
+  display: none !important;
+}
+
 .neo-grid-nav-btn {
   grid-column: 1 / -1;
   display: inline-flex;
@@ -6420,6 +6466,18 @@ body.neo-grid-body-lock {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .neo-notification-dot {
+    width: 7px;
+    height: 7px;
+    top: -1px;
+    right: -1px;
+  }
+
+  .util-icon-btn.menu-toggle > .neo-notification-dot {
+    top: 2px;
+    right: 2px;
+  }
+
   .neo-grid-doc-container {
     width: min(96vw, 900px);
     max-height: 92vh;
@@ -6458,6 +6516,18 @@ body.neo-grid-body-lock {
 
   .neo-grid-nav-btn {
     font-size: 0.8rem;
+  }
+
+  .neo-notification-dot {
+    width: 6px;
+    height: 6px;
+    top: 0;
+    right: 0;
+  }
+
+  .util-icon-btn.menu-toggle > .neo-notification-dot {
+    top: 1px;
+    right: 1px;
   }
 
   .neo-grid-doc-header h2 {
