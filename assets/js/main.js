@@ -152,6 +152,11 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
+      // Trio note links open in a new tab; keep overlay open when user returns to this tab
+      if (clickedLink.classList.contains('neo-grid-note-item')) {
+        return;
+      }
+
       // Default behavior for normal links: close overlay
       setTimeout(closeNeoGrid, 150);
     });
