@@ -3866,13 +3866,6 @@ window.COLLEGE_DATA = {
                       title: "IC Engines 2022",
                     },
                     {
-                      year: 2024,
-                      file: "ymca-ic-engines-2024.pdf",
-                      id: "ymca-ic-engines-2024",
-                      pages: 3,
-                      title: "IC Engines 2024",
-                    },
-                    {
                       year: 2025,
                       file: "ymca-ic-engines-2025.pdf",
                       id: "ymca-ic-engines-2025",
@@ -4075,6 +4068,13 @@ window.COLLEGE_DATA = {
                       id: "ymca-wses-2023",
                       pages: 3,
                       title: "WSES 2023",
+                    },
+                    {
+                      year: 2024,
+                      file: "ymca-wses-2024.pdf",
+                      id: "ymca-wses-2024",
+                      pages: 3,
+                      title: "WSES 2024",
                     }
                   ],
                 },
