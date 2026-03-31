@@ -1427,7 +1427,7 @@
                   id: ymca-coa-2019
                   pages: 3
                   title: "COA 2019"
-                  upload: "Saumy" 
+                  upload: "Saumy"
                 - year: 2025
                   file: ymca-coa-praxian-analysis-2025.pdf
                   id: ymca-coa-praxian-analysis-2025
@@ -1436,7 +1436,7 @@
                   upload: "Saumy"
                 - year: 2026
                   file: pyqfort-coa-module-1-notes.pdf
-                  id: pyqfort-coa-module-1-notes 
+                  id: pyqfort-coa-module-1-notes
                   pages: 12
                   title: "PYQFort COA Module 1"
                   new: true
@@ -1445,7 +1445,7 @@
                   praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-2-notes.pdf
-                  id: pyqfort-coa-module-2-notes 
+                  id: pyqfort-coa-module-2-notes
                   pages: 21
                   title: "PYQFort COA Module 2"
                   new: true
@@ -1454,14 +1454,14 @@
                   praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-3-notes.pdf
-                  id: pyqfort-coa-module-3-notes 
+                  id: pyqfort-coa-module-3-notes
                   pages: 12
                   title: "PYQFort COA Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-coa-module-4-notes.pdf
-                  id: pyqfort-coa-module-4-notes 
+                  id: pyqfort-coa-module-4-notes
                   pages: 8
                   title: "PYQFort COA Module 4"
                   new: true
@@ -1635,35 +1635,35 @@
                   upload: "Saumy"
                 - year: 2026
                   file: pyqfort-os-module-1-notes.pdf
-                  id: pyqfort-os-module-1-notes 
+                  id: pyqfort-os-module-1-notes
                   pages: 12
                   title: "PYQFort OS Module 1"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-2-notes.pdf
-                  id: pyqfort-os-module-2-notes 
+                  id: pyqfort-os-module-2-notes
                   pages: 12
                   title: "PYQFort OS Module 2"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-3-notes.pdf
-                  id: pyqfort-os-module-3-notes 
+                  id: pyqfort-os-module-3-notes
                   pages: 10
                   title: "PYQFort OS Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-4-notes.pdf
-                  id: pyqfort-os-module-4-notes 
+                  id: pyqfort-os-module-4-notes
                   pages: 13
                   title: "PYQFort OS Module 4"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-5-notes.pdf
-                  id: pyqfort-os-module-5-notes 
+                  id: pyqfort-os-module-5-notes
                   pages: 24
                   title: "PYQFort OS Module 5"
                   new: true
@@ -1672,7 +1672,7 @@
                   praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-os-module-6-notes.pdf
-                  id: pyqfort-os-module-6-notes 
+                  id: pyqfort-os-module-6-notes
                   pages: 25
                   title: "PYQFort OS Module 6"
                   new: true
@@ -1796,14 +1796,14 @@
                   upload: "Neha"
                 - year: 2022
                   file: ymca-toc-set-1-2022.pdf
-                  id: ymca-toc-set-1-2022 
+                  id: ymca-toc-set-1-2022
                   pages: 3
                   title: "Theory of Computation Set 1 2022"
                   new: true
                   upload: "Neha"
                 - year: 2022
                   file: ymca-toc-set-2-2022.pdf
-                  id: ymca-toc-set-2-2022 
+                  id: ymca-toc-set-2-2022
                   pages: 3
                   title: "Theory of Computation Set 2 2022"
                   new: true
@@ -4898,7 +4898,7 @@
                   upload: "Saumy"
                 - year: 2026
                   file: pyqfort-coa-module-1-notes.pdf
-                  id: pyqfort-coa-module-1-notes 
+                  id: pyqfort-coa-module-1-notes
                   pages: 12
                   title: "PYQFort COA Module 1"
                   new: true
@@ -4907,7 +4907,7 @@
                   praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-2-notes.pdf
-                  id: pyqfort-coa-module-2-notes 
+                  id: pyqfort-coa-module-2-notes
                   pages: 21
                   title: "PYQFort COA Module 2"
                   new: true
@@ -4916,14 +4916,14 @@
                   praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-3-notes.pdf
-                  id: pyqfort-coa-module-3-notes 
+                  id: pyqfort-coa-module-3-notes
                   pages: 12
                   title: "PYQFort COA Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-coa-module-4-notes.pdf
-                  id: pyqfort-coa-module-4-notes 
+                  id: pyqfort-coa-module-4-notes
                   pages: 8
                   title: "PYQFort COA Module 4"
                   new: true
@@ -4949,35 +4949,35 @@
                   upload: "Saumy"
                 - year: 2026
                   file: pyqfort-os-module-1-notes.pdf
-                  id: pyqfort-os-module-1-notes 
+                  id: pyqfort-os-module-1-notes
                   pages: 12
                   title: "PYQFort OS Module 1"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-2-notes.pdf
-                  id: pyqfort-os-module-2-notes 
+                  id: pyqfort-os-module-2-notes
                   pages: 12
                   title: "PYQFort OS Module 2"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-3-notes.pdf
-                  id: pyqfort-os-module-3-notes 
+                  id: pyqfort-os-module-3-notes
                   pages: 10
                   title: "PYQFort OS Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-4-notes.pdf
-                  id: pyqfort-os-module-4-notes 
+                  id: pyqfort-os-module-4-notes
                   pages: 13
                   title: "PYQFort OS Module 4"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-5-notes.pdf
-                  id: pyqfort-os-module-5-notes 
+                  id: pyqfort-os-module-5-notes
                   pages: 24
                   title: "PYQFort OS Module 5"
                   new: true
@@ -4986,7 +4986,7 @@
                   praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-os-module-6-notes.pdf
-                  id: pyqfort-os-module-6-notes 
+                  id: pyqfort-os-module-6-notes
                   pages: 25
                   title: "PYQFort OS Module 6"
                   new: true
@@ -5173,14 +5173,14 @@
                   upload: "Neha"
                 - year: 2022
                   file: ymca-toc-set-1-2022.pdf
-                  id: ymca-toc-set-1-2022 
+                  id: ymca-toc-set-1-2022
                   pages: 3
                   title: "Theory of Computation Set 1 2022"
                   new: true
                   upload: "Neha"
                 - year: 2022
                   file: ymca-toc-set-2-2022.pdf
-                  id: ymca-toc-set-2-2022 
+                  id: ymca-toc-set-2-2022
                   pages: 3
                   title: "Theory of Computation Set 2 2022"
                   new: true
@@ -5412,13 +5412,13 @@
               pyqs:
                 - year: 2019
                   file: ymca-bee-2019.pdf
-                  id: ymca-bee-2019 
+                  id: ymca-bee-2019
                   pages: 3
                   title: "Basic Electronic Engineering 2019"
                   new: true
                 - year: 2022
                   file: ymca-bee-2022.pdf
-                  id: ymca-bee-2022  
+                  id: ymca-bee-2022
                   pages: 3
                   title: "Basic Electronic Engineering 2022"
                 - year: 2024
@@ -5436,27 +5436,27 @@
               pyqs:
                 - year: 2023
                   file: ymca-biology-set-1-2023.pdf
-                  id: ymca-biology-set-1-2023  
+                  id: ymca-biology-set-1-2023
                   pages: 3
                   title: "Biology 2023 set 1"
                 - year: 2023
                   file: ymca-biology-set-2-2023.pdf
-                  id: ymca-biology-set-2-2023  
+                  id: ymca-biology-set-2-2023
                   pages: 3
                   title: "Biology 2023 set 2"
                 - year: 2023
                   file: ymca-biology-set-3-2023.pdf
-                  id: ymca-biology-set-3-2023  
+                  id: ymca-biology-set-3-2023
                   pages: 3
                   title: "Biology 2023 set 3"
                 - year: 2024
                   file: ymca-biology-set-1-2024.pdf
-                  id: ymca-biology-set-1-2024  
+                  id: ymca-biology-set-1-2024
                   pages: 3
                   title: "Biology 2024 set 1"
                 - year: 2024
                   file: ymca-biology-set-2-2024.pdf
-                  id: ymca-biology-set-2-2024  
+                  id: ymca-biology-set-2-2024
                   pages: 3
                   title: "Biology 2024 set 2"
                   upload: "Saumy"
@@ -7096,20 +7096,17 @@
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge Set 1 2023"
                   upload: "Saumy"
-                  upload: "Saumy"
                 - year: 2023
                   file: ymca-eitk-set-2-2023.pdf
                   id: ymca-eitk-set-2-2023
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge Set 2 2023"
                   upload: "Saumy"
-                  upload: "Saumy"
                 - year: 2024
                   file: ymca-eitk-2024.pdf
                   id: ymca-eitk-2024
                   pages: 3
                   title: "Essence of Indian Traditional Knowledge 2024"
-                  upload: "Saumy"
                   upload: "Saumy"
             - name: Artificial Intelligence
               slug: ai
@@ -7124,13 +7121,11 @@
                   pages: 3
                   title: "Artificial Intelligence 2023"
                   upload: "Saumy"
-                  upload: "Saumy"
                 - year: 2024
                   file: ymca-ai-2024.pdf
                   id: ymca-ai-2024
                   pages: 3
                   title: "Artificial Intelligence 2024"
-                  upload: "Saumy"
                   upload: "Saumy"
             - name: Design of Machine Elements
               slug: design-machine-elements
@@ -7165,13 +7160,11 @@
                   pages: 3
                   title: "Kinematics of Robots 2023"
                   upload: "Saumy"
-                  upload: "Saumy"
                 - year: 2024
                   file: ymca-kinematics-of-robots-2024.pdf
                   id: ymca-kinematics-of-robots-2024
                   pages: 3
                   title: "Kinematics of Robots 2024"
-                  upload: "Saumy"
                   upload: "Saumy"
             - name: Mechatronics
               slug: mechatronics
@@ -7185,7 +7178,6 @@
                   id: ymca-mechatronics-2024
                   pages: 3
                   title: "Mechatronics 2024"
-                  upload: "Saumy"
                   upload: "Saumy"
         - number: 5
           slug: sem5
@@ -7206,7 +7198,6 @@
                   pages: 3
                   title: "Computer-Aided Design and Manufacturing 2023"
                   upload: "Saumy"
-                  upload: "Saumy"
             - name: Cyber Laws
               slug: cyber-laws
               id: cyber-laws
@@ -7219,7 +7210,6 @@
                   id: ymca-cyber-laws-2023
                   pages: 3
                   title: "Cyber Laws 2023"
-                  upload: "Saumy"
                   upload: "Saumy"
             - name: Digital Signal Processing
               slug: dsp
@@ -7234,7 +7224,6 @@
                   pages: 3
                   title: "Digital Signal Processing 2023"
                   upload: "Saumy"
-                  upload: "Saumy"
             - name: Machine Learning
               slug: ml
               id: ml
@@ -7247,7 +7236,6 @@
                   id: ymca-ml-2023
                   pages: 3
                   title: "Machine Learning 2023"
-                  upload: "Saumy"
                   upload: "Saumy"
         - number: 6
           slug: sem6
@@ -7268,7 +7256,6 @@
                   pages: 3
                   title: "Electric and Hybrid Vehicles 2024"
                   upload: "Saumy"
-                  upload: "Saumy"
             - name: Mobile Computing
               slug: mobile
               id: mobile
@@ -7281,7 +7268,6 @@
                   id: ymca-mobile-2024
                   pages: 3
                   title: "Mobile Computing 2024"
-                  upload: "Saumy"
                   upload: "Saumy"
             - name: Robotics and Artificial Intelligence
               slug: rai
@@ -7296,7 +7282,6 @@
                   pages: 3
                   title: "Robotics and Artificial Intelligence 2024"
                   upload: "Saumy"
-                  upload: "Saumy"
             - name: Soft Computing
               slug: soft-computing
               id: soft-computing
@@ -7310,7 +7295,6 @@
                   pages: 3
                   title: "Soft Computing 2024"
                   upload: "Saumy"
-                  upload: "Saumy"
             - name: Software Engineering
               slug: software
               id: software
@@ -7323,7 +7307,6 @@
                   id: ymca-software-2024
                   pages: 3
                   title: "Software Engineering 2024"
-                  upload: "Saumy"
                   upload: "Saumy"
     - name: IOT
       slug: iot
@@ -7983,7 +7966,7 @@
                   upload: "Saumy"
         - number: 5
           slug: sem5
-          id: sem5 
+          id: sem5
           description: Subjects for Semester 5
           keywords: ["semester 5", "bba", "business"]
           subjects:
@@ -8930,7 +8913,7 @@
                   upload: "Saumy"
                 - year: 2026
                   file: pyqfort-coa-module-1-notes.pdf
-                  id: pyqfort-coa-module-1-notes 
+                  id: pyqfort-coa-module-1-notes
                   pages: 12
                   title: "PYQFort COA Module 1"
                   new: true
@@ -8939,7 +8922,7 @@
                   praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-2-notes.pdf
-                  id: pyqfort-coa-module-2-notes 
+                  id: pyqfort-coa-module-2-notes
                   pages: 21
                   title: "PYQFort COA Module 2"
                   new: true
@@ -8948,14 +8931,14 @@
                   praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-3-notes.pdf
-                  id: pyqfort-coa-module-3-notes 
+                  id: pyqfort-coa-module-3-notes
                   pages: 12
                   title: "PYQFort COA Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-coa-module-4-notes.pdf
-                  id: pyqfort-coa-module-4-notes 
+                  id: pyqfort-coa-module-4-notes
                   pages: 8
                   title: "PYQFort COA Module 4"
                   new: true
@@ -9001,35 +8984,35 @@
                   upload: "Saumy"
                 - year: 2026
                   file: pyqfort-os-module-1-notes.pdf
-                  id: pyqfort-os-module-1-notes 
+                  id: pyqfort-os-module-1-notes
                   pages: 12
                   title: "PYQFort OS Module 1"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-2-notes.pdf
-                  id: pyqfort-os-module-2-notes 
+                  id: pyqfort-os-module-2-notes
                   pages: 12
                   title: "PYQFort OS Module 2"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-3-notes.pdf
-                  id: pyqfort-os-module-3-notes 
+                  id: pyqfort-os-module-3-notes
                   pages: 10
                   title: "PYQFort OS Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-4-notes.pdf
-                  id: pyqfort-os-module-4-notes 
+                  id: pyqfort-os-module-4-notes
                   pages: 13
                   title: "PYQFort OS Module 4"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-5-notes.pdf
-                  id: pyqfort-os-module-5-notes 
+                  id: pyqfort-os-module-5-notes
                   pages: 24
                   title: "PYQFort OS Module 5"
                   new: true
@@ -9038,14 +9021,14 @@
                   praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-os-module-6-notes.pdf
-                  id: pyqfort-os-module-6-notes 
+                  id: pyqfort-os-module-6-notes
                   pages: 25
                   title: "PYQFort OS Module 6"
                   new: true
                   pyqfort_notes: true
                   praxian: true
                   praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
-            - name: Optimization Techniques & Decision Making 
+            - name: Optimization Techniques & Decision Making
               slug: otdm
               id: otdm
               description: Techniques for optimization and decision making
@@ -9494,7 +9477,7 @@
                   upload: "isha0325"
                 - year: 2026
                   file: pyqfort-coa-module-1-notes.pdf
-                  id: pyqfort-coa-module-1-notes 
+                  id: pyqfort-coa-module-1-notes
                   pages: 12
                   title: "PYQFort COA Module 1"
                   new: true
@@ -9503,7 +9486,7 @@
                   praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-2-notes.pdf
-                  id: pyqfort-coa-module-2-notes 
+                  id: pyqfort-coa-module-2-notes
                   pages: 21
                   title: "PYQFort COA Module 2"
                   new: true
@@ -9512,14 +9495,14 @@
                   praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-3-notes.pdf
-                  id: pyqfort-coa-module-3-notes 
+                  id: pyqfort-coa-module-3-notes
                   pages: 12
                   title: "PYQFort COA Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-coa-module-4-notes.pdf
-                  id: pyqfort-coa-module-4-notes 
+                  id: pyqfort-coa-module-4-notes
                   pages: 8
                   title: "PYQFort COA Module 4"
                   new: true
@@ -9783,7 +9766,7 @@
                   upload: "isha0325"
                 - year: 2025
                   file: nit-kur-computer-networks-2025-set-1
-                  id: nit-kur-computer-networks-2025-set-1 
+                  id: nit-kur-computer-networks-2025-set-1
                   pages: 10
                   title: "Computer Networks 2025 Set 1"
                   upload: "isha0325"
@@ -9966,35 +9949,35 @@
                   upload: "isha0325"
                 - year: 2026
                   file: pyqfort-os-module-1-notes.pdf
-                  id: pyqfort-os-module-1-notes 
+                  id: pyqfort-os-module-1-notes
                   pages: 12
                   title: "PYQFort OS Module 1"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-2-notes.pdf
-                  id: pyqfort-os-module-2-notes 
+                  id: pyqfort-os-module-2-notes
                   pages: 12
                   title: "PYQFort OS Module 2"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-3-notes.pdf
-                  id: pyqfort-os-module-3-notes 
+                  id: pyqfort-os-module-3-notes
                   pages: 10
                   title: "PYQFort OS Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-4-notes.pdf
-                  id: pyqfort-os-module-4-notes 
+                  id: pyqfort-os-module-4-notes
                   pages: 13
                   title: "PYQFort OS Module 4"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-5-notes.pdf
-                  id: pyqfort-os-module-5-notes 
+                  id: pyqfort-os-module-5-notes
                   pages: 24
                   title: "PYQFort OS Module 5"
                   new: true
@@ -10003,7 +9986,7 @@
                   praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-os-module-6-notes.pdf
-                  id: pyqfort-os-module-6-notes 
+                  id: pyqfort-os-module-6-notes
                   pages: 25
                   title: "PYQFort OS Module 6"
                   new: true
@@ -11005,7 +10988,7 @@
                   upload: "Y4shu"
                 - year: 2026
                   file: pyqfort-coa-module-1-notes.pdf
-                  id: pyqfort-coa-module-1-notes 
+                  id: pyqfort-coa-module-1-notes
                   pages: 12
                   title: "PYQFort COA Module 1"
                   new: true
@@ -11014,7 +10997,7 @@
                   praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-2-notes.pdf
-                  id: pyqfort-coa-module-2-notes 
+                  id: pyqfort-coa-module-2-notes
                   pages: 21
                   title: "PYQFort COA Module 2"
                   new: true
@@ -11023,14 +11006,14 @@
                   praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-3-notes.pdf
-                  id: pyqfort-coa-module-3-notes 
+                  id: pyqfort-coa-module-3-notes
                   pages: 12
                   title: "PYQFort COA Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-coa-module-4-notes.pdf
-                  id: pyqfort-coa-module-4-notes 
+                  id: pyqfort-coa-module-4-notes
                   pages: 8
                   title: "PYQFort COA Module 4"
                   new: true
@@ -11214,35 +11197,35 @@
                   upload: "SK8-infi"
                 - year: 2026
                   file: pyqfort-os-module-1-notes.pdf
-                  id: pyqfort-os-module-1-notes 
+                  id: pyqfort-os-module-1-notes
                   pages: 12
                   title: "PYQFort OS Module 1"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-2-notes.pdf
-                  id: pyqfort-os-module-2-notes 
+                  id: pyqfort-os-module-2-notes
                   pages: 12
                   title: "PYQFort OS Module 2"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-3-notes.pdf
-                  id: pyqfort-os-module-3-notes 
+                  id: pyqfort-os-module-3-notes
                   pages: 10
                   title: "PYQFort OS Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-4-notes.pdf
-                  id: pyqfort-os-module-4-notes 
+                  id: pyqfort-os-module-4-notes
                   pages: 13
                   title: "PYQFort OS Module 4"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-5-notes.pdf
-                  id: pyqfort-os-module-5-notes 
+                  id: pyqfort-os-module-5-notes
                   pages: 24
                   title: "PYQFort OS Module 5"
                   new: true
@@ -11251,7 +11234,7 @@
                   praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-os-module-6-notes.pdf
-                  id: pyqfort-os-module-6-notes 
+                  id: pyqfort-os-module-6-notes
                   pages: 25
                   title: "PYQFort OS Module 6"
                   new: true
@@ -12179,7 +12162,7 @@
                   upload: "Megha"
                 - year: 2026
                   file: pyqfort-coa-module-1-notes.pdf
-                  id: pyqfort-coa-module-1-notes 
+                  id: pyqfort-coa-module-1-notes
                   pages: 12
                   title: "PYQFort COA Module 1"
                   new: true
@@ -12188,7 +12171,7 @@
                   praxian_link: "https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-2-notes.pdf
-                  id: pyqfort-coa-module-2-notes 
+                  id: pyqfort-coa-module-2-notes
                   pages: 21
                   title: "PYQFort COA Module 2"
                   new: true
@@ -12197,14 +12180,14 @@
                   praxian_link: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-coa-module-3-notes.pdf
-                  id: pyqfort-coa-module-3-notes 
+                  id: pyqfort-coa-module-3-notes
                   pages: 12
                   title: "PYQFort COA Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-coa-module-4-notes.pdf
-                  id: pyqfort-coa-module-4-notes 
+                  id: pyqfort-coa-module-4-notes
                   pages: 8
                   title: "PYQFort COA Module 4"
                   new: true
@@ -12338,35 +12321,35 @@
                   upload: "Megha"
                 - year: 2026
                   file: pyqfort-os-module-1-notes.pdf
-                  id: pyqfort-os-module-1-notes 
+                  id: pyqfort-os-module-1-notes
                   pages: 12
                   title: "PYQFort OS Module 1"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-2-notes.pdf
-                  id: pyqfort-os-module-2-notes 
+                  id: pyqfort-os-module-2-notes
                   pages: 12
                   title: "PYQFort OS Module 2"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-3-notes.pdf
-                  id: pyqfort-os-module-3-notes 
+                  id: pyqfort-os-module-3-notes
                   pages: 10
                   title: "PYQFort OS Module 3"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-4-notes.pdf
-                  id: pyqfort-os-module-4-notes 
+                  id: pyqfort-os-module-4-notes
                   pages: 13
                   title: "PYQFort OS Module 4"
                   new: true
                   pyqfort_notes: true
                 - year: 2026
                   file: pyqfort-os-module-5-notes.pdf
-                  id: pyqfort-os-module-5-notes 
+                  id: pyqfort-os-module-5-notes
                   pages: 24
                   title: "PYQFort OS Module 5"
                   new: true
@@ -12375,7 +12358,7 @@
                   praxian_link: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
                 - year: 2026
                   file: pyqfort-os-module-6-notes.pdf
-                  id: pyqfort-os-module-6-notes 
+                  id: pyqfort-os-module-6-notes
                   pages: 25
                   title: "PYQFort OS Module 6"
                   new: true
