@@ -1,208 +1,481 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  
-  <!-- Inline CSS to prevent FOUC -->
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #000000;
-    }
-    html.dark-theme {
-      --bg-color: #1a1a1a;
-      --text-color: #ffffff;
-    }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-    /* Prevent theme-icon flash: hide sun by default, show it when .is-dark */
-    .theme-toggle .theme-icon-sun { opacity: 0; position: absolute; }
-    .theme-toggle .theme-icon-moon { opacity: 1; position: absolute; }
-    .theme-toggle.is-dark .theme-icon-sun { opacity: 1; }
-    .theme-toggle.is-dark .theme-icon-moon { opacity: 0; }
-  </style>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            {% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{
+            site.title }}{% endif %}
+        </title>
 
-  <!-- Inline script to apply theme immediately -->
-  <script>
-    (function() {
-      // Check localStorage for theme preference
-      var theme = localStorage.getItem('theme');
-      var isDark = theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      // Apply dark-theme class if saved or system prefers dark mode
-      if (isDark) {
-        document.documentElement.classList.add('dark-theme');
-      }
-      // Synchronously mark theme-toggle so the correct icon renders on first paint
-      // (the button doesn't exist yet in <head>, so we use a DOMContentLoaded-racing
-      //  MutationObserver that fires as soon as the element is parsed)
-      if (isDark) {
-        var mo = new MutationObserver(function(mutations, obs) {
-          var btn = document.querySelector('.theme-toggle');
-          if (btn) { btn.classList.add('is-dark'); obs.disconnect(); }
-        });
-        mo.observe(document.documentElement, { childList: true, subtree: true });
-      }
-    })();
-  </script>
+        <!-- Inline CSS to prevent FOUC -->
+        <style>
+            :root {
+                --bg-color: #ffffff;
+                --text-color: #000000;
+            }
+            html.dark-theme {
+                --bg-color: #1a1a1a;
+                --text-color: #ffffff;
+            }
+            body {
+                background-color: var(--bg-color);
+                color: var(--text-color);
+            }
+            /* Prevent theme-icon flash: hide sun by default, show it when .is-dark */
+            .theme-toggle .theme-icon-sun {
+                opacity: 0;
+                position: absolute;
+            }
+            .theme-toggle .theme-icon-moon {
+                opacity: 1;
+                position: absolute;
+            }
+            .theme-toggle.is-dark .theme-icon-sun {
+                opacity: 1;
+            }
+            .theme-toggle.is-dark .theme-icon-moon {
+                opacity: 0;
+            }
+        </style>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+        <!-- Inline script to apply theme immediately -->
+        <script>
+            (function () {
+                // Check localStorage for theme preference
+                var theme = localStorage.getItem("theme");
+                var isDark =
+                    theme === "dark" ||
+                    (!theme &&
+                        window.matchMedia("(prefers-color-scheme: dark)")
+                            .matches);
+                // Apply dark-theme class if saved or system prefers dark mode
+                if (isDark) {
+                    document.documentElement.classList.add("dark-theme");
+                }
+                // Synchronously mark theme-toggle so the correct icon renders on first paint
+                // (the button doesn't exist yet in <head>, so we use a DOMContentLoaded-racing
+                //  MutationObserver that fires as soon as the element is parsed)
+                if (isDark) {
+                    var mo = new MutationObserver(function (mutations, obs) {
+                        var btn = document.querySelector(".theme-toggle");
+                        if (btn) {
+                            btn.classList.add("is-dark");
+                            obs.disconnect();
+                        }
+                    });
+                    mo.observe(document.documentElement, {
+                        childList: true,
+                        subtree: true,
+                    });
+                }
+            })();
+        </script>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
-  <link rel="manifest" href="{{ '/assets/images/site.webmanifest' | relative_url }}">
-  
-  <!-- SEO and Social Media -->
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:type" content="website">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ '/assets/css/main.css' | relative_url }}"
+        />
 
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SYJW6FT3HV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SYJW6FT3HV');
-  </script>
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="{{ '/assets/images/favicon.ico' | relative_url }}"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}"
+        />
+        <link
+            rel="manifest"
+            href="{{ '/assets/images/site.webmanifest' | relative_url }}"
+        />
 
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "uv8be24eow");
-  </script>
+        <!-- SEO and Social Media -->
+        <meta
+            name="description"
+            content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+        />
+        <meta
+            property="og:title"
+            content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}"
+        />
+        <meta
+            property="og:description"
+            content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+        />
+        <meta property="og:url" content="{{ page.url | absolute_url }}" />
+        <meta property="og:type" content="website" />
 
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <div class="header-left">
-        <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-      </div>
-      
-      <nav class="site-nav">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <!-- <a href="{{ '/contribute/' | relative_url }}">Add PYQs</a> -->
-        <a href="{{ '/search/' | relative_url }}">Search</a>
-        <!-- <a href="https://github.com/Saumy1905/PYQFort"  target="_blank" rel="noopener noreferrer">GitHub</a> -->
-        <a href="{{ '/vision/' | relative_url }}">Vision</a>
-        <a href="{{ '/about/' | relative_url }}">About</a>
-      </nav>
-      
-      <div class="header-right">
-        <a href="{{ '/refact/' | relative_url }}" class="util-icon-btn refact-header-btn" id="refact-header-btn" aria-label="Refact – My Saved Subjects" title="Refact – My Saved Subjects">
-          <svg class="util-svg refact-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>
-          <span class="refact-badge" id="refact-badge"></span>
-        </a>
-        <a href="https://tally.so/r/wz6BKa" target="_blank" rel="noopener noreferrer" class="util-icon-btn add-pyq-button" aria-label="Add PYQs" title="Add PYQs">
-          <svg class="util-svg add-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </a>
-        <button class="util-icon-btn theme-toggle" aria-label="Toggle theme">
-          <svg class="util-svg theme-svg theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="util-svg theme-svg theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
-        {% comment %} notification-dot="true" | data-notification-dot="true" shows red dot on menu; omit or use false to hide (default). Requires child span.neo-notification-dot. {% endcomment %}
-        <button class="util-icon-btn menu-toggle" type="button" notification-dot="true" aria-label="Toggle menu" title="Quick navigation">
-          <svg class="util-svg menu-svg menu-icon-bento" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="5" cy="5" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg>
-          <svg class="util-svg menu-svg menu-icon-x" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="7" x2="17" y2="17"/><line x1="17" y1="7" x2="7" y2="17"/></svg>
-          <span class="neo-notification-dot" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-    
-    <div class="search-container">
-      <div class="container">
-        <form class="search-form" action="{{ '/search/' | relative_url }}">
-          <input type="text" id="search-input" name="q" placeholder="Search PDFs...">
-          <button type="submit"><i class="fas fa-search"></i></button>
-        </form>
-      </div>
-    </div>
-  </header>
+        <!-- Canonical URL -->
+        <link rel="canonical" href="{{ page.url | absolute_url }}" />
 
-  <!-- Neo-Grid Menu Overlay: notification-dot="true" or data-notification-dot="true" on a .neo-grid-item shows a red dot on that tile’s icon (add span.neo-notification-dot inside .neo-grid-icon). false or omitted = hidden. -->
-  <div id="neo-grid-overlay" class="neo-grid-overlay" aria-hidden="true">
-    <div class="neo-grid-backdrop"></div>
-    <div class="neo-grid-panel neo-grid-panel-base neo-grid-panel-active" role="navigation" aria-label="Quick Navigation Menu" data-panel="base">
-      <a href="{{ '/' | relative_url }}" class="neo-grid-item">
-        <span class="neo-grid-icon"><i class="fa-solid fa-house"></i></span>
-        <span class="neo-grid-label">Home</span>
-      </a>
-      <a href="https://tally.so/r/wz6BKa" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
-        <span class="neo-grid-icon"><i class="fa-solid fa-plus"></i></span>
-        <span class="neo-grid-label">Add PYQs</span>
-      </a>
-      <!-- <a href="{{ '/about/' | relative_url }}" class="neo-grid-item">
+        <!-- Google Analytics 4 -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-SYJW6FT3HV"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-SYJW6FT3HV");
+        </script>
+
+        <!-- Microsoft Clarity -->
+        <script type="text/javascript">
+            (function (c, l, a, r, i, t, y) {
+                c[a] =
+                    c[a] ||
+                    function () {
+                        (c[a].q = c[a].q || []).push(arguments);
+                    };
+                t = l.createElement(r);
+                t.async = 1;
+                t.src = "https://www.clarity.ms/tag/" + i;
+                y = l.getElementsByTagName(r)[0];
+                y.parentNode.insertBefore(t, y);
+            })(window, document, "clarity", "script", "uv8be24eow");
+        </script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container">
+                <div class="header-left">
+                    <h1 class="site-title">
+                        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+                    </h1>
+                </div>
+
+                <nav class="site-nav">
+                    <a href="{{ '/' | relative_url }}">Home</a>
+                    <!-- <a href="{{ '/contribute/' | relative_url }}">Add PYQs</a> -->
+                    <a href="{{ '/search/' | relative_url }}">Search</a>
+                    <!-- <a href="https://github.com/Saumy1905/PYQFort"  target="_blank" rel="noopener noreferrer">GitHub</a> -->
+                    <a href="{{ '/vision/' | relative_url }}">Vision</a>
+                    <a href="{{ '/about/' | relative_url }}">About</a>
+                </nav>
+
+                <div class="header-right">
+                    <a
+                        href="{{ '/refact/' | relative_url }}"
+                        class="util-icon-btn refact-header-btn"
+                        id="refact-header-btn"
+                        aria-label="Refact – My Saved Subjects"
+                        title="Refact – My Saved Subjects"
+                    >
+                        <svg
+                            class="util-svg refact-svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M21 2v6h-6" />
+                            <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                            <path d="M3 22v-6h6" />
+                            <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                        </svg>
+                        <span class="refact-badge" id="refact-badge"></span>
+                    </a>
+                    <a
+                        href="https://tally.so/r/wz6BKa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="util-icon-btn add-pyq-button"
+                        aria-label="Add PYQs"
+                        title="Add PYQs"
+                    >
+                        <svg
+                            class="util-svg add-svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                    </a>
+                    <button
+                        class="util-icon-btn theme-toggle"
+                        aria-label="Toggle theme"
+                    >
+                        <svg
+                            class="util-svg theme-svg theme-icon-moon"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                            />
+                        </svg>
+                        <svg
+                            class="util-svg theme-svg theme-icon-sun"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                    </button>
+                    {% comment %} notification-dot="true" |
+                    data-notification-dot="true" shows red dot on menu; omit or
+                    use false to hide (default). Requires child
+                    span.neo-notification-dot. {% endcomment %}
+                    <button
+                        class="util-icon-btn menu-toggle"
+                        type="button"
+                        notification-dot="true"
+                        aria-label="Toggle menu"
+                        title="Quick navigation"
+                    >
+                        <svg
+                            class="util-svg menu-svg menu-icon-bento"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            stroke="none"
+                        >
+                            <circle cx="5" cy="5" r="2" />
+                            <circle cx="12" cy="5" r="2" />
+                            <circle cx="19" cy="5" r="2" />
+                            <circle cx="5" cy="12" r="2" />
+                            <circle cx="12" cy="12" r="2" />
+                            <circle cx="19" cy="12" r="2" />
+                            <circle cx="5" cy="19" r="2" />
+                            <circle cx="12" cy="19" r="2" />
+                            <circle cx="19" cy="19" r="2" />
+                        </svg>
+                        <svg
+                            class="util-svg menu-svg menu-icon-x"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <line x1="7" y1="7" x2="17" y2="17" />
+                            <line x1="17" y1="7" x2="7" y2="17" />
+                        </svg>
+                        <span
+                            class="neo-notification-dot"
+                            aria-hidden="true"
+                        ></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <div class="container">
+                    <form
+                        class="search-form"
+                        action="{{ '/search/' | relative_url }}"
+                    >
+                        <input
+                            type="text"
+                            id="search-input"
+                            name="q"
+                            placeholder="Search PDFs..."
+                        />
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <!-- Neo-Grid Menu Overlay: notification-dot="true" or data-notification-dot="true" on a .neo-grid-item shows a red dot on that tile’s icon (add span.neo-notification-dot inside .neo-grid-icon). false or omitted = hidden. -->
+        <div id="neo-grid-overlay" class="neo-grid-overlay" aria-hidden="true">
+            <div class="neo-grid-backdrop"></div>
+            <div
+                class="neo-grid-panel neo-grid-panel-base neo-grid-panel-active"
+                role="navigation"
+                aria-label="Quick Navigation Menu"
+                data-panel="base"
+            >
+                <a href="{{ '/' | relative_url }}" class="neo-grid-item">
+                    <span class="neo-grid-icon"
+                        ><i class="fa-solid fa-house"></i
+                    ></span>
+                    <span class="neo-grid-label">Home</span>
+                </a>
+                <a
+                    href="https://tally.so/r/wz6BKa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="neo-grid-item"
+                >
+                    <span class="neo-grid-icon"
+                        ><i class="fa-solid fa-plus"></i
+                    ></span>
+                    <span class="neo-grid-label">Add PYQs</span>
+                </a>
+                <!-- <a href="{{ '/about/' | relative_url }}" class="neo-grid-item">
         <span class="neo-grid-icon"><i class="fa-solid fa-circle-info"></i></span>
         <span class="neo-grid-label">About</span>
       </a> -->
-      <a href="{{ '/refact/' | relative_url }}" class="neo-grid-item">
-        <span class="neo-grid-icon"><i class="fa-solid fa-rotate"></i></span>
-        <span class="neo-grid-label">Refact</span>
-      </a>
-      <a href="{{ '/vision/' | relative_url }}" class="neo-grid-item">
-        <span class="neo-grid-icon"><i class="fa-solid fa-rocket"></i></span>
-        <span class="neo-grid-label">Vision</span>
-      </a>
-      <a href="#" class="neo-grid-item" nested-grid="nested-grid-special" data-nested-grid="nested-grid-special" notification-dot="true" aria-label="Open Premium Subjects">
-        <span class="neo-grid-icon">
-          <i class="fa-solid fa-crown"></i>
-          <span class="neo-notification-dot" aria-hidden="true"></span>
-        </span>
-        <span class="neo-grid-label">Premium</span>
-      </a>
-      <a href="{{ '/search/' | relative_url }}" class="neo-grid-item">
-        <span class="neo-grid-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-        <span class="neo-grid-label">Search</span>
-      </a>
-      <!-- <a href="https://tally.so/r/n0W0EN" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
+                <a href="{{ '/refact/' | relative_url }}" class="neo-grid-item">
+                    <span class="neo-grid-icon"
+                        ><i class="fa-solid fa-rotate"></i
+                    ></span>
+                    <span class="neo-grid-label">Refact</span>
+                </a>
+                <a href="{{ '/vision/' | relative_url }}" class="neo-grid-item">
+                    <span class="neo-grid-icon"
+                        ><i class="fa-solid fa-rocket"></i
+                    ></span>
+                    <span class="neo-grid-label">Vision</span>
+                </a>
+                <a
+                    href="#"
+                    class="neo-grid-item"
+                    nested-grid="nested-grid-special"
+                    data-nested-grid="nested-grid-special"
+                    notification-dot="true"
+                    aria-label="Open Premium Subjects"
+                >
+                    <span class="neo-grid-icon">
+                        <i class="fa-solid fa-crown"></i>
+                        <span
+                            class="neo-notification-dot"
+                            aria-hidden="true"
+                        ></span>
+                    </span>
+                    <span class="neo-grid-label">Premium</span>
+                </a>
+                <a href="{{ '/search/' | relative_url }}" class="neo-grid-item">
+                    <span class="neo-grid-icon"
+                        ><i class="fa-solid fa-magnifying-glass"></i
+                    ></span>
+                    <span class="neo-grid-label">Search</span>
+                </a>
+                <!-- <a href="https://tally.so/r/n0W0EN" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
         <span class="neo-grid-icon"><i class="fa-solid fa-bug"></i></span>
         <span class="neo-grid-label">Bug Report</span>
       </a> -->
-      <a href="https://whatsapp.com/channel/0029VbA8ahgDzgT43SB9VH1V" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
-        <span class="neo-grid-icon"><i class="fa-brands fa-whatsapp"></i></span>
-        <span class="neo-grid-label">WhatsApp</span>
-      </a>
-      <a href="https://www.linkedin.com/company/pyqfort" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
-        <span class="neo-grid-icon"><i class="fa-brands fa-linkedin"></i></span>
-        <span class="neo-grid-label">LinkedIn</span>
-      </a>
-      <a href="https://www.instagram.com/pyqfort" target="_blank" rel="noopener noreferrer" class="neo-grid-item">
-        <span class="neo-grid-icon"><i class="fa-brands fa-instagram"></i></span>
-        <span class="neo-grid-label">Instagram</span>
-      </a>
-    </div>
+                <a
+                    href="https://whatsapp.com/channel/0029VbA8ahgDzgT43SB9VH1V"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="neo-grid-item"
+                >
+                    <span class="neo-grid-icon"
+                        ><i class="fa-brands fa-whatsapp"></i
+                    ></span>
+                    <span class="neo-grid-label">WhatsApp</span>
+                </a>
+                <a
+                    href="https://www.linkedin.com/company/pyqfort"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="neo-grid-item"
+                >
+                    <span class="neo-grid-icon"
+                        ><i class="fa-brands fa-linkedin"></i
+                    ></span>
+                    <span class="neo-grid-label">LinkedIn</span>
+                </a>
+                <a
+                    href="https://www.instagram.com/pyqfort"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="neo-grid-item"
+                >
+                    <span class="neo-grid-icon"
+                        ><i class="fa-brands fa-instagram"></i
+                    ></span>
+                    <span class="neo-grid-label">Instagram</span>
+                </a>
+            </div>
 
-    <div class="neo-grid-panel neo-grid-panel-nested" data-panel="nested-grid-special" aria-hidden="true">
-      <button type="button" class="neo-grid-nav-btn" data-neo-back aria-label="Back to menu">
-        <i class="fa-solid fa-arrow-left"></i>
-        <span>Back</span>
-      </button>
-      <a href="#" class="neo-grid-item" nested-member="computer" notification-dot="false" data-nested-member="computer">
-        <span class="neo-grid-icon"><i class="fa-solid fa-laptop-code"></i>
-        <span class="neo-notification-dot" aria-hidden="true"></span>
-        </span>
-        <span class="neo-grid-label">Computer</span>
-      </a>
-      <a href="#" class="neo-grid-item" nested-member="mechanical" notification-dot="false" data-nested-member="mechanical">
-        <span class="neo-grid-icon"><i class="fa-solid fa-gears"></i>
-        <span class="neo-notification-dot" aria-hidden="true"></span></span>
-        <span class="neo-grid-label">Mechanical</span>
-      </a>
-      <!-- <a href="#" class="neo-grid-item" nested-member="electronics" data-nested-member="electronics">
+            <div
+                class="neo-grid-panel neo-grid-panel-nested"
+                data-panel="nested-grid-special"
+                aria-hidden="true"
+            >
+                <button
+                    type="button"
+                    class="neo-grid-nav-btn"
+                    data-neo-back
+                    aria-label="Back to menu"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back</span>
+                </button>
+                <a
+                    href="#"
+                    class="neo-grid-item"
+                    nested-member="computer"
+                    notification-dot="true"
+                    data-nested-member="computer"
+                >
+                    <span class="neo-grid-icon"
+                        ><i class="fa-solid fa-laptop-code"></i>
+                        <span
+                            class="neo-notification-dot"
+                            aria-hidden="true"
+                        ></span>
+                    </span>
+                    <span class="neo-grid-label">Computer</span>
+                </a>
+                <a
+                    href="#"
+                    class="neo-grid-item"
+                    nested-member="mechanical"
+                    notification-dot="true"
+                    data-nested-member="mechanical"
+                >
+                    <span class="neo-grid-icon"
+                        ><i class="fa-solid fa-gears"></i>
+                        <span
+                            class="neo-notification-dot"
+                            aria-hidden="true"
+                        ></span
+                    ></span>
+                    <span class="neo-grid-label">Mechanical</span>
+                </a>
+                <!-- <a href="#" class="neo-grid-item" nested-member="electronics" data-nested-member="electronics">
         <span class="neo-grid-icon"><i class="fa-solid fa-microchip"></i></span>
         <span class="neo-grid-label">Electronics</span>
       </a>
@@ -226,222 +499,532 @@
         <span class="neo-grid-icon"><i class="fa-solid fa-atom"></i></span>
         <span class="neo-grid-label">Physics</span>
       </a> -->
-    </div>
+            </div>
 
-    <div class="neo-grid-panel neo-grid-panel-nested" data-panel="duo-nested-subject-grid" aria-hidden="true">
-      <button type="button" class="neo-grid-nav-btn" data-neo-back aria-label="Back to Premium streams">
-        <i class="fa-solid fa-arrow-left"></i>
-        <span>Back</span>
-      </button>
+            <div
+                class="neo-grid-panel neo-grid-panel-nested"
+                data-panel="duo-nested-subject-grid"
+                aria-hidden="true"
+            >
+                <button
+                    type="button"
+                    class="neo-grid-nav-btn"
+                    data-neo-back
+                    aria-label="Back to Premium streams"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back</span>
+                </button>
 
-      <div class="duo-nested-subject-grid-group" data-member-group="computer">
-        <a href="#" class="neo-grid-item" trio-nested-grid="notes-os" data-trio-grid="notes-os">
-          <span class="neo-grid-icon"><i class="fa-solid fa-desktop"></i></span>
-          <span class="neo-grid-label">OS</span>
-        </a>
-        <a href="#" class="neo-grid-item" trio-nested-grid="notes-coa" data-trio-grid="notes-coa">
-          <span class="neo-grid-icon"><i class="fa-solid fa-memory"></i></span>
-          <span class="neo-grid-label">COA</span>
-        </a>
-      </div>
+                <div
+                    class="duo-nested-subject-grid-group"
+                    data-member-group="computer"
+                >
+                    <a
+                        href="#"
+                        class="neo-grid-item"
+                        trio-nested-grid="notes-os"
+                        data-trio-grid="notes-os"
+                        notification-dot="true"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-desktop"></i>
+                            <span
+                                class="neo-notification-dot"
+                                aria-hidden="true"
+                            ></span>
+                        </span>
+                        <span class="neo-grid-label">OS</span>
+                    </a>
+                    <a
+                        href="#"
+                        class="neo-grid-item"
+                        trio-nested-grid="notes-coa"
+                        data-trio-grid="notes-coa"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-memory"></i
+                        ></span>
+                        <span class="neo-grid-label">COA</span>
+                    </a>
+                </div>
 
-      <div class="duo-nested-subject-grid-group" data-member-group="mechanical">
-        <a href="#" class="neo-grid-item" trio-nested-grid="notes-manufacturing" data-trio-grid="notes-manufacturing">
-          <span class="neo-grid-icon"><i class="fa-solid fa-industry"></i></span>
-          <span class="neo-grid-label">Manufacturing</span>
-        </a>
-        <a href="#" class="neo-grid-item" trio-nested-grid="notes-machining" data-trio-grid="notes-machining">
-          <span class="neo-grid-icon"><i class="fa-solid fa-gears"></i></span>
-          <span class="neo-grid-label">Machining</span>
-        </a>
-      </div>
-    </div>
+                <div
+                    class="duo-nested-subject-grid-group"
+                    data-member-group="mechanical"
+                >
+                    <a
+                        href="#"
+                        class="neo-grid-item"
+                        trio-nested-grid="notes-manufacturing"
+                        data-trio-grid="notes-manufacturing"
+                        notification-dot="true"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-industry"></i>
+                            <span
+                                class="neo-notification-dot"
+                                aria-hidden="true"
+                            ></span>
+                        </span>
+                        <span class="neo-grid-label">Manufacturing</span>
+                    </a>
+                    <a
+                        href="#"
+                        class="neo-grid-item"
+                        trio-nested-grid="notes-machining"
+                        data-trio-grid="notes-machining"
+                        notification-dot="true"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-gears"></i>
+                            <span
+                                class="neo-notification-dot"
+                                aria-hidden="true"
+                            ></span>
+                        </span>
+                        <span class="neo-grid-label">Machining</span>
+                    </a>
+                </div>
+            </div>
 
-    <div class="neo-grid-panel neo-grid-panel-nested" data-panel="trio-nested-notes-grid" aria-hidden="true">
-      <button type="button" class="neo-grid-nav-btn" data-neo-back aria-label="Back to Premium subjects">
-        <i class="fa-solid fa-arrow-left"></i>
-        <span>Back</span>
-      </button>
+            <div
+                class="neo-grid-panel neo-grid-panel-nested"
+                data-panel="trio-nested-notes-grid"
+                aria-hidden="true"
+            >
+                <button
+                    type="button"
+                    class="neo-grid-nav-btn"
+                    data-neo-back
+                    aria-label="Back to Premium subjects"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back</span>
+                </button>
 
-      <div class="trio-nested-notes-grid-group" data-trio-group="notes-os">
-        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/os/pyqfort-os-module-1-notes" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 1</span>
-        </a>
-        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/os/pyqfort-os-module-2-notes" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 2</span>
-        </a>
-        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/os/pyqfort-os-module-3-notes" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 3</span>
-        </a>
-        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/os/pyqfort-os-module-4-notes" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 4</span>
-        </a>
-        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/os/pyqfort-os-module-5-notes" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 5 *</span>
-        </a>
-        <a href="https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 6 *</span>
-        </a>
-      </div>
+                <div
+                    class="trio-nested-notes-grid-group"
+                    data-trio-group="notes-os"
+                >
+                    <a
+                        href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/os/pyqfort-os-module-1-notes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 1</span>
+                    </a>
+                    <a
+                        href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/os/pyqfort-os-module-2-notes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 2</span>
+                    </a>
+                    <a
+                        href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/os/pyqfort-os-module-3-notes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 3</span>
+                    </a>
+                    <a
+                        href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/os/pyqfort-os-module-4-notes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 4</span>
+                    </a>
+                    <a
+                        href="https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                        notification-dot="true"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i>
+                            <span
+                                class="neo-notification-dot"
+                                aria-hidden="true"
+                            ></span>
+                        </span>
+                        <span class="neo-grid-label">Module 5 *</span>
+                    </a>
+                    <a
+                        href="https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                        notification-dot="true"
+                    >
+                        <span class="neo-grid-icon" notification-dot="true"
+                            ><i class="fa-solid fa-book"></i>
+                            <span
+                                class="neo-notification-dot"
+                                aria-hidden="true"
+                            ></span>
+                        </span>
+                        <span class="neo-grid-label">Module 6 *</span>
+                    </a>
+                </div>
 
-      <div class="trio-nested-notes-grid-group" data-trio-group="notes-coa">
-        <a href="https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 1</span>
-        </a>
-        <a href="https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 2</span>
-        </a>
-        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/coa/pyqfort-coa-module-3-notes" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 3</span>
-        </a>
-        <a href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/coa/pyqfort-coa-module-4-notes" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 4</span>
-        </a>
-      </div>
+                <div
+                    class="trio-nested-notes-grid-group"
+                    data-trio-group="notes-coa"
+                >
+                    <a
+                        href="https://topmate.io/saumy1905/1942623?utm_source=public_profile&utm_campaign=saumy1905"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 1</span>
+                    </a>
+                    <a
+                        href="https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 2</span>
+                    </a>
+                    <a
+                        href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/coa/pyqfort-coa-module-3-notes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 3</span>
+                    </a>
+                    <a
+                        href="https://pyqfort.com/pdf-viewer/ymca/computer-engineering/sem4/coa/pyqfort-coa-module-4-notes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 4</span>
+                    </a>
+                </div>
 
-      <div class="trio-nested-notes-grid-group" data-trio-group="notes-manufacturing">
-        <a href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/pyqfort-manufacturing-practices-module-1" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 1</span>
-        </a>
-        <a href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/pyqfort-manufacturing-practices-module-2" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 2</span>
-        </a>
-        <a href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/pyqfort-manufacturing-practices-module-3" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 3 *</span>
-        </a>
-        <a href="https://topmate.io/saumy1905/1975553?utm_source=public_profile&utm_campaign=saumy1905" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 4 *</span>
-        </a>
-      </div>
+                <div
+                    class="trio-nested-notes-grid-group"
+                    data-trio-group="notes-manufacturing"
+                >
+                    <a
+                        href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/pyqfort-manufacturing-practices-module-1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 1</span>
+                    </a>
+                    <a
+                        href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/pyqfort-manufacturing-practices-module-2"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 2</span>
+                    </a>
+                    <a
+                        href="https://topmate.io/saumy1905/1975553?utm_source=public_profile&utm_campaign=saumy1905"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                        notification-dot="true"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i>
+                            <span
+                                class="neo-notification-dot"
+                                aria-hidden="true"
+                            ></span>
+                        </span>
+                        <span class="neo-grid-label">Module 3 *</span>
+                    </a>
+                    <a
+                        href="https://topmate.io/saumy1905/1975553?utm_source=public_profile&utm_campaign=saumy1905"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                        notification-dot="true"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i>
+                            <span
+                                class="neo-notification-dot"
+                                aria-hidden="true"
+                            ></span>
+                        </span>
+                        <span class="neo-grid-label">Module 4 *</span>
+                    </a>
+                </div>
 
-      <div class="trio-nested-notes-grid-group" data-trio-group="notes-machining">
-        <a href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/m-machining-module-1-notes" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 1</span>
-        </a>
-        <a href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/m-machining-module-2-notes" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 2</span>
-        </a>
-        <a href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/m-machining-module-3-notes" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 3 *</span>
-        </a>
-        <a href="https://topmate.io/saumy1905/1977013?utm_source=public_profile&utm_campaign=saumy1905" target="_blank" rel="noopener noreferrer" class="neo-grid-item neo-grid-note-item">
-          <span class="neo-grid-icon"><i class="fa-solid fa-book"></i></span>
-          <span class="neo-grid-label">Module 4 *</span>
-        </a>
-      </div>
-    </div>
-  </div>
+                <div
+                    class="trio-nested-notes-grid-group"
+                    data-trio-group="notes-machining"
+                >
+                    <a
+                        href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/m-machining-module-1-notes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 1</span>
+                    </a>
+                    <a
+                        href="https://pyqfort.com/pdf-viewer/ymca/mechanical-engineering/sem4/manufacturing/m-machining-module-2-notes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i
+                        ></span>
+                        <span class="neo-grid-label">Module 2</span>
+                    </a>
+                    <a
+                        href="https://topmate.io/saumy1905/1977013?utm_source=public_profile&utm_campaign=saumy1905"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                        notification-dot="true"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i>
+                            <span
+                                class="neo-notification-dot"
+                                aria-hidden="true"
+                            ></span>
+                        </span>
+                        <span class="neo-grid-label">Module 3 *</span>
+                    </a>
+                    <a
+                        href="https://topmate.io/saumy1905/1977013?utm_source=public_profile&utm_campaign=saumy1905"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="neo-grid-item neo-grid-note-item"
+                        notification-dot="true"
+                    >
+                        <span class="neo-grid-icon"
+                            ><i class="fa-solid fa-book"></i>
+                            <span
+                                class="neo-notification-dot"
+                                aria-hidden="true"
+                            ></span>
+                        </span>
+                        <span class="neo-grid-label">Module 4 *</span>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-  <main class="site-content">
-    {{ content }}
-  </main>
+        <main class="site-content">{{ content }}</main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-left">
-          <h2>{{ site.title }}</h2>
-          <p>{{ site.description }}</p>
-          <div class="social-links">
-            <a href="https://whatsapp.com/channel/0029VbA8ahgDzgT43SB9VH1V" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel">
-              <i class="fab fa-whatsapp" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/pyqfort" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <i class="fab fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.instagram.com/pyqfort" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <i class="fab fa-instagram" aria-hidden="true"></i>
-            </a>
-            <!-- <a href="https://github.com/Saumy1905/PYQFort" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <h2>{{ site.title }}</h2>
+                        <p>{{ site.description }}</p>
+                        <div class="social-links">
+                            <a
+                                href="https://whatsapp.com/channel/0029VbA8ahgDzgT43SB9VH1V"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="WhatsApp Channel"
+                            >
+                                <i
+                                    class="fab fa-whatsapp"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/company/pyqfort"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn"
+                            >
+                                <i
+                                    class="fab fa-linkedin"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+                            <a
+                                href="https://www.instagram.com/pyqfort"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                            >
+                                <i
+                                    class="fab fa-instagram"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+                            <!-- <a href="https://github.com/Saumy1905/PYQFort" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <img src="{{ '/assets/images/icons/github.svg' | relative_url }}" alt="GitHub" aria-hidden="true" class="theme-aware-icon">
             </a> -->
-          </div>
-          <style>
-            .social-links {
-              margin-top: 1rem;
-              display: flex;
-              align-items: center;
-            }
-            .social-links a {
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-              margin-right: 1.2rem;
-              width: 2rem;
-              height: 2rem;
-              color: var(--text-color);
-              transition: all 0.3s ease;
-            }
-            .social-links a i {
-              font-size: 1.5rem;
-            }
-            .theme-aware-icon {
-              width: 1.5rem;
-              height: 1.5rem;
-              vertical-align: middle;
-              filter: invert(0);
-              transition: filter 0.3s ease;
-            }
-            html.dark-theme .theme-aware-icon {
-              filter: invert(1);
-            }
-            .social-links a:hover {
-              color: #e83151;
-              transform: scale(1.1);
-            }
-            .social-links a:hover .theme-aware-icon {
-              filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(335deg) brightness(91%) contrast(92%);
-            }
-            html.dark-theme .social-links a:hover .theme-aware-icon {
-              filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(335deg) brightness(131%) contrast(92%);
-            }
-          </style>
-        </div>
-        
-        <div class="footer-right">
-          <div class="footer-links">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="{{ '/' | relative_url }}">Home</a></li>
-              <li><a href="https://tally.so/r/wz6BKa" target="_blank" rel="noopener noreferrer">Add PYQs</a></li>
-              <li><a href="{{ '/colleges/igdtuw/' | relative_url }}">IGDTUW, Delhi</a></li>
-              <li><a href="{{ '/colleges/ymca/' | relative_url }}">YMCA</a></li>
-              <li><a href="{{ '/colleges/nit-kur/' | relative_url }}">NIT Kurukshetra</a></li>
-              <li><a href="{{ '/colleges/vit-bhopal/' | relative_url }}">VIT Bhopal</a></li>
-              <li><a href="https://github.com/Saumy1905/PYQFort"  target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://tally.so/r/n0W0EN"  target="_blank" rel="noopener noreferrer">Report a Bug</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>© {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+                        </div>
+                        <style>
+                            .social-links {
+                                margin-top: 1rem;
+                                display: flex;
+                                align-items: center;
+                            }
+                            .social-links a {
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 1.2rem;
+                                width: 2rem;
+                                height: 2rem;
+                                color: var(--text-color);
+                                transition: all 0.3s ease;
+                            }
+                            .social-links a i {
+                                font-size: 1.5rem;
+                            }
+                            .theme-aware-icon {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                                vertical-align: middle;
+                                filter: invert(0);
+                                transition: filter 0.3s ease;
+                            }
+                            html.dark-theme .theme-aware-icon {
+                                filter: invert(1);
+                            }
+                            .social-links a:hover {
+                                color: #e83151;
+                                transform: scale(1.1);
+                            }
+                            .social-links a:hover .theme-aware-icon {
+                                filter: invert(27%) sepia(51%) saturate(2878%)
+                                    hue-rotate(335deg) brightness(91%)
+                                    contrast(92%);
+                            }
+                            html.dark-theme
+                                .social-links
+                                a:hover
+                                .theme-aware-icon {
+                                filter: invert(27%) sepia(51%) saturate(2878%)
+                                    hue-rotate(335deg) brightness(131%)
+                                    contrast(92%);
+                            }
+                        </style>
+                    </div>
 
-  <!-- Scripts -->
-  <script src="{{ '/assets/js/college-data.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/refact.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/search-engine.js' | relative_url }}"></script>
-</body>
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li>
+                                    <a href="{{ '/' | relative_url }}">Home</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://tally.so/r/wz6BKa"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Add PYQs</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="{{ '/colleges/igdtuw/' | relative_url }}"
+                                        >IGDTUW, Delhi</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="{{ '/colleges/ymca/' | relative_url }}"
+                                        >YMCA</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="{{ '/colleges/nit-kur/' | relative_url }}"
+                                        >NIT Kurukshetra</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="{{ '/colleges/vit-bhopal/' | relative_url }}"
+                                        >VIT Bhopal</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://github.com/Saumy1905/PYQFort"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >GitHub</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://tally.so/r/n0W0EN"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Report a Bug</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        © {{ site.time | date: '%Y' }} {{ site.title }}. All
+                        rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ '/assets/js/college-data.js' | relative_url }}"></script>
+        <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+        <script src="{{ '/assets/js/refact.js' | relative_url }}"></script>
+        <script src="{{ '/assets/js/search-engine.js' | relative_url }}"></script>
+    </body>
 </html>
