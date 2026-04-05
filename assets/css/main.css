@@ -6092,6 +6092,7 @@ h1, h2, h3, h4, h5, h6 {
 .neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(7) { transition-delay: 0.22s; }
 .neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(8) { transition-delay: 0.25s; }
 .neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(9) { transition-delay: 0.28s; }
+.neo-grid-overlay.neo-grid-active .neo-grid-item:nth-child(10) { transition-delay: 0.28s; }
 
 /* Reset delays when closing so items disappear immediately */
 .neo-grid-overlay:not(.neo-grid-active) .neo-grid-item {
@@ -6187,7 +6188,8 @@ body.neo-grid-body-lock {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #e83151;
+  /* background: #e83151; */
+  background: #50C878; /* Emerald green */
   box-shadow: 0 0 0 2px var(--bg-color, #ffffff);
   pointer-events: none;
   z-index: 5;
