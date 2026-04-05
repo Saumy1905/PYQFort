@@ -5594,6 +5594,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 1.1rem;
   padding: 0 0.25rem;
   background-color: #e83151;
+  /* background-color: #50C878; Emerald green (not related to notification-dot) */
   color: #fff;
   border-radius: 999px;
   font-size: 0.65rem;

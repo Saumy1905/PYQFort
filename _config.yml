@@ -1,6 +1,6 @@
 # Site settings
 title: PYQFort
-description: PYQFort is providing premium, engineered, educational resources to empower the students of India cause 'we have nothing to lose but our chains'
+description: PYQFort is providing premium, engineered, educational resources to empower the students of India
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://pyqfort.com" # the base hostname & protocol for your site
 
