@@ -7,24 +7,34 @@
 :root {
   --v-bg-deep: var(--background-color);
   --v-bg-mid: var(--light-gray);
-  --v-bg-card: rgba(13, 18, 36, 0.85);
-  --v-bg-card-hover: rgba(20, 28, 55, 0.95);
+  --v-bg-card: var(--card-background);
+  --v-bg-card-hover: var(--light-gray);
   --v-electric: var(--primary-color);
   --v-electric-dim: rgba(74, 108, 247, 0.15);
   --v-electric-glow: rgba(74, 108, 247, 0.35);
   --v-electric-bright: #5d7bf9;
   --v-cyan: #6c8cfa;
   --v-text: var(--text-color);
-  --v-text-dim: #8892a8;
-  --v-text-muted: #4a5270;
+  --v-text-dim: var(--secondary-color);
+  --v-text-muted: var(--border-color);
   --v-accent-green: #00ffa3;
   --v-accent-gold: #ffd700;
   --v-accent-red: #ff4060;
   --v-font-heading: 'Inter', 'Segoe UI', sans-serif;
   --v-font-mono: 'JetBrains Mono', 'Consolas', monospace;
-  --v-border: rgba(74, 108, 247, 0.12);
+  --v-border: var(--border-color);
   --v-transition-heavy: cubic-bezier(0.22, 0.61, 0.36, 1);
   --v-transition-snap: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Dark theme adjustments for vision page */
+.dark-theme {
+  --v-bg-card: rgba(30, 30, 30, 0.95);
+  --v-bg-card-hover: rgba(40, 40, 40, 0.95);
+  --v-electric-dim: rgba(93, 123, 249, 0.15);
+  --v-electric-glow: rgba(93, 123, 249, 0.35);
+  --v-text-dim: #a0a0a0;
+  --v-text-muted: #6c757d;
 }
 
 /* ── Vision Wrapper — Full-Page Container ───────────────────────────────── */
@@ -403,6 +413,8 @@ body.vision-page {
   transition: opacity 0.6s var(--v-transition-heavy),
               transform 0.6s var(--v-transition-heavy),
               border-color 0.3s, background 0.3s;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .vision-slide.is-visible .vision-pillar {
@@ -431,6 +443,7 @@ body.vision-page {
   font-size: 1.3rem;
   margin-bottom: 1.25rem;
   transition: transform 0.3s var(--v-transition-snap);
+  flex-shrink: 0;
 }
 
 .vision-pillar:hover .vision-pillar__icon {
@@ -443,12 +456,17 @@ body.vision-page {
   font-weight: 700;
   color: var(--v-text);
   margin-bottom: 0.75rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .vision-pillar__desc {
   font-size: 0.9rem;
   color: var(--v-text-dim);
   line-height: 1.7;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .vision-pillar__glow {
@@ -577,6 +595,51 @@ body.vision-page {
   transition: opacity 0.6s var(--v-transition-heavy),
               transform 0.6s var(--v-transition-heavy),
               border-color 0.3s;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.vision-slide.is-visible .vision-impact-card {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.vision-impact-card:nth-child(1) { transition-delay: 0.1s; }
+.vision-impact-card:nth-child(2) { transition-delay: 0.3s; }
+.vision-impact-card:nth-child(3) { transition-delay: 0.5s; }
+
+.vision-impact-card:hover {
+  border-color: var(--v-electric);
+}
+
+.vision-impact-card__number {
+  display: block;
+  font-family: var(--v-font-mono);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  color: var(--v-text);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 30px var(--v-electric-dim);
+  word-wrap: break-word;
+}
+
+.vision-impact-card__label {
+  display: block;
+  font-family: var(--v-font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--v-electric);
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.vision-impact-card__sub {
+  font-size: 0.8rem;
+  color: var(--v-text-muted);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .vision-slide.is-visible .vision-impact-card {
@@ -979,6 +1042,8 @@ body.vision-page {
   background: var(--v-bg-card);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .vision-roadmap-phase__content h3 {
@@ -987,6 +1052,9 @@ body.vision-page {
   font-weight: 700;
   color: var(--v-text);
   margin-bottom: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .vision-roadmap-phase__content p {
@@ -994,6 +1062,8 @@ body.vision-page {
   color: var(--v-text-dim);
   line-height: 1.7;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .vision-roadmap-phase__status {
@@ -1135,9 +1205,17 @@ body.vision-page {
     gap: 1rem;
   }
 
+  .vision-pillar {
+    padding: 1.75rem 1.25rem;
+  }
+
   .vision-impact-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .vision-impact-card {
+    padding: 2rem 1.25rem;
   }
 
   .vision-trust-layout {
@@ -1163,6 +1241,14 @@ body.vision-page {
     flex-direction: row;
     justify-content: center;
     gap: 3rem;
+  }
+
+  .vision-roadmap {
+    padding-left: 35px;
+  }
+
+  .vision-roadmap-phase__content {
+    padding: 1.25rem;
   }
 
   .vision-speed-gauges {
@@ -1218,6 +1304,24 @@ body.vision-page {
   .vision-cover-logo {
     width: 60px;
     height: 60px;
+  }
+
+  /* Pillars */
+  .vision-pillars {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .vision-pillar {
+    padding: 1.5rem 1rem;
+  }
+
+  .vision-pillar__title {
+    font-size: 1rem;
+  }
+
+  .vision-pillar__desc {
+    font-size: 0.85rem;
   }
 
   /* Impact */
