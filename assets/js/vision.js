@@ -403,13 +403,17 @@
       ctx.clearRect(0, 0, w, h);
       time += 0.003;
 
-      // Vanishing point
-      const vpx = w * 0.65;
-      const vpy = h * 0.45;
+      // Responsive adjustments based on screen size
+      const isMobile = w <= 768;
+      const isTablet = w > 768 && w <= 992;
+      
+      // Vanishing point - adjust for mobile/tablet
+      const vpx = isMobile ? w * 0.5 : (isTablet ? w * 0.6 : w * 0.65);
+      const vpy = isMobile ? h * 0.35 : (isTablet ? h * 0.4 : h * 0.45);
 
-      // Draw grid lines from bottom-right
-      const numLines = 30;
-      const electricBlue = 'rgba(0, 191, 255, ';
+      // Draw grid lines from bottom-right - reduce on smaller screens
+      const numLines = isMobile ? 15 : (isTablet ? 20 : 30);
+      const electricBlue = 'rgba(74, 108, 247, ';
 
       // Horizontal-like lines (receding into distance)
       for (let i = 0; i < numLines; i++) {
@@ -430,8 +434,8 @@
         ctx.stroke();
       }
 
-      // Vertical-like lines (perspective converging to vanishing point)
-      const numVLines = 24;
+      // Vertical-like lines (perspective converging to vanishing point) - reduce on smaller screens
+      const numVLines = isMobile ? 12 : (isTablet ? 18 : 24);
       for (let i = 0; i < numVLines; i++) {
         const t = i / numVLines;
         const baseX = w * t;
@@ -445,18 +449,19 @@
         ctx.stroke();
       }
 
-      // Vertical pillars (building-like structures)
+      // Vertical pillars (building-like structures) - scale based on screen size
+      const pillarScale = isMobile ? 0.5 : (isTablet ? 0.7 : 1);
       const pillars = [
-        { x: w * 0.7, h: h * 0.4, w: 30 },
-        { x: w * 0.78, h: h * 0.55, w: 25 },
-        { x: w * 0.85, h: h * 0.35, w: 20 },
-        { x: w * 0.6, h: h * 0.3, w: 22 },
-        { x: w * 0.92, h: h * 0.45, w: 18 },
+        { x: w * 0.7, h: h * 0.4 * pillarScale, w: 30 * pillarScale },
+        { x: w * 0.78, h: h * 0.55 * pillarScale, w: 25 * pillarScale },
+        { x: w * 0.85, h: h * 0.35 * pillarScale, w: 20 * pillarScale },
+        { x: w * 0.6, h: h * 0.3 * pillarScale, w: 22 * pillarScale },
+        { x: w * 0.92, h: h * 0.45 * pillarScale, w: 18 * pillarScale },
       ];
 
       pillars.forEach((p, i) => {
         const pulseAlpha = 0.08 + 0.06 * Math.sin(time * 1.5 + i * 1.2);
-        const baseY = h * 0.5 + (i * 20);
+        const baseY = h * 0.5 + (i * 20 * pillarScale);
 
         ctx.beginPath();
         ctx.fillStyle = electricBlue + pulseAlpha + ')';
@@ -469,7 +474,7 @@
         ctx.strokeRect(p.x - p.w / 2, baseY - p.h, p.w, p.h);
 
         // Horizontal lines on pillars
-        const numHLines = Math.floor(p.h / 20);
+        const numHLines = Math.floor(p.h / (20 * pillarScale));
         for (let j = 0; j < numHLines; j++) {
           const ly = baseY - p.h + (p.h / numHLines) * j;
           ctx.beginPath();
@@ -481,12 +486,13 @@
         }
       });
 
-      // Glow point at vanishing point
-      const gradient = ctx.createRadialGradient(vpx, vpy, 0, vpx, vpy, 150);
-      gradient.addColorStop(0, 'rgba(0, 191, 255, 0.08)');
-      gradient.addColorStop(1, 'rgba(0, 191, 255, 0)');
+      // Glow point at vanishing point - scale based on screen size
+      const glowRadius = isMobile ? 80 : (isTablet ? 120 : 150);
+      const gradient = ctx.createRadialGradient(vpx, vpy, 0, vpx, vpy, glowRadius);
+      gradient.addColorStop(0, 'rgba(74, 108, 247, 0.08)');
+      gradient.addColorStop(1, 'rgba(74, 108, 247, 0)');
       ctx.fillStyle = gradient;
-      ctx.fillRect(vpx - 150, vpy - 150, 300, 300);
+      ctx.fillRect(vpx - glowRadius, vpy - glowRadius, glowRadius * 2, glowRadius * 2);
 
       animFrame = requestAnimationFrame(draw);
     }
