@@ -51,11 +51,11 @@
 
 /* ── Navigation Dots ────────────────────────────────────────────────────── */
 .vision-nav-dots {
+  display: none; /* Hidden on all devices for consistent UX */
   position: fixed;
   right: 24px;
   top: 50%;
   transform: translateY(-50%);
-  display: flex;
   flex-direction: column;
   gap: 12px;
   z-index: 150;
@@ -113,24 +113,17 @@
 
 /* ── Body Scroll Context for Vision Page ────────────────────────────────── */
 body.vision-page {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: none;
   overflow-y: auto;
   scroll-behavior: smooth;
-}
-
-/* Disable snap scrolling on tablet and mobile for better touch experience */
-@media (max-width: 992px) {
-  body.vision-page {
-    scroll-snap-type: none;
-  }
 }
 
 /* ── Individual Slide ───────────────────────────────────────────────────── */
 .vision-slide {
   width: 100%;
   min-height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-align: none;
+  scroll-snap-stop: normal;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,11 +133,9 @@ body.vision-page {
   padding: 80px 40px;
 }
 
-/* Disable snap alignment on tablet and mobile */
+/* Adjust padding and height on tablet and mobile */
 @media (max-width: 992px) {
   .vision-slide {
-    scroll-snap-align: none;
-    scroll-snap-stop: normal;
     min-height: auto;
     padding: 60px 30px;
   }
@@ -1270,11 +1261,6 @@ body.vision-page {
 
   .vision-speed-gauges {
     gap: 2rem;
-  }
-
-  /* Hide navigation dots on mobile/tablet for cleaner experience */
-  .vision-nav-dots {
-    display: none;
   }
 
   .vision-dot {

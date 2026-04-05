@@ -96,18 +96,17 @@
   }, { passive: true });
 
   // ── Keyboard Navigation ───────────────────────────────────────────────
-  document.addEventListener('keydown', (e) => {
-    // Only if vision page is in focus and on desktop
-    if (!wrapper) return;
-    if (window.innerWidth <= 992) return; // Disable keyboard navigation on mobile/tablet
-    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-      e.preventDefault();
-      navigateToSlide(currentSlide + 1);
-    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-      e.preventDefault();
-      navigateToSlide(currentSlide - 1);
-    }
-  });
+  // Disabled for consistent UX across all devices
+  // document.addEventListener('keydown', (e) => {
+  //   if (!wrapper) return;
+  //   if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+  //     e.preventDefault();
+  //     navigateToSlide(currentSlide + 1);
+  //   } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+  //     e.preventDefault();
+  //     navigateToSlide(currentSlide - 1);
+  //   }
+  // });
 
   // ── Slide-Specific Animations ─────────────────────────────────────────
   function triggerSlideAnimations(index) {
@@ -598,33 +597,26 @@
   // Draw 3D grid
   drawPerspectiveGrid();
 
-  // Touch/Swipe Support - Only enable on desktop (>992px)
-  let touchStartY = 0;
-  let touchEndY = 0;
+  // Touch/Swipe Support - Disabled for consistent UX across all devices
+  // let touchStartY = 0;
+  // let touchEndY = 0;
 
-  // Check if device is desktop
-  function isDesktop() {
-    return window.innerWidth > 992;
-  }
+  // if (slidesContainer) {
+  //   slidesContainer.addEventListener('touchstart', (e) => {
+  //     touchStartY = e.changedTouches[0].screenY;
+  //   }, { passive: true });
 
-  if (slidesContainer) {
-    slidesContainer.addEventListener('touchstart', (e) => {
-      if (!isDesktop()) return; // Disable swipe navigation on mobile/tablet
-      touchStartY = e.changedTouches[0].screenY;
-    }, { passive: true });
-
-    slidesContainer.addEventListener('touchend', (e) => {
-      if (!isDesktop()) return; // Disable swipe navigation on mobile/tablet
-      touchEndY = e.changedTouches[0].screenY;
-      const diff = touchStartY - touchEndY;
-      if (Math.abs(diff) > 60) {
-        if (diff > 0) {
-          navigateToSlide(currentSlide + 1);
-        } else {
-          navigateToSlide(currentSlide - 1);
-        }
-      }
-    }, { passive: true });
-  }
+  //   slidesContainer.addEventListener('touchend', (e) => {
+  //     touchEndY = e.changedTouches[0].screenY;
+  //     const diff = touchStartY - touchEndY;
+  //     if (Math.abs(diff) > 60) {
+  //       if (diff > 0) {
+  //         navigateToSlide(currentSlide + 1);
+  //       } else {
+  //         navigateToSlide(currentSlide - 1);
+  //       }
+  //     }
+  //   }, { passive: true });
+  // }
 
 })();
