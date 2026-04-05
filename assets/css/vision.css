@@ -118,6 +118,13 @@ body.vision-page {
   scroll-behavior: smooth;
 }
 
+/* Disable snap scrolling on tablet and mobile for better touch experience */
+@media (max-width: 992px) {
+  body.vision-page {
+    scroll-snap-type: none;
+  }
+}
+
 /* ── Individual Slide ───────────────────────────────────────────────────── */
 .vision-slide {
   width: 100%;
@@ -131,6 +138,16 @@ body.vision-page {
   background-color: var(--v-bg-deep);
   overflow: hidden;
   padding: 80px 40px;
+}
+
+/* Disable snap alignment on tablet and mobile */
+@media (max-width: 992px) {
+  .vision-slide {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+    min-height: auto;
+    padding: 60px 30px;
+  }
 }
 
 .vision-slide__content {
@@ -1255,10 +1272,9 @@ body.vision-page {
     gap: 2rem;
   }
 
+  /* Hide navigation dots on mobile/tablet for cleaner experience */
   .vision-nav-dots {
-    right: 12px;
-    gap: 8px;
-    padding: 10px 6px;
+    display: none;
   }
 
   .vision-dot {
@@ -1281,16 +1297,7 @@ body.vision-page {
     font-size: clamp(1.5rem, 5vw, 2rem);
   }
 
-  .vision-nav-dots {
-    right: 8px;
-    gap: 6px;
-    padding: 8px 5px;
-  }
-
-  .vision-dot {
-    width: 7px;
-    height: 7px;
-  }
+  /* Navigation dots already hidden on mobile via tablet breakpoint */
 
   /* Cover */
   .vision-cover-title__main {

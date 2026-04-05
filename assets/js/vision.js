@@ -97,8 +97,9 @@
 
   // ── Keyboard Navigation ───────────────────────────────────────────────
   document.addEventListener('keydown', (e) => {
-    // Only if vision page is in focus
+    // Only if vision page is in focus and on desktop
     if (!wrapper) return;
+    if (window.innerWidth <= 992) return; // Disable keyboard navigation on mobile/tablet
     if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
       e.preventDefault();
       navigateToSlide(currentSlide + 1);
@@ -597,16 +598,23 @@
   // Draw 3D grid
   drawPerspectiveGrid();
 
-  // Touch/Swipe Support
+  // Touch/Swipe Support - Only enable on desktop (>992px)
   let touchStartY = 0;
   let touchEndY = 0;
 
+  // Check if device is desktop
+  function isDesktop() {
+    return window.innerWidth > 992;
+  }
+
   if (slidesContainer) {
     slidesContainer.addEventListener('touchstart', (e) => {
+      if (!isDesktop()) return; // Disable swipe navigation on mobile/tablet
       touchStartY = e.changedTouches[0].screenY;
     }, { passive: true });
 
     slidesContainer.addEventListener('touchend', (e) => {
+      if (!isDesktop()) return; // Disable swipe navigation on mobile/tablet
       touchEndY = e.changedTouches[0].screenY;
       const diff = touchStartY - touchEndY;
       if (Math.abs(diff) > 60) {
