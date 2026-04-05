@@ -10,6 +10,9 @@
   const wrapper = document.getElementById('vision-wrapper');
   if (!wrapper) return; // Not on vision page
 
+  // Add vision-page class to body for CSS targeting
+  document.body.classList.add('vision-page');
+
   const slidesContainer = document.getElementById('vision-slides');
   const slides = Array.from(wrapper.querySelectorAll('.vision-slide'));
   const dots = Array.from(wrapper.querySelectorAll('.vision-dot'));
@@ -48,7 +51,7 @@
       });
     },
     {
-      root: slidesContainer,
+      root: null,
       threshold: 0.5,
     }
   );
@@ -84,15 +87,13 @@
   }
 
   // Also update on scroll for smoother progress
-  if (slidesContainer) {
-    slidesContainer.addEventListener('scroll', () => {
-      if (!progressBar) return;
-      const scrollTop = slidesContainer.scrollTop;
-      const scrollHeight = slidesContainer.scrollHeight - slidesContainer.clientHeight;
-      const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-      progressBar.style.width = Math.min(100, pct) + '%';
-    }, { passive: true });
-  }
+  window.addEventListener('scroll', () => {
+    if (!progressBar) return;
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    progressBar.style.width = Math.min(100, pct) + '%';
+  }, { passive: true });
 
   // ── Keyboard Navigation ───────────────────────────────────────────────
   document.addEventListener('keydown', (e) => {
@@ -512,7 +513,7 @@
           }
         });
       },
-      { root: slidesContainer, threshold: 0.1 }
+      { root: null, threshold: 0.1 }
     );
     if (coverSlide) canvasObserver.observe(coverSlide);
   }
