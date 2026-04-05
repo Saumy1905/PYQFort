@@ -205,26 +205,23 @@
     const svg = document.getElementById('vision-growth-chart');
     if (!svg) return;
 
-    // Data points (normalized growth over time)
+    // Data points matching the image: Week 1 to Week 13 (288 to 8.67k sessions)
     const data = [
-      { x: 0, y: 10 },   // Start
-      { x: 80, y: 12 },
-      { x: 160, y: 18 },
-      { x: 240, y: 25 },
-      { x: 320, y: 40 },
-      { x: 400, y: 65 },
-      { x: 480, y: 100 },
-      { x: 560, y: 160 },
-      { x: 640, y: 230 },
-      { x: 720, y: 301 }, // 30.1x
+      { week: 1, sessions: 288 },
+      { week: 3, sessions: 820 },
+      { week: 5, sessions: 1950 },
+      { week: 7, sessions: 3400 },
+      { week: 9, sessions: 5600 },
+      { week: 13, sessions: 8670 }
     ];
 
-    const padding = { top: 30, right: 30, bottom: 50, left: 60 };
+    const padding = { top: 40, right: 80, bottom: 60, left: 70 };
     const chartW = 800 - padding.left - padding.right;
     const chartH = 400 - padding.top - padding.bottom;
-    const maxY = 320;
+    const maxY = 9000; // Slightly above 8.67k for headroom
+    const maxWeek = 13;
 
-    // Create gradient
+    // Create gradient for area fill
     const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
     const grad = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
     grad.setAttribute('id', 'v-chart-gradient');
@@ -235,12 +232,12 @@
 
     const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
     stop1.setAttribute('offset', '0%');
-    stop1.setAttribute('stop-color', '#00bfff');
-    stop1.setAttribute('stop-opacity', '0.3');
+    stop1.setAttribute('stop-color', 'var(--v-electric)');
+    stop1.setAttribute('stop-opacity', '0.4');
 
     const stop2 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
     stop2.setAttribute('offset', '100%');
-    stop2.setAttribute('stop-color', '#00bfff');
+    stop2.setAttribute('stop-color', 'var(--v-electric)');
     stop2.setAttribute('stop-opacity', '0.02');
 
     grad.appendChild(stop1);
@@ -248,54 +245,117 @@
     defs.appendChild(grad);
     svg.appendChild(defs);
 
-    // Grid lines
-    for (let i = 0; i <= 4; i++) {
-      const y = padding.top + (chartH / 4) * i;
+    // Horizontal grid lines (5 lines for 0, 2k, 4k, 6k, 8k)
+    const yLabels = [0, 2000, 4000, 6000, 8000];
+    yLabels.forEach((val, i) => {
+      const y = padding.top + chartH - (val / maxY) * chartH;
+      
+      // Grid line
       const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
       line.setAttribute('x1', padding.left);
       line.setAttribute('y1', y);
       line.setAttribute('x2', 800 - padding.right);
       line.setAttribute('y2', y);
       line.setAttribute('class', 'v-grid-line');
+      line.setAttribute('stroke-dasharray', '4,4');
       svg.appendChild(line);
-    }
 
-    // X-axis labels
-    const months = ['Jan', 'Feb', 'Mar', 'Apr'];
-    months.forEach((m, i) => {
+      // Y-axis label (right side)
       const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-      text.setAttribute('x', padding.left + (chartW / (months.length - 1)) * i);
-      text.setAttribute('y', 400 - 15);
+      text.setAttribute('x', 800 - padding.right + 15);
+      text.setAttribute('y', y + 4);
       text.setAttribute('class', 'v-chart-label');
-      text.setAttribute('text-anchor', 'middle');
-      text.textContent = m;
+      text.setAttribute('text-anchor', 'start');
+      text.textContent = val === 0 ? '0' : (val / 1000) + 'k';
       svg.appendChild(text);
     });
 
+    // Vertical grid lines for each week
+    data.forEach((pt) => {
+      const x = padding.left + ((pt.week - 1) / (maxWeek - 1)) * chartW;
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', x);
+      line.setAttribute('y1', padding.top);
+      line.setAttribute('x2', x);
+      line.setAttribute('y2', 400 - padding.bottom);
+      line.setAttribute('class', 'v-grid-line');
+      line.setAttribute('stroke-dasharray', '4,4');
+      svg.appendChild(line);
+    });
+
+    // X-axis labels (weeks)
+    data.forEach((pt) => {
+      const x = padding.left + ((pt.week - 1) / (maxWeek - 1)) * chartW;
+      const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      text.setAttribute('x', x);
+      text.setAttribute('y', 400 - padding.bottom + 25);
+      text.setAttribute('class', 'v-chart-label');
+      text.setAttribute('text-anchor', 'middle');
+      text.textContent = 'Week ' + pt.week;
+      svg.appendChild(text);
+    });
+
+    // X-axis title
+    const xTitle = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    xTitle.setAttribute('x', padding.left + chartW / 2);
+    xTitle.setAttribute('y', 400 - 10);
+    xTitle.setAttribute('class', 'v-chart-label');
+    xTitle.setAttribute('text-anchor', 'middle');
+    xTitle.textContent = 'Period';
+    svg.appendChild(xTitle);
+
+    // Y-axis title (Sessions)
+    const yTitle = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    yTitle.setAttribute('x', 800 - 20);
+    yTitle.setAttribute('y', 25);
+    yTitle.setAttribute('class', 'v-chart-label');
+    yTitle.setAttribute('text-anchor', 'end');
+    yTitle.textContent = 'Sessions';
+    svg.appendChild(yTitle);
+
     // Build path
-    function scaleX(x) { return padding.left + (x / 720) * chartW; }
-    function scaleY(y) { return padding.top + chartH - (y / maxY) * chartH; }
+    function scaleX(week) { 
+      return padding.left + ((week - 1) / (maxWeek - 1)) * chartW; 
+    }
+    function scaleY(sessions) { 
+      return padding.top + chartH - (sessions / maxY) * chartH; 
+    }
 
     let linePath = '';
-    let areaPath = `M ${scaleX(data[0].x)} ${scaleY(0)}`;
+    let areaPath = `M ${scaleX(data[0].week)} ${400 - padding.bottom}`;
 
     data.forEach((pt, i) => {
-      const px = scaleX(pt.x);
-      const py = scaleY(pt.y);
+      const px = scaleX(pt.week);
+      const py = scaleY(pt.sessions);
+      
       if (i === 0) {
         linePath += `M ${px} ${py}`;
         areaPath += ` L ${px} ${py}`;
       } else {
-        // Smooth curve
+        // Smooth curve using bezier
         const prev = data[i - 1];
-        const cpx1 = scaleX(prev.x) + (scaleX(pt.x) - scaleX(prev.x)) * 0.4;
-        const cpx2 = scaleX(pt.x) - (scaleX(pt.x) - scaleX(prev.x)) * 0.4;
-        linePath += ` C ${cpx1} ${scaleY(prev.y)} ${cpx2} ${py} ${px} ${py}`;
-        areaPath += ` C ${cpx1} ${scaleY(prev.y)} ${cpx2} ${py} ${px} ${py}`;
+        const prevX = scaleX(prev.week);
+        const prevY = scaleY(prev.sessions);
+        const cpx1 = prevX + (px - prevX) * 0.5;
+        const cpx2 = px - (px - prevX) * 0.5;
+        
+        linePath += ` C ${cpx1} ${prevY}, ${cpx2} ${py}, ${px} ${py}`;
+        areaPath += ` C ${cpx1} ${prevY}, ${cpx2} ${py}, ${px} ${py}`;
       }
+
+      // Add data point labels on the line
+      const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      label.setAttribute('x', px);
+      label.setAttribute('y', py - 10);
+      label.setAttribute('class', 'v-chart-label');
+      label.setAttribute('text-anchor', 'middle');
+      label.setAttribute('fill', 'var(--v-electric)');
+      label.setAttribute('font-weight', '600');
+      label.textContent = pt.sessions >= 1000 ? (pt.sessions / 1000).toFixed(1) + 'k' : pt.sessions;
+      svg.appendChild(label);
     });
 
-    areaPath += ` L ${scaleX(720)} ${scaleY(0)} Z`;
+    areaPath += ` L ${scaleX(data[data.length - 1].week)} ${400 - padding.bottom} Z`;
 
     // Area fill
     const area = document.createElementNS('http://www.w3.org/2000/svg', 'path');
@@ -307,6 +367,8 @@
     const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     line.setAttribute('d', linePath);
     line.setAttribute('class', 'v-chart-line');
+    line.setAttribute('stroke-width', '3');
+    
     // Animate line drawing
     const lineLen = line.getTotalLength ? line.getTotalLength() : 2000;
     line.style.strokeDasharray = lineLen;
@@ -315,24 +377,25 @@
 
     // Trigger line draw
     requestAnimationFrame(() => {
-      line.style.transition = 'stroke-dashoffset 2s cubic-bezier(0.22, 0.61, 0.36, 1)';
+      line.style.transition = 'stroke-dashoffset 2.5s cubic-bezier(0.22, 0.61, 0.36, 1)';
       line.style.strokeDashoffset = '0';
     });
 
-    // End dot
-    const lastPt = data[data.length - 1];
-    const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    dot.setAttribute('cx', scaleX(lastPt.x));
-    dot.setAttribute('cy', scaleY(lastPt.y));
-    dot.setAttribute('r', '6');
-    dot.setAttribute('class', 'v-chart-dot');
-    dot.style.opacity = '0';
-    svg.appendChild(dot);
+    // Add dots at each data point
+    data.forEach((pt, i) => {
+      const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      dot.setAttribute('cx', scaleX(pt.week));
+      dot.setAttribute('cy', scaleY(pt.sessions));
+      dot.setAttribute('r', '5');
+      dot.setAttribute('class', 'v-chart-dot');
+      dot.style.opacity = '0';
+      svg.appendChild(dot);
 
-    setTimeout(() => {
-      dot.style.transition = 'opacity 0.5s';
-      dot.style.opacity = '1';
-    }, 2000);
+      setTimeout(() => {
+        dot.style.transition = 'opacity 0.5s';
+        dot.style.opacity = '1';
+      }, 2000 + (i * 200));
+    });
   }
 
   // ── Trust Ring Animation ──────────────────────────────────────────────

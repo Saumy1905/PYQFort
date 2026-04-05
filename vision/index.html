@@ -4,339 +4,653 @@ title: Vision
 description: "PYQFort: The Architecture of Trust — A Rigorous 94-Day Performance Analysis. Q1 2026 Digital Briefing."
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/vision.css' | relative_url }}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/vision.css' | relative_url }}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+/>
 
 <div class="vision-wrapper" id="vision-wrapper">
+    <!-- Navigation Dots -->
+    <nav
+        class="vision-nav-dots"
+        id="vision-nav-dots"
+        aria-label="Slide navigation"
+    >
+        <button
+            class="vision-dot active"
+            data-slide="0"
+            aria-label="Slide 1: Cover"
+            title="The Entry"
+        ></button>
+        <button
+            class="vision-dot"
+            data-slide="1"
+            aria-label="Slide 2: Philosophy"
+            title="The Soul"
+        ></button>
+        <button
+            class="vision-dot"
+            data-slide="2"
+            aria-label="Slide 3: Mission"
+            title="The Pillars"
+        ></button>
+        <button
+            class="vision-dot"
+            data-slide="3"
+            aria-label="Slide 4: Growth"
+            title="The Momentum"
+        ></button>
+        <button
+            class="vision-dot"
+            data-slide="4"
+            aria-label="Slide 5: Impact"
+            title="The Magnitude"
+        ></button>
+        <button
+            class="vision-dot"
+            data-slide="5"
+            aria-label="Slide 6: Trust"
+            title="The Engine"
+        ></button>
+        <button
+            class="vision-dot"
+            data-slide="6"
+            aria-label="Slide 7: Behavior"
+            title="The Deep-Dive"
+        ></button>
+        <button
+            class="vision-dot"
+            data-slide="7"
+            aria-label="Slide 8: Speed"
+            title="The Moat"
+        ></button>
+        <button
+            class="vision-dot"
+            data-slide="8"
+            aria-label="Slide 9: Future"
+            title="The Horizon"
+        ></button>
+        <button
+            class="vision-dot"
+            data-slide="9"
+            aria-label="Slide 10: Closing"
+            title="The Handshake"
+        ></button>
+    </nav>
 
-  <!-- Navigation Dots -->
-  <nav class="vision-nav-dots" id="vision-nav-dots" aria-label="Slide navigation">
-    <button class="vision-dot active" data-slide="0" aria-label="Slide 1: Cover" title="The Entry"></button>
-    <button class="vision-dot" data-slide="1" aria-label="Slide 2: Philosophy" title="The Soul"></button>
-    <button class="vision-dot" data-slide="2" aria-label="Slide 3: Mission" title="The Pillars"></button>
-    <button class="vision-dot" data-slide="3" aria-label="Slide 4: Growth" title="The Momentum"></button>
-    <button class="vision-dot" data-slide="4" aria-label="Slide 5: Impact" title="The Magnitude"></button>
-    <button class="vision-dot" data-slide="5" aria-label="Slide 6: Trust" title="The Engine"></button>
-    <button class="vision-dot" data-slide="6" aria-label="Slide 7: Behavior" title="The Deep-Dive"></button>
-    <button class="vision-dot" data-slide="7" aria-label="Slide 8: Speed" title="The Moat"></button>
-    <button class="vision-dot" data-slide="8" aria-label="Slide 9: Future" title="The Horizon"></button>
-    <button class="vision-dot" data-slide="9" aria-label="Slide 10: Closing" title="The Handshake"></button>
-  </nav>
+    <!-- Scroll Progress -->
+    <div class="vision-progress-bar" id="vision-progress-bar"></div>
 
-  <!-- Scroll Progress -->
-  <div class="vision-progress-bar" id="vision-progress-bar"></div>
+    <!-- Slide Container -->
+    <div class="vision-slides" id="vision-slides">
+        <!-- ════════════════════════ SLIDE 1: THE ENTRY (COVER) ════════════════════════ -->
+        <section class="vision-slide vision-slide--cover" id="vision-slide-0">
+            <canvas class="vision-grid-canvas" id="vision-grid-canvas"></canvas>
+            <div class="vision-slide__content vision-slide__content--cover">
+                <div class="vision-cover-logo">
+                    <img
+                        src="{{ '/assets/images/pyqfort.jpg' | relative_url }}"
+                        alt="PYQFort Logo"
+                        class="vision-cover-logo__img"
+                    />
+                </div>
+                <h1 class="vision-cover-title">
+                    <span class="vision-cover-title__main">PYQFort</span>
+                    <span class="vision-cover-title__sub"
+                        >Q1 2026 Briefing</span
+                    >
+                </h1>
+                <p class="vision-cover-tagline">The Architecture of Trust</p>
+                <p class="vision-cover-desc">
+                    A Rigorous 94-Day Performance Analysis
+                </p>
+                <div class="vision-cover-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verified by Microsoft Clarity</span>
+                </div>
+                <div class="vision-scroll-hint" id="vision-scroll-hint">
+                    <span>Scroll to explore</span>
+                    <div class="vision-scroll-hint__arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Slide Container -->
-  <div class="vision-slides" id="vision-slides">
+        <!-- ════════════════════════ SLIDE 2: THE SOUL (PHILOSOPHY) ════════════════════════ -->
+        <section
+            class="vision-slide vision-slide--philosophy"
+            id="vision-slide-1"
+        >
+            <div class="vision-slide__ambient-glow"></div>
+            <div class="vision-slide__content">
+                <span class="vision-slide__label">02 — The Soul</span>
+                <h2 class="vision-slide__title">
+                    Beyond a Website.<br /><span class="vision-accent"
+                        >An Emotional Anchor.</span
+                    >
+                </h2>
+                <div class="vision-philosophy-quote">
+                    <blockquote>
+                        <span
+                            class="vision-typewriter"
+                            data-text="Design is not just what it looks like and feels like. Design is how it works."
+                            >"</span
+                        >
+                    </blockquote>
+                    <cite>— Steve Jobs</cite>
+                </div>
+                <p class="vision-philosophy-body">
+                    At PYQFort,
+                    <strong>Design is a discipline. Art is the soul.</strong>
+                    <br />
+                    Every resource, every interaction, and every millisecond is
+                    an intentional engineering decision—a fusion of precision
+                    and art.
+                </p>
+            </div>
+        </section>
 
-    <!-- ════════════════════════ SLIDE 1: THE ENTRY (COVER) ════════════════════════ -->
-    <section class="vision-slide vision-slide--cover" id="vision-slide-0">
-      <canvas class="vision-grid-canvas" id="vision-grid-canvas"></canvas>
-      <div class="vision-slide__content vision-slide__content--cover">
-        <div class="vision-cover-logo">
-          <img src="{{ '/assets/images/pyqfort.jpg' | relative_url }}" alt="PYQFort Logo" class="vision-cover-logo__img">
-        </div>
-        <h1 class="vision-cover-title">
-          <span class="vision-cover-title__main">PYQFort</span>
-          <span class="vision-cover-title__sub">Q1 2026 Briefing</span>
-        </h1>
-        <p class="vision-cover-tagline">The Architecture of Trust</p>
-        <p class="vision-cover-desc">A Rigorous 94-Day Performance Analysis</p>
-        <div class="vision-cover-badge">
-          <i class="fas fa-check-circle"></i>
-          <span>Verified by Microsoft Clarity</span>
-        </div>
-        <div class="vision-scroll-hint" id="vision-scroll-hint">
-          <span>Scroll to explore</span>
-          <div class="vision-scroll-hint__arrow">
-            <i class="fas fa-chevron-down"></i>
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- ════════════════════════ SLIDE 3: THE PILLARS (MISSION) ════════════════════════ -->
+        <section class="vision-slide vision-slide--mission" id="vision-slide-2">
+            <div class="vision-slide__content">
+                <span class="vision-slide__label">03 — Mission</span>
+                <h2 class="vision-slide__title">
+                    Empowering the Architects of Tomorrow
+                </h2>
+                <div class="vision-pillars">
+                    <div class="vision-pillar" data-delay="0">
+                        <div class="vision-pillar__icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3 class="vision-pillar__title">Premium Quality</h3>
+                        <p class="vision-pillar__desc">
+                            Crafted, verified, and structured for maximum
+                            academic impact
+                        </p>
+                        <div class="vision-pillar__glow"></div>
+                    </div>
+                    <div class="vision-pillar" data-delay="150">
+                        <div class="vision-pillar__icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="vision-pillar__title">Engineered Access</h3>
+                        <p class="vision-pillar__desc">
+                            Low-latency, reliable, and technically optimized
+                            resource delivery.
+                        </p>
+                        <div class="vision-pillar__glow"></div>
+                    </div>
+                    <div class="vision-pillar" data-delay="300">
+                        <div class="vision-pillar__icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="vision-pillar__title">Student-First</h3>
+                        <p class="vision-pillar__desc">
+                            An Intuitive, Student-First workspace for every
+                            student with a focus on time, speed, career and
+                            student life
+                        </p>
+                        <div class="vision-pillar__glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- ════════════════════════ SLIDE 2: THE SOUL (PHILOSOPHY) ════════════════════════ -->
-    <section class="vision-slide vision-slide--philosophy" id="vision-slide-1">
-      <div class="vision-slide__ambient-glow"></div>
-      <div class="vision-slide__content">
-        <span class="vision-slide__label">02 — The Soul</span>
-        <h2 class="vision-slide__title">Beyond a Website.<br><span class="vision-accent">An Emotional Anchor.</span></h2>
-        <div class="vision-philosophy-quote">
-          <blockquote>
-            <span class="vision-typewriter" data-text="Design is not just what it looks like and feels like. Design is how it works.">"</span>
-          </blockquote>
-          <cite>— Steve Jobs</cite>
-        </div>
-        <p class="vision-philosophy-body">
-          Engineering students don't need another static archive. They need <strong>infrastructure</strong> — a system that respects their time, earns their trust from the first click, and becomes an emotional constant from Day 1 to Graduation.
-        </p>
-        <p class="vision-philosophy-body vision-philosophy-body--dim">
-          PYQFort exists to replace the chaos of slow, unverified, fragmented resources with <span class="vision-accent">engineered precision</span>.
-        </p>
-      </div>
-    </section>
+        <!-- ════════════════════════ SLIDE 4: THE MOMENTUM (GROWTH) ════════════════════════ -->
+        <section class="vision-slide vision-slide--growth" id="vision-slide-3">
+            <div class="vision-slide__content">
+                <span class="vision-slide__label">04 — Growth Velocity</span>
+                <h2 class="vision-slide__title">
+                    30.1× Session Growth in 94 Days
+                </h2>
+                <div class="vision-growth-chart-wrapper">
+                    <svg
+                        class="vision-growth-chart"
+                        id="vision-growth-chart"
+                        viewBox="0 0 800 400"
+                        preserveAspectRatio="xMidYMid meet"
+                    >
+                        <!-- Drawn by JS -->
+                    </svg>
+                    <!--<div class="vision-growth-stat">
+                        <span
+                            class="vision-growth-stat__number vision-counter"
+                            data-target="30.1"
+                            data-suffix="×"
+                            data-decimals="1"
+                            >0×</span
+                        >
+                        <span class="vision-growth-stat__label"
+                            >Growth in 94 Days</span
+                        >
+                    </div>-->
+                </div>
+                <p class="vision-growth-footnote">
+                    <i class="fas fa-seedling"></i> Fueled by
+                    <strong>zero-cost organic discovery</strong> — no paid ads,
+                    no promotions. Pure product-market fit.
+                </p>
+            </div>
+        </section>
 
-    <!-- ════════════════════════ SLIDE 3: THE PILLARS (MISSION) ════════════════════════ -->
-    <section class="vision-slide vision-slide--mission" id="vision-slide-2">
-      <div class="vision-slide__content">
-        <span class="vision-slide__label">03 — The Pillars</span>
-        <h2 class="vision-slide__title">Three Core Laws</h2>
-        <div class="vision-pillars">
-          <div class="vision-pillar" data-delay="0">
-            <div class="vision-pillar__icon">
-              <i class="fas fa-gem"></i>
+        <!-- ════════════════════════ SLIDE 5: THE MAGNITUDE (IMPACT) ════════════════════════ -->
+        <section class="vision-slide vision-slide--impact" id="vision-slide-4">
+            <div class="vision-slide__content">
+                <span class="vision-slide__label">05 — Core Performance</span>
+                <h2 class="vision-slide__title">
+                    Q1 2026 — Platform Impact at a Glance
+                </h2>
+                <div class="vision-impact-grid">
+                    <div class="vision-impact-card" data-delay="0">
+                        <span
+                            class="vision-impact-card__number vision-counter"
+                            data-target="8670"
+                            data-suffix=""
+                            data-decimals="0"
+                            >0</span
+                        >
+                        <span class="vision-impact-card__label"
+                            >Total Sessions</span
+                        >
+                        <span class="vision-impact-card__sub"
+                            >Across all users over the 94-day period</span
+                        >
+                    </div>
+                    <div class="vision-impact-card" data-delay="200">
+                        <span
+                            class="vision-impact-card__number vision-counter"
+                            data-target="3232"
+                            data-suffix=""
+                            data-decimals="0"
+                            >0</span
+                        >
+                        <span class="vision-impact-card__label"
+                            >Unique Students</span
+                        >
+                        <span class="vision-impact-card__sub"
+                            >Individual engineering students reached</span
+                        >
+                    </div>
+                    <div class="vision-impact-card" data-delay="400">
+                        <span
+                            class="vision-impact-card__number vision-counter"
+                            data-target="1249"
+                            data-suffix=""
+                            data-decimals="0"
+                            >0</span
+                        >
+                        <span class="vision-impact-card__label"
+                            >Confirmed Impact</span
+                        >
+                        <span class="vision-impact-card__sub"
+                            >Confirmed downloads — direct value delivered</span
+                        >
+                    </div>
+                </div>
             </div>
-            <h3 class="vision-pillar__title">Premium Quality</h3>
-            <p class="vision-pillar__desc">Every resource is verified, curated, and maintained by 60+ contributors. No compromise on quality.</p>
-            <div class="vision-pillar__glow"></div>
-          </div>
-          <div class="vision-pillar" data-delay="150">
-            <div class="vision-pillar__icon">
-              <i class="fas fa-bolt"></i>
-            </div>
-            <h3 class="vision-pillar__title">Engineered Access</h3>
-            <p class="vision-pillar__desc">Sub-second load times. Instant PDF viewing. Zero friction between a student and their next exam answer.</p>
-            <div class="vision-pillar__glow"></div>
-          </div>
-          <div class="vision-pillar" data-delay="300">
-            <div class="vision-pillar__icon">
-              <i class="fas fa-users"></i>
-            </div>
-            <h3 class="vision-pillar__title">Student-First Ecosystem</h3>
-            <p class="vision-pillar__desc">Free. Open. Built by students, for students. No ads, no paywalls, no hidden agenda.</p>
-            <div class="vision-pillar__glow"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- ════════════════════════ SLIDE 4: THE MOMENTUM (GROWTH) ════════════════════════ -->
-    <section class="vision-slide vision-slide--growth" id="vision-slide-3">
-      <div class="vision-slide__content">
-        <span class="vision-slide__label">04 — The Momentum</span>
-        <h2 class="vision-slide__title">The Velocity Curve</h2>
-        <div class="vision-growth-chart-wrapper">
-          <svg class="vision-growth-chart" id="vision-growth-chart" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
-            <!-- Drawn by JS -->
-          </svg>
-          <div class="vision-growth-stat">
-            <span class="vision-growth-stat__number vision-counter" data-target="30.1" data-suffix="×" data-decimals="1">0×</span>
-            <span class="vision-growth-stat__label">Growth in 94 Days</span>
-          </div>
-        </div>
-        <p class="vision-growth-footnote">
-          <i class="fas fa-seedling"></i> Fueled by <strong>zero-cost organic discovery</strong> — no paid ads, no promotions. Pure product-market fit.
-        </p>
-      </div>
-    </section>
+        <!-- ════════════════════════ SLIDE 6: THE HABITUATING ENGINE (TRUST) ════════════════════════ -->
+        <section class="vision-slide vision-slide--trust" id="vision-slide-5">
+            <div class="vision-slide__content">
+                <span class="vision-slide__label">06 — The Trust Index</span>
+                <h2 class="vision-slide__title">Institutional Integration</h2>
+                <div class="vision-trust-layout">
+                    <div class="vision-trust-ring-wrapper">
+                        <svg
+                            class="vision-trust-ring"
+                            id="vision-trust-ring"
+                            viewBox="0 0 200 200"
+                        >
+                            <circle
+                                class="vision-trust-ring__bg"
+                                cx="100"
+                                cy="100"
+                                r="85"
+                            />
+                            <circle
+                                class="vision-trust-ring__fill"
+                                cx="100"
+                                cy="100"
+                                r="85"
+                                stroke-dasharray="534.07"
+                                stroke-dashoffset="534.07"
+                            />
+                            <text
+                                class="vision-trust-ring__text"
+                                x="100"
+                                y="95"
+                                text-anchor="middle"
+                                dominant-baseline="middle"
+                            >
+                                <tspan
+                                    class="vision-trust-ring__value vision-counter"
+                                    data-target="48"
+                                    data-suffix="%"
+                                    data-decimals="0"
+                                >
+                                    0%
+                                </tspan>
+                            </text>
+                            <text
+                                class="vision-trust-ring__label"
+                                x="100"
+                                y="125"
+                                text-anchor="middle"
+                            >
+                                Retention Rate
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="vision-trust-details">
+                        <p class="vision-trust-headline">
+                            Nearly
+                            <span class="vision-accent">1 in 2</span> students
+                            return voluntarily.
+                        </p>
+                        <p class="vision-trust-body">
+                            Retention is the only metric that cannot be
+                            manufactured. A 48% retention rate means PYQFort has
+                            crossed the threshold from "useful tool" to
+                            <strong>academic infrastructure</strong>.
+                        </p>
+                        <div class="vision-trust-bar">
+                            <div class="vision-trust-bar__track">
+                                <div
+                                    class="vision-trust-bar__fill"
+                                    id="vision-trust-bar-fill"
+                                    style="width: 0%"
+                                ></div>
+                            </div>
+                            <div class="vision-trust-bar__labels">
+                                <span>New Users</span>
+                                <span>Returning Users</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- ════════════════════════ SLIDE 5: THE MAGNITUDE (IMPACT) ════════════════════════ -->
-    <section class="vision-slide vision-slide--impact" id="vision-slide-4">
-      <div class="vision-slide__content">
-        <span class="vision-slide__label">05 — The Magnitude</span>
-        <h2 class="vision-slide__title">Numbers That Speak</h2>
-        <div class="vision-impact-grid">
-          <div class="vision-impact-card" data-delay="0">
-            <span class="vision-impact-card__number vision-counter" data-target="8670" data-suffix="" data-decimals="0">0</span>
-            <span class="vision-impact-card__label">Total Sessions</span>
-            <span class="vision-impact-card__sub">Active learning engagements</span>
-          </div>
-          <div class="vision-impact-card" data-delay="200">
-            <span class="vision-impact-card__number vision-counter" data-target="3232" data-suffix="" data-decimals="0">0</span>
-            <span class="vision-impact-card__label">Unique Students</span>
-            <span class="vision-impact-card__sub">Individual lives reached</span>
-          </div>
-          <div class="vision-impact-card" data-delay="400">
-            <span class="vision-impact-card__number vision-counter" data-target="1249" data-suffix="" data-decimals="0">0</span>
-            <span class="vision-impact-card__label">Downloads</span>
-            <span class="vision-impact-card__sub">Confirmed life-impact events</span>
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- ════════════════════════ SLIDE 7: THE DEEP-DIVE (BEHAVIOR) ════════════════════════ -->
+        <section
+            class="vision-slide vision-slide--behavior"
+            id="vision-slide-6"
+        >
+            <div class="vision-slide__content">
+                <span class="vision-slide__label">07 — User Behavior</span>
+                <h2 class="vision-slide__title">Metric of Immersion</h2>
+                <div class="vision-behavior-layout">
+                    <div class="vision-staircase" id="vision-staircase">
+                        <div class="vision-stair" data-step="1" data-delay="0">
+                            <div
+                                class="vision-stair__bar"
+                                style="--stair-height: 20%"
+                            ></div>
+                            <span class="vision-stair__label">Discovery</span>
+                        </div>
+                        <div
+                            class="vision-stair"
+                            data-step="2"
+                            data-delay="100"
+                        >
+                            <div
+                                class="vision-stair__bar"
+                                style="--stair-height: 40%"
+                            ></div>
+                            <span class="vision-stair__label">Browse</span>
+                        </div>
+                        <div
+                            class="vision-stair"
+                            data-step="3"
+                            data-delay="200"
+                        >
+                            <div
+                                class="vision-stair__bar"
+                                style="--stair-height: 55%"
+                            ></div>
+                            <span class="vision-stair__label">Explore</span>
+                        </div>
+                        <div
+                            class="vision-stair"
+                            data-step="4"
+                            data-delay="300"
+                        >
+                            <div
+                                class="vision-stair__bar"
+                                style="--stair-height: 70%"
+                            ></div>
+                            <span class="vision-stair__label">Study</span>
+                        </div>
+                        <div
+                            class="vision-stair"
+                            data-step="5"
+                            data-delay="400"
+                        >
+                            <div
+                                class="vision-stair__bar"
+                                style="--stair-height: 85%"
+                            ></div>
+                            <span class="vision-stair__label">Deep Dive</span>
+                        </div>
+                        <div
+                            class="vision-stair vision-stair--peak"
+                            data-step="6"
+                            data-delay="500"
+                        >
+                            <div
+                                class="vision-stair__bar"
+                                style="--stair-height: 100%"
+                            ></div>
+                            <span class="vision-stair__label">6.6 Pages</span>
+                        </div>
+                    </div>
+                    <div class="vision-behavior-stats">
+                        <div class="vision-behavior-stat">
+                            <span
+                                class="vision-behavior-stat__number vision-counter"
+                                data-target="6.6"
+                                data-suffix=""
+                                data-decimals="1"
+                                >0</span
+                            >
+                            <span class="vision-behavior-stat__label"
+                                >Avg. Pages per Session</span
+                            >
+                        </div>
+                        <div class="vision-behavior-stat">
+                            <span
+                                class="vision-behavior-stat__number vision-counter"
+                                data-target="57"
+                                data-suffix="K+"
+                                data-decimals="0"
+                                >0</span
+                            >
+                            <span class="vision-behavior-stat__label"
+                                >Total Page Views</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- ════════════════════════ SLIDE 6: THE HABITUATING ENGINE (TRUST) ════════════════════════ -->
-    <section class="vision-slide vision-slide--trust" id="vision-slide-5">
-      <div class="vision-slide__content">
-        <span class="vision-slide__label">06 — The Habituating Engine</span>
-        <h2 class="vision-slide__title">Institutional Integration</h2>
-        <div class="vision-trust-layout">
-          <div class="vision-trust-ring-wrapper">
-            <svg class="vision-trust-ring" id="vision-trust-ring" viewBox="0 0 200 200">
-              <circle class="vision-trust-ring__bg" cx="100" cy="100" r="85" />
-              <circle class="vision-trust-ring__fill" cx="100" cy="100" r="85" 
-                      stroke-dasharray="534.07" stroke-dashoffset="534.07" />
-              <text class="vision-trust-ring__text" x="100" y="95" text-anchor="middle" dominant-baseline="middle">
-                <tspan class="vision-trust-ring__value vision-counter" data-target="48" data-suffix="%" data-decimals="0">0%</tspan>
-              </text>
-              <text class="vision-trust-ring__label" x="100" y="125" text-anchor="middle">Retention Rate</text>
-            </svg>
-          </div>
-          <div class="vision-trust-details">
-            <p class="vision-trust-headline">Nearly <span class="vision-accent">1 in 2</span> students return voluntarily.</p>
-            <p class="vision-trust-body">This isn't casual browsing — it's habit formation. A 48% retention rate means PYQFort has crossed the threshold from "useful tool" to <strong>academic infrastructure</strong>.</p>
-            <div class="vision-trust-bar">
-              <div class="vision-trust-bar__track">
-                <div class="vision-trust-bar__fill" id="vision-trust-bar-fill" style="width: 0%"></div>
-              </div>
-              <div class="vision-trust-bar__labels">
-                <span>New Users</span>
-                <span>Returning Users</span>
-              </div>
+        <!-- ════════════════════════ SLIDE 8: THE INFRASTRUCTURE MOAT (SPEED) ════════════════════════ -->
+        <section class="vision-slide vision-slide--speed" id="vision-slide-7">
+            <div class="vision-slide__content">
+                <span class="vision-slide__label">08 — Technical Moat</span>
+                <h2 class="vision-slide__title">
+                    Velocity: The Infrastructure Moat
+                </h2>
+                <p class="vision-speed-subtitle">
+                    Access Equity — because slow infrastructure is a privilege
+                    gate.
+                </p>
+                <div class="vision-speed-gauges">
+                    <div class="vision-speed-gauge" data-delay="0">
+                        <svg class="vision-gauge-svg" viewBox="0 0 200 120">
+                            <path
+                                class="vision-gauge__track"
+                                d="M 20 100 A 80 80 0 0 1 180 100"
+                            />
+                            <path
+                                class="vision-gauge__fill"
+                                id="vision-gauge-load"
+                                d="M 20 100 A 80 80 0 0 1 180 100"
+                                stroke-dasharray="251.33"
+                                stroke-dashoffset="251.33"
+                            />
+                        </svg>
+                        <div class="vision-gauge__value">
+                            <span
+                                class="vision-counter"
+                                data-target="1.1"
+                                data-suffix="s"
+                                data-decimals="1"
+                                >0s</span
+                            >
+                        </div>
+                        <span class="vision-gauge__label">Load Time</span>
+                        <span class="vision-gauge__sub"
+                            >The silent differentiator</span
+                        >
+                    </div>
+                    <div class="vision-speed-gauge" data-delay="200">
+                        <svg class="vision-gauge-svg" viewBox="0 0 200 120">
+                            <path
+                                class="vision-gauge__track"
+                                d="M 20 100 A 80 80 0 0 1 180 100"
+                            />
+                            <path
+                                class="vision-gauge__fill"
+                                id="vision-gauge-perf"
+                                d="M 20 100 A 80 80 0 0 1 180 100"
+                                stroke-dasharray="251.33"
+                                stroke-dashoffset="251.33"
+                            />
+                        </svg>
+                        <div class="vision-gauge__value">
+                            <span
+                                class="vision-counter"
+                                data-target="89"
+                                data-suffix="/100"
+                                data-decimals="0"
+                                >0/100</span
+                            >
+                        </div>
+                        <span class="vision-gauge__label"
+                            >Performance Score</span
+                        >
+                        <span class="vision-gauge__sub"
+                            >Competitors can't match this</span
+                        >
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- ════════════════════════ SLIDE 7: THE DEEP-DIVE (BEHAVIOR) ════════════════════════ -->
-    <section class="vision-slide vision-slide--behavior" id="vision-slide-6">
-      <div class="vision-slide__content">
-        <span class="vision-slide__label">07 — The Deep-Dive</span>
-        <h2 class="vision-slide__title">Metric of Immersion</h2>
-        <div class="vision-behavior-layout">
-          <div class="vision-staircase" id="vision-staircase">
-            <div class="vision-stair" data-step="1" data-delay="0">
-              <div class="vision-stair__bar" style="--stair-height: 20%"></div>
-              <span class="vision-stair__label">Discovery</span>
+        <!-- ════════════════════════ SLIDE 9: THE HORIZON (FUTURE) ════════════════════════ -->
+        <section class="vision-slide vision-slide--horizon" id="vision-slide-8">
+            <div class="vision-slide__content">
+                <span class="vision-slide__label">09 — Future Vision</span>
+                <h2 class="vision-slide__title">
+                    From Archive to Infrastructure
+                </h2>
+                <div class="vision-roadmap">
+                    <div class="vision-roadmap__line"></div>
+                    <div class="vision-roadmap-phase" data-delay="0">
+                        <div class="vision-roadmap-phase__node">
+                            <span class="vision-roadmap-phase__num">01</span>
+                        </div>
+                        <div class="vision-roadmap-phase__content">
+                            <h3>Phase I</h3>
+                            <span
+                                class="vision-roadmap-phase__status vision-roadmap-phase__status--done"
+                                >Completed</span
+                            >
+                            <p>Curated Academic Foundation</p>
+                        </div>
+                    </div>
+                    <div class="vision-roadmap-phase" data-delay="200">
+                        <div class="vision-roadmap-phase__node">
+                            <span class="vision-roadmap-phase__num">02</span>
+                        </div>
+                        <div class="vision-roadmap-phase__content">
+                            <h3>Phase II</h3>
+                            <span
+                                class="vision-roadmap-phase__status vision-roadmap-phase__status--active"
+                                >In Progress</span
+                            >
+                            <p>
+                                Trusted Platform — personalized, persistent,
+                                deeply indexed content ecosystem
+                            </p>
+                        </div>
+                    </div>
+                    <div class="vision-roadmap-phase" data-delay="400">
+                        <div class="vision-roadmap-phase__node">
+                            <span class="vision-roadmap-phase__num">03</span>
+                        </div>
+                        <div class="vision-roadmap-phase__content">
+                            <h3>Lifecycle Integration</h3>
+                            <span class="vision-roadmap-phase__status"
+                                >Phase III</span
+                            >
+                            <p>
+                                Becoming an integral part of the engineering
+                                lifecycle from the fresher year itself
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="vision-stair" data-step="2" data-delay="100">
-              <div class="vision-stair__bar" style="--stair-height: 40%"></div>
-              <span class="vision-stair__label">Browse</span>
-            </div>
-            <div class="vision-stair" data-step="3" data-delay="200">
-              <div class="vision-stair__bar" style="--stair-height: 55%"></div>
-              <span class="vision-stair__label">Explore</span>
-            </div>
-            <div class="vision-stair" data-step="4" data-delay="300">
-              <div class="vision-stair__bar" style="--stair-height: 70%"></div>
-              <span class="vision-stair__label">Study</span>
-            </div>
-            <div class="vision-stair" data-step="5" data-delay="400">
-              <div class="vision-stair__bar" style="--stair-height: 85%"></div>
-              <span class="vision-stair__label">Deep Dive</span>
-            </div>
-            <div class="vision-stair vision-stair--peak" data-step="6" data-delay="500">
-              <div class="vision-stair__bar" style="--stair-height: 100%"></div>
-              <span class="vision-stair__label">6.6 Pages</span>
-            </div>
-          </div>
-          <div class="vision-behavior-stats">
-            <div class="vision-behavior-stat">
-              <span class="vision-behavior-stat__number vision-counter" data-target="6.6" data-suffix="" data-decimals="1">0</span>
-              <span class="vision-behavior-stat__label">Avg. Pages per Session</span>
-            </div>
-            <div class="vision-behavior-stat">
-              <span class="vision-behavior-stat__number vision-counter" data-target="57" data-suffix="K+" data-decimals="0">0</span>
-              <span class="vision-behavior-stat__label">Total Page Views</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- ════════════════════════ SLIDE 8: THE INFRASTRUCTURE MOAT (SPEED) ════════════════════════ -->
-    <section class="vision-slide vision-slide--speed" id="vision-slide-7">
-      <div class="vision-slide__content">
-        <span class="vision-slide__label">08 — The Infrastructure Moat</span>
-        <h2 class="vision-slide__title">Speed as a Moral Commitment</h2>
-        <p class="vision-speed-subtitle">Access Equity — because slow infrastructure is a privilege gate.</p>
-        <div class="vision-speed-gauges">
-          <div class="vision-speed-gauge" data-delay="0">
-            <svg class="vision-gauge-svg" viewBox="0 0 200 120">
-              <path class="vision-gauge__track" d="M 20 100 A 80 80 0 0 1 180 100" />
-              <path class="vision-gauge__fill" id="vision-gauge-load" d="M 20 100 A 80 80 0 0 1 180 100" 
-                    stroke-dasharray="251.33" stroke-dashoffset="251.33" />
-            </svg>
-            <div class="vision-gauge__value">
-              <span class="vision-counter" data-target="1.1" data-suffix="s" data-decimals="1">0s</span>
+        <!-- ════════════════════════ SLIDE 10: THE FINAL HANDSHAKE (CLOSING) ════════════════════════ -->
+        <section class="vision-slide vision-slide--closing" id="vision-slide-9">
+            <div class="vision-closing-bg" id="vision-closing-bg"></div>
+            <div class="vision-slide__content vision-slide__content--closing">
+                <div class="vision-closing-text">
+                    <span class="vision-slide__label"
+                        >10 — Onboard and Navigate</span
+                    >
+                    <h2 class="vision-closing-title">
+                        Thank You<br />for trusting pyqfort.com
+                    </h2>
+                    <p class="vision-closing-body">
+                        Providing
+                        <span class="vision-accent"
+                            >premium, engineered, educational</span
+                        >
+                        resources to empower the students of India
+                    </p>
+                    <!--<p class="vision-closing-motto">
+                        "Stay Hungry. Stay Engineering."
+                    </p>-->
+                    <div class="vision-closing-cta">
+                        <a
+                            href="{{ '/' | relative_url }}"
+                            class="vision-btn vision-btn--primary"
+                        >
+                            <i class="fas fa-home"></i> Explore PYQFort
+                        </a>
+                        <a
+                            href="{{ '/about/' | relative_url }}"
+                            class="vision-btn vision-btn--outline"
+                        >
+                            <i class="fas fa-info-circle"></i> About Us
+                        </a>
+                    </div>
+                </div>
             </div>
-            <span class="vision-gauge__label">Load Time</span>
-            <span class="vision-gauge__sub">The silent differentiator</span>
-          </div>
-          <div class="vision-speed-gauge" data-delay="200">
-            <svg class="vision-gauge-svg" viewBox="0 0 200 120">
-              <path class="vision-gauge__track" d="M 20 100 A 80 80 0 0 1 180 100" />
-              <path class="vision-gauge__fill" id="vision-gauge-perf" d="M 20 100 A 80 80 0 0 1 180 100"
-                    stroke-dasharray="251.33" stroke-dashoffset="251.33" />
-            </svg>
-            <div class="vision-gauge__value">
-              <span class="vision-counter" data-target="89" data-suffix="/100" data-decimals="0">0/100</span>
-            </div>
-            <span class="vision-gauge__label">Performance Score</span>
-            <span class="vision-gauge__sub">Competitors can't match this</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ════════════════════════ SLIDE 9: THE HORIZON (FUTURE) ════════════════════════ -->
-    <section class="vision-slide vision-slide--horizon" id="vision-slide-8">
-      <div class="vision-slide__content">
-        <span class="vision-slide__label">09 — The Horizon</span>
-        <h2 class="vision-slide__title">From Archive to Infrastructure</h2>
-        <div class="vision-roadmap">
-          <div class="vision-roadmap__line"></div>
-          <div class="vision-roadmap-phase" data-delay="0">
-            <div class="vision-roadmap-phase__node">
-              <span class="vision-roadmap-phase__num">01</span>
-            </div>
-            <div class="vision-roadmap-phase__content">
-              <h3>Foundation</h3>
-              <span class="vision-roadmap-phase__status vision-roadmap-phase__status--done">Completed</span>
-              <p>Core PYQ repository. Multi-college support. Lightning-fast PDF viewer. Premium search engine.</p>
-            </div>
-          </div>
-          <div class="vision-roadmap-phase" data-delay="200">
-            <div class="vision-roadmap-phase__node">
-              <span class="vision-roadmap-phase__num">02</span>
-            </div>
-            <div class="vision-roadmap-phase__content">
-              <h3>Expansion</h3>
-              <span class="vision-roadmap-phase__status vision-roadmap-phase__status--active">In Progress</span>
-              <p>Premium notes ecosystem. Contributor network scaling. Subject-wise analytics. Smart recommendations.</p>
-            </div>
-          </div>
-          <div class="vision-roadmap-phase" data-delay="400">
-            <div class="vision-roadmap-phase__node">
-              <span class="vision-roadmap-phase__num">03</span>
-            </div>
-            <div class="vision-roadmap-phase__content">
-              <h3>Lifecycle Integration</h3>
-              <span class="vision-roadmap-phase__status">Planned</span>
-              <p>Permanent academic companion. First-year to final-year lifecycle. Institutional partnerships. AI-powered study paths.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ════════════════════════ SLIDE 10: THE FINAL HANDSHAKE (CLOSING) ════════════════════════ -->
-    <section class="vision-slide vision-slide--closing" id="vision-slide-9">
-      <div class="vision-closing-bg" id="vision-closing-bg"></div>
-      <div class="vision-slide__content vision-slide__content--closing">
-        <div class="vision-closing-text">
-          <span class="vision-slide__label">10 — The Final Handshake</span>
-          <h2 class="vision-closing-title">Thank You<br>for Trusting PYQFort.</h2>
-          <p class="vision-closing-body">
-            Every session, every download, every returning student validates our conviction — that education infrastructure should be <span class="vision-accent">free, fast, and unwavering</span>.
-          </p>
-          <p class="vision-closing-motto">"Stay Hungry. Stay Engineering."</p>
-          <div class="vision-closing-cta">
-            <a href="{{ '/' | relative_url }}" class="vision-btn vision-btn--primary">
-              <i class="fas fa-home"></i> Explore PYQFort
-            </a>
-            <a href="{{ '/about/' | relative_url }}" class="vision-btn vision-btn--outline">
-              <i class="fas fa-info-circle"></i> About Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div><!-- /.vision-slides -->
-</div><!-- /.vision-wrapper -->
+        </section>
+    </div>
+    <!-- /.vision-slides -->
+</div>
+<!-- /.vision-wrapper -->
 
 <script src="{{ '/assets/js/vision.js' | relative_url }}"></script>
