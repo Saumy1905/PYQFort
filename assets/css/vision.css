@@ -15,8 +15,8 @@
   --v-electric-bright: #5d7bf9;
   --v-cyan: #6c8cfa;
   --v-text: var(--text-color);
-  --v-text-dim: var(--secondary-color);
-  --v-text-muted: var(--border-color);
+  --v-text-dim: #6c757d;
+  --v-text-muted: #495057;
   --v-accent-green: #00ffa3;
   --v-accent-gold: #ffd700;
   --v-accent-red: #ff4060;
@@ -34,7 +34,7 @@
   --v-electric-dim: rgba(93, 123, 249, 0.15);
   --v-electric-glow: rgba(93, 123, 249, 0.35);
   --v-text-dim: #a0a0a0;
-  --v-text-muted: #6c757d;
+  --v-text-muted: #8892a8;
 }
 
 /* ── Vision Wrapper — Full-Page Container ───────────────────────────────── */
@@ -369,7 +369,7 @@ body.vision-page {
   font-family: var(--v-font-mono);
   font-size: 0.8rem;
   font-style: normal;
-  color: var(--v-text-muted);
+  color: var(--v-text-dim);
 }
 
 .vision-philosophy-body {
@@ -525,7 +525,7 @@ body.vision-page {
 }
 
 .vision-growth-chart .v-chart-label {
-  fill: var(--v-text-muted);
+  fill: var(--v-text-dim);
   font-family: var(--v-font-mono);
   font-size: 11px;
 }
@@ -550,7 +550,7 @@ body.vision-page {
 .vision-growth-stat__label {
   font-family: var(--v-font-mono);
   font-size: 0.75rem;
-  color: var(--v-text-muted);
+  color: var(--v-text-dim);
   letter-spacing: 0.05em;
 }
 
@@ -637,7 +637,7 @@ body.vision-page {
 
 .vision-impact-card__sub {
   font-size: 0.8rem;
-  color: var(--v-text-muted);
+  color: var(--v-text-dim);
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -731,7 +731,7 @@ body.vision-page {
 
 .vision-trust-ring__label {
   font-size: 0.7rem;
-  fill: var(--v-text-muted);
+  fill: var(--v-text-dim);
   font-family: var(--v-font-mono);
   letter-spacing: 0.05em;
 }
@@ -783,7 +783,7 @@ body.vision-page {
   margin-top: 6px;
   font-family: var(--v-font-mono);
   font-size: 0.7rem;
-  color: var(--v-text-muted);
+  color: var(--v-text-dim);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -853,7 +853,7 @@ body.vision-page {
 .vision-stair__label {
   font-family: var(--v-font-mono);
   font-size: 0.65rem;
-  color: var(--v-text-muted);
+  color: var(--v-text-dim);
   margin-top: 8px;
   text-align: center;
   white-space: nowrap;
@@ -968,7 +968,7 @@ body.vision-page {
 .vision-gauge__sub {
   display: block;
   font-size: 0.8rem;
-  color: var(--v-text-muted);
+  color: var(--v-text-dim);
   margin-top: 0.25rem;
 }
 
@@ -1338,9 +1338,30 @@ body.vision-page {
     font-size: clamp(2rem, 8vw, 3rem);
   }
 
+  .vision-impact-card__sub {
+    font-size: 0.75rem;
+  }
+
+  /* Growth Chart */
+  .vision-growth-chart .v-chart-label {
+    font-size: 10px;
+  }
+
+  .vision-growth-stat__label {
+    font-size: 0.7rem;
+  }
+
   /* Trust */
   .vision-trust-ring {
     max-width: 180px;
+  }
+
+  .vision-trust-ring__label {
+    font-size: 0.65rem;
+  }
+
+  .vision-trust-bar__labels {
+    font-size: 0.65rem;
   }
 
   /* Behavior */
@@ -1365,6 +1386,15 @@ body.vision-page {
     grid-template-columns: 1fr;
     gap: 2rem;
     max-width: 300px;
+  }
+
+  .vision-gauge__sub {
+    font-size: 0.75rem;
+  }
+
+  /* Philosophy */
+  .vision-philosophy-quote cite {
+    font-size: 0.75rem;
   }
 
   /* Roadmap */
