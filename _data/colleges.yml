@@ -12431,3 +12431,1420 @@
                   id: nsut-distributed-computing-raw
                   title: "Distributed Computing Raw"
                   upload: "Megha"
+- name: Anna University
+  slug: anna-university
+  id: anna-university
+  description: Explore branches and Previous Year Question Papers
+  keywords: ["anna university", "chennai", "engineering", "tamil nadu"]
+  icon: university
+  branches:
+    - name: Academic Common Resources
+      slug: acr
+      id: acr
+      description: Academic Common Subjects for First Year
+      keywords: ["common", "first year", "foundation"]
+      icon: book
+      semesters:
+        - number: 1
+          slug: sem-1
+          id: sem-1
+          description: Semester 1 Subjects
+          keywords: ["semester 1"]
+          subjects:
+            - name: Chemistry
+              slug: chem
+              id: chem
+              description: Engineering Chemistry
+              keywords: ["chemistry"]
+              icon: flask
+              pyqs:
+                - year: 2022
+                  file: anna-university-chem-dec-2022.pdf
+                  id: anna-university-chem-dec-2022
+                  title: "Chemistry Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-chem-dec-2023.pdf
+                  id: anna-university-chem-dec-2023
+                  title: "Chemistry Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-chem-may-2022.pdf
+                  id: anna-university-chem-may-2022
+                  title: "Chemistry May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-chem-may-2023.pdf
+                  id: anna-university-chem-may-2023
+                  title: "Chemistry May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-chem-may-2024.pdf
+                  id: anna-university-chem-may-2024
+                  title: "Chemistry May 2024"
+                  upload: "Saumy"
+            - name: English
+              slug: eng
+              id: eng
+              description: English
+              keywords: ["english"]
+              icon: comment-dots
+              pyqs:
+                - year: 2022
+                  file: anna-university-eng-dec-2022.pdf
+                  id: anna-university-eng-dec-2022
+                  title: "English Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-eng-dec-2023.pdf
+                  id: anna-university-eng-dec-2023
+                  title: "English Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-eng-may-2022.pdf
+                  id: anna-university-eng-may-2022
+                  title: "English May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-eng-may-2023.pdf
+                  id: anna-university-eng-may-2023
+                  title: "English May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-eng-may-2024.pdf
+                  id: anna-university-eng-may-2024
+                  title: "English May 2024"
+                  upload: "Saumy"
+            - name: Matrices and Calculus
+              slug: matrices
+              id: matrices
+              description: Matrices and Calculus
+              keywords: ["matrices", "calculus"]
+              icon: calculator
+              pyqs:
+                - year: 2022
+                  file: anna-university-matrices-dec-2022.pdf
+                  id: anna-university-matrices-dec-2022
+                  title: "Matrices Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-matrices-dec-2023.pdf
+                  id: anna-university-matrices-dec-2023
+                  title: "Matrices Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-matrices-may-2022.pdf
+                  id: anna-university-matrices-may-2022
+                  title: "Matrices May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-matrices-may-2023.pdf
+                  id: anna-university-matrices-may-2023
+                  title: "Matrices May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-matrices-may-2024.pdf
+                  id: anna-university-matrices-may-2024
+                  title: "Matrices May 2024"
+                  upload: "Saumy"
+            - name: Programming for Problem Solving
+              slug: pps
+              id: pps
+              description: Programming for Problem Solving
+              keywords: ["pps", "programming"]
+              icon: code
+              pyqs:
+                - year: 2022
+                  file: anna-university-pps-dec-2022.pdf
+                  id: anna-university-pps-dec-2022
+                  title: "PPS Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-pps-dec-2023.pdf
+                  id: anna-university-pps-dec-2023
+                  title: "PPS Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-pps-may-2022.pdf
+                  id: anna-university-pps-may-2022
+                  title: "PPS May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-pps-may-2023.pdf
+                  id: anna-university-pps-may-2023
+                  title: "PPS May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-pps-may-2024.pdf
+                  id: anna-university-pps-may-2024
+                  title: "PPS May 2024"
+                  upload: "Saumy"
+            - name: Tamil
+              slug: tamil
+              id: tamil
+              description: Tamil
+              keywords: ["tamil"]
+              icon: book
+              pyqs:
+                - year: 2022
+                  file: anna-university-tamil-dec-2022.pdf
+                  id: anna-university-tamil-dec-2022
+                  title: "Tamil Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-tamil-dec-2023.pdf
+                  id: anna-university-tamil-dec-2023
+                  title: "Tamil Dec 2023"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-tamil-may-2023.pdf
+                  id: anna-university-tamil-may-2023
+                  title: "Tamil May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-tamil-may-2024.pdf
+                  id: anna-university-tamil-may-2024
+                  title: "Tamil May 2024"
+                  upload: "Saumy"
+        - number: 2
+          slug: sem2
+          id: sem2
+          description: Semester 2 Subjects
+          keywords: ["semester 2"]
+          subjects:
+            - name: Applied Physics
+              slug: a-physics
+              id: a-physics
+              description: Applied Physics
+              keywords: ["physics"]
+              icon: atom
+              pyqs:
+                - year: 2022
+                  file: anna-university-a-physics-dec-2022.pdf
+                  id: anna-university-a-physics-dec-2022
+                  title: "Applied Physics Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-a-physics-dec-2023.pdf
+                  id: anna-university-a-physics-dec-2023
+                  title: "Applied Physics Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-a-physics-may-2022.pdf
+                  id: anna-university-a-physics-may-2022
+                  title: "Applied Physics May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-a-physics-may-2023.pdf
+                  id: anna-university-a-physics-may-2023
+                  title: "Applied Physics May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-a-physics-may-2024.pdf
+                  id: anna-university-a-physics-may-2024
+                  title: "Applied Physics May 2024"
+                  upload: "Saumy"
+            - name: Basic Electrical Engineering
+              slug: bee
+              id: bee
+              description: Basic Electrical Engineering
+              keywords: ["bee", "electrical"]
+              icon: plug
+              pyqs:
+                - year: 2022
+                  file: anna-university-bee-dec-2022.pdf
+                  id: anna-university-bee-dec-2022
+                  title: "BEE Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-bee-dec-2023.pdf
+                  id: anna-university-bee-dec-2023
+                  title: "BEE Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-bee-may-2022.pdf
+                  id: anna-university-bee-may-2022
+                  title: "BEE May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-bee-may-2023.pdf
+                  id: anna-university-bee-may-2023
+                  title: "BEE May 2023"
+                  upload: "Saumy"
+            - name: Circuit Theory
+              slug: circuit
+              id: circuit
+              description: Circuit Theory
+              keywords: ["circuit"]
+              icon: microchip
+              pyqs:
+                - year: 2022
+                  file: anna-university-circuit-dec-2022.pdf
+                  id: anna-university-circuit-dec-2022
+                  title: "Circuit Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-circuit-dec-2023.pdf
+                  id: anna-university-circuit-dec-2023
+                  title: "Circuit Dec 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-circuit-dec-2024.pdf
+                  id: anna-university-circuit-dec-2024
+                  title: "Circuit Dec 2024"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-circuit-may-2022.pdf
+                  id: anna-university-circuit-may-2022
+                  title: "Circuit May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-circuit-may-2023.pdf
+                  id: anna-university-circuit-may-2023
+                  title: "Circuit May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-circuit-may-2024.pdf
+                  id: anna-university-circuit-may-2024
+                  title: "Circuit May 2024"
+                  upload: "Saumy"
+            - name: Civil and Mechanical Engineering
+              slug: civ-mech
+              id: civ-mech
+              description: Civil and Mechanical Engineering
+              keywords: ["civil", "mechanical"]
+              icon: tools
+              pyqs:
+                - year: 2022
+                  file: anna-university-civ-mech-dec-2022.pdf
+                  id: anna-university-civ-mech-dec-2022
+                  title: "Civ & Mech Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-civ-mech-dec-2023.pdf
+                  id: anna-university-civ-mech-dec-2023
+                  title: "Civ & Mech Dec 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-civ-mech-dec-2024.pdf
+                  id: anna-university-civ-mech-dec-2024
+                  title: "Civ & Mech Dec 2024"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-civ-mech-may-2022.pdf
+                  id: anna-university-civ-mech-may-2022
+                  title: "Civ & Mech May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-civ-mech-may-2023.pdf
+                  id: anna-university-civ-mech-may-2023
+                  title: "Civ & Mech May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-civ-mech-may-2024.pdf
+                  id: anna-university-civ-mech-may-2024
+                  title: "Civ & Mech May 2024"
+                  upload: "Saumy"
+            - name: Data Structures and Algorithms
+              slug: dsa
+              id: dsa
+              description: Data Structures and Algorithms
+              keywords: ["dsa", "data structures"]
+              icon: sitemap
+              pyqs:
+                - year: 2022
+                  file: anna-university-dsa-dec-2022.pdf
+                  id: anna-university-dsa-dec-2022
+                  title: "DSA Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-dsa-dec-2023.pdf
+                  id: anna-university-dsa-dec-2023
+                  title: "DSA Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-dsa-may-2022.pdf
+                  id: anna-university-dsa-may-2022
+                  title: "DSA May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-dsa-may-2023.pdf
+                  id: anna-university-dsa-may-2023
+                  title: "DSA May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-dsa-may-2024.pdf
+                  id: anna-university-dsa-may-2024
+                  title: "DSA May 2024"
+                  upload: "Saumy"
+            - name: Electric Circuits
+              slug: e-circuit
+              id: e-circuit
+              description: Electric Circuits
+              keywords: ["electric circuits"]
+              icon: plug
+              pyqs:
+                - year: 2022
+                  file: anna-university-e-circuit-dec-2022.pdf
+                  id: anna-university-e-circuit-dec-2022
+                  title: "Electric Circuit Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-e-circuit-dec-2023.pdf
+                  id: anna-university-e-circuit-dec-2023
+                  title: "Electric Circuit Dec 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-e-circuit-dec-2024.pdf
+                  id: anna-university-e-circuit-dec-2024
+                  title: "Electric Circuit Dec 2024"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-e-circuit-may-2022.pdf
+                  id: anna-university-e-circuit-may-2022
+                  title: "Electric Circuit May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-e-circuit-may-2023.pdf
+                  id: anna-university-e-circuit-may-2023
+                  title: "Electric Circuit May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-e-circuit-may-2024.pdf
+                  id: anna-university-e-circuit-may-2024
+                  title: "Electric Circuit May 2024"
+                  upload: "Saumy"
+            - name: Engineering Graphics
+              slug: e-graphics
+              id: e-graphics
+              description: Engineering Graphics
+              keywords: ["graphics"]
+              icon: pencil-ruler
+              pyqs:
+                - year: 2022
+                  file: anna-university-e-graphics-dec-2022.pdf
+                  id: anna-university-e-graphics-dec-2022
+                  title: "Engineering Graphics Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-e-graphics-dec-2023.pdf
+                  id: anna-university-e-graphics-dec-2023
+                  title: "Engineering Graphics Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-e-graphics-may-2022.pdf
+                  id: anna-university-e-graphics-may-2022
+                  title: "Engineering Graphics May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-e-graphics-may-2023.pdf
+                  id: anna-university-e-graphics-may-2023
+                  title: "Engineering Graphics May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-e-graphics-may-2024.pdf
+                  id: anna-university-e-graphics-may-2024
+                  title: "Engineering Graphics May 2024"
+                  upload: "Saumy"
+            - name: Electrical Instrumentation
+              slug: e-instru
+              id: e-instru
+              description: Electrical Instrumentation
+              keywords: ["instrumentation"]
+              icon: tools
+              pyqs:
+                - year: 2022
+                  file: anna-university-e-instru-dec-2022.pdf
+                  id: anna-university-e-instru-dec-2022
+                  title: "Electrical Instrumentation Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-e-instru-dec-2023.pdf
+                  id: anna-university-e-instru-dec-2023
+                  title: "Electrical Instrumentation Dec 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-e-instru-dec-2024.pdf
+                  id: anna-university-e-instru-dec-2024
+                  title: "Electrical Instrumentation Dec 2024"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-e-instru-may-2022.pdf
+                  id: anna-university-e-instru-may-2022
+                  title: "Electrical Instrumentation May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-e-instru-may-2023.pdf
+                  id: anna-university-e-instru-may-2023
+                  title: "Electrical Instrumentation May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-e-instru-may-2024.pdf
+                  id: anna-university-e-instru-may-2024
+                  title: "Electrical Instrumentation May 2024"
+                  upload: "Saumy"
+            - name: English II
+              slug: english-2
+              id: english-2
+              description: English II
+              keywords: ["english"]
+              icon: comment-dots
+              pyqs:
+                - year: 2022
+                  file: anna-university-english-2-dec-2022.pdf
+                  id: anna-university-english-2-dec-2022
+                  title: "English II Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-english-2-dec-2023.pdf
+                  id: anna-university-english-2-dec-2023
+                  title: "English II Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-english-2-may-2022.pdf
+                  id: anna-university-english-2-may-2022
+                  title: "English II May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-english-2-may-2023.pdf
+                  id: anna-university-english-2-may-2023
+                  title: "English II May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-english-2-may-2024.pdf
+                  id: anna-university-english-2-may-2024
+                  title: "English II May 2024"
+                  upload: "Saumy"
+            - name: Instrumentation
+              slug: instru
+              id: instru
+              description: Instrumentation
+              keywords: ["instrumentation"]
+              icon: tools
+              pyqs:
+                - year: 2022
+                  file: anna-university-instru-dec-2022.pdf
+                  id: anna-university-instru-dec-2022
+                  title: "Instrumentation Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-instru-dec-2023.pdf
+                  id: anna-university-instru-dec-2023
+                  title: "Instrumentation Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-instru-may-2022.pdf
+                  id: anna-university-instru-may-2022
+                  title: "Instrumentation May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-instru-may-2023.pdf
+                  id: anna-university-instru-may-2023
+                  title: "Instrumentation May 2023"
+                  upload: "Saumy"
+            - name: Material Science
+              slug: material
+              id: material
+              description: Material Science
+              keywords: ["material science"]
+              icon: cubes
+              pyqs:
+                - year: 2022
+                  file: anna-university-material-dec-2022.pdf
+                  id: anna-university-material-dec-2022
+                  title: "Material Science Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-material-dec-2023.pdf
+                  id: anna-university-material-dec-2023
+                  title: "Material Science Dec 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-material-dec-2024.pdf
+                  id: anna-university-material-dec-2024
+                  title: "Material Science Dec 2024"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-material-may-2022.pdf
+                  id: anna-university-material-may-2022
+                  title: "Material Science May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-material-may-2023.pdf
+                  id: anna-university-material-may-2023
+                  title: "Material Science May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-material-may-2024.pdf
+                  id: anna-university-material-may-2024
+                  title: "Material Science May 2024"
+                  upload: "Saumy"
+            - name: Physics for Civil Engineering
+              slug: phy-civil
+              id: phy-civil
+              description: Physics for Civil Engineering
+              keywords: ["physics", "civil"]
+              icon: atom
+              pyqs:
+                - year: 2022
+                  file: anna-university-phy-civil-dec-2022.pdf
+                  id: anna-university-phy-civil-dec-2022
+                  title: "Physics for Civil Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-phy-civil-dec-2023.pdf
+                  id: anna-university-phy-civil-dec-2023
+                  title: "Physics for Civil Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-phy-civil-may-2022.pdf
+                  id: anna-university-phy-civil-may-2022
+                  title: "Physics for Civil May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-phy-civil-may-2023.pdf
+                  id: anna-university-phy-civil-may-2023
+                  title: "Physics for Civil May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-phy-civil-may-2024.pdf
+                  id: anna-university-phy-civil-may-2024
+                  title: "Physics for Civil May 2024"
+                  upload: "Saumy"
+            - name: Physics for Electrical Engineering
+              slug: phy-electrical
+              id: phy-electrical
+              description: Physics for Electrical Engineering
+              keywords: ["physics", "electrical"]
+              icon: atom
+              pyqs:
+                - year: 2022
+                  file: anna-university-phy-electrical-dec-2022.pdf
+                  id: anna-university-phy-electrical-dec-2022
+                  title: "Physics for Electrical Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-phy-electrical-dec-2023.pdf
+                  id: anna-university-phy-electrical-dec-2023
+                  title: "Physics for Electrical Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-phy-electrical-may-2022.pdf
+                  id: anna-university-phy-electrical-may-2022
+                  title: "Physics for Electrical May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-phy-electrical-may-2023.pdf
+                  id: anna-university-phy-electrical-may-2023
+                  title: "Physics for Electrical May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-phy-electrical-may-2024.pdf
+                  id: anna-university-phy-electrical-may-2024
+                  title: "Physics for Electrical May 2024"
+                  upload: "Saumy"
+            - name: Physics for Electronics Engineering
+              slug: phy-electronics
+              id: phy-electronics
+              description: Physics for Electronics Engineering
+              keywords: ["physics", "electronics"]
+              icon: atom
+              pyqs:
+                - year: 2022
+                  file: anna-university-phy-electronics-dec-2022.pdf
+                  id: anna-university-phy-electronics-dec-2022
+                  title: "Physics for Electronics Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-phy-electronics-dec-2023.pdf
+                  id: anna-university-phy-electronics-dec-2023
+                  title: "Physics for Electronics Dec 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-phy-electronics-dec-2024.pdf
+                  id: anna-university-phy-electronics-dec-2024
+                  title: "Physics for Electronics Dec 2024"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-phy-electronics-may-2022.pdf
+                  id: anna-university-phy-electronics-may-2022
+                  title: "Physics for Electronics May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-phy-electronics-may-2023.pdf
+                  id: anna-university-phy-electronics-may-2023
+                  title: "Physics for Electronics May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-phy-electronics-may-2024.pdf
+                  id: anna-university-phy-electronics-may-2024
+                  title: "Physics for Electronics May 2024"
+                  upload: "Saumy"
+            - name: Physics for Information Science
+              slug: phy-info
+              id: phy-info
+              description: Physics for Information Science
+              keywords: ["physics", "information science"]
+              icon: atom
+              pyqs:
+                - year: 2022
+                  file: anna-university-phy-info-dec-2022.pdf
+                  id: anna-university-phy-info-dec-2022
+                  title: "Physics for Info Science Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-phy-info-dec-2023.pdf
+                  id: anna-university-phy-info-dec-2023
+                  title: "Physics for Info Science Dec 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-phy-info-dec-2024.pdf
+                  id: anna-university-phy-info-dec-2024
+                  title: "Physics for Info Science Dec 2024"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-phy-info-may-2022.pdf
+                  id: anna-university-phy-info-may-2022
+                  title: "Physics for Info Science May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-phy-info-may-2023.pdf
+                  id: anna-university-phy-info-may-2023
+                  title: "Physics for Info Science May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-phy-info-may-2024.pdf
+                  id: anna-university-phy-info-may-2024
+                  title: "Physics for Info Science May 2024"
+                  upload: "Saumy"
+            - name: Programming in C
+              slug: pro-in-c
+              id: pro-in-c
+              description: Programming in C
+              keywords: ["programming", "c"]
+              icon: code
+              pyqs:
+                - year: 2022
+                  file: anna-university-pro-in-c-dec-2022.pdf
+                  id: anna-university-pro-in-c-dec-2022
+                  title: "Programming in C Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-pro-in-c-dec-2023.pdf
+                  id: anna-university-pro-in-c-dec-2023
+                  title: "Programming in C Dec 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-pro-in-c-dec-2024.pdf
+                  id: anna-university-pro-in-c-dec-2024
+                  title: "Programming in C Dec 2024"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-pro-in-c-may-2022.pdf
+                  id: anna-university-pro-in-c-may-2022
+                  title: "Programming in C May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-pro-in-c-may-2023.pdf
+                  id: anna-university-pro-in-c-may-2023
+                  title: "Programming in C May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-pro-in-c-may-2024.pdf
+                  id: anna-university-pro-in-c-may-2024
+                  title: "Programming in C May 2024"
+                  upload: "Saumy"
+            - name: Statistics and Numerical Methods
+              slug: stats
+              id: stats
+              description: Statistics and Numerical Methods
+              keywords: ["statistics", "numerical methods"]
+              icon: calculator
+              pyqs:
+                - year: 2022
+                  file: anna-university-stats-dec-2022.pdf
+                  id: anna-university-stats-dec-2022
+                  title: "Statistics Dec 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-stats-dec-2023.pdf
+                  id: anna-university-stats-dec-2023
+                  title: "Statistics Dec 2023"
+                  upload: "Saumy"
+                - year: 2022
+                  file: anna-university-stats-may-2022.pdf
+                  id: anna-university-stats-may-2022
+                  title: "Statistics May 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-stats-may-2023.pdf
+                  id: anna-university-stats-may-2023
+                  title: "Statistics May 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-stats-may-2024.pdf
+                  id: anna-university-stats-may-2024
+                  title: "Statistics May 2024"
+                  upload: "Saumy"
+            - name: Tamil and Technology
+              slug: tamil-n-tech
+              id: tamil-n-tech
+              description: Tamil and Technology
+              keywords: ["tamil", "technology"]
+              icon: book
+              pyqs:
+                - year: 2023
+                  file: anna-university-tamil-n-tech-dec-2023.pdf
+                  id: anna-university-tamil-n-tech-dec-2023
+                  title: "Tamil and Technology Dec 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: anna-university-tamil-n-tech-may-2024.pdf
+                  id: anna-university-tamil-n-tech-may-2024
+                  title: "Tamil and Technology May 2024"
+                  upload: "Saumy"
+                - year: 2023
+                  file: anna-university-tamil-n-tech-may-2023.pdf
+                  id: anna-university-tamil-n-tech-may-2023
+                  title: "Tamil and Technology May 2023"
+                  upload: "Saumy"
+
+- name: Chennai Institute of Technology
+  slug: cit
+  id: cit
+  description: Explore branches and Previous Year Question Papers
+  keywords: ["cit", "chennai institute of technology"]
+  icon: university
+  branches:
+    - name: Academic Common Resources
+      slug: acr
+      id: acr
+      description: Academic Common Subjects
+      keywords: ["common", "first year"]
+      icon: book
+      semesters:
+        - number: 1
+          slug: sem1
+          id: sem1
+          description: Semester 1
+          subjects:
+            - name: Calculus
+              slug: calculus
+              id: calculus
+              description: Calculus
+              keywords: ["calculus"]
+              icon: calculator
+              pyqs:
+                - year: 2024
+                  file: cit-calculus-dec-2024.pdf
+                  id: cit-calculus-dec-2024
+                  title: "Calculus Dec 2024"
+                  upload: "Saumy"
+                - year: 2024
+                  file: cit-calculus-nov-2024.pdf
+                  id: cit-calculus-nov-2024
+                  title: "Calculus Nov 2024"
+                  upload: "Saumy"
+            - name: Communicative English
+              slug: com-english
+              id: com-english
+              description: Communicative English
+              keywords: ["english"]
+              icon: comment-dots
+              pyqs:
+                - year: 2024
+                  file: cit-com-english-dec-2024.pdf
+                  id: cit-com-english-dec-2024
+                  title: "Communicative English Dec 2024"
+                  upload: "Saumy"
+            - name: C++
+              slug: cpp
+              id: cpp
+              description: C++ Programming
+              keywords: ["cpp", "c++"]
+              icon: code
+              pyqs:
+                - year: 2024
+                  file: cit-cpp-nov-2024.pdf
+                  id: cit-cpp-nov-2024
+                  title: "C++ Nov 2024"
+                  upload: "Saumy"
+            - name: Digital System Design
+              slug: dsd
+              id: dsd
+              description: Digital System Design
+              keywords: ["dsd", "digital"]
+              icon: microchip
+              pyqs:
+                - year: 2024
+                  file: cit-dsd-dec-2024.pdf
+                  id: cit-dsd-dec-2024
+                  title: "DSD Dec 2024"
+                  upload: "Saumy"
+                - year: 2024
+                  file: cit-dsd-nov-2024.pdf
+                  id: cit-dsd-nov-2024
+                  title: "DSD Nov 2024"
+                  upload: "Saumy"
+            - name: Engineering Physics
+              slug: e-physics
+              id: e-physics
+              description: Engineering Physics
+              keywords: ["physics"]
+              icon: atom
+              pyqs:
+                - year: 2018
+                  file: cit-e-physics-dec-2018.pdf
+                  id: cit-e-physics-dec-2018
+                  title: "Engineering Physics Dec 2018"
+                  upload: "Saumy"
+                - year: 2024
+                  file: cit-e-physics-dec-2024.pdf
+                  id: cit-e-physics-dec-2024
+                  title: "Engineering Physics Dec 2024"
+                  upload: "Saumy"
+                - year: 2019
+                  file: cit-e-physics-may-2019.pdf
+                  id: cit-e-physics-may-2019
+                  title: "Engineering Physics May 2019"
+                  upload: "Saumy"
+            - name: Tamils
+              slug: tamils
+              id: tamils
+              description: Tamils
+              keywords: ["tamil"]
+              icon: book
+              pyqs:
+                - year: 2024
+                  file: cit-tamils-dec-2024.pdf
+                  id: cit-tamils-dec-2024
+                  title: "Tamils Dec 2024"
+                  upload: "Saumy"
+            - name: Web Development
+              slug: web-dev
+              id: web-dev
+              description: Web Development
+              keywords: ["web dev"]
+              icon: globe
+              pyqs:
+                - year: 2024
+                  file: cit-web-dev-dec-2024.pdf
+                  id: cit-web-dev-dec-2024
+                  title: "Web Development Dec 2024"
+                  upload: "Saumy"
+                - year: 2024
+                  file: cit-web-dev-nov-2024.pdf
+                  id: cit-web-dev-nov-2024
+                  title: "Web Development Nov 2024"
+                  upload: "Saumy"
+        - number: 2
+          slug: sem2
+          id: sem2
+          description: Semester 2
+          subjects:
+            - name: Communicative English II
+              slug: com-english-2
+              id: com-english-2
+              description: Communicative English II
+              keywords: ["english"]
+              icon: comment-dots
+              pyqs:
+                - year: 2025
+                  file: cit-com-english-2-may-2025.pdf
+                  id: cit-com-english-2-may-2025
+                  title: "Communicative English II May 2025"
+                  upload: "Saumy"
+            - name: Database Management Systems
+              slug: dbms
+              id: dbms
+              description: Database Management Systems
+              keywords: ["dbms"]
+              icon: database
+              pyqs:
+                - year: 2025
+                  file: cit-dbms-apr-2025.pdf
+                  id: cit-dbms-apr-2025
+                  title: "DBMS Apr 2025"
+                  upload: "Saumy"
+                - year: 2025
+                  file: cit-dbms-feb-2025.pdf
+                  id: cit-dbms-feb-2025
+                  title: "DBMS Feb 2025"
+                  upload: "Saumy"
+                - year: 2025
+                  file: cit-dbms-mar-2025.pdf
+                  id: cit-dbms-mar-2025
+                  title: "DBMS Mar 2025"
+                  upload: "Saumy"
+                - year: 2025
+                  file: cit-dbms-may-2025.pdf
+                  id: cit-dbms-may-2025
+                  title: "DBMS May 2025"
+                  upload: "Saumy"
+            - name: Data Structures and Algorithms
+              slug: dsa
+              id: dsa
+              description: Data Structures and Algorithms
+              keywords: ["dsa"]
+              icon: sitemap
+              pyqs:
+                - year: 2025
+                  file: cit-dsa-feb-2025.pdf
+                  id: cit-dsa-feb-2025
+                  title: "DSA Feb 2025"
+                  upload: "Saumy"
+                - year: 2025
+                  file: cit-dsa-may-2025.pdf
+                  id: cit-dsa-may-2025
+                  title: "DSA May 2025"
+                  upload: "Saumy"
+            - name: Java Programming
+              slug: java
+              id: java
+              description: Java Programming
+              keywords: ["java"]
+              icon: code
+              pyqs:
+                - year: 2025
+                  file: cit-java-apr-2025.pdf
+                  id: cit-java-apr-2025
+                  title: "Java Apr 2025"
+                  upload: "Saumy"
+                - year: 2025
+                  file: cit-java-may-2025.pdf
+                  id: cit-java-may-2025
+                  title: "Java May 2025"
+                  upload: "Saumy"
+            - name: Probability and Statistics
+              slug: prob
+              id: prob
+              description: Probability and Statistics
+              keywords: ["probability", "statistics"]
+              icon: dice
+              pyqs:
+                - year: 2025
+                  file: cit-prob-may-2025.pdf
+                  id: cit-prob-may-2025
+                  title: "Probability May 2025"
+                  upload: "Saumy"
+            - name: Tamil and Technology
+              slug: tamil-n-tech
+              id: tamil-n-tech
+              description: Tamil and Technology
+              keywords: ["tamil"]
+              icon: book
+              pyqs:
+                - year: 2025
+                  file: cit-tamil-n-tech-may-2025.pdf
+                  id: cit-tamil-n-tech-may-2025
+                  title: "Tamil and Technology May 2025"
+                  upload: "Saumy"
+            - name: Web Development with Frameworks and Platforms
+              slug: wdfp
+              id: wdfp
+              description: Web Development with Frameworks and Platforms
+              keywords: ["web dev", "frameworks"]
+              icon: globe
+              pyqs:
+                - year: 2025
+                  file: cit-wdfp-apr-2025.pdf
+                  id: cit-wdfp-apr-2025
+                  title: "WDFP Apr 2025"
+                  upload: "Saumy"
+                - year: 2025
+                  file: cit-wdfp-feb-2025.pdf
+                  id: cit-wdfp-feb-2025
+                  title: "WDFP Feb 2025"
+                  upload: "Saumy"
+                - year: 2025
+                  file: cit-wdfp-march-2025.pdf
+                  id: cit-wdfp-march-2025
+                  title: "WDFP March 2025"
+                  upload: "Saumy"
+                - year: 2025
+                  file: cit-wdfp-may-2025.pdf
+                  id: cit-wdfp-may-2025
+                  title: "WDFP May 2025"
+                  upload: "Saumy"
+
+- name: Hindustan Institute of Technology
+  slug: hit
+  id: hit
+  description: Explore branches and Previous Year Question Papers
+  keywords: ["hit", "hindustan institute of technology"]
+  icon: university
+  branches:
+    - name: Academic Common Resources
+      slug: acr
+      id: acr
+      description: Academic Common Subjects
+      keywords: ["common"]
+      icon: book
+      semesters:
+        - number: 1
+          slug: sem1
+          id: sem1
+          description: Semester 1
+          subjects:
+            - name: Chemistry I
+              slug: chem-1
+              id: chem-1
+              description: Chemistry I
+              keywords: ["chemistry"]
+              icon: flask
+              pyqs:
+                - year: 2017
+                  file: hit-chem-1-2017.pdf
+                  id: hit-chem-1-2017
+                  title: "Chemistry I 2017"
+                  upload: "Saumy"
+                - year: 2020
+                  file: hit-chem-1-2020.pdf
+                  id: hit-chem-1-2020
+                  title: "Chemistry I 2020"
+                  upload: "Saumy"
+                - year: 2022
+                  file: hit-chem-1-2022.pdf
+                  id: hit-chem-1-2022
+                  title: "Chemistry I 2022"
+                  upload: "Saumy"
+                - year: 2019
+                  file: hit-chem-1-backlog-2019.pdf
+                  id: hit-chem-1-backlog-2019
+                  title: "Chemistry I Backlog 2019"
+                  upload: "Saumy"
+                - year: 2020
+                  file: hit-chem-1-backlog-2020.pdf
+                  id: hit-chem-1-backlog-2020
+                  title: "Chemistry I Backlog 2020"
+                  upload: "Saumy"
+            - name: Mathematics I
+              slug: maths-1
+              id: maths-1
+              description: Mathematics I
+              keywords: ["maths"]
+              icon: calculator
+              pyqs:
+                - year: 2019
+                  file: hit-maths-1-2019.pdf
+                  id: hit-maths-1-2019
+                  title: "Maths I 2019"
+                  upload: "Saumy"
+                - year: 2020
+                  file: hit-maths-1-2020.pdf
+                  id: hit-maths-1-2020
+                  title: "Maths I 2020"
+                  upload: "Saumy"
+                - year: 2021
+                  file: hit-maths-1-2021.pdf
+                  id: hit-maths-1-2021
+                  title: "Maths I 2021"
+                  upload: "Saumy"
+                - year: 2022
+                  file: hit-maths-1-2022.pdf
+                  id: hit-maths-1-2022
+                  title: "Maths I 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: hit-maths-1-2023.pdf
+                  id: hit-maths-1-2023
+                  title: "Maths I 2023"
+                  upload: "Saumy"
+                - year: 2019
+                  file: hit-maths-1-backlog-2019.pdf
+                  id: hit-maths-1-backlog-2019
+                  title: "Maths I Backlog 2019"
+                  upload: "Saumy"
+                - year: 2020
+                  file: hit-maths-1-backlog-2020.pdf
+                  id: hit-maths-1-backlog-2020
+                  title: "Maths I Backlog 2020"
+                  upload: "Saumy"
+                - year: 2021
+                  file: hit-maths-1-backlog-2021.pdf
+                  id: hit-maths-1-backlog-2021
+                  title: "Maths I Backlog 2021"
+                  upload: "Saumy"
+            - name: Physics I
+              slug: physics-1
+              id: physics-1
+              description: Physics I
+              keywords: ["physics"]
+              icon: atom
+              pyqs:
+                - year: 2021
+                  file: hit-physics-1-2021.pdf
+                  id: hit-physics-1-2021
+                  title: "Physics I 2021"
+                  upload: "Saumy"
+                - year: 2023
+                  file: hit-physics-1-2023.pdf
+                  id: hit-physics-1-2023
+                  title: "Physics I 2023"
+                  upload: "Saumy"
+        - number: 2
+          slug: sem2
+          id: sem2
+          description: Semester 2
+          subjects:
+            - name: Basic Electrical Engineering
+              slug: bee
+              id: bee
+              description: Basic Electrical Engineering
+              keywords: ["bee"]
+              icon: plug
+              pyqs:
+                - year: 2020
+                  file: hit-bee-2020.pdf
+                  id: hit-bee-2020
+                  title: "BEE 2020"
+                  upload: "Saumy"
+                - year: 2021
+                  file: hit-bee-2021.pdf
+                  id: hit-bee-2021
+                  title: "BEE 2021"
+                  upload: "Saumy"
+                - year: 2022
+                  file: hit-bee-2022.pdf
+                  id: hit-bee-2022
+                  title: "BEE 2022"
+                  upload: "Saumy"
+                - year: 2024
+                  file: hit-bee-2024.pdf
+                  id: hit-bee-2024
+                  title: "BEE 2024"
+                  upload: "Saumy"
+            - name: Programming for Problem Solving
+              slug: pps
+              id: pps
+              description: Programming for Problem Solving
+              keywords: ["pps"]
+              icon: code
+              pyqs:
+                - year: 2021
+                  file: hit-pps-2021.pdf
+                  id: hit-pps-2021
+                  title: "PPS 2021"
+                  upload: "Saumy"
+                - year: 2022
+                  file: hit-pps-2022.pdf
+                  id: hit-pps-2022
+                  title: "PPS 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: hit-pps-2023.pdf
+                  id: hit-pps-2023
+                  title: "PPS 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: hit-pps-2024.pdf
+                  id: hit-pps-2024
+                  title: "PPS 2024"
+                  upload: "Saumy"
+
+- name: Maharaja Agrasen Institute of Technology
+  slug: mait
+  id: mait
+  description: Explore branches and Previous Year Question Papers
+  keywords: ["mait", "maharaja agrasen", "delhi"]
+  icon: university
+  branches:
+    - name: Academic Common Resources
+      slug: acr
+      id: acr
+      description: Academic Common Subjects
+      keywords: ["common"]
+      icon: book
+      semesters:
+        - number: 1
+          slug: sem1
+          id: sem1
+          description: Semester 1
+          subjects:
+            - name: Applied Chemistry
+              slug: a-chemistry
+              id: a-chemistry
+              description: Applied Chemistry
+              keywords: ["chemistry"]
+              icon: flask
+              pyqs:
+                - year: 2024
+                  file: mait-a-chemistry-jan-2024.pdf
+                  id: mait-a-chemistry-jan-2024
+                  title: "Applied Chemistry Jan 2024"
+                  upload: "Saumy"
+            - name: Applied Mathematics
+              slug: a-maths
+              id: a-maths
+              description: Applied Mathematics
+              keywords: ["maths"]
+              icon: calculator
+              pyqs:
+                - year: 2024
+                  file: mait-a-maths-dec-2024.pdf
+                  id: mait-a-maths-dec-2024
+                  title: "Applied Maths Dec 2024"
+                  upload: "Saumy"
+                - year: 2023
+                  file: mait-a-maths-mar-2023.pdf
+                  id: mait-a-maths-mar-2023
+                  title: "Applied Maths Mar 2023"
+                  upload: "Saumy"
+            - name: Applied Physics
+              slug: a-physics
+              id: a-physics
+              description: Applied Physics
+              keywords: ["physics"]
+              icon: atom
+              pyqs:
+                - year: 2024
+                  file: mait-a-physics-jan-2024.pdf
+                  id: mait-a-physics-jan-2024
+                  title: "Applied Physics Jan 2024"
+                  upload: "Saumy"
+                - year: 2023
+                  file: mait-a-physics-nov-2023.pdf
+                  id: mait-a-physics-nov-2023
+                  title: "Applied Physics Nov 2023"
+                  upload: "Saumy"
+            - name: Communication Skills
+              slug: com-skills
+              id: com-skills
+              description: Communication Skills
+              keywords: ["communication"]
+              icon: comment-dots
+              pyqs:
+                - year: 2024
+                  file: mait-com-skills-jan-2024.pdf
+                  id: mait-com-skills-jan-2024
+                  title: "Communication Skills Jan 2024"
+                  upload: "Saumy"
+                - year: 2025
+                  file: mait-com-skills-jan-2025.pdf
+                  id: mait-com-skills-jan-2025
+                  title: "Communication Skills Jan 2025"
+                  upload: "Saumy"
+            - name: Environmental Science
+              slug: e-science
+              id: e-science
+              description: Environmental Science
+              keywords: ["environment"]
+              icon: leaf
+              pyqs:
+                - year: 2025
+                  file: mait-e-science-jan-2025.pdf
+                  id: mait-e-science-jan-2025
+                  title: "Environmental Science Jan 2025"
+                  upload: "Saumy"
+                - year: 2023
+                  file: mait-e-science-mar-2023.pdf
+                  id: mait-e-science-mar-2023
+                  title: "Environmental Science Mar 2023"
+                  upload: "Saumy"
+            - name: Manufacturing Process
+              slug: m-process
+              id: m-process
+              description: Manufacturing Process
+              keywords: ["manufacturing"]
+              icon: tools
+              pyqs:
+                - year: 2024
+                  file: mait-m-process-dec-2024.pdf
+                  id: mait-m-process-dec-2024
+                  title: "Manufacturing Process Dec 2024"
+                  upload: "Saumy"
+                - year: 2023
+                  file: mait-m-process-nov-2023.pdf
+                  id: mait-m-process-nov-2023
+                  title: "Manufacturing Process Nov 2023"
+                  upload: "Saumy"
+        - number: 2
+          slug: sem2
+          id: sem2
+          description: Semester 2
+          subjects:
+            - name: Applied Mathematics II
+              slug: a-maths-2
+              id: a-maths-2
+              description: Applied Mathematics II
+              keywords: ["maths"]
+              icon: calculator
+              pyqs:
+                - year: 2023
+                  file: mait-a-maths-2-july2023.pdf
+                  id: mait-a-maths-2-july2023
+                  title: "Applied Maths II July 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: mait-a-maths-2-jun-2024.pdf
+                  id: mait-a-maths-2-jun-2024
+                  title: "Applied Maths II Jun 2024"
+                  upload: "Saumy"
+            - name: Applied Physics II
+              slug: a-physics-2
+              id: a-physics-2
+              description: Applied Physics II
+              keywords: ["physics"]
+              icon: atom
+              pyqs:
+                - year: 2023
+                  file: mait-a-physics-2-july-2023.pdf
+                  id: mait-a-physics-2-july-2023
+                  title: "Applied Physics II July 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: mait-a-physics-2-june-2024.pdf
+                  id: mait-a-physics-2-june-2024
+                  title: "Applied Physics II June 2024"
+                  upload: "Saumy"
+            - name: Engineering Mechanics
+              slug: e-mechanics
+              id: e-mechanics
+              description: Engineering Mechanics
+              keywords: ["mechanics"]
+              icon: tools
+              pyqs:
+                - year: 2023
+                  file: mait-e-mechanics-july-2023.pdf
+                  id: mait-e-mechanics-july-2023
+                  title: "Engineering Mechanics July 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: mait-e-mechanics-june-2024.pdf
+                  id: mait-e-mechanics-june-2024
+                  title: "Engineering Mechanics June 2024"
+                  upload: "Saumy"
+            - name: Environmental Studies
+              slug: e-studies
+              id: e-studies
+              description: Environmental Studies
+              keywords: ["environment"]
+              icon: leaf
+              pyqs:
+                - year: 2023
+                  file: mait-e-studies-july-2023.pdf
+                  id: mait-e-studies-july-2023
+                  title: "Environmental Studies July 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: mait-e-studies-june-2024.pdf
+                  id: mait-e-studies-june-2024
+                  title: "Environmental Studies June 2024"
+                  upload: "Saumy"
+            - name: Programming for Problem Solving
+              slug: pps
+              id: pps
+              description: Programming for Problem Solving
+              keywords: ["pps"]
+              icon: code
+              pyqs:
+                - year: 2023
+                  file: mait-pps-july-2023.pdf
+                  id: mait-pps-july-2023
+                  title: "PPS July 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: mait-pps-june-2024.pdf
+                  id: mait-pps-june-2024
+                  title: "PPS June 2024"
+                  upload: "Saumy"
