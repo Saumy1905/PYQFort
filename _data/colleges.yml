@@ -13467,11 +13467,11 @@
                   title: "WDFP May 2025"
                   upload: "Saumy"
 
-- name: Hindustan Institute of Technology
+- name: Heritage Institute of Technology
   slug: hit
   id: hit
   description: Explore branches and Previous Year Question Papers
-  keywords: ["hit", "hindustan institute of technology"]
+  keywords: ["hit", "Heritage Institute of Technology"]
   icon: university
   branches:
     - name: Academic Common Resources
