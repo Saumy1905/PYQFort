@@ -6189,8 +6189,8 @@ body.neo-grid-body-lock {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  /* background: #e83151; */
-  background: #50C878; /* Emerald green */
+  background: #e83151;
+  /* background: #50C878; Emerald green */
   box-shadow: 0 0 0 2px var(--bg-color, #ffffff);
   pointer-events: none;
   z-index: 5;
