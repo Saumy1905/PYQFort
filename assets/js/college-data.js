@@ -4953,6 +4953,27 @@ window.COLLEGE_DATA = {
                       pages: 3,
                       title: "Economics 2024",
                     },
+                    {
+                      year: 2026,
+                      file: "pyqfort-economics-module-1.pdf",
+                      id: "pyqfort-economics-module-1",
+                      pages: 3,
+                      title: "Economics Module 1",
+                    },
+                    {
+                      year: 2026,
+                      file: "pyqfort-economics-module-2.pdf",
+                      id: "pyqfort-economics-module-2",
+                      pages: 3,
+                      title: "Economics Module 2",
+                    },
+                    {
+                      year: 2026,
+                      file: "pyqfort-economics-module-3.pdf",
+                      id: "pyqfort-economics-module-3",
+                      pages: 3,
+                      title: "Economics Module 3",
+                    }
                   ],
                 },
               ],

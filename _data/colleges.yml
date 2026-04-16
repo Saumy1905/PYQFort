@@ -1394,6 +1394,14 @@
               theme: "purple"
               meta_text: "Buy Now!"
               type: "subject_integrated"
+            - title: "Economics Module-3 Notes"
+              description: "FREE Premium! | 25 pages| for just ₹0"
+              url: "https://topmate.io/saumy1905/1947032?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-economics-module-3.jpg"
+              badge: "FREE Premium"
+              theme: "purple"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
             - title: "OS Module-5 & 6 Notes"
               description: "Paid Premium! | 47 pages | for just ₹20"
               url: "https://topmate.io/saumy1905/1948296?utm_source=public_profile&utm_campaign=saumy1905"
@@ -1583,6 +1591,29 @@
                   pages: 3
                   title: "Economics 2018"
                   upload: "Saumy"
+                - year: 2026
+                  file: pyqfort-economics-module-1.pdf
+                  id: pyqfort-economics-module-1
+                  pages: 23
+                  title: "PYQFort Economics Module 1"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-economics-module-2.pdf
+                  id: pyqfort-economics-module-2
+                  pages: 18
+                  title: "PYQFort Economics Module 2"
+                  new: true
+                  pyqfort_notes: true
+                - year: 2026
+                  file: pyqfort-economics-module-3.pdf
+                  id: pyqfort-economics-module-3
+                  pages: 25
+                  title: "PYQFort Economics Module 3"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/2051086?utm_source=public_profile&utm_campaign=saumy1905"
             - name: Environmental science
               id: environmental-science
               description: Study of environmental issues and solutions
