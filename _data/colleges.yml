@@ -1410,6 +1410,14 @@
               theme: "blue"
               meta_text: "Buy Now!"
               type: "subject_integrated"
+            - title: "Economics Module 4, 5 & 6 Notes"
+              description: "Paid Premium! | 53 pages | for just ₹20"
+              url: "https://topmate.io/saumy1905/2051094?utm_source=public_profile&utm_campaign=saumy1905"
+              image: "marketing/pyqfort-economics-module-4_5_6.jpg"
+              badge: "Paid Premium"
+              theme: "blue"
+              meta_text: "Buy Now!"
+              type: "subject_integrated"
           subjects:
             - name: Computer Organization and Architecture
               id: coa
@@ -1614,6 +1622,33 @@
                   pyqfort_notes: true
                   praxian: true
                   praxian_link: "https://topmate.io/saumy1905/2051086?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-economics-module-4.pdf
+                  id: pyqfort-economics-module-4
+                  pages: 18
+                  title: "PYQFort Economics Module 4"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/2051094?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-economics-module-5.pdf
+                  id: pyqfort-economics-module-5
+                  pages: 11
+                  title: "PYQFort Economics Module 5"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/2051094?utm_source=public_profile&utm_campaign=saumy1905"
+                - year: 2026
+                  file: pyqfort-economics-module-6.pdf
+                  id: pyqfort-economics-module-6
+                  pages: 27
+                  title: "PYQFort Economics Module 6"
+                  new: true
+                  pyqfort_notes: true
+                  praxian: true
+                  praxian_link: "https://topmate.io/saumy1905/2051094?utm_source=public_profile&utm_campaign=saumy1905"
             - name: Environmental science
               id: environmental-science
               description: Study of environmental issues and solutions

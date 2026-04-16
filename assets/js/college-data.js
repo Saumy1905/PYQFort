@@ -4973,6 +4973,27 @@ window.COLLEGE_DATA = {
                       id: "pyqfort-economics-module-3",
                       pages: 3,
                       title: "Economics Module 3",
+                    },
+                    {
+                      year: 2026,
+                      file: "pyqfort-economics-module-4.pdf",
+                      id: "pyqfort-economics-module-4",
+                      pages: 3,
+                      title: "Economics Module 4",
+                    },
+                    {
+                      year: 2026,
+                      file: "pyqfort-economics-module-5.pdf",
+                      id: "pyqfort-economics-module-5",
+                      pages: 3,
+                      title: "Economics Module 5",
+                    },
+                    {
+                      year: 2026,
+                      file: "pyqfort-economics-module-6.pdf",
+                      id: "pyqfort-economics-module-6",
+                      pages: 3,
+                      title: "Economics Module 6",
                     }
                   ],
                 },
