@@ -8223,6 +8223,133 @@
                   pages: 3
                   title: "System Analysis 2024"
                   upload: "Saumy"
+    - name: Civil Engineering
+      slug: civil
+      id: civil
+      description: Civil Engineering Branch
+      keywords: ["civil", "engineering", "construction", "infrastructure"]
+      icon: hard-hat
+      semesters:
+        - number: 4
+          slug: sem4
+          id: sem4
+          description: Subjects for Semester 4
+          keywords: ["semester 4", "civil engineering", "construction"]
+          subjects:
+            - name: Env Engineering
+              slug: env
+              id: env
+              description: Study of environmental engineering principles and practices
+              keywords: ["environmental", "engineering", "principles", "practices"]
+              icon: leaf
+              pyqs:
+                - year: 2022
+                  file: ymca-env-2022.pdf
+                  id: ymca-env-2022
+                  pages: 3
+                  title: "Env 2022"
+                  upload: "saumy"
+                - year: 2023
+                  file: ymca-env-2023.pdf
+                  id: ymca-env-2023
+                  pages: 3
+                  title: "Env 2023"
+                  upload: "saumy"
+                - year: 2024
+                  file: ymca-env-2024.pdf
+                  id: ymca-env-2024
+                  pages: 3
+                  title: "Env 2024"
+                  upload: "saumy"
+            - name: Geology
+              slug: geology
+              id: geology
+              description: Study of geology and its impact on the environment
+              keywords: ["geology", "environment", "impact"]
+              icon: mountain
+              pyqs:
+                - year: 2024
+                  file: ymca-geology-2024.pdf
+                  id: ymca-geology-2024
+                  pages: 3
+                  title: "Geology 2024"
+                  upload: "saumy"
+            - name: Highway Engineering
+              slug: highway
+              id: highway
+              description: Principles of highway engineering and design
+              keywords: ["highway", "engineering", "design"]
+              icon: road
+              pyqs:
+                - year: 2024
+                  file: ymca-highway-2024.pdf
+                  id: ymca-highway-2024
+                  pages: 3
+                  title: "Highway Engineering 2024"
+                  upload: "saumy"
+                - year: 2025
+                  file: ymca-highway-2025.pdf
+                  id: ymca-highway-2025
+                  pages: 3
+                  title: "Highway Engineering 2025"
+                  upload: "saumy"
+            - name: Mathematics-III
+              slug: maths
+              id: maths
+              description: Advanced mathematics for civil engineering
+              keywords: ["mathematics", "civil engineering", "advanced"]
+              icon: square-root-alt
+              pyqs:
+                - year: 2023
+                  file: ymca-maths-2023.pdf
+                  id: ymca-maths-2023
+                  pages: 3
+                  title: "Mathematics III 2023"
+                  upload: "saumy"
+                - year: 2024
+                  file: ymca-maths-2024.pdf
+                  id: ymca-maths-2024
+                  pages: 3
+                  title: "Mathematics III 2024"
+                  upload: "saumy"
+            - name: Soil Mechanics
+              slug: soil-mechanics
+              id: soil-mechanics
+              description: Study of soil mechanics and foundation engineering
+              keywords: ["soil", "mechanics", "foundation", "engineering"]
+              icon: seedling
+              pyqs:
+                - year: 2024
+                  file: ymca-soil-mechanics-2024.pdf
+                  id: ymca-soil-mechanics-2024
+                  pages: 3
+                  title: "Soil Mechanics 2024"
+                  upload: "saumy"
+                - year: 2025
+                  file: ymca-soil-mechanics-2025.pdf
+                  id: ymca-soil-mechanics-2025
+                  pages: 3
+                  title: "Soil Mechanics 2025"
+                  upload: "saumy"
+            - name: SOM
+              slug: som
+              id: som
+              description: Study of strength of materials and structural analysis
+              keywords: ["strength", "materials", "structural", "analysis"]
+              icon: weight-hanging
+              pyqs:
+                - year: 2024
+                  file: ymca-som-2024.pdf
+                  id: ymca-som-2024
+                  pages: 3
+                  title: "SOM 2024"
+                  upload: "saumy"
+                - year: 2025
+                  file: ymca-som-2025.pdf
+                  id: ymca-som-2025
+                  pages: 3
+                  title: "SOM 2025"
+                  upload: "saumy"
 - name: VIT Bhopal
   slug: vit-bhopal
   id: vit-bhopal

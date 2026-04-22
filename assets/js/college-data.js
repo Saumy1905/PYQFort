@@ -8493,6 +8493,161 @@ window.COLLEGE_DATA = {
             },
           ],
         },
+        {
+          name: "Civil Engineering",
+          slug: "civil-engineering",
+          id: "civil-engineering",
+          description: "Civil Engineering Branch",
+          icon: "hard-hat",
+          semesters: [
+            {
+              number: 4,
+              slug: "sem4",
+              id: "sem4",
+              description: "Subjects for Semester 4",
+              subjects: [
+                {
+                  name: "Environmental Engineering",
+                  slug: "env",
+                  id: "env",
+                  description: "Study of environmental engineering principles and practices",
+                  icon: "leaf",
+                  pyqs: [
+                    {
+                      year: 2022,
+                      file: "ymca-env-2022.pdf",
+                      id: "ymca-env-2022",
+                      pages: 10,
+                      title: "Env 2022",
+                    },
+                    {
+                      year: 2023,
+                      file: "ymca-env-2023.pdf",
+                      id: "ymca-env-2023",
+                      pages: 10,
+                      title: "Env 2023",
+                    },
+                    {
+                      year: 2024,
+                      file: "ymca-env-2024.pdf",
+                      id: "ymca-env-2024",
+                      pages: 10,
+                      title: "Env 2024",
+                    },
+                  ],
+                },
+                {
+                  name: "Environmental Geology",
+                  slug: "geology",
+                  id: "geology",
+                  description: "Study of geology and its impact on the environment",
+                  icon: "mountain",
+                  pyqs: [
+                    {
+                      year: 2024,
+                      file: "ymca-geology-2024.pdf",
+                      id: "ymca-geology-2024",
+                      pages: 10,
+                      title: "Geology 2024",
+                    },
+                  ],
+                },
+                {
+                  name: "Highway Engineering",
+                  slug: "highway",
+                  id: "highway",
+                  description: "Principles of highway engineering and design",
+                  icon: "road",
+                  pyqs: [
+                    {
+                      year: 2024,
+                      file: "ymca-highway-2024.pdf",
+                      id: "ymca-highway-2024",
+                      pages: 10,
+                      title: "Highway Engineering 2024",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-highway-2025.pdf",
+                      id: "ymca-highway-2025",
+                      pages: 10,
+                      title: "Highway Engineering 2025",
+                    },
+                  ],
+                },
+                {
+                  name: "Mathematics-III",
+                  slug: "maths",
+                  id: "maths",
+                  description: "Advanced mathematics for civil engineering",
+                  icon: "square-root-alt",
+                  pyqs: [
+                    {
+                      year: 2023,
+                      file: "ymca-maths-2023.pdf",
+                      id: "ymca-maths-2023",
+                      pages: 10,
+                      title: "Mathematics III 2023",
+                    },
+                    {
+                      year: 2024,
+                      file: "ymca-maths-2024.pdf",
+                      id: "ymca-maths-2024",
+                      pages: 10,
+                      title: "Mathematics III 2024",
+                    },
+                  ],
+                },
+                {
+                  name: "Soil Mechanics",
+                  slug: "soil-mechanics",
+                  id: "soil-mechanics",
+                  description: "Study of soil mechanics and foundation engineering",
+                  icon: "seedling",
+                  pyqs: [
+                    {
+                      year: 2024,
+                      file: "ymca-soil-mechanics-2024.pdf",
+                      id: "ymca-soil-mechanics-2024",
+                      pages: 10,
+                      title: "Soil Mechanics 2024",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-soil-mechanics-2025.pdf",
+                      id: "ymca-soil-mechanics-2025",
+                      pages: 10,
+                      title: "Soil Mechanics 2025",
+                    },
+                  ],
+                },
+                {
+                  name: "SOM",
+                  slug: "som",
+                  id: "som",
+                  description: "Study of strength of materials and structural analysis",
+                  icon: "weight-hanging",
+                  pyqs: [
+                    {
+                      year: 2024,
+                      file: "ymca-som-2024.pdf",
+                      id: "ymca-som-2024",
+                      pages: 10,
+                      title: "SOM 2024",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-som-2025.pdf",
+                      id: "ymca-som-2025",
+                      pages: 10,
+                      title: "SOM 2025",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
     {
@@ -14856,11 +15011,11 @@ window.COLLEGE_DATA = {
       ]
     },
     {
-      name: "Hindustan Institute of Technology",
+      name: "Heritage Institute of Technology",
       slug: "hit",
       id: "hit",
       description: "Explore branches and Previous Year Question Papers",
-      keywords: ["hit", "hindustan institute of technology"],
+      keywords: ["hit", "heritage institute of technology"],
       icon: "university",
       branches: [
         {
