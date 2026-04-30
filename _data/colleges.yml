@@ -794,6 +794,90 @@
                   pages: 3
                   title: "Engineering Graphics and Design 2024"
                   upload: "Saumy"
+                - year: 2026
+                  file: egd-1.pdf
+                  id: egd-1
+                  pages: 3
+                  title: "EGD Notes 1"
+                  new: true
+                - year: 2026
+                  file: egd-2.pdf
+                  id: egd-2
+                  pages: 3
+                  title: "EGD Notes 2"
+                  new: true
+                - year: 2026
+                  file: egd-3.pdf
+                  id: egd-3
+                  pages: 3
+                  title: "EGD Notes 3"
+                  new: true
+                - year: 2026
+                  file: egd-4.pdf
+                  id: egd-4
+                  pages: 3
+                  title: "EGD Notes 4"
+                  new: true
+                - year: 2026
+                  file: egd-5.pdf
+                  id: egd-5
+                  pages: 3
+                  title: "EGD Notes 5"
+                  new: true
+                - year: 2026
+                  file: egd-7.pdf
+                  id: egd-7
+                  pages: 3
+                  title: "EGD Notes 7"
+                  new: true
+                - year: 2026
+                  file: egd-8.pdf
+                  id: egd-8
+                  pages: 3
+                  title: "EGD Notes 8"
+                  new: true
+                - year: 2026
+                  file: egd-9.pdf
+                  id: egd-9
+                  pages: 3
+                  title: "EGD Notes 9"
+                  new: true
+                - year: 2026
+                  file: egd-10.pdf
+                  id: egd-10
+                  pages: 3
+                  title: "EGD Notes 10"
+                  new: true
+                - year: 2026
+                  file: egd-11.pdf
+                  id: egd-11
+                  pages: 3
+                  title: "EGD Notes 11"
+                  new: true
+                - year: 2026
+                  file: egd-12.pdf
+                  id: egd-12
+                  pages: 3
+                  title: "EGD Notes 12"
+                  new: true
+                - year: 2026
+                  file: ppt-1.pdf
+                  id: ppt-1
+                  pages: 3
+                  title: "EGD PPT 1"
+                  new: true
+                - year: 2026
+                  file: ppt-2.pdf
+                  id: ppt-2
+                  pages: 3
+                  title: "EGD PPT 2"
+                  new: true
+                - year: 2026
+                  file: ppt-3.pdf
+                  id: ppt-3
+                  pages: 3
+                  title: "EGD PPT 3"
+                  new: true
             - name: Electromagnetic Theory
               slug: emt
               id: emt
