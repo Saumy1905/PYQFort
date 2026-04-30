@@ -265,6 +265,18 @@
               keywords: ["chemistry", "engineering", "materials"]
               icon: flask
               pyqs:
+                - year: 2026
+                  file: pes-diagram.pdf
+                  id: pes-diagram
+                  pages: 3
+                  title: "PES Diagram"
+                  new: true
+                - year: 2026
+                  file: sythesis-of-drugs.pdf
+                  id: synthesis-of-drugs
+                  pages: 3
+                  title: "Synthesis of Drugs"
+                  new: true
                 - year: 2018
                   file: ymca-chemistry-2018.pdf
                   id: ymca-chemistry-2018
@@ -377,6 +389,30 @@
               keywords: ["english", "communication", "skills"]
               icon: comment-dots
               pyqs:
+                - year: 2026
+                  file: unit-1-word-formation.pdf
+                  id: unit-1-word-formation
+                  pages: 3
+                  title: "Unit 1 Word Formation"
+                  new: true
+                - year: 2026
+                  file: unit-2-creating-coherence.pdf
+                  id: unit-2-creating-coherence
+                  pages: 3
+                  title: "Unit 2 Creating Coherence"
+                  new: true
+                - year: 2026
+                  file: unit-3-organizing-paragraphs.pdf
+                  id: unit-3-organizing-paragraphs
+                  pages: 3
+                  title: "Unit 3 Organizing Paragraphs"
+                  new: true
+                - year: 2026
+                  file: unit-4-precis-writing.pdf
+                  id: unit-4-precis-writing
+                  pages: 3
+                  title: "Unit 4 Precis Writing"
+                  new: true
                 - year: 2022
                   file: ymca-english-2022.pdf
                   id: ymca-english-2022
@@ -669,6 +705,24 @@
               keywords: ["semiconductor", "physics", "electronics"]
               icon: microchip
               pyqs:
+                - year: 2026
+                  file: unit-1-semiconductor.pdf
+                  id: unit-1-semiconductor
+                  pages: 3
+                  title: "Semiconductor Physics Unit 1"
+                  new: true
+                - year: 2026
+                  file: unit-2-semiconductor.pdf
+                  id: unit-2-semiconductor
+                  pages: 3
+                  title: "Semiconductor Physics Unit 2"
+                  new: true
+                - year: 2026
+                  file: quantum-energy-band-diagram.pdf
+                  id: quantum-energy-band-diagram
+                  pages: 3
+                  title: "Quantum Energy Band Diagram"
+                  new: true
                 - year: 2018
                   file: ymca-semiconductor-2018.pdf
                   id: ymca-semiconductor-2018
@@ -885,6 +939,18 @@
               keywords: ["electromagnetic", "theory", "physics"]
               icon: magnet
               pyqs:
+                - year: 2026
+                  file: emt-notes.pdf
+                  id: emt-notes
+                  pages: 3
+                  title: "EMT Notes"
+                  new: true
+                - year: 2026
+                  file: emt-unit-1.pdf
+                  id: emt-unit-1
+                  pages: 3
+                  title: "EMT Unit 1"
+                  new: true
                 - year: 2022
                   file: ymca-emt-2022.pdf
                   id: ymca-emt-2022
@@ -1089,6 +1155,60 @@
               keywords: ["programming", "problem solving", "coding"]
               icon: code
               pyqs:
+                - year: 2026
+                  file: pps-notes.pdf
+                  id: pps-notes
+                  pages: 3
+                  title: "PPS Notes"
+                  new: true
+                - year: 2026
+                  file: notes-1.pdf
+                  id: notes-1
+                  pages: 3
+                  title: "PPS Notes 1"
+                  new: true
+                - year: 2026
+                  file: notes-2.pdf
+                  id: notes-2
+                  pages: 3
+                  title: "PPS Notes 2"
+                  new: true
+                - year: 2026
+                  file: notes-3.pdf
+                  id: notes-3
+                  pages: 3
+                  title: "PPS Notes 3"
+                  new: true
+                - year: 2026
+                  file: notes-4.pdf
+                  id: notes-4
+                  pages: 3
+                  title: "PPS Notes 4"
+                  new: true
+                - year: 2026
+                  file: notes-5.pdf
+                  id: notes-5
+                  pages: 3
+                  title: "PPS Notes 5"
+                  new: true
+                - year: 2026
+                  file: notes-6.pdf
+                  id: notes-6
+                  pages: 3
+                  title: "PPS Notes 6"
+                  new: true
+                - year: 2026
+                  file: notes-7.pdf
+                  id: notes-7
+                  pages: 3
+                  title: "PPS Notes 7"
+                  new: true
+                - year: 2026
+                  file: notes-8.pdf
+                  id: notes-8
+                  pages: 3
+                  title: "PPS Notes 8"
+                  new: true
                 - year: 2019
                   file: ymca-pps-set-1-2019.pdf
                   id: ymca-pps-set-1-2019
