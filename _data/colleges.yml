@@ -712,12 +712,6 @@
                   title: "Semiconductor Physics Unit 1"
                   new: true
                 - year: 2026
-                  file: unit-2-semiconductor.pdf
-                  id: unit-2-semiconductor
-                  pages: 3
-                  title: "Semiconductor Physics Unit 2"
-                  new: true
-                - year: 2026
                   file: quantum-energy-band-diagram.pdf
                   id: quantum-energy-band-diagram
                   pages: 3
@@ -1155,12 +1149,6 @@
               keywords: ["programming", "problem solving", "coding"]
               icon: code
               pyqs:
-                - year: 2026
-                  file: pps-notes.pdf
-                  id: pps-notes
-                  pages: 3
-                  title: "PPS Notes"
-                  new: true
                 - year: 2026
                   file: notes-1.pdf
                   id: notes-1
@@ -1827,12 +1815,6 @@
                   title: "Principle of Inclusion and Exclusion Book"
                   new: true
                 - year: 2026
-                  file: ch-2-lecture-notes.pdf
-                  id: ch-2-lecture-notes
-                  pages: 3
-                  title: "Discrete Mathematics Chapter 2 Lecture Notes"
-                  new: true
-                - year: 2026
                   file: counting-techniques.pdf
                   id: counting-techniques
                   pages: 3
@@ -1843,12 +1825,6 @@
                   id: exam-solution-1
                   pages: 3
                   title: "Exam Solution 1"
-                  new: true
-                - year: 2026
-                  file: notes-1.pdf
-                  id: notes-1
-                  pages: 3
-                  title: "Discrete Mathematics Notes 1"
                   new: true
                 - year: 2026
                   file: notes-maths-induction.pdf
@@ -2011,22 +1987,10 @@
               slug: environmental-science
               pyqs:
                 - year: 2026
-                  file: word-notes-1.pdf
-                  id: word-notes-1  # Add this unique identifier
+                  file: word-notes_mrcet.pdf
+                  id: word-notes_mrcet  # Add this unique identifier
                   pages: 3
-                  title: "Env Word Notes 1"
-                  new: true
-                - year: 2026
-                  file: word-notes-2.pdf
-                  id: word-notes-2  # Add this unique identifier
-                  pages: 3
-                  title: "Env Word Notes 2"
-                  new: true
-                - year: 2026
-                  file: word-notes-3.pdf
-                  id: word-notes-3  # Add this unique identifier
-                  pages: 3
-                  title: "Env Word Notes 3"
+                  title: "Env Word Notes (MRCET)"
                   new: true
                 - year: 2013
                   file: ymca-environmental-science-2013.pdf
