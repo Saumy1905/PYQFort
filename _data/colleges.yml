@@ -302,12 +302,18 @@
                   title: "Chemistry 2024"
                   upload: "Saumy"
                 - year: 2025
-                  file: ymca-chemistry-2025.pdf
-                  id: ymca-chemistry-2025
+                  file: ymca-chemistry-2025-set-1.pdf
+                  id: ymca-chemistry-2025-set-1
                   pages: 3
-                  title: "Chemistry 2025"
-                  new: true
+                  title: "Chemistry 2025 Set 1"
                   upload: "Deepesh Sharma"
+                - year: 2025
+                  file: ymca-chemistry-2025-set-2.pdf
+                  id: ymca-chemistry-2025-set-2
+                  pages: 3
+                  title: "Chemistry 2025 Set 2"
+                  new: true
+                  upload: "joyboy"
                 - year: 2022
                   file: ymca-chemistry-2022-sessional-1.pdf
                   id: ymca-chemistry-2022-sessional-1
@@ -1080,6 +1086,13 @@
                   pages: 3
                   title: "Maths 106-D 2023"
                   upload: "Saumy"
+                - year: 2025
+                  file: ymca-maths-106-d-2025.pdf
+                  id: ymca-maths-106-d-2025
+                  pages: 3
+                  title: "Maths 106-D 2025"
+                  upload: "joyboy"
+                  new: true
                 - year: 2024
                   file: ymca-maths-106-d-2024-sessional.pdf
                   id: ymca-maths-106-d-2024-sessional

@@ -232,6 +232,20 @@ window.COLLEGE_DATA = {
                       title: "Chemistry 2024",
                     },
                     {
+                      year: 2025,
+                      file: "ymca-chemistry-2025-set-1.pdf",
+                      id: "ymca-chemistry-2025-set-1",
+                      pages: 3,
+                      title: "Chemistry 2025 Set 1",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-chemistry-2025-set-2.pdf",
+                      id: "ymca-chemistry-2025-set-2",
+                      pages: 3,
+                      title: "Chemistry 2025 Set 2",
+                    },
+                    {
                       year: 2022,
                       file: "ymca-chemistry-2022-sessional-1.pdf",
                       id: "ymca-chemistry-2022-sessional-1",
@@ -366,6 +380,20 @@ window.COLLEGE_DATA = {
                       id: "ymca-english-2024",
                       pages: 3,
                       title: "English 2024",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-english-set-1-2025.pdf",
+                      id: "ymca-english-set-1-2025",
+                      pages: 3,
+                      title: "English Set 1 2025",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-english-set-2-2025.pdf",
+                      id: "ymca-english-set-2-2025",
+                      pages: 3,
+                      title: "English Set 2 2025",
                     },
                     {
                       year: 2025,
@@ -805,6 +833,13 @@ window.COLLEGE_DATA = {
                       id: "ymca-maths-106-d-2023",
                       pages: 3,
                       title: "Mathematics 106-D 2023",
+                    },
+                    {
+                      year: 2025,
+                      file: "ymca-maths-106-d-2025.pdf",
+                      id: "ymca-maths-106-d-2025",
+                      pages: 3,
+                      title: "Mathematics 106-D 2025",
                     },
                     {
                       year: 2024,
