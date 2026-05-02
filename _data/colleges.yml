@@ -2517,7 +2517,7 @@
           description: Subjects for Semester 6
           keywords: ["semester 6", "engineering", "subjects"]
           subjects:
-            - name: CN
+            - name: Computer Networks
               id: computer-networks
               description: Principles of computer networking
               keywords: ["computer", "networks", "principles"]
@@ -2526,28 +2526,42 @@
               pyqs:
                 - year: 2017
                   file: ymca-computer-networks-2017.pdf
-                  id: ymca-computer-networks-2017  # Add this unique identifier
+                  id: ymca-computer-networks-2017
                   pages: 3
-                  title: "CN 2017"
+                  title: "Computer Networks 2017"
                   upload: "Saumy"
                 - year: 2018
                   file: ymca-computer-networks-2018.pdf
-                  id: ymca-computer-networks-2018  # Add this unique identifier
+                  id: ymca-computer-networks-2018
                   pages: 3
-                  title: "CN 2018"
+                  title: "Computer Networks 2018"
                   upload: "Saumy"
                 - year: 2023
                   file: ymca-computer-networks-2023.pdf
-                  id: ymca-computer-networks-2023  # Add this unique identifier
+                  id: ymca-computer-networks-2023
                   pages: 3
-                  title: "CN 2023"
+                  title: "Computer Networks 2023"
                   upload: "Saumy"
                 - year: 2024
-                  file: ymca-computer-networks-2024.pdf
-                  id: ymca-computer-networks-2024  # Add this unique identifier
+                  file: ymca-computer-networks-2024-set-1.pdf
+                  id: ymca-computer-networks-2024-set-1
                   pages: 3
-                  title: "CN 2024"
+                  title: "Computer Networks 2024 Set 1"
                   upload: "Saumy"
+                - year: 2024
+                  file: ymca-computer-networks-2024-set-2.pdf
+                  id: ymca-computer-networks-2024-set-2
+                  pages: 3
+                  title: "Computer Networks 2024 Set 2"
+                  upload: "Anshul"
+                  new: true
+                - year: 2025
+                  file: ymca-computer-networks-2025.pdf
+                  id: ymca-computer-networks-2025
+                  pages: 3
+                  title: "Computer Networks 2025"
+                  upload: "Anshul"
+                  new: true
             - name: AI Expert System
               id: ai-exp-system
               description: Fundamentals of AI and expert systems
@@ -3475,11 +3489,25 @@
                   title: "Computer Networks 2023"
                   upload: "Saumy"
                 - year: 2024
-                  file: ymca-computer-networks-2024.pdf
-                  id: ymca-computer-networks-2024
+                  file: ymca-computer-networks-2024-set-1.pdf
+                  id: ymca-computer-networks-2024-set-1
                   pages: 3
-                  title: "Computer Networks 2024"
+                  title: "Computer Networks 2024 Set 1"
                   upload: "Saumy"
+                - year: 2024
+                  file: ymca-computer-networks-2024-set-2.pdf
+                  id: ymca-computer-networks-2024-set-2
+                  pages: 3
+                  title: "Computer Networks 2024 Set 2"
+                  upload: "Anshul"
+                  new: true
+                - year: 2025
+                  file: ymca-computer-networks-2025.pdf
+                  id: ymca-computer-networks-2025
+                  pages: 3
+                  title: "Computer Networks 2025"
+                  upload: "Anshul"
+                  new: true
             - name: Economics
               slug: economics
               id: economics
@@ -5695,11 +5723,25 @@
                   title: "Computer Networks 2023"
                   upload: "Saumy"
                 - year: 2024
-                  file: ymca-computer-networks-2024.pdf
-                  id: ymca-computer-networks-2024
+                  file: ymca-computer-networks-2024-set-1.pdf
+                  id: ymca-computer-networks-2024-set-1
                   pages: 3
-                  title: "Computer Networks 2024"
+                  title: "Computer Networks 2024 Set 1"
                   upload: "Saumy"
+                - year: 2024
+                  file: ymca-computer-networks-2024-set-2.pdf
+                  id: ymca-computer-networks-2024-set-2
+                  pages: 3
+                  title: "Computer Networks 2024 Set 2"
+                  upload: "Anshul"
+                  new: true
+                - year: 2025
+                  file: ymca-computer-networks-2025.pdf
+                  id: ymca-computer-networks-2025
+                  pages: 3
+                  title: "Computer Networks 2025"
+                  upload: "Anshul"
+                  new: true
             - name: Effective Technical Communication
               slug: etc
               id: etc
