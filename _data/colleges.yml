@@ -258,6 +258,13 @@
                   title: "BET Sessional 5 2025"
                   upload: "Anushka Sharma"
                   new: true
+                - year: 2026
+                  file: ymca-bet-2026-sessional-1.pdf
+                  id: ymca-bet-2026-sessional-1
+                  pages: 3
+                  title: "BET Sessional 1 2026"
+                  upload: "Pratik"
+                  new: true
             - name: Chemistry
               slug: chemistry
               id: chemistry
