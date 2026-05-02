@@ -272,18 +272,6 @@
               keywords: ["chemistry", "engineering", "materials"]
               icon: flask
               pyqs:
-                - year: 2026
-                  file: pes-diagram.pdf
-                  id: pes-diagram
-                  pages: 3
-                  title: "PES Diagram"
-                  new: true
-                - year: 2026
-                  file: sythesis-of-drugs.pdf
-                  id: synthesis-of-drugs
-                  pages: 3
-                  title: "Synthesis of Drugs"
-                  new: true
                 - year: 2018
                   file: ymca-chemistry-2018.pdf
                   id: ymca-chemistry-2018
@@ -395,6 +383,18 @@
                   title: "Chemistry Sessional 5 2025"
                   upload: "Anushka Sharma"
                   new: true
+                - year: 2026
+                  file: pes-diagram.pdf
+                  id: pes-diagram
+                  pages: 3
+                  title: "PES Diagram"
+                  new: true
+                - year: 2026
+                  file: sythesis-of-drugs.pdf
+                  id: synthesis-of-drugs
+                  pages: 3
+                  title: "Synthesis of Drugs"
+                  new: true
             - name: English
               slug: english
               id: english
@@ -402,30 +402,6 @@
               keywords: ["english", "communication", "skills"]
               icon: comment-dots
               pyqs:
-                - year: 2026
-                  file: unit-1-word-formation.pdf
-                  id: unit-1-word-formation
-                  pages: 3
-                  title: "Unit 1 Word Formation"
-                  new: true
-                - year: 2026
-                  file: unit-2-creating-coherence.pdf
-                  id: unit-2-creating-coherence
-                  pages: 3
-                  title: "Unit 2 Creating Coherence"
-                  new: true
-                - year: 2026
-                  file: unit-3-organizing-paragraphs.pdf
-                  id: unit-3-organizing-paragraphs
-                  pages: 3
-                  title: "Unit 3 Organizing Paragraphs"
-                  new: true
-                - year: 2026
-                  file: unit-4-precis-writing.pdf
-                  id: unit-4-precis-writing
-                  pages: 3
-                  title: "Unit 4 Precis Writing"
-                  new: true
                 - year: 2022
                   file: ymca-english-2022.pdf
                   id: ymca-english-2022
@@ -510,6 +486,30 @@
                   pages: 3
                   title: "English Sessional 4 2025"
                   upload: "Anushka Sharma"
+                  new: true
+                - year: 2026
+                  file: unit-1-word-formation.pdf
+                  id: unit-1-word-formation
+                  pages: 3
+                  title: "Unit 1 Word Formation"
+                  new: true
+                - year: 2026
+                  file: unit-2-creating-coherence.pdf
+                  id: unit-2-creating-coherence
+                  pages: 3
+                  title: "Unit 2 Creating Coherence"
+                  new: true
+                - year: 2026
+                  file: unit-3-organizing-paragraphs.pdf
+                  id: unit-3-organizing-paragraphs
+                  pages: 3
+                  title: "Unit 3 Organizing Paragraphs"
+                  new: true
+                - year: 2026
+                  file: unit-4-precis-writing.pdf
+                  id: unit-4-precis-writing
+                  pages: 3
+                  title: "Unit 4 Precis Writing"
                   new: true
             - name: Maths 101-C
               slug: maths-101-c
@@ -718,18 +718,6 @@
               keywords: ["semiconductor", "physics", "electronics"]
               icon: microchip
               pyqs:
-                - year: 2026
-                  file: unit-1-semiconductor.pdf
-                  id: unit-1-semiconductor
-                  pages: 3
-                  title: "Semiconductor Physics Unit 1"
-                  new: true
-                - year: 2026
-                  file: quantum-energy-band-diagram.pdf
-                  id: quantum-energy-band-diagram
-                  pages: 3
-                  title: "Quantum Energy Band Diagram"
-                  new: true
                 - year: 2018
                   file: ymca-semiconductor-2018.pdf
                   id: ymca-semiconductor-2018
@@ -771,8 +759,20 @@
                   id: ymca-semiconductor-2025
                   pages: 3
                   title: "Semiconductor Physics 2025"
-                  new: true
                   upload: "Saumy"
+                  new: true
+                - year: 2026
+                  file: unit-1-semiconductor.pdf
+                  id: unit-1-semiconductor
+                  pages: 3
+                  title: "Semiconductor Physics Unit 1"
+                  new: true
+                - year: 2026
+                  file: quantum-energy-band-diagram.pdf
+                  id: quantum-energy-band-diagram
+                  pages: 3
+                  title: "Quantum Energy Band Diagram"
+                  new: true
             - name: Waves and Optics
               slug: waves
               id: waves
@@ -946,18 +946,6 @@
               keywords: ["electromagnetic", "theory", "physics"]
               icon: magnet
               pyqs:
-                - year: 2026
-                  file: emt-notes.pdf
-                  id: emt-notes
-                  pages: 3
-                  title: "EMT Notes"
-                  new: true
-                - year: 2026
-                  file: emt-unit-1.pdf
-                  id: emt-unit-1
-                  pages: 3
-                  title: "EMT Unit 1"
-                  new: true
                 - year: 2022
                   file: ymca-emt-2022.pdf
                   id: ymca-emt-2022
@@ -982,6 +970,18 @@
                   pages: 3
                   title: "Electromagnetic Theory Sessional 2 2024"
                   upload: "Saumy"
+                - year: 2026
+                  file: emt-notes.pdf
+                  id: emt-notes
+                  pages: 3
+                  title: "EMT Notes"
+                  new: true
+                - year: 2026
+                  file: emt-unit-1.pdf
+                  id: emt-unit-1
+                  pages: 3
+                  title: "EMT Unit 1"
+                  new: true
             - name: Environment and Ecology
               slug: ene
               id: ene
@@ -1169,54 +1169,6 @@
               keywords: ["programming", "problem solving", "coding"]
               icon: code
               pyqs:
-                - year: 2026
-                  file: notes-1.pdf
-                  id: notes-1
-                  pages: 3
-                  title: "PPS Notes 1"
-                  new: true
-                - year: 2026
-                  file: notes-2.pdf
-                  id: notes-2
-                  pages: 3
-                  title: "PPS Notes 2"
-                  new: true
-                - year: 2026
-                  file: notes-3.pdf
-                  id: notes-3
-                  pages: 3
-                  title: "PPS Notes 3"
-                  new: true
-                - year: 2026
-                  file: notes-4.pdf
-                  id: notes-4
-                  pages: 3
-                  title: "PPS Notes 4"
-                  new: true
-                - year: 2026
-                  file: notes-5.pdf
-                  id: notes-5
-                  pages: 3
-                  title: "PPS Notes 5"
-                  new: true
-                - year: 2026
-                  file: notes-6.pdf
-                  id: notes-6
-                  pages: 3
-                  title: "PPS Notes 6"
-                  new: true
-                - year: 2026
-                  file: notes-7.pdf
-                  id: notes-7
-                  pages: 3
-                  title: "PPS Notes 7"
-                  new: true
-                - year: 2026
-                  file: notes-8.pdf
-                  id: notes-8
-                  pages: 3
-                  title: "PPS Notes 8"
-                  new: true
                 - year: 2019
                   file: ymca-pps-set-1-2019.pdf
                   id: ymca-pps-set-1-2019
@@ -1315,6 +1267,54 @@
                   pages: 3
                   title: "Programming for Problem Solving Sessional 2 2024"
                   upload: "Saumy"
+                - year: 2026
+                  file: notes-1.pdf
+                  id: notes-1
+                  pages: 3
+                  title: "PPS Notes 1"
+                  new: true
+                - year: 2026
+                  file: notes-2.pdf
+                  id: notes-2
+                  pages: 3
+                  title: "PPS Notes 2"
+                  new: true
+                - year: 2026
+                  file: notes-3.pdf
+                  id: notes-3
+                  pages: 3
+                  title: "PPS Notes 3"
+                  new: true
+                - year: 2026
+                  file: notes-4.pdf
+                  id: notes-4
+                  pages: 3
+                  title: "PPS Notes 4"
+                  new: true
+                - year: 2026
+                  file: notes-5.pdf
+                  id: notes-5
+                  pages: 3
+                  title: "PPS Notes 5"
+                  new: true
+                - year: 2026
+                  file: notes-6.pdf
+                  id: notes-6
+                  pages: 3
+                  title: "PPS Notes 6"
+                  new: true
+                - year: 2026
+                  file: notes-7.pdf
+                  id: notes-7
+                  pages: 3
+                  title: "PPS Notes 7"
+                  new: true
+                - year: 2026
+                  file: notes-8.pdf
+                  id: notes-8
+                  pages: 3
+                  title: "PPS Notes 8"
+                  new: true
     - name: Computer Engineering
       slug: computer-engineering
       id: computer-engineering
@@ -1701,6 +1701,54 @@
               icon: project-diagram
               slug: daa
               pyqs:
+                - year: 2015
+                  file: ymca-daa-2015.pdf
+                  id: ymca-daa-2015
+                  pages: 3
+                  title: "DAA 2015"
+                  upload: "Saumy"
+                - year: 2016
+                  file: ymca-daa-2016.pdf
+                  id: ymca-daa-2016
+                  pages: 3
+                  title: "DAA 2016"
+                  upload: "Saumy"
+                - year: 2019
+                  file: ymca-daa-2019.pdf
+                  id: ymca-daa-2019
+                  pages: 3
+                  title: "DAA 2019"
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-daa-2022.pdf
+                  id: ymca-daa-2022
+                  pages: 3
+                  title: "DAA 2022"
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-daa-2023.pdf
+                  id: ymca-daa-2023
+                  pages: 3
+                  title: "DAA 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-daa-2024.pdf
+                  id: ymca-daa-2024
+                  pages: 3
+                  title: "DAA 2024"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-daa-2025.pdf
+                  id: ymca-daa-2025
+                  pages: 3
+                  title: "DAA 2025"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-daa-praxian-analysis-2025.pdf
+                  id: ymca-daa-praxian-analysis-2025
+                  pages: 3
+                  title: "DAA Praxian Analysis 2025"
+                  upload: "Saumy"
                 - year: 2026
                   file: notes-unit-1.pdf
                   id: notes-unit-1
@@ -1749,48 +1797,6 @@
                   pages: 3
                   title: "Class Notes 7"
                   new: true
-                - year: 2015
-                  file: ymca-daa-2015.pdf
-                  id: ymca-daa-2015  # Add this unique identifier
-                  pages: 3
-                  title: "DAA 2015"
-                  upload: "Saumy"
-                - year: 2016
-                  file: ymca-daa-2016.pdf
-                  id: ymca-daa-2016  # Add this unique identifier
-                  pages: 3
-                  title: "DAA 2016"
-                  upload: "Saumy"
-                - year: 2019
-                  file: ymca-daa-2019.pdf
-                  id: ymca-daa-2019  # Add this unique identifier
-                  pages: 3
-                  title: "DAA 2019"
-                  upload: "Saumy"
-                - year: 2022
-                  file: ymca-daa-2022.pdf
-                  id: ymca-daa-2022  # Add this unique identifier
-                  pages: 3
-                  title: "DAA 2022"
-                  upload: "Saumy"
-                - year: 2023
-                  file: ymca-daa-2023.pdf
-                  id: ymca-daa-2023  # Add this unique identifier
-                  pages: 3
-                  title: "DAA 2023"
-                  upload: "Saumy"
-                - year: 2024
-                  file: ymca-daa-2024.pdf
-                  id: ymca-daa-2024  # Add this unique identifier
-                  pages: 3
-                  title: "DAA 2024"
-                  upload: "Saumy"
-                - year: 2025
-                  file: ymca-daa-praxian-analysis-2025.pdf
-                  id: ymca-daa-praxian-analysis-2025
-                  pages: 3
-                  title: "DAA Praxian Analysis 2025"
-                  upload: "Saumy"
             - name: Discrete Mathematics
               id: discrete-mathematics
               description: Mathematical foundations for computer science
@@ -1798,6 +1804,54 @@
               icon: abacus
               slug: discrete-mathematics
               pyqs:
+                - year: 2019
+                  file: ymca-discrete-mathematics-2019.pdf
+                  id: ymca-discrete-mathematics-2019  # Add this unique identifier
+                  pages: 3
+                  title: "Discrete Mathematics 2019"
+                  upload: "Saumy"
+                - year: 2020
+                  file: ymca-discrete-mathematics-2020-set-1.pdf
+                  id: ymca-discrete-mathematics-2020-set-1  # Add this unique identifier
+                  pages: 3
+                  title: "Discrete Mathematics 2020 Set 1"
+                  upload: "Saumy"
+                - year: 2020
+                  file: ymca-discrete-mathematics-2020-set-2.pdf
+                  id: ymca-discrete-mathematics-2020-set-2  # Add this unique identifier
+                  pages: 3
+                  title: "Discrete Mathematics 2020 Set 2"
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-discrete-mathematics-2022-set-1.pdf
+                  id: ymca-discrete-mathematics-2022-set-1  # Add this unique identifier
+                  pages: 3
+                  title: "Discrete Mathematics 2022"
+                  upload: "Saumy"
+                - year: 2022
+                  file: ymca-discrete-mathematics-2022-set-2.pdf
+                  id: ymca-discrete-mathematics-2022-set-2  # Add this unique identifier
+                  pages: 3
+                  title: "Discrete Mathematics 2022 Set 2"
+                  upload: "Saumy"
+                - year: 2023
+                  file: ymca-discrete-mathematics-2023.pdf
+                  id: ymca-discrete-mathematics-2023  # Add this unique identifier
+                  pages: 3
+                  title: "Discrete Mathematics 2023"
+                  upload: "Saumy"
+                - year: 2024
+                  file: ymca-discrete-mathematics-2024.pdf
+                  id: ymca-discrete-mathematics-2024  # Add this unique identifier
+                  pages: 3
+                  title: "Discrete Mathematics 2024"
+                  upload: "Saumy"
+                - year: 2025
+                  file: ymca-discrete-mathematics-praxian-analysis-2025.pdf
+                  id: ymca-discrete-mathematics-praxian-analysis-2025  # Add this unique identifier
+                  pages: 3
+                  title: "Discrete Mathematics Praxian Analysis 2025"
+                  upload: "Saumy"
                 - year: 2026
                   file: assignment-1.pdf
                   id: assignment-1
@@ -1864,54 +1918,6 @@
                   pages: 3
                   title: "Unit 1 Theorems Notes"
                   new: true
-                - year: 2019
-                  file: ymca-discrete-mathematics-2019.pdf
-                  id: ymca-discrete-mathematics-2019  # Add this unique identifier
-                  pages: 3
-                  title: "Discrete Mathematics 2019"
-                  upload: "Saumy"
-                - year: 2020
-                  file: ymca-discrete-mathematics-2020-set-1.pdf
-                  id: ymca-discrete-mathematics-2020-set-1  # Add this unique identifier
-                  pages: 3
-                  title: "Discrete Mathematics 2020 Set 1"
-                  upload: "Saumy"
-                - year: 2020
-                  file: ymca-discrete-mathematics-2020-set-2.pdf
-                  id: ymca-discrete-mathematics-2020-set-2  # Add this unique identifier
-                  pages: 3
-                  title: "Discrete Mathematics 2020 Set 2"
-                  upload: "Saumy"
-                - year: 2022
-                  file: ymca-discrete-mathematics-2022-set-1.pdf
-                  id: ymca-discrete-mathematics-2022-set-1  # Add this unique identifier
-                  pages: 3
-                  title: "Discrete Mathematics 2022"
-                  upload: "Saumy"
-                - year: 2022
-                  file: ymca-discrete-mathematics-2022-set-2.pdf
-                  id: ymca-discrete-mathematics-2022-set-2  # Add this unique identifier
-                  pages: 3
-                  title: "Discrete Mathematics 2022 Set 2"
-                  upload: "Saumy"
-                - year: 2023
-                  file: ymca-discrete-mathematics-2023.pdf
-                  id: ymca-discrete-mathematics-2023  # Add this unique identifier
-                  pages: 3
-                  title: "Discrete Mathematics 2023"
-                  upload: "Saumy"
-                - year: 2024
-                  file: ymca-discrete-mathematics-2024.pdf
-                  id: ymca-discrete-mathematics-2024  # Add this unique identifier
-                  pages: 3
-                  title: "Discrete Mathematics 2024"
-                  upload: "Saumy"
-                - year: 2025
-                  file: ymca-discrete-mathematics-praxian-analysis-2025.pdf
-                  id: ymca-discrete-mathematics-praxian-analysis-2025  # Add this unique identifier
-                  pages: 3
-                  title: "Discrete Mathematics Praxian Analysis 2025"
-                  upload: "Saumy"
             - name: Economics
               id: economics
               description: Economics principles in engineering
@@ -2006,106 +2012,106 @@
               icon: leaf
               slug: environmental-science
               pyqs:
-                - year: 2026
-                  file: word-notes_mrcet.pdf
-                  id: word-notes_mrcet  # Add this unique identifier
-                  pages: 3
-                  title: "Env Word Notes (MRCET)"
-                  new: true
                 - year: 2013
                   file: ymca-environmental-science-2013.pdf
-                  id: ymca-environmental-science-2013  # Add this unique identifier
+                  id: ymca-environmental-science-2013
                   pages: 3
                   title: "Env 2013"
                   upload: "Saumy"
                   new: true
                 - year: 2014
                   file: ymca-environmental-science-2014.pdf
-                  id: ymca-environmental-science-2014  # Add this unique identifier
+                  id: ymca-environmental-science-2014
                   pages: 3
                   title: "Env 2014"
                   upload: "Saumy"
                   new: true
                 - year: 2015
                   file: ymca-environmental-science-2015.pdf
-                  id: ymca-environmental-science-2015  # Add this unique identifier
+                  id: ymca-environmental-science-2015
                   pages: 3
                   title: "Env 2015"
                   upload: "Saumy"
                   new: true
                 - year: 2017
                   file: ymca-environmental-science-2017.pdf
-                  id: ymca-environmental-science-2017  # Add this unique identifier
+                  id: ymca-environmental-science-2017
                   pages: 3
                   title: "Env 2017"
                   upload: "Saumy"
                   new: true
                 - year: 2018
                   file: ymca-environmental-science-2018-set-1.pdf
-                  id: ymca-environmental-science-2018-set-1  # Add this unique identifier
+                  id: ymca-environmental-science-2018-set-1
                   pages: 3
                   title: "Env 2018 Set 1"
                   upload: "Saumy"
                   new: true
                 - year: 2018
                   file: ymca-environmental-science-2018-set-2.pdf
-                  id: ymca-environmental-science-2018-set-2  # Add this unique identifier
+                  id: ymca-environmental-science-2018-set-2
                   pages: 3
                   title: "Env 2018 Set 2"
                   upload: "Saumy"
                   new: true
                 - year: 2019
                   file: ymca-environmental-science-2019-set-1.pdf
-                  id: ymca-environmental-science-2019-set-1  # Add this unique identifier
+                  id: ymca-environmental-science-2019-set-1
                   pages: 3
                   title: "Env 2019 Set 1"
                   upload: "Saumy"
                 - year: 2019
                   file: ymca-environmental-science-2019-set-2.pdf
-                  id: ymca-environmental-science-2019-set-2  # Add this unique identifier
+                  id: ymca-environmental-science-2019-set-2
                   pages: 3
                   title: "Env 2019 Set 2"
                   upload: "Saumy"
                   new: true
                 - year: 2019
                   file: ymca-environmental-science-2019-set-3.pdf
-                  id: ymca-environmental-science-2019-set-3  # Add this unique identifier
+                  id: ymca-environmental-science-2019-set-3
                   pages: 3
                   title: "Env 2019 Set 3"
                   upload: "Saumy"
                   new: true
                 - year: 2022
                   file: ymca-environmental-science-2022-set-1.pdf
-                  id: ymca-environmental-science-2022-set-1  # Add this unique identifier
+                  id: ymca-environmental-science-2022-set-1
                   pages: 3
                   title: "Env 2022 Set 1"
                   upload: "Saumy"
                   new: true
                 - year: 2022
                   file: ymca-environmental-science-2022-set-2.pdf
-                  id: ymca-environmental-science-2022-set-2  # Add this unique identifier
+                  id: ymca-environmental-science-2022-set-2
                   pages: 3
                   title: "Env 2022 Set 2"
                   upload: "Saumy"
                   new: true
                 - year: 2023
                   file: ymca-environmental-science-2023.pdf
-                  id: ymca-environmental-science-2023  # Add this unique identifier
+                  id: ymca-environmental-science-2023
                   pages: 3
                   title: "Env 2023"
                   upload: "Saumy"
                 - year: 2024
                   file: ymca-environmental-science-2024.pdf
-                  id: ymca-environmental-science-2024  # Add this unique identifier
+                  id: ymca-environmental-science-2024
                   pages: 3
                   title: "Env 2024"
                   upload: "Saumy"
                 - year: 2025
                   file: ymca-env-praxian-analysis-2025.pdf
-                  id: ymca-env-praxian-analysis-2025  # Add this unique identifier
+                  id: ymca-env-praxian-analysis-2025
                   pages: 3
                   title: "Env Praxian Analysis 2025"
                   upload: "Saumy"
+                - year: 2026
+                  file: word-notes_mrcet.pdf
+                  id: word-notes_mrcet
+                  pages: 3
+                  title: "Env Word Notes (MRCET)"
+                  new: true
             - name: Operating System
               id: os
               description: Principles of operating systems
